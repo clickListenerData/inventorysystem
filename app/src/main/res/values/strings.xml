@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">InventorySystem</string>
+    
+    <string name="main_home_txt">首页</string>
+    <string name="main_inventory_manager">库存管理</string>
+    <string name="main_partner_ship">合作关系</string>
+    <string name="main_shop_mall">商城</string>
+    <string name="main_personal_center">个人中心</string>
+
+    <string name="login_txt">登录</string>
+</resources>
