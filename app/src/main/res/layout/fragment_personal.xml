@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/main_personal_center"/>
+    <include layout="@layout/view_login_out"/>
+    <include layout="@layout/view_loading"/>
+    <include layout="@layout/view_check_net"/>
+    <include layout="@layout/view_error"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color_bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@android:color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_txt_size"
+                android:text="@string/main_personal_center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="@dimen/dp_14"
+                android:src="@android:drawable/sym_action_chat"/>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:showDividers="middle"
+            android:divider="@drawable/shape_line_drawable"
+            android:layout_marginTop="@dimen/dp_14"
+            android:orientation="vertical">
+            <com.micropole.inventorysystem.widght.NormalLlView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:main_txt_content="@string/personal_category_manager"
+                app:main_drawable="@android:drawable/ic_menu_manage"
+                app:custom_txt_content="12"/>
+
+            <com.micropole.inventorysystem.widght.NormalLlView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:main_txt_content="@string/personal_category_manager"
+                app:main_drawable="@android:drawable/ic_menu_manage"
+                app:custom_txt_content="12"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
