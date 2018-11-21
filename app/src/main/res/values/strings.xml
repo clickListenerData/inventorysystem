@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">衣布购</string>
-    
+
     <string name="main_home_txt">首页</string>
     <string name="main_inventory_manager">库存管理</string>
     <string name="main_partner_ship">合作关系</string>
@@ -12,7 +12,7 @@
     <string name="empty_data">暂无数据</string>
 
     <string name="search_hint_txt">请输入关键字</string>
-    
+
     <!--首页-->
     <string name="input_storage">入库</string>
     <string name="output_storage">出库</string>
@@ -88,4 +88,56 @@
     <string name="finance_return_money">总回款</string>
     <string name="finance_returned_money">已回款</string>
     <string name="finance_wait_money">待回款</string>
+=======
+    <string name="back">Back</string>
+    <string name="login">登录</string>
+    <string name="login_phone">手机号码</string>
+    <string name="single_input">单行输入</string>
+    <string name="login_pw">密码</string>
+    <string name="login_wx">微信快捷登陆</string>
+    <string name="login_register">注册账号</string>
+    <string name="login_forget_pw">忘记密码?</string>
+    <string name="reg_iamge">设置头像</string>
+    <string name="reg_name">请输入你的姓名</string>
+    <string name="name">姓名</string>
+    <string name="reg_contry">所在国家</string>
+    <string name="reg_xu_contry">请选择国家</string>
+    <string name="reg_xu_bri">请选择你的生日</string>
+    <string name="reg_bri">生日</string>
+    <string name="reg_phone">手机号码</string>
+    <string name="reg_xu_phone">请输入您的手机号码</string>
+    <string name="reg_tian_code">请输入验证码</string>
+    <string name="reg_code">验证码</string>
+    <string name="reg_get_code">获取验证码</string>
+    <string name="reg_tian_pw">请输入新密码</string>
+    <string name="reg_tsure_pw">请再次确认密码</string>
+    <string name="reg_pw">新密码</string>
+    <string name="reg_sure_pw">确认密码</string>
+    <string name="reg_forget">忘记密码</string>
+    <string name="reg_register">注册账号</string>
+    <string name="sure">确认</string>
+    <string name="zi">请输入关键字</string>
+    <string name="partner_id">用户ID/手机号</string>
+    <string name="partner_message">用户信息</string>
+    <string name="partner_setting">自定义设置</string>
+    <string name="partner_fuzeren">公司负责人</string>
+    <string name="partner_phone">联系方式</string>
+    <string name="partner_email">邮箱</string>
+    <string name="partner_hangye">所属行业</string>
+    <string name="partner_country">国籍</string>
+    <string name="partner_address">地址</string>
+    <string name="partner_gonggao">公司公告</string>
+    <string name="partner_supplier">添加为供应商</string>
+    <string name="partner_customer">添加为客户</string>
+    <string name="partner_beizhu">备注名</string>
+    <string name="partner_hezuo">合作方类型</string>
+    <string name="partner_dengji">合作方等级</string>
+    <string name="partner_xiaoshou">销售人员</string>
+    <string name="partner_send">发送订单</string>
+    <string name="partner_kuanxiang">查看款项记录</string>
+    <string name="partner_order">查看订单记录</string>
+    <string name="partner_detail">详情资料</string>
+    <string name="partner_add">添加合作关系</string>
+    <string name="partner_hezuoguanxi">合作关系</string>
+    <string name="partner_add_hezuoguanxi">添加合作关系</string>
 </resources>
