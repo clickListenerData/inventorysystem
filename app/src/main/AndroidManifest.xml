@@ -24,6 +24,7 @@
         <activity android:name=".ui.personal.inventory.MaterialManagerActivity"/>
         <activity android:name=".ui.personal.inventory.MineCompanyActivity"/>
         <activity android:name=".ui.personal.inventory.FinanceActivity"/>
+        <activity android:name=".ui.personal.inventory.AddColorActivity"/>
     </application>
 
 </manifest>

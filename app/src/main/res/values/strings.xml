@@ -88,4 +88,17 @@
     <string name="finance_return_money">总回款</string>
     <string name="finance_returned_money">已回款</string>
     <string name="finance_wait_money">待回款</string>
+
+    <!--添加颜色-->
+    <string name="color_name_txt">颜色名称</string>
+    <string name="color_name_hint">请输入颜色名称</string>
+    <string name="create_add_color_id">以色码创建</string>
+    <string name="color_id_txt">色码</string>
+    <string name="color_id_hint">请输入色码</string>
+    <string name="create_add_color_rgb">以RGB创建</string>
+    <string name="r_hint">请输入r值</string>
+    <string name="g_hint">请输入g值</string>
+    <string name="b_hint">请输入b值</string>
+    <string name="alpha_color_txt">透明度</string>
+    <string name="color_template_txt">以模板创建</string>
 </resources>

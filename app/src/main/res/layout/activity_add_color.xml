@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="#ff0000"/>
+    </FrameLayout>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/color_name_txt"
+        app:input_hint_content="@string/color_name_hint"
+        app:input_enable="true"
+        />
+
+</LinearLayout>
