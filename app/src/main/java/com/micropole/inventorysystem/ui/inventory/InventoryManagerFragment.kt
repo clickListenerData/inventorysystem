@@ -1,8 +1,24 @@
 package com.micropole.inventorysystem.ui.inventory
 
+import android.content.Context
+import android.support.v7.widget.LinearLayoutManager
+import android.view.LayoutInflater
 import android.view.View
+import com.blankj.utilcode.util.FragmentUtils.getFragments
+import com.micropole.baseapplibrary.adapter.DataBindAdapter
+import com.micropole.baseapplibrary.appconst.setListData
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.adapter.IndicatorAdapter
+import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
+import kotlinx.android.synthetic.main.fragment_inventory_manager.*
+import kotlinx.android.synthetic.main.view_inventory_head.view.*
+import net.lucode.hackware.magicindicator.FragmentContainerHelper
+import net.lucode.hackware.magicindicator.MagicIndicator
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView
 
 /**
  * @ClassName       InventoryManagerFragment
@@ -22,5 +38,30 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
     }
 
     override fun initData() {
+        rrv_inventory.mLayoutManager = LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false)
+        rrv_inventory.mAdapter = DataBindAdapter<InventoryGoodsBean>(1,R.layout.item_inventory_goods)
+        rrv_inventory.mAdapter?.isUseEmpty(false)
+
+        rrv_inventory.mAdapter?.setHeaderView(getHeaderView())
+
+        (rrv_inventory.mAdapter as DataBindAdapter<InventoryGoodsBean>).setListData(arrayListOf(InventoryGoodsBean(), InventoryGoodsBean(),InventoryGoodsBean()))
+    }
+
+    fun getHeaderView() : View{
+        val view = LayoutInflater.from(mContext).inflate(R.layout.view_inventory_head, null,false)
+        initMagic(view.magic_inventory)
+        return view
+    }
+
+    fun initMagic(magic : MagicIndicator){
+        val fragmentContainerHelper = FragmentContainerHelper()
+        val commonNavigator = CommonNavigator(mContext)
+        commonNavigator.adapter = IndicatorAdapter(arrayListOf("大衣","短袖","裤子","鞋子")){
+            view,index ->
+            fragmentContainerHelper.handlePageSelected(index,false)
+            //
+        }
+        magic.navigator = commonNavigator
+        fragmentContainerHelper.attachMagicIndicator(magic)
     }
 }

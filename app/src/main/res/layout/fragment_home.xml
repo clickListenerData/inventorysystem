@@ -4,10 +4,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/main_home_txt"/>
+    <include layout="@layout/view_loading"/>
+    <include layout="@layout/view_check_net"/>
+    <include layout="@layout/view_error"/>
+
+    <LinearLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_txt_size"
+                android:text="@string/app_name"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/iv_home_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_home_search"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_4"
+                android:src="@android:drawable/ic_menu_camera"/>
+            <ImageView
+                android:id="@+id/iv_home_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_14"
+                android:src="@android:drawable/ic_menu_search"/>
+        </RelativeLayout>
+
+        <com.micropole.baseapplibrary.widght.RefreshRecyclerView
+            android:id="@+id/rrv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
 
 </FrameLayout>

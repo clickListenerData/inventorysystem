@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="com.micropole.inventorysystem.entity.InventoryGoodsBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/shape_white_gray_r3"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_inventory_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@color/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/iv_inventory_img"
+            app:layout_constraintLeft_toRightOf="@id/iv_inventory_img"
+            app:layout_constraintBottom_toTopOf="@id/tv_inventory_size"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="AW0000"/>
+
+        <TextView
+            android:id="@+id/tv_inventory_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_inventory_id"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_id"
+            app:layout_constraintBottom_toTopOf="@id/tv_inventory_color"
+            android:text="XL"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_inventory_size"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
+            android:text="红"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/tv_inventory_package"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_package"
+            app:layout_constraintTop_toTopOf="@id/iv_inventory_img"
+            app:layout_constraintBottom_toTopOf="@id/tv_inventory_num"
+            android:text="@string/inventory_txt"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_package"
+            app:layout_constraintRight_toRightOf="@id/tv_inventory_package"
+            app:layout_constraintTop_toBottomOf="@id/tv_inventory_txt"
+            app:layout_constraintBottom_toTopOf="@id/tv_inventory_package"
+            android:text="100"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@id/tv_inventory_num"
+            app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
+            android:text="(2箱零2件)"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

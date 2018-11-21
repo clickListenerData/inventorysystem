@@ -4,9 +4,11 @@ import android.content.Context
 import android.graphics.Color
 import android.support.annotation.*
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
+import com.blankj.utilcode.util.ConvertUtils
 import com.micropole.inventorysystem.R
 import kotlinx.android.synthetic.main.view_normal_ll.view.*
 
@@ -69,7 +71,7 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
     }
 
     fun setMainTitleSize(sp : Float){
-        tv_main_title.textSize = sp
+        tv_main_title.setTextSize(TypedValue.COMPLEX_UNIT_PX,sp)
     }
 
     fun setMainTitleSize(@DimenRes id : Int){
@@ -98,7 +100,7 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
     }
 
     fun setCustomTxtSize(sp : Float){
-        tv_custom.textSize = sp
+        tv_custom.setTextSize(TypedValue.COMPLEX_UNIT_PX,sp)
     }
 
     fun setCustomTxtSize(@DimenRes id : Int){

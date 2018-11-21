@@ -9,6 +9,40 @@
 
     <string name="login_txt">登录</string>
 
+    <string name="empty_data">暂无数据</string>
+
+    <string name="search_hint_txt">请输入关键字</string>
+    
+    <!--首页-->
+    <string name="input_storage">入库</string>
+    <string name="output_storage">出库</string>
+    <string name="inventory_detail">进销存明细</string>
+    <string name="to_be_input_goods">待入库商品</string>
+    <string name="current_month_input">当月入库</string>
+    <string name="current_month_output">当月出库</string>
+    <string name="current_month_turnover">当月营业额</string>
+    <string name="to_be_payment">待付款</string>
+    <string name="to_be_received">待收货</string>
+    <string name="to_be_evaluated">待评价</string>
+    <string name="after_sale_order">售后订单</string>
+    <string name="recommend_for_you">为您推荐</string>
+
+    <!--库存管理-->
+    <string name="inventory_goods_count">商品总数</string>
+    <string name="inventory_counts">库存总量</string>
+    <string name="inventory_count_cost">库存总成本</string>
+    <string name="input_goods">商品入库</string>
+    <string name="output_goods">商品出库</string>
+    <string name="new_create_goods">新建商品</string>
+    <string name="order_record">订单记录</string>
+    <string name="inventory_goods">库存商品</string>
+
+    <string name="output_count">出库量</string>
+    <string name="inventory_count_txt">库存量</string>
+    <string name="inventory_txt">库存</string>
+    <string name="time_txt">时间</string>
+    <string name="sales_txt">销量</string>
+
     <!--个人中心-->
     <string name="personal_inventory_system">进销存系统</string>
     <string name="personal_category_manager">分类管理</string>

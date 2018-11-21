@@ -30,6 +30,7 @@ class RefreshRecyclerView@JvmOverloads constructor(context : Context, attrs : At
         }
         value?.bindToRecyclerView(mRecyclerView)
         value?.setEmptyView(R.layout.item_view_empty,this)
+        value?.setHeaderFooterEmpty(true,false)
         field = value
     }
 
