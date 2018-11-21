@@ -1,5 +1,7 @@
 package com.micropole.baseapplibrary.appconst
 
+import android.support.annotation.IdRes
+import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
 import com.bigkoo.convenientbanner.ConvenientBanner
@@ -34,6 +36,12 @@ fun<DATA : Any> BaseQuickAdapter<DATA,out BaseViewHolder>.setListData(data : Lis
         this.setNewData(data)
         this.disableLoadMoreIfNotFullPage()
     }
+}
+
+fun BaseViewHolder.setRvAdapter(@IdRes id : Int,manager : RecyclerView.LayoutManager,adapter : RecyclerView.Adapter<BaseViewHolder>){
+    val view = this.getView<RecyclerView>(id)
+    view.layoutManager = manager
+    view.adapter = adapter
 }
 
 fun setUrl(view:ImageView?,url:String?){

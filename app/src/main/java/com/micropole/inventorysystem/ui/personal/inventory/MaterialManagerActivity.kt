@@ -8,7 +8,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.MaterialBean
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.MaterialConstract
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.MaterialPresent
-import kotlinx.android.synthetic.main.activity_news.*
+import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       MaterialManagerActivity

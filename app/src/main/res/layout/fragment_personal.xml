@@ -153,6 +153,7 @@
                         app:custom_txt_content="12"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_company"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -161,6 +162,7 @@
                         app:custom_txt_content="12"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_finance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"

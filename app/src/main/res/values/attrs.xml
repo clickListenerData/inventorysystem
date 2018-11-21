@@ -19,4 +19,16 @@
         <attr name="bottom_txt_color" format="color"/>
         <attr name="bottom_txt_content" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="InputMsgView">
+        <attr name="title_size" format="float"/>
+        <attr name="title_color" format="color"/>
+        <attr name="title_content" format="string"/>
+        <attr name="input_color" format="color"/>
+        <attr name="input_size" format="float"/>
+        <attr name="input_hint_color" format="color"/>
+        <attr name="input_hint_content" format="string"/>
+        <attr name="input_content" format="string"/>
+        <attr name="input_enable" format="boolean"/>
+    </declare-styleable>
 </resources>

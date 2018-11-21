@@ -8,7 +8,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.ColorBean
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.ColorConstract
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.ColorPresent
-import kotlinx.android.synthetic.main.activity_news.*
+import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       ColorManagerActivity

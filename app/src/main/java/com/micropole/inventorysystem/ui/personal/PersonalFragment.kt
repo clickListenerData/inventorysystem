@@ -2,9 +2,7 @@ package com.micropole.inventorysystem.ui.personal
 
 import android.view.View
 import com.micropole.inventorysystem.R
-import com.micropole.inventorysystem.ui.personal.inventory.CategoryActivity
-import com.micropole.inventorysystem.ui.personal.inventory.ColorManagerActivity
-import com.micropole.inventorysystem.ui.personal.inventory.MaterialManagerActivity
+import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.micropole.inventorysystem.ui.personal.mine.NewsActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
@@ -29,6 +27,9 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_category.setOnClickListener { activity?.startActivity<CategoryActivity>() }
         nll_color.setOnClickListener { activity?.startActivity<ColorManagerActivity>() }
         nll_material.setOnClickListener { activity?.startActivity<MaterialManagerActivity>() }
+        nll_company.setOnClickListener { activity?.startActivity<MineCompanyActivity>() }
+        nll_finance.setOnClickListener { activity?.startActivity<FinanceActivity>() }
+
     }
 
     override fun initData() {

@@ -65,4 +65,27 @@
     <string name="new_create_category">新建分类</string>
     <string name="new_create_color">添加新颜色</string>
     <string name="new_create_material">添加新材质</string>
+    <string name="not_add_company">没有加入任何公司</string>
+    <string name="new_create_company">创建公司</string>
+
+    <!--我的公司-->
+    <string name="company_message">公司信息</string>
+    <string name="company_for_head">公司负责人</string>
+    <string name="company_for_phone">联系方式</string>
+    <string name="company_for_email">邮箱</string>
+    <string name="company_for_industry">所属行业</string>
+    <string name="company_for_country">国籍</string>
+    <string name="company_for_address">地址</string>
+    <string name="company_for_announcement">公司公告</string>
+    
+    <string name="company_btn_look">查看成员列表</string>
+    <string name="company_btn_update">更新公司信息</string>
+    <string name="company_btn_leave">离开该公司</string>
+    <string name="company_btn_add">加入该公司</string>
+    <string name="company_btn_transfer">转让该公司</string>
+    
+    <!--财务管理-->
+    <string name="finance_return_money">总回款</string>
+    <string name="finance_returned_money">已回款</string>
+    <string name="finance_wait_money">待回款</string>
 </resources>

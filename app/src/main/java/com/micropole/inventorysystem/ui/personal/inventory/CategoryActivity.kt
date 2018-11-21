@@ -8,7 +8,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.CategoryBean
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.CategoryConstract
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.CategoryPresent
-import kotlinx.android.synthetic.main.activity_news.*
+import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       CategoryActivity
