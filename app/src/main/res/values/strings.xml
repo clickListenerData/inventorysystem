@@ -61,4 +61,8 @@
     <string name="personal_feed_back">意见反馈</string>
     <string name="personal_mine_about">关于我们</string>
     <string name="personal_login_out">退出登录</string>
+
+    <string name="new_create_category">新建分类</string>
+    <string name="new_create_color">添加新颜色</string>
+    <string name="new_create_material">添加新材质</string>
 </resources>

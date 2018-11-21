@@ -3,12 +3,18 @@ package com.micropole.inventorysystem.ui.home
 import android.support.v7.widget.GridLayoutManager
 import android.view.LayoutInflater
 import android.view.View
+import com.blankj.utilcode.util.ConvertUtils
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.baseapplibrary.appconst.setListData
+import com.micropole.baseapplibrary.appconst.setTurnImage
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.util.SpaceItemDecoration
 import com.micropole.inventorysystem.entity.GoodsBean
+import com.micropole.inventorysystem.util.CustPagerTransformer
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.view_home_head.*
+import kotlinx.android.synthetic.main.view_home_head.view.*
 
 /**
  * @ClassName       HomeFragment
@@ -31,6 +37,7 @@ class HomeFragment : BaseMvpViewFragment() {
         rrv_home.mLayoutManager = GridLayoutManager(mContext,2,GridLayoutManager.VERTICAL,false)
         rrv_home.mAdapter = DataBindAdapter<GoodsBean>(1,R.layout.item_home_goods)
         rrv_home.mAdapter?.isUseEmpty(false)
+        rrv_home.mRecyclerView.addItemDecoration(SpaceItemDecoration())
 
         rrv_home.mAdapter?.setHeaderView(getHeaderView())
 
@@ -39,6 +46,11 @@ class HomeFragment : BaseMvpViewFragment() {
 
     fun getHeaderView() : View {
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_home_head, null, false)
+        view.cb_home.viewPager.pageMargin=26
+        view.cb_home.viewPager.clipToPadding=false
+        view.cb_home.viewPager.setPadding(ConvertUtils.dp2px(36f),0, ConvertUtils.dp2px(36f),0)
+        view.cb_home.viewPager.pageMargin = ConvertUtils.dp2px(20f)
+        view.cb_home.setTurnImage(arrayListOf("12","12","12")).setPageTransformer(CustPagerTransformer(mContext))
         return view
     }
 }

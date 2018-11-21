@@ -7,6 +7,7 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.recyclerview.mvp.BaseRvConstract
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
+import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 import com.xx.baseutilslibrary.common.XxResourceUtil
 
 /**
@@ -17,7 +18,7 @@ import com.xx.baseutilslibrary.common.XxResourceUtil
  * @Date            2018/11/16 14:48
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-abstract class BaseRefreshActivity<T,P : BaseRvConstract.Present> : BaseMvpActivity<P>(), SwipeRefreshLayout.OnRefreshListener {
+abstract class BaseRefreshActivity<T,P : BaseMvpPresenter<*,out BaseRvConstract.View>> : BaseMvpActivity<P>(), SwipeRefreshLayout.OnRefreshListener {
 
     var mCurrentPage = 1
     var refresh : SwipeRefreshLayout? = null
@@ -31,12 +32,14 @@ abstract class BaseRefreshActivity<T,P : BaseRvConstract.Present> : BaseMvpActiv
         val id1 = XxResourceUtil.getId(this, "recycler_view")
         refresh = findViewById(id)
         recyclerView = findViewById(id1)
+        initRv()
         loadData(mCurrentPage)
     }
 
     fun setRvLa(layoutManager: RecyclerView.LayoutManager,adapter: BaseQuickAdapter<T,out BaseViewHolder>){
         recyclerView?.layoutManager = layoutManager
         adapter.setEmptyView(R.layout.item_view_empty,recyclerView)
+        adapter.bindToRecyclerView(recyclerView)
         this.adapter = adapter
         recyclerView?.adapter = adapter
     }
@@ -77,4 +80,6 @@ abstract class BaseRefreshActivity<T,P : BaseRvConstract.Present> : BaseMvpActiv
     }
 
     abstract fun loadData(page : Int)
+
+    abstract fun initRv()
 }

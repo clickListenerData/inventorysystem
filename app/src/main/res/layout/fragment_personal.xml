@@ -27,6 +27,7 @@
                 android:textSize="@dimen/title_txt_size"
                 android:text="@string/main_personal_center"/>
             <ImageView
+                android:id="@+id/iv_news"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center"
@@ -125,6 +126,7 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:orientation="vertical">
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -133,6 +135,7 @@
                         app:custom_txt_content="12"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_color"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -141,6 +144,7 @@
                         app:custom_txt_content="12"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_material"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"

@@ -35,7 +35,7 @@ fun ImageView.loadImag( url: String?, tran: BitmapTransformation? = null, plach:
     val options = RequestOptions().also {
         if (tran != null) it.transform(tran)
         if (plach != 0) it.placeholder(plach) else it.placeholder(R.drawable.image)
-        if (error != 0) it.error(error)
+        if (error != 0) it.error(error) else it.error(R.drawable.image)
         if (isCircle) it.circleCrop()
         if (radio != 0) it.transform(RoundedCorners(radio))
 //        if (radio != 0) it.transform()

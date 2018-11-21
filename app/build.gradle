@@ -71,4 +71,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     implementation project(':baseAppLibrary')
+
+    //圆形图像
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }

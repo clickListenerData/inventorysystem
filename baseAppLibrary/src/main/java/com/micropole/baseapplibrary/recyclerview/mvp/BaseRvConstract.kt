@@ -16,9 +16,4 @@ interface BaseRvConstract {
     interface View : BaseMvpView{
         fun refreshError()
     }
-
-    interface Model{
-    }
-
-    abstract class Present : BaseMvpPresenter<Model,View>(){}
 }
