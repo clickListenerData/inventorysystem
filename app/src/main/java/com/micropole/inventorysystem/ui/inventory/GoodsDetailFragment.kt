@@ -3,9 +3,15 @@ package com.micropole.inventorysystem.ui.inventory
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
+import com.chad.library.adapter.base.BaseViewHolder
+import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.adapter.AddInputAdapter
+import com.micropole.inventorysystem.adapter.inventorydetail.CustomerListAdapter
+import com.micropole.inventorysystem.entity.ColorBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_goods_details.*
 
@@ -33,6 +39,7 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
     }
 
     var mType = ""
+    var mAdapter : RecyclerView.Adapter<out BaseViewHolder>? = null
 
     override fun getFragmentLayoutId(): Int = R.layout.fragment_goods_details
 
@@ -41,15 +48,18 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
         rv_goods_detail.layoutManager = LinearLayoutManager(mContext)
         when(mType){
             INVENTORY_GOODS -> {
-
+                mAdapter = AddInputAdapter()
+                (mAdapter as AddInputAdapter).addHeaderView(getHeadView())
+                (mAdapter as AddInputAdapter).addFooterView(getFootView())
             }
             SALE_DETAILS -> {
-
+                mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_sale_details)
             }
             CUSTOMER_LIST -> {
-
+                mAdapter = CustomerListAdapter()
             }
         }
+        rv_goods_detail.adapter = mAdapter
     }
 
     override fun initEvent(view: View?) {

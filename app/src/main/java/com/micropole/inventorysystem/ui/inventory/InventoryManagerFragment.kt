@@ -40,12 +40,17 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
 
     override fun initData() {
         rrv_inventory.mLayoutManager = LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false)
-        rrv_inventory.mAdapter = DataBindAdapter<InventoryGoodsBean>(1,R.layout.item_inventory_goods)
+        val dataBindAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)
+        rrv_inventory.mAdapter = dataBindAdapter
         rrv_inventory.mAdapter?.isUseEmpty(false)
 
         rrv_inventory.mAdapter?.setHeaderView(getHeaderView())
 
-        (rrv_inventory.mAdapter as DataBindAdapter<InventoryGoodsBean>).setListData(arrayListOf(InventoryGoodsBean(), InventoryGoodsBean(),InventoryGoodsBean()))
+        dataBindAdapter.setListData(arrayListOf(InventoryGoodsBean(), InventoryGoodsBean(),InventoryGoodsBean()))
+
+        dataBindAdapter.setOnItemClickListener { adapter, view, position ->
+            activity?.startActivity<GoodsDetailActivity>()
+        }
     }
 
     fun getHeaderView() : View{
