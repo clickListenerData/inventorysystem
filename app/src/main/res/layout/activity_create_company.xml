@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/text_color_white"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/color666666"
+            android:layout_gravity="center_vertical"
+            android:text="@string/company_cover"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/image"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/company_name"
+        app:input_hint_content="@string/company_name_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="@string/company_country"
+        app:custom_txt_content="@string/company_country_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/company_email"
+        app:input_hint_content="@string/company_email_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/company_industry"
+        app:input_hint_content="@string/company_industry_hint"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@drawable/shape_white_gray_r3"
+        android:text="@string/create_txt"/>
+
+</LinearLayout>

@@ -101,7 +101,45 @@
     <string name="b_hint">请输入b值</string>
     <string name="alpha_color_txt">透明度</string>
     <string name="color_template_txt">以模板创建</string>
-=======
+    
+    <!--创建公司-->
+    <string name="company_cover">公司封面</string>
+    <string name="company_name">公司名称</string>
+    <string name="company_name_hint">请输入公司名称</string>
+    <string name="company_country">公司所在国家</string>
+    <string name="company_country_hint">请选择国家</string>
+    <string name="company_email">公司邮箱</string>
+    <string name="company_email_hint">请输入公司邮箱</string>
+    <string name="company_industry">行业</string>
+    <string name="company_industry_hint">请输入公司经营范围</string>
+    <string name="create_txt">创建</string>
+    <string name="save_txt">保存</string>
+    
+    <string name="invitation_member">已邀请成员</string>
+
+    <!--成员详情-->
+    <string name="member_msg">用户信息</string>
+    <string name="member_phone">联系方式</string>
+    <string name="member_email">邮箱</string>
+    <string name="member_company">所属公司</string>
+    <string name="member_add_time">加入时间</string>
+    <string name="member_birthday">生日</string>
+    <string name="member_custom_setting">自定义设置</string>
+    <string name="member_nick_name">备注名</string>
+    <string name="member_position">职位</string>
+
+    <!--个人信息设置-->
+    <string name="personal_msg_name">姓名</string>
+    <string name="personal_msg_sex">性别</string>
+    <string name="personal_msg_birth">生日</string>
+    <string name="personal_msg_head_img">头像</string>
+    <string name="safety_pwd_setting">登录密码设置</string>
+    <string name="safety_phone_setting">绑定/修改手机号码</string>
+    <string name="safety_auto_login">自动登录</string>
+
+    <string name="feed_back_hint">请输入您的意见或者建议</string>
+    <string name="commit_txt">提交</string>
+    =======
     <string name="back">Back</string>
     <string name="login">登录</string>
     <string name="login_phone">手机号码</string>

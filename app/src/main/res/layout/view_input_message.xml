@@ -27,7 +27,7 @@
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/text_edit_hint"
         android:textColorHint="@color/text_edit_hint"
-        android:text="kevin"
+        android:text=""
         android:gravity="right"/>
 
 </LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/partner_id"
+            android:gravity="center"
+            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/color_333"/>
+        <EditText
+            android:id="@+id/et_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/login_input"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:hint="@string/single_input"
+            android:textSize="@dimen/sp_14"
+            android:padding="6dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/color_333"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center"
+        android:text="@string/sure"
+        android:gravity="center"
+        android:textSize="@dimen/main_txt_size"
+        android:background="@drawable/login_code"
+        android:textColor="@color/color_333"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="@string/invitation_member"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+</LinearLayout>

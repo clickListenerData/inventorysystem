@@ -31,6 +31,11 @@
         <activity android:name=".ui.partnership.PartnerDetailActivity" />
         <activity android:name=".ui.partnership.PartnerDetailTwoActivity"></activity>
         <activity android:name=".ui.personal.inventory.AddColorActivity"/>
+        <activity android:name=".ui.personal.inventory.CreateCompanyActivity"/>
+        <activity android:name=".ui.personal.mine.AboutPersonalActivity"/>
+        <activity android:name=".ui.personal.mine.FeedBackActivity"/>
+        <activity android:name=".ui.personal.mine.PersonalMsgActivity"/>
+        <activity android:name=".ui.personal.mine.SafetySetActivity"/>
     </application>
 
 </manifest>

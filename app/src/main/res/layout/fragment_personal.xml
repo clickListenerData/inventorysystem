@@ -239,6 +239,7 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:orientation="vertical">
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_personal_msg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -247,6 +248,7 @@
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_safety"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -255,6 +257,7 @@
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_feed_back"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -263,6 +266,7 @@
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_about_personal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
