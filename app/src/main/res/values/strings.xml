@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">衣布购</string>
-    
+
     <string name="main_home_txt">首页</string>
     <string name="main_inventory_manager">库存管理</string>
     <string name="main_partner_ship">合作关系</string>
@@ -12,7 +12,7 @@
     <string name="empty_data">暂无数据</string>
 
     <string name="search_hint_txt">请输入关键字</string>
-    
+
     <!--首页-->
     <string name="input_storage">入库</string>
     <string name="output_storage">出库</string>
@@ -26,6 +26,32 @@
     <string name="to_be_evaluated">待评价</string>
     <string name="after_sale_order">售后订单</string>
     <string name="recommend_for_you">为您推荐</string>
+    <string name="wait_treasury">待入库订单数</string>
+    <string name="chuli">正在处理订单</string>
+    <string name="zongliang">商品总量</string>
+    <string name="all_value">总价值</string>
+    <string name="rukudan">入库单</string>
+    <string name="chukudan">出库单</string>
+    <string name="tuihui">退回订单</string>
+    <string name="guaqi">订单挂起</string>
+    <string name="shop_out">商品出库</string>
+    <string name="shop_in">商品入库</string>
+    <string name="chuanjian">创建订单</string>
+    <string name="ruku_shop">手动入库商品</string>
+    <string name="select_shop">选择商品</string>
+    <string name="select_customer">选择客户</string>
+    <string name="select_order">订单选项</string>
+    <string name="shuidian">税点</string>
+    <string name="shuru_shuidian">请输入税点(选填)</string>
+    <string name="shur_fujiafeiyong">请输入附加费用(选填)</string>
+    <string name="fujiafeiyong">附加费用</string>
+    <string name="youhui">优惠</string>
+    <string name="beizhu">备注</string>
+    <string name="shur_beizhu">请输入备注(选填)</string>
+    <string name="shur_youhui">请输入优惠金额(选填)</string>
+    <string name="now_order">立即下单</string>
+    <string name="guaqinow">挂起</string>
+    <string name="ruku_shops">点击选择要入库的商品</string>
 
     <!--库存管理-->
     <string name="inventory_goods_count">商品总数</string>
@@ -77,13 +103,13 @@
     <string name="company_for_country">国籍</string>
     <string name="company_for_address">地址</string>
     <string name="company_for_announcement">公司公告</string>
-    
+
     <string name="company_btn_look">查看成员列表</string>
     <string name="company_btn_update">更新公司信息</string>
     <string name="company_btn_leave">离开该公司</string>
     <string name="company_btn_add">加入该公司</string>
     <string name="company_btn_transfer">转让该公司</string>
-    
+
     <!--财务管理-->
     <string name="finance_return_money">总回款</string>
     <string name="finance_returned_money">已回款</string>
@@ -101,7 +127,7 @@
     <string name="b_hint">请输入b值</string>
     <string name="alpha_color_txt">透明度</string>
     <string name="color_template_txt">以模板创建</string>
-    
+
     <!--创建公司-->
     <string name="company_cover">公司封面</string>
     <string name="company_name">公司名称</string>
@@ -114,7 +140,7 @@
     <string name="company_industry_hint">请输入公司经营范围</string>
     <string name="create_txt">创建</string>
     <string name="save_txt">保存</string>
-    
+
     <string name="invitation_member">已邀请成员</string>
 
     <!--成员详情-->
@@ -196,6 +222,7 @@
     <string name="btn_edit_goods">编辑商品</string>
     <string name="btn_delete_goods">删除商品</string>
     <string name="btn_create_qr_code">生成二维码</string>
+    =======
     =======
     <string name="back">Back</string>
     <string name="login">登录</string>

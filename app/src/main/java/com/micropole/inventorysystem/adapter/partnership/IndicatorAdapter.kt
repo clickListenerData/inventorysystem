@@ -1,4 +1,4 @@
-package com.micropole.inventorysystem.adapter
+package com.micropole.inventorysystem.adapter.partnership
 
 import android.content.Context
 import android.graphics.Color
