@@ -5,7 +5,9 @@ import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.home.InTreasuryAdapter
+import com.micropole.inventorysystem.ui.inventory.input.GoodsInputActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_in_treasury.*
 import kotlinx.android.synthetic.main.view_title.*
 /**
@@ -40,6 +42,7 @@ class InTreasuryActivity : BaseMvpViewActivity() {
      * 初始化事件
      */
     override fun initEvent() {
+        tv_chuangjian.setOnClickListener { startActivity<GoodsInputActivity>() }
     }
     companion object {
         fun startInTreasuryActivity(context:Context){

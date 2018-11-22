@@ -184,6 +184,7 @@
     <!--手动入库-->
     <string name="new_add_inventory">新增的库存</string>
     <string name="multiple_line_input">多行输入</string>
+    <string name="inventory_by_hand">手动入库商品</string>
 
     <!--进销存明细-->
     <string name="inventory_detail_time">时间</string>
