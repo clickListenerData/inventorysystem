@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:divider="@drawable/shape_line_drawable"
+            android:showDividers="middle">
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/new_goods_name"
+                app:input_enable="true"/>
+            <com.micropole.inventorysystem.widght.NormalLlView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:main_txt_content="@string/new_goods_category"/>
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/new_goods_id"
+                app:input_enable="true"/>
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/new_goods_cost_price"
+                app:input_enable="true"/>
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/new_goods_retail_price"
+                app:input_enable="true"/>
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/new_goods_remark"
+                app:input_hint_content="@string/optional_txt"
+                app:input_enable="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_10"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/main_txt_size"
+                    android:textColor="@color/color666666"
+                    android:text="@string/new_goods_color"
+                    android:layout_marginLeft="@dimen/dp_10"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="#ff0000"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_media_play"
+                    android:layout_marginRight="@dimen/dp_10"/>
+            </LinearLayout>
+
+
+            <com.micropole.inventorysystem.widght.NormalLlView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:main_txt_content="@string/new_goods_size"
+                app:custom_txt_content="XL/XXL"/>
+            <com.micropole.inventorysystem.widght.NormalLlView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:main_txt_content="@string/new_goods_material"
+                app:custom_txt_content=""/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_10"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/main_txt_size"
+                    android:textColor="@color/color666666"
+                    android:text="@string/new_goods_img"
+                    android:layout_marginLeft="@dimen/dp_14"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@color/colorPrimary"
+                    android:layout_marginRight="@dimen/dp_10"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_media_play"
+                    android:layout_marginRight="@dimen/dp_10"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginLeft="@dimen/dp_72"
+                android:layout_marginRight="@dimen/dp_72"
+                android:text="@string/save_txt"
+                android:background="@drawable/shape_white_gray_r3"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

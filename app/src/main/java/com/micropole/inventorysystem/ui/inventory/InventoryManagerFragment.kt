@@ -11,6 +11,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.fragment_inventory_manager.*
 import kotlinx.android.synthetic.main.view_inventory_head.view.*
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
@@ -50,6 +51,7 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
     fun getHeaderView() : View{
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_inventory_head, null,false)
         initMagic(view.magic_inventory)
+        view.tv_new_goods.setOnClickListener { activity?.startActivity<NewGoodsActivity>() }
         return view
     }
 

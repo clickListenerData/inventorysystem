@@ -139,6 +139,63 @@
 
     <string name="feed_back_hint">请输入您的意见或者建议</string>
     <string name="commit_txt">提交</string>
+
+    <!--新建商品-->
+    <string name="new_goods_name">商品名称</string>
+    <string name="new_goods_category">所属分类</string>
+    <string name="new_goods_id">货号</string>
+    <string name="new_goods_cost_price">成本价</string>
+    <string name="new_goods_retail_price">零售价</string>
+    <string name="new_goods_remark">备注</string>
+    <string name="new_goods_color">选择颜色</string>
+    <string name="new_goods_size">规格管理</string>
+    <string name="new_goods_material">选择材质</string>
+    <string name="new_goods_img">选择封面</string>
+    <string name="material_input_percent">请输入材质占比</string>
+
+    <string name="optional_txt">选填</string>
+
+    <!--手动入库-->
+    <string name="new_add_inventory">新增的库存</string>
+    <string name="multiple_line_input">多行输入</string>
+
+    <!--进销存明细-->
+    <string name="inventory_detail_time">时间</string>
+    <string name="inventory_detail_count">商品量</string>
+    <string name="inventory_detail_price">金额</string>
+
+    <!--商品详情-->
+    <string name="goods_detail_msg">商品信息</string>
+    <string name="goods_detail_super">供应商</string>
+    <string name="material_txt">材质</string>
+    <string name="purchase_price">进货价</string>
+    <string name="size_count">规格数量</string>
+
+    <!--编辑商品-->
+    <string name="edit_category">所属分类</string>
+    <string name="edit_category_hint">请选择分类</string>
+    <string name="inventory_warning">库存预警</string>
+    <string name="inventory_warning_hint">请填写预警值（选填）</string>
+    <string name="remark_hint">请填写备注（选填）</string>
+    <string name="correlation_goods">该商品已经关联s%</string>
+    <string name="look_goods_detail">查看商品详情</string>
+    <string name="input_txt">请输入s%</string>
+
+    <string name="goods_inventory">商品/库存</string>
+    <string name="goods_sale_detail">销售明细</string>
+    <string name="goods_customer_list">客户名单</string>
+
+    <string name="old_goods_id">原货号</string>
+    <string name="goods_detail_package_percent">包装配比</string>
+    <string name="category_txt">分类</string>
+    <string name="goods_create_time">商品创建时间</string>
+    <string name="goods_size_inventory">规格库存</string>
+
+    <string name="btn_add_inventory">新增入库</string>
+    <string name="btn_output_inventory">出库</string>
+    <string name="btn_edit_goods">编辑商品</string>
+    <string name="btn_delete_goods">删除商品</string>
+    <string name="btn_create_qr_code">生成二维码</string>
     =======
     <string name="back">Back</string>
     <string name="login">登录</string>

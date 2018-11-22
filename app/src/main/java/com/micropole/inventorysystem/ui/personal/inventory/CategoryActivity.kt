@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       CategoryActivity
- * @Description     分类管理
+ * @Description     分类管理  选择分类
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/21 14:07
