@@ -12,4 +12,5 @@
     <color name="text_color_white">#ffffff</color>
     <color name="text_edit_hint">#999999</color>
     <color name="app_color_bg">#ededed</color>
+    <color name="color_333">#333333</color>
 </resources>

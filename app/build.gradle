@@ -29,7 +29,7 @@ android {
             storeFile file('MicroPoleTD.jks')
             storePassword 'android'
         }
-        debug  {
+        debug {
             keyAlias 'micro pole td'
             keyPassword 'android'
             storeFile file('MicroPoleTD.jks')
@@ -60,7 +60,7 @@ android {
         exclude 'META-INF/rxjava.properties'
     }
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }

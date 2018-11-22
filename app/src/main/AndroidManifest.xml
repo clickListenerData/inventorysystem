@@ -24,6 +24,12 @@
         <activity android:name=".ui.personal.inventory.MaterialManagerActivity"/>
         <activity android:name=".ui.personal.inventory.MineCompanyActivity"/>
         <activity android:name=".ui.personal.inventory.FinanceActivity"/>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.login.ForgetActivity" />
+        <activity android:name=".ui.partnership.AddPartnerActivity" />
+        <activity android:name=".ui.partnership.PartnerDetailActivity" />
+        <activity android:name=".ui.partnership.PartnerDetailTwoActivity"></activity>
         <activity android:name=".ui.personal.inventory.AddColorActivity"/>
     </application>
 

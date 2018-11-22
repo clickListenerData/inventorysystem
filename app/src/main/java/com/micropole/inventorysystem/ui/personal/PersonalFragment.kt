@@ -4,8 +4,9 @@ import android.view.View
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.micropole.inventorysystem.ui.personal.mine.NewsActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
+import com.micropole.inventorysystem.ui.login.LoginActivity
+import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_personal.*
 
 /**
@@ -30,6 +31,7 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_company.setOnClickListener { activity?.startActivity<MineCompanyActivity>() }
         nll_finance.setOnClickListener { activity?.startActivity<FinanceActivity>() }
 
+        tv_title.setOnClickListener {  LoginActivity.startLoginActivity(mContext) }
     }
 
     override fun initData() {
