@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/login_input"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginLeft="@dimen/dp_10">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10">
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234563565"
+            android:textColor="@color/color666666"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:id="@+id/tv_ruku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rukudan"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color666666"
+            android:textSize="10sp"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-11-1 8：8"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color666666"
+            android:textSize="10sp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优衣库"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10">
+
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <TextView
+            android:id="@+id/tv_guaqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuihui"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:background="@drawable/login_code"/>
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥300     共2件"
+            android:textColor="@color/color666666"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_14"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

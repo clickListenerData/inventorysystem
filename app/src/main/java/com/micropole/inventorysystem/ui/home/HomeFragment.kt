@@ -51,6 +51,12 @@ class HomeFragment : BaseMvpViewFragment() {
         view.cb_home.viewPager.setPadding(ConvertUtils.dp2px(36f),0, ConvertUtils.dp2px(36f),0)
         view.cb_home.viewPager.pageMargin = ConvertUtils.dp2px(20f)
         view.cb_home.setTurnImage(arrayListOf("12","12","12")).setPageTransformer(CustPagerTransformer(mContext))
+        view.tv_chuku.setOnClickListener {
+                OutTreasuryActivity.startOutTreasuryActivity(mContext)
+        }
+        view.tv_ruku.setOnClickListener {
+            InTreasuryActivity.startInTreasuryActivity(mContext)
+        }
         return view
     }
 }

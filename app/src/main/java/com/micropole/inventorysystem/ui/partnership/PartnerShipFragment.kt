@@ -3,7 +3,7 @@ package com.micropole.inventorysystem.ui.partnership
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.micropole.inventorysystem.R
-import com.micropole.inventorysystem.adapter.PartnerShipAdapter
+import com.micropole.inventorysystem.adapter.partnership.PartnerShipAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_partner_ship.*
 import kotlinx.android.synthetic.main.view_title.*
@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.view_title.*
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class PartnerShipFragment : BaseMvpViewFragment() {
-    var adapter=PartnerShipAdapter()
+    var adapter= PartnerShipAdapter()
     override fun getFragmentLayoutId(): Int  = R.layout.fragment_partner_ship
 
     override fun initView(view: View?) {

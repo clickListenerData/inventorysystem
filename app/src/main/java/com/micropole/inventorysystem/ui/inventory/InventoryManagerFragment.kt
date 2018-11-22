@@ -1,14 +1,12 @@
 package com.micropole.inventorysystem.ui.inventory
 
-import android.content.Context
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
-import com.blankj.utilcode.util.FragmentUtils.getFragments
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.baseapplibrary.appconst.setListData
 import com.micropole.inventorysystem.R
-import com.micropole.inventorysystem.adapter.IndicatorAdapter
+import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
@@ -17,9 +15,6 @@ import kotlinx.android.synthetic.main.view_inventory_head.view.*
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView
 
 /**
  * @ClassName       InventoryManagerFragment
@@ -58,9 +53,8 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
     fun initMagic(magic : MagicIndicator){
         val fragmentContainerHelper = FragmentContainerHelper()
         val commonNavigator = CommonNavigator(mContext)
-        commonNavigator.adapter = IndicatorAdapter(arrayListOf("大衣","短袖","裤子","鞋子")){
-            view,index ->
-            fragmentContainerHelper.handlePageSelected(index,false)
+        commonNavigator.adapter = IndicatorAdapter(arrayListOf("大衣", "短袖", "裤子", "鞋子")) { view, index ->
+            fragmentContainerHelper.handlePageSelected(index, false)
             //
         }
         magic.navigator = commonNavigator

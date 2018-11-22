@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ui.personal.mine.NewsActivity"/>
         <activity android:name=".ui.personal.inventory.CategoryActivity"/>
         <activity android:name=".ui.personal.inventory.ColorManagerActivity"/>
@@ -31,7 +30,11 @@
         <activity android:name=".ui.login.ForgetActivity" />
         <activity android:name=".ui.partnership.AddPartnerActivity" />
         <activity android:name=".ui.partnership.PartnerDetailActivity" />
-        <activity android:name=".ui.partnership.PartnerDetailTwoActivity"/>
+        <activity android:name=".ui.partnership.PartnerDetailTwoActivity" />
+        <activity android:name=".ui.home.OutTreasuryActivity" />
+        <activity android:name=".ui.home.InTreasuryActivity" />
+        <activity android:name=".ui.home.OutTreasuryDetailActivity" />
+        <activity android:name=".ui.home.NewBuildOrderActivity"></activity>
         <activity android:name=".ui.personal.inventory.AddColorActivity"/>
         <activity android:name=".ui.personal.inventory.CreateCompanyActivity"/>
         <activity android:name=".ui.personal.mine.AboutPersonalActivity"/>
