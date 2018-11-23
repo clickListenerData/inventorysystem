@@ -48,6 +48,7 @@
         <activity android:name=".ui.inventory.InventoryGoodsDetailActivity"/>
         <activity android:name=".ui.inventory.input.EditGoodsActivity"/>
         <activity android:name=".ui.inventory.GoodsDetailActivity"/>
+        <activity android:name=".ui.personal.inventory.MemberListActivity"/>
     </application>
 
 </manifest>

@@ -85,6 +85,7 @@
     <string name="personal_mine_message">个人信息设置</string>
     <string name="personal_safety_setting">安全性设置</string>
     <string name="personal_feed_back">意见反馈</string>
+    <string name="personal_contact_service">联系客服</string>
     <string name="personal_mine_about">关于我们</string>
     <string name="personal_login_out">退出</string>
 
@@ -95,14 +96,14 @@
     <string name="new_create_company">创建公司</string>
 
     <!--我的公司-->
-    <string name="company_message">公司信息</string>
+    <string name="company_message">企业信息</string>
     <string name="company_for_head">公司负责人</string>
     <string name="company_for_phone">联系方式</string>
     <string name="company_for_email">邮箱</string>
     <string name="company_for_industry">所属行业</string>
     <string name="company_for_country">国籍</string>
     <string name="company_for_address">地址</string>
-    <string name="company_for_announcement">公司公告</string>
+    <string name="company_for_announcement">公司公告:</string>
 
     <string name="company_btn_look">查看成员列表</string>
     <string name="company_btn_update">更新公司信息</string>
@@ -153,6 +154,10 @@
     <string name="member_custom_setting">自定义设置</string>
     <string name="member_nick_name">备注名</string>
     <string name="member_position">职位</string>
+
+    <string name="remove_member">移除该成员</string>
+    <string name="add_member">添加该成员</string>
+    <string name="add_new_member">添加新成员</string>
 
     <!--个人信息设置-->
     <string name="personal_msg_name">姓名</string>

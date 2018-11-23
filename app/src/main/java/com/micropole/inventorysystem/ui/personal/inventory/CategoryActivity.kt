@@ -12,13 +12,16 @@ import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       CategoryActivity
- * @Description     分类管理  选择分类
+ * @Description     分类管理  选择分类  选择分类下商品
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/21 14:07
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Present>(),CategoryConstract.View {
+
+
+
     override fun loadData(page: Int) {
         getPresenter().getCategoryList()
     }
