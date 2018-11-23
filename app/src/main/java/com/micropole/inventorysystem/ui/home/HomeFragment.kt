@@ -48,9 +48,9 @@ class HomeFragment : BaseMvpViewFragment() {
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_home_head, null, false)
         view.cb_home.viewPager.pageMargin=26
         view.cb_home.viewPager.clipToPadding=false
-        view.cb_home.viewPager.setPadding(ConvertUtils.dp2px(36f),0, ConvertUtils.dp2px(36f),0)
-        view.cb_home.viewPager.pageMargin = ConvertUtils.dp2px(20f)
-        view.cb_home.setTurnImage(arrayListOf("12","12","12")).setPageTransformer(CustPagerTransformer(mContext))
+        view.cb_home.viewPager.setPadding(ConvertUtils.dp2px(24f),ConvertUtils.dp2px(10f), ConvertUtils.dp2px(24f),ConvertUtils.dp2px(10f))
+        view.cb_home.viewPager.pageMargin = ConvertUtils.dp2px(14f)
+        view.cb_home.setTurnImage(arrayListOf("12","12","12"),isConer = ConvertUtils.dp2px(6f)).setPageTransformer(CustPagerTransformer(mContext))
         view.tv_chuku.setOnClickListener {
                 OutTreasuryActivity.startOutTreasuryActivity(mContext)
         }

@@ -74,4 +74,5 @@ dependencies {
 
     //圆形图像
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
 }

@@ -33,7 +33,7 @@ public class BindAdapter {
 
     @BindingAdapter(value = {"android:convenient_banner_data","android:convenient_banner_is_turn"},requireAll = false)
     public static void setBannerData(ConvenientBanner view, List<String> data,Long isTurn){
-        com.micropole.baseapplibrary.appconst.AdapterKt.setTurnImage(view,data,isTurn);
+        com.micropole.baseapplibrary.appconst.AdapterKt.setTurnImage(view,data,isTurn,false,0);
     }
 
     @BindingAdapter(value = {"android:rv_layout_manager","android:rv_adapter"},requireAll = true)

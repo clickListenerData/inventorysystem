@@ -17,7 +17,7 @@ import com.chad.library.adapter.base.BaseViewHolder
  * @Date            2018/11/8 10:07
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class DataBindAdapter<T>(val brId : Int, @LayoutRes val id:Int, var br:Int = -1) : BaseQuickAdapter<T,DataBindAdapter.DataBindViewHolder>(id) {
+open class DataBindAdapter<T>(val brId : Int, @LayoutRes val id:Int, var br:Int = -1) : BaseQuickAdapter<T,DataBindAdapter.DataBindViewHolder>(id) {
     override fun convert(helper: DataBindViewHolder?, item: T) {
         helper?.binding?.setVariable(brId,item)
         if (br >= 0) helper?.binding?.setVariable(br,{view : View -> onItemChildClickListener?.onItemChildClick(this,view,helper.adapterPosition)})

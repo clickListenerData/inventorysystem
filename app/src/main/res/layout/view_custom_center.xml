@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/color666666"
-        android:textSize="@dimen/main_txt_size"
-        android:text="1111"/>
+        android:textSize="@dimen/txt_11"
+        android:text=""/>
 
     <TextView
         android:id="@+id/tv_custom_bottom"
@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp_4"
         android:textSize="@dimen/big_txt_size"
-        android:textColor="@color/color888888"
-        android:text="11"/>
+        android:textColor="@color/title_color"
+        android:text=""/>
 
 </LinearLayout>

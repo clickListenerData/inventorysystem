@@ -23,10 +23,10 @@ class SpaceItemDecoration : RecyclerView.ItemDecoration() {
         }else{
             if (parent!!.getChildLayoutPosition(view) % 2 == 0){  //第二列
                 outRect?.right = ConvertUtils.dp2px(14f)
-                outRect?.left = ConvertUtils.dp2px(4f)
+                outRect?.left = ConvertUtils.dp2px(7f)
             }else{  //第一列
                 outRect?.left = ConvertUtils.dp2px(14f)
-                outRect?.right = ConvertUtils.dp2px(4f)
+                outRect?.right = ConvertUtils.dp2px(7f)
             }
         }
     }

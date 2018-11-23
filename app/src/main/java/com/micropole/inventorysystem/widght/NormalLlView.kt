@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Build
 import android.support.annotation.*
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -66,6 +67,13 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
                 iv_main_title.visibility = View.GONE
             }else{
                 iv_main_title.setImageDrawable(drawable)
+            }
+        }
+
+        if (a.hasValue(R.styleable.NormalLlView_custom_txt_drawable)){
+            val drawable = a.getDrawable(R.styleable.NormalLlView_custom_txt_drawable)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                tv_custom.setCompoundDrawablesRelativeWithIntrinsicBounds(null,null,drawable,null)
             }
         }
     }

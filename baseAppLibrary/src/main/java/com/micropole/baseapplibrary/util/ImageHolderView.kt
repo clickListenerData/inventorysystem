@@ -11,11 +11,11 @@ import com.xx.baseutilslibrary.extensions.loadImag
  * date: 2018/8/16
  * describe:
  */
-class ImageHolderView : Holder<String>{
+class ImageHolderView(val isCircle : Boolean = false,val isConer : Int = 0) : Holder<String>{
     var imageview : ImageView? = null
 
     override fun UpdateUI(context: Context?, position: Int, data: String?) {
-        imageview?.loadImag(data ?: "",isCircle = false)
+        imageview?.loadImag(data ?: "",isCircle = isCircle,radio = isConer)
     }
 
     override fun createView(context: Context?): View {

@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/title_height"
-    android:background="@android:color/white">
+    android:background="#f9f9f9">
 
     <ImageView
         android:id="@+id/ib_back"
@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/title_color"
+        android:textStyle="bold"
         android:textSize="@dimen/title_txt_size"
         android:text="@string/personal_mine_company"/>
 

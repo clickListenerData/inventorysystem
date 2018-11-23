@@ -11,6 +11,8 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_gray_r3"
+        android:padding="@dimen/dp_14"
         android:layout_marginTop="@dimen/dp_10">
         <ImageView
             android:id="@+id/iv_goods_img"
@@ -26,23 +28,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
+            android:textColor="@color/title_color"
             android:text="@string/app_name"
             app:layout_constraintTop_toBottomOf="@id/iv_goods_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="@dimen/dp_4"
-            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_10"
             />
         <TextView
+            android:id="@+id/tv_goods_des"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_goods_name"
-            android:textSize="@dimen/main_txt_size"
+            android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
-            android:text="¥200"
-            android:layout_marginLeft="@dimen/dp_4"
+            android:text="des"
+            android:layout_marginTop="@dimen/dp_4"
+            />
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textSize="@dimen/txt_17"
+            android:textColor="@color/txt_price"
+            app:layout_constraintTop_toBottomOf="@id/tv_goods_des"
+            android:text="¥ 200"
             />
     </android.support.constraint.ConstraintLayout>
 

@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
             name="data"
             type="com.micropole.inventorysystem.entity.NewsBean"/>
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    <android.support.v4.widget.SlidingPaneLayout
+        android:id="@+id/slid_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:divider="@drawable/shape_line_drawable"
-        android:showDividers="beginning|end">
+        android:layout_height="70dp"
+        android:layoutDirection="rtl"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
-            android:text="入库通知"
-            android:layout_marginTop="@dimen/dp_10"/>
+        <FrameLayout
+            android:id="@+id/fl_menu_del"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_color_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_delete"/>
+        </FrameLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_10"
-            android:text="2018"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="@dimen/dp_14"
+            >
+            <ImageView
+                android:id="@+id/iv_news_img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                android:src="@color/colorPrimary"
+                />
+            <TextView
+                android:id="@+id/tv_news_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/iv_news_img"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/txt_15"
+                android:textColor="@color/title_color"
+                android:text="name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/tv_news_name"
+                android:textColor="@color/text_edit_hint"
+                android:textSize="@dimen/txt_13"
+                android:text="des"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="@dimen/txt_11"
+                android:textColor="@color/text_edit_hint"
+                android:text="time"/>
+        </android.support.constraint.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="des"/>
-    </LinearLayout>
+    </android.support.v4.widget.SlidingPaneLayout>
 </layout>

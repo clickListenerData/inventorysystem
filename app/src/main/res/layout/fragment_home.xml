@@ -18,7 +18,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_height"
-            android:background="@android:color/white"
+            android:background="#F9F9F9"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/iv_home_search"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_14"
                 android:src="@android:drawable/ic_menu_camera"/>
             <ImageView
                 android:id="@+id/iv_home_search"

@@ -48,11 +48,11 @@ fun setUrl(view:ImageView?,url:String?){
     view?.loadImag(url)
 }
 
-fun ConvenientBanner<*>.setTurnImage(mImgs:List<String>,isturn : Long = 2000) : ConvenientBanner<*>{
+fun ConvenientBanner<*>.setTurnImage(mImgs:List<String>,isturn : Long = 2000,isCircle : Boolean = false,isConer : Int = 0) : ConvenientBanner<*>{
     this as ConvenientBanner<String>
-    setPages({ImageHolderView()} , mImgs)
+    setPages({ImageHolderView(isCircle,isConer)} , mImgs)
     setPageIndicator(intArrayOf(R.drawable.shape_indicator_gray, R.drawable.shape_indicator_red))
-    setPointViewVisible(true)
+    setPointViewVisible(false)
     if (isturn != 0L) startTurning(isturn)
 
     return this

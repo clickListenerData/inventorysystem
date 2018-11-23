@@ -2,7 +2,10 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.os.Build
 import android.support.annotation.ColorInt
+import android.support.v4.widget.TextViewCompat.setCompoundDrawablesRelative
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -44,6 +47,11 @@ class CustomCenterView@JvmOverloads constructor(context : Context, attrs : Attri
             setTopTxtContent(string)
         }
 
+        if (a.hasValue(R.styleable.CustomCenterView_top_txt_drawable)){
+            val drawable = a.getDrawable(R.styleable.CustomCenterView_top_txt_drawable)
+            setTopTxtDrawable(drawable)
+        }
+
         if (a.hasValue(R.styleable.CustomCenterView_bottom_txt_size)){
             val dimension = a.getDimension(R.styleable.CustomCenterView_bottom_txt_size,14f)
             setBottomTxtSize(dimension)
@@ -70,6 +78,12 @@ class CustomCenterView@JvmOverloads constructor(context : Context, attrs : Attri
 
     fun setTopTxtContent(content : String){
         tv_custom_top.text = content
+    }
+
+    fun setTopTxtDrawable(drawable : Drawable){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            tv_custom_top.setCompoundDrawablesRelativeWithIntrinsicBounds(null,drawable,null,null)
+        }
     }
 
     fun setBottomTxtSize(sp : Float){

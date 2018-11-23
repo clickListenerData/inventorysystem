@@ -9,12 +9,14 @@
         <attr name="custom_txt_size" format="dimension"/>
         <attr name="custom_txt_color" format="color"/>
         <attr name="custom_txt_content" format="string"/>
+        <attr name="custom_txt_drawable" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="CustomCenterView">
         <attr name="top_txt_size" format="dimension"/>
         <attr name="top_txt_color" format="color"/>
         <attr name="top_txt_content" format="string"/>
+        <attr name="top_txt_drawable" format="reference"/>
         <attr name="bottom_txt_size" format="dimension"/>
         <attr name="bottom_txt_color" format="color"/>
         <attr name="bottom_txt_content" format="string"/>

@@ -12,12 +12,14 @@
         android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white">
+        android:background="@color/app_color_bg"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_14">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
+            android:background="@drawable/shape_white_gray_r3" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>
