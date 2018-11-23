@@ -42,16 +42,18 @@
         android:layout_marginTop="@dimen/dp_14">
 
         <TextView
+            android:id="@+id/tv_ruku"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:drawableTop="@android:drawable/ic_menu_crop"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
+            android:gravity="center"
             android:text="@string/input_goods"
-            android:gravity="center"/>
+            android:textColor="@color/color666666"
+            android:textSize="@dimen/main_txt_size" />
 
         <TextView
+            android:id="@+id/tv_chuku"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

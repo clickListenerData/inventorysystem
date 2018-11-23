@@ -8,6 +8,8 @@ import com.micropole.baseapplibrary.appconst.setListData
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
+import com.micropole.inventorysystem.ui.home.InTreasuryActivity
+import com.micropole.inventorysystem.ui.home.OutTreasuryActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.fragment_inventory_manager.*
@@ -52,6 +54,12 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_inventory_head, null,false)
         initMagic(view.magic_inventory)
         view.tv_new_goods.setOnClickListener { activity?.startActivity<NewGoodsActivity>() }
+        view.tv_ruku.setOnClickListener {
+            InTreasuryActivity.startInTreasuryActivity(mContext)
+        }
+        view.tv_chuku.setOnClickListener {
+            OutTreasuryActivity.startOutTreasuryActivity(mContext)
+        }
         return view
     }
 

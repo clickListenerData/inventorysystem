@@ -3,6 +3,11 @@ package com.micropole.inventorysystem.ui.home
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.view.MotionEvent
+import android.view.View
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.home.InTreasuryAdapter
 import com.micropole.inventorysystem.ui.inventory.input.GoodsInputActivity
@@ -36,6 +41,12 @@ class InTreasuryActivity : BaseMvpViewActivity() {
         recyclerView.adapter=adapter
         recyclerView.isNestedScrollingEnabled=false
         adapter.setNewData(arrayListOf("",""))
+        recyclerView.addOnItemTouchListener(object : OnItemClickListener(){
+            override fun onSimpleItemClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
+                InTreasuryDetailActivity.startInTreasuryDetailActivity(mContext)
+            }
+
+        })
     }
 
     /**

@@ -5,6 +5,10 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
+import android.widget.AdapterView
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.home.OutTreasuryAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
@@ -36,9 +40,13 @@ class OutTreasuryActivity : BaseMvpViewActivity() {
         recyclerView.adapter=adapter
         recyclerView.isNestedScrollingEnabled=false
         adapter.setNewData(arrayListOf("",""))
-        adapter.setOnItemClickListener { adapter, view, position ->
-            OutTreasuryDetailActivity.startOutTreasuryDetailActivity(this)
-        }
+        recyclerView.addOnItemTouchListener(object : OnItemClickListener(){
+            override fun onSimpleItemClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
+                OutTreasuryDetailActivity.startOutTreasuryDetailActivity(mContext)
+            }
+
+        })
+
     }
 
     /**

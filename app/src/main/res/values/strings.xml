@@ -40,6 +40,7 @@
     <string name="ruku_shop">手动入库商品</string>
     <string name="select_shop">选择商品</string>
     <string name="select_customer">选择客户</string>
+    <string name="gonyingshang">供应商</string>
     <string name="select_order">订单选项</string>
     <string name="shuidian">税点</string>
     <string name="shuru_shuidian">请输入税点(选填)</string>
@@ -223,13 +224,16 @@
     <string name="btn_edit_goods">编辑商品</string>
     <string name="btn_delete_goods">删除商品</string>
     <string name="btn_create_qr_code">生成二维码</string>
-    =======
-    =======
     <string name="back">Back</string>
     <string name="login">登录</string>
     <string name="login_phone">手机号码</string>
+    <string name="login_phone_old">旧手机号</string>
+    <string name="login_phone_new">新手机号</string>
     <string name="single_input">单行输入</string>
     <string name="login_pw">密码</string>
+    <string name="set_pw">原密码</string>
+    <string name="set_new_pw">新密码</string>
+    <string name="set_new_surepw">确认密码</string>
     <string name="login_wx">微信快捷登陆</string>
     <string name="login_register">注册账号</string>
     <string name="login_forget_pw">忘记密码?</string>
@@ -245,6 +249,7 @@
     <string name="reg_tian_code">请输入验证码</string>
     <string name="reg_code">验证码</string>
     <string name="reg_get_code">获取验证码</string>
+    <string name="reg_tishi">绑定手机号后，手机号将作为您的登录账号</string>
     <string name="reg_tian_pw">请输入新密码</string>
     <string name="reg_tsure_pw">请再次确认密码</string>
     <string name="reg_pw">新密码</string>
@@ -252,6 +257,7 @@
     <string name="reg_forget">忘记密码</string>
     <string name="reg_register">注册账号</string>
     <string name="sure">确认</string>
+    <string name="reg_banding">绑定</string>
     <string name="zi">请输入关键字</string>
     <string name="partner_id">用户ID/手机号</string>
     <string name="partner_message">用户信息</string>
