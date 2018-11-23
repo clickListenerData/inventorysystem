@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Build
 import android.support.annotation.*
 import android.util.AttributeSet
@@ -22,6 +23,8 @@ import kotlinx.android.synthetic.main.view_normal_ll.view.*
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class NormalLlView@JvmOverloads constructor(context : Context, attrs : AttributeSet? = null, def : Int = 0) : LinearLayout(context, attrs,def){
+
+    var bold = true
 
     init {
         LayoutInflater.from(context).inflate(R.layout.view_normal_ll,this,true)
@@ -76,6 +79,10 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
                 tv_custom.setCompoundDrawablesRelativeWithIntrinsicBounds(null,null,drawable,null)
             }
         }
+
+        if (a.hasValue(R.styleable.NormalLlView_custom_txt_bold)){
+            bold = a.getBoolean(R.styleable.NormalLlView_custom_txt_bold,bold)
+        }
     }
 
     fun setMainTitleSize(sp : Float){
@@ -121,6 +128,7 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
     }
 
     fun setCustomTxt(txt: String){
+        if (bold) tv_custom.setTypeface(null,Typeface.BOLD)
         tv_custom.text = txt
     }
 

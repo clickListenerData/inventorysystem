@@ -10,6 +10,7 @@
         <attr name="custom_txt_color" format="color"/>
         <attr name="custom_txt_content" format="string"/>
         <attr name="custom_txt_drawable" format="reference"/>
+        <attr name="custom_txt_bold" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="CustomCenterView">

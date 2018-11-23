@@ -314,6 +314,17 @@
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_contact_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        app:main_txt_content="@string/personal_contact_service"
+                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        android:paddingLeft="@dimen/dp_4"
+                        app:custom_txt_content=""/>
+
+                    <com.micropole.inventorysystem.widght.NormalLlView
                         android:id="@+id/nll_about_personal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

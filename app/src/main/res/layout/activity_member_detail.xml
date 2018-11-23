@@ -36,11 +36,12 @@
                     android:showDividers="middle">
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="90dp"
+                        android:layout_height="100dp"
                         android:orientation="horizontal"
-                        android:paddingVertical="@dimen/dp_10"
-                        android:background="@android:color/white"
+                        android:paddingVertical="25dp"
+                        android:background="@android:color/holo_red_light"
                         android:layout_marginTop="@dimen/dp_14"
+                        android:layout_marginHorizontal="@dimen/dp_14"
                         android:paddingLeft="@dimen/dp_14">
 
                         <ImageView
@@ -59,6 +60,9 @@
                             app:layout_constraintLeft_toRightOf="@id/iv_personal_img"
                             app:layout_constraintTop_toTopOf="@id/iv_personal_img"
                             app:layout_constraintBottom_toTopOf="@id/tv_personal_phone"
+                            android:textSize="@dimen/txt_15"
+                            android:textColor="@color/text_color_white"
+                            android:textStyle="bold"
                             android:text=""/>
                         <TextView
                             android:id="@+id/tv_personal_phone"
@@ -67,6 +71,8 @@
                             app:layout_constraintLeft_toLeftOf="@id/tv_personal_name"
                             app:layout_constraintTop_toBottomOf="@id/tv_personal_name"
                             app:layout_constraintBottom_toTopOf="@id/tv_personal_real_name"
+                            android:textSize="@dimen/txt_11"
+                            android:textColor="@color/text_color_white"
                             android:text=""/>
                         <TextView
                             android:id="@+id/tv_personal_real_name"
@@ -75,6 +81,8 @@
                             app:layout_constraintLeft_toLeftOf="@id/tv_personal_phone"
                             app:layout_constraintTop_toBottomOf="@id/tv_personal_phone"
                             app:layout_constraintBottom_toBottomOf="@id/iv_personal_img"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/txt_11"
                             android:text=""/>
 
                         <View
@@ -105,61 +113,119 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toRightOf="@id/iv_personal_company"
                             android:layout_marginLeft="@dimen/dp_10"
+                            android:textSize="@dimen/txt_15"
+                            android:textColor="@color/text_color_white"
                             android:text=""/>
 
                     </android.support.constraint.ConstraintLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_white_gray_r3"
                         android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:textSize="@dimen/main_txt_size"
-                        android:textColor="@color/color666666"
-                        android:text="@string/member_msg"/>
-                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_marginHorizontal="@dimen/dp_14">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:textSize="@dimen/txt_13"
+                            android:textColor="@color/color666666"
+                            android:text="@string/member_msg"
+                            android:paddingLeft="@dimen/dp_14"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line_color"/>
+
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:title_content="@string/member_phone"
+                            app:input_content="1700000000"/>
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_content="@string/member_email"
+                            app:input_content="1700000000"/>
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_content="@string/company_for_country"
+                            app:input_content="1700000000"/>
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_content="@string/member_company"
+                            app:input_content="1700000000"/>
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_content="@string/member_add_time"
+                            app:input_content="1700000000"
+                            android:paddingBottom="@dimen/dp_14"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_white_gray_r3"
                         android:layout_marginTop="@dimen/dp_10"
-                        app:title_content="@string/member_phone"
-                        app:input_content="1700000000"/>
-                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_marginHorizontal="@dimen/dp_14">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:textSize="@dimen/txt_13"
+                            android:textColor="@color/color666666"
+                            android:text="@string/member_custom_setting"
+                            android:paddingLeft="@dimen/dp_14"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line_color"/>
+                        <com.micropole.inventorysystem.widght.NormalLlView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:main_txt_content="@string/member_nick_name"
+                            app:custom_txt_size="@dimen/txt_15"
+                            app:custom_txt_color="@color/text_edit_hint"
+                            app:custom_txt_content="name"
+                            app:custom_txt_bold="false"
+                            app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        <com.micropole.inventorysystem.widght.NormalLlView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:main_txt_content="@string/member_position"
+                            app:custom_txt_size="@dimen/txt_15"
+                            app:custom_txt_color="@color/text_edit_hint"
+                            app:custom_txt_content="name"
+                            app:custom_txt_bold="false"
+                            app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+
+                    </LinearLayout>
+
+                    <com.coorchice.library.SuperTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:title_content="@string/member_email"
-                        app:input_content="1700000000"/>
-                    <com.micropole.inventorysystem.widght.InputMsgView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:title_content="@string/company_for_country"
-                        app:input_content="1700000000"/>
-                    <com.micropole.inventorysystem.widght.InputMsgView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:title_content="@string/member_company"
-                        app:input_content="1700000000"/>
-                    <com.micropole.inventorysystem.widght.InputMsgView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:title_content="@string/member_add_time"
-                        app:input_content="1700000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:textSize="@dimen/main_txt_size"
-                        android:textColor="@color/color666666"
-                        android:text="@string/member_custom_setting"/>
-                    <com.micropole.inventorysystem.widght.NormalLlView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_10"
-                        app:main_txt_content="@string/member_nick_name"/>
-                    <com.micropole.inventorysystem.widght.NormalLlView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:main_txt_content="@string/member_position"/>
+                        android:layout_marginHorizontal="23dp"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_14"
+                        app:stv_corner="6dp"
+                        app:stv_solid="@color/txt_price"
+                        android:textSize="@dimen/txt_15"
+                        android:textColor="@color/text_color_white"
+                        android:text="@string/remove_member"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp_14"/>
+
                 </LinearLayout>
             </ScrollView>
         </FrameLayout>
