@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.view_title.*
 /**
 * @ClassName       InTreasuryActivity
 * @Description     入库
-* @Author          肖光飞
+* @Author          xiaoguangfei
 * @Sign            。。。
 * @Date            2018/11/19 17:47
 * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
