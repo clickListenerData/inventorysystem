@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NormalLlView">
+        <attr name="main_txt_size" format="dimension"/>
+        <attr name="main_txt_color" format="color"/>
+        <attr name="main_txt_content" format="string"/>
+        <attr name="main_drawable" format="reference"/>
+        <attr name="custom_txt_size" format="dimension"/>
+        <attr name="custom_txt_color" format="color"/>
+        <attr name="custom_txt_content" format="string"/>
+        <attr name="custom_txt_drawable" format="reference"/>
+        <attr name="custom_txt_bold" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomCenterView">
+        <attr name="top_txt_size" format="dimension"/>
+        <attr name="top_txt_color" format="color"/>
+        <attr name="top_txt_content" format="string"/>
+        <attr name="top_txt_drawable" format="reference"/>
+        <attr name="bottom_txt_size" format="dimension"/>
+        <attr name="bottom_txt_color" format="color"/>
+        <attr name="bottom_txt_content" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputMsgView">
+        <attr name="title_size" format="float"/>
+        <attr name="title_color" format="color"/>
+        <attr name="title_content" format="string"/>
+        <attr name="input_color" format="color"/>
+        <attr name="input_size" format="float"/>
+        <attr name="input_hint_color" format="color"/>
+        <attr name="input_hint_content" format="string"/>
+        <attr name="input_content" format="string"/>
+        <attr name="input_enable" format="boolean"/>
+    </declare-styleable>
+</resources>

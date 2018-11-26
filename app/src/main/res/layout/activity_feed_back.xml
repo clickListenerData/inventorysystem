@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_white_gray_r3"
+        android:hint="@string/feed_back_hint"
+        android:gravity="top"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/text_edit_hint"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        />
+
+    <com.coorchice.library.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
+        android:text="@string/commit_txt"
+        android:paddingVertical="@dimen/dp_10"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="20dp"
+        />
+
+</LinearLayout>

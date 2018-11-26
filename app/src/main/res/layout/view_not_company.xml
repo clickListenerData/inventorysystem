@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_get"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/text_edit_hint"
+        android:text="@string/not_add_company"/>
+
+    <com.coorchice.library.SuperTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_gray_r3"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingVertical="@dimen/dp_14"
+        android:paddingHorizontal="54dp"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
+        android:text="@string/new_create_company"
+        app:stv_solid="@color/text_edit_hint"
+        app:stv_corner="6dp"
+        />
+
+
+</LinearLayout>

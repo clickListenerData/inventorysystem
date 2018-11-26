@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_input_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/title_color"
+        android:text="@string/company_for_head"
+        android:layout_gravity="center_vertical"/>
+
+    <EditText
+        android:id="@+id/et_input_msg"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_4"
+        android:enabled="false"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/title_color"
+        android:textColorHint="@color/text_edit_hint"
+        android:text=""
+        android:gravity="right"/>
+
+</LinearLayout>

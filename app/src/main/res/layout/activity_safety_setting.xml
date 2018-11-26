@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title"/>
+
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/nll_safety_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:main_txt_content="@string/safety_pwd_setting"
+        app:main_drawable="@android:drawable/ic_menu_manage"
+        app:custom_txt_content=""/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/nll_safety_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:main_txt_content="@string/safety_phone_setting"
+        app:main_drawable="@android:drawable/ic_menu_manage"
+        app:custom_txt_content=""/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+        android:background="@color/text_color_white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_manage"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_4"
+            android:text="@string/safety_auto_login"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            android:gravity="center_vertical"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            />
+    </FrameLayout>
+
+</LinearLayout>

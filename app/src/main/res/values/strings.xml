@@ -1,0 +1,290 @@
+<resources>
+    <string name="app_name">衣布购</string>
+
+    <string name="main_home_txt">首页</string>
+    <string name="main_inventory_manager">库存管理</string>
+    <string name="main_partner_ship">合作关系</string>
+    <string name="main_shop_mall">商城</string>
+    <string name="main_personal_center">个人中心</string>
+
+    <string name="login_txt">登录</string>
+
+    <string name="empty_data">暂无数据</string>
+
+    <string name="search_hint_txt">请输入关键字</string>
+
+    <!--首页-->
+    <string name="input_storage">入库</string>
+    <string name="output_storage">出库</string>
+    <string name="inventory_detail">进销存明细</string>
+    <string name="to_be_input_goods">待入库商品</string>
+    <string name="current_month_input">当月入库</string>
+    <string name="current_month_output">当月出库</string>
+    <string name="current_month_turnover">当月营业额</string>
+    <string name="to_be_payment">待付款</string>
+    <string name="to_be_received">待收货</string>
+    <string name="to_be_evaluated">待评价</string>
+    <string name="after_sale_order">售后订单</string>
+    <string name="recommend_for_you">为您推荐</string>
+    <string name="wait_treasury">待入库订单数</string>
+    <string name="chuli">正在处理订单</string>
+    <string name="zongliang">商品总量</string>
+    <string name="all_value">总价值</string>
+    <string name="rukudan">入库单</string>
+    <string name="chukudan">出库单</string>
+    <string name="tuihui">退回订单</string>
+    <string name="guaqi">订单挂起</string>
+    <string name="shop_out">商品出库</string>
+    <string name="shop_in">商品入库</string>
+    <string name="chuanjian">创建订单</string>
+    <string name="ruku_shop">手动入库商品</string>
+    <string name="select_shop">选择商品</string>
+    <string name="select_customer">选择客户</string>
+    <string name="gonyingshang">供应商</string>
+    <string name="select_order">订单选项</string>
+    <string name="shuidian">税点</string>
+    <string name="shuru_shuidian">请输入税点(选填)</string>
+    <string name="shur_fujiafeiyong">请输入附加费用(选填)</string>
+    <string name="fujiafeiyong">附加费用</string>
+    <string name="youhui">优惠</string>
+    <string name="beizhu">备注</string>
+    <string name="shur_beizhu">请输入备注(选填)</string>
+    <string name="shur_youhui">请输入优惠金额(选填)</string>
+    <string name="now_order">立即下单</string>
+    <string name="guaqinow">挂起</string>
+    <string name="ruku_shops">点击选择要入库的商品</string>
+
+    <!--库存管理-->
+    <string name="inventory_goods_count">商品总数</string>
+    <string name="inventory_counts">库存总量</string>
+    <string name="inventory_count_cost">库存总成本</string>
+    <string name="input_goods">商品入库</string>
+    <string name="output_goods">商品出库</string>
+    <string name="new_create_goods">新建商品</string>
+    <string name="order_record">订单记录</string>
+    <string name="inventory_goods">库存商品</string>
+
+    <string name="output_count">出库量</string>
+    <string name="inventory_count_txt">库存量</string>
+    <string name="inventory_txt">库存</string>
+    <string name="time_txt">时间</string>
+    <string name="sales_txt">销量</string>
+
+    <!--个人中心-->
+    <string name="personal_inventory_system">进销存系统</string>
+    <string name="personal_category_manager">分类管理</string>
+    <string name="personal_color_manager">颜色管理</string>
+    <string name="personal_material_bank">材质库</string>
+    <string name="personal_mine_company">我的公司</string>
+    <string name="personal_finance_manager">财务管理</string>
+    <string name="personal_cloth_buy">衣布购商城</string>
+    <string name="personal_all_order">全部订单</string>
+    <string name="personal_address_manager">管理收货地址</string>
+    <string name="personal_mine_collect">我的收藏</string>
+    <string name="personal_mine_foot">我的足迹</string>
+    <string name="personal_normal_setting">通用设置</string>
+    <string name="personal_mine_message">个人信息设置</string>
+    <string name="personal_safety_setting">安全性设置</string>
+    <string name="personal_feed_back">意见反馈</string>
+    <string name="personal_contact_service">联系客服</string>
+    <string name="personal_mine_about">关于我们</string>
+    <string name="personal_login_out">退出</string>
+
+    <string name="new_create_category">新建分类</string>
+    <string name="new_create_color">添加新颜色</string>
+    <string name="new_create_material">添加新材质</string>
+    <string name="not_add_company">没有加入任何公司</string>
+    <string name="new_create_company">创建公司</string>
+
+    <!--我的公司-->
+    <string name="company_message">企业信息</string>
+    <string name="company_for_head">公司负责人</string>
+    <string name="company_for_phone">联系方式</string>
+    <string name="company_for_email">邮箱</string>
+    <string name="company_for_industry">所属行业</string>
+    <string name="company_for_country">国籍</string>
+    <string name="company_for_address">地址</string>
+    <string name="company_for_announcement">公司公告:</string>
+
+    <string name="company_btn_look">查看成员列表</string>
+    <string name="company_btn_update">更新公司信息</string>
+    <string name="company_btn_leave">离开该公司</string>
+    <string name="company_btn_add">加入该公司</string>
+    <string name="company_btn_transfer">转让该公司</string>
+
+    <!--财务管理-->
+    <string name="finance_return_money">总回款</string>
+    <string name="finance_returned_money">已回款</string>
+    <string name="finance_wait_money">待回款</string>
+
+    <!--添加颜色-->
+    <string name="color_name_txt">颜色名称</string>
+    <string name="color_name_hint">请输入颜色名称</string>
+    <string name="create_add_color_id">以色码创建</string>
+    <string name="color_id_txt">色码</string>
+    <string name="color_id_hint">请输入色码</string>
+    <string name="create_add_color_rgb">以RGB创建</string>
+    <string name="r_hint">请输入r值</string>
+    <string name="g_hint">请输入g值</string>
+    <string name="b_hint">请输入b值</string>
+    <string name="alpha_color_txt">透明度</string>
+    <string name="color_template_txt">以模板创建</string>
+
+    <!--创建公司-->
+    <string name="company_cover">公司封面</string>
+    <string name="company_name">公司名称</string>
+    <string name="company_name_hint">请输入公司名称</string>
+    <string name="company_country">公司所在国家</string>
+    <string name="company_country_hint">请选择国家</string>
+    <string name="company_email">公司邮箱</string>
+    <string name="company_email_hint">请输入公司邮箱</string>
+    <string name="company_industry">行业</string>
+    <string name="company_industry_hint">请输入公司经营范围</string>
+    <string name="create_txt">创建</string>
+    <string name="save_txt">保存</string>
+
+    <string name="invitation_member">已邀请成员</string>
+
+    <!--成员详情-->
+    <string name="member_msg">用户信息</string>
+    <string name="member_phone">联系方式</string>
+    <string name="member_email">邮箱</string>
+    <string name="member_company">所属公司</string>
+    <string name="member_add_time">加入时间</string>
+    <string name="member_birthday">生日</string>
+    <string name="member_custom_setting">自定义设置</string>
+    <string name="member_nick_name">备注名</string>
+    <string name="member_position">职位</string>
+
+    <string name="remove_member">移除该成员</string>
+    <string name="add_member">添加该成员</string>
+    <string name="add_new_member">添加新成员</string>
+
+    <!--个人信息设置-->
+    <string name="personal_msg_name">姓名</string>
+    <string name="personal_msg_sex">性别</string>
+    <string name="personal_msg_birth">生日</string>
+    <string name="personal_msg_head_img">头像</string>
+    <string name="safety_pwd_setting">登录密码设置</string>
+    <string name="safety_phone_setting">绑定/修改手机号码</string>
+    <string name="safety_auto_login">自动登录</string>
+
+    <string name="feed_back_hint">请输入您的意见或者建议</string>
+    <string name="commit_txt">提交</string>
+
+    <!--新建商品-->
+    <string name="new_goods_name">商品名称</string>
+    <string name="new_goods_category">所属分类</string>
+    <string name="new_goods_id">货号</string>
+    <string name="new_goods_cost_price">成本价</string>
+    <string name="new_goods_retail_price">零售价</string>
+    <string name="new_goods_remark">备注</string>
+    <string name="new_goods_color">选择颜色</string>
+    <string name="new_goods_size">规格管理</string>
+    <string name="new_goods_material">选择材质</string>
+    <string name="new_goods_img">选择封面</string>
+    <string name="material_input_percent">请输入材质占比</string>
+
+    <string name="optional_txt">选填</string>
+
+    <!--手动入库-->
+    <string name="new_add_inventory">新增的库存</string>
+    <string name="multiple_line_input">多行输入</string>
+    <string name="inventory_by_hand">手动入库商品</string>
+
+    <!--进销存明细-->
+    <string name="inventory_detail_time">时间</string>
+    <string name="inventory_detail_count">商品量</string>
+    <string name="inventory_detail_price">金额</string>
+
+    <!--商品详情-->
+    <string name="goods_detail_msg">商品信息</string>
+    <string name="goods_detail_super">供应商</string>
+    <string name="material_txt">材质</string>
+    <string name="purchase_price">进货价</string>
+    <string name="size_count">规格数量</string>
+
+    <!--编辑商品-->
+    <string name="edit_category">所属分类</string>
+    <string name="edit_category_hint">请选择分类</string>
+    <string name="inventory_warning">库存预警</string>
+    <string name="inventory_warning_hint">请填写预警值（选填）</string>
+    <string name="remark_hint">请填写备注（选填）</string>
+    <string name="correlation_goods">该商品已经关联s%</string>
+    <string name="look_goods_detail">查看商品详情</string>
+    <string name="input_txt">请输入s%</string>
+
+    <string name="goods_inventory">商品/库存</string>
+    <string name="goods_sale_detail">销售明细</string>
+    <string name="goods_customer_list">客户名单</string>
+
+    <string name="old_goods_id">原货号</string>
+    <string name="goods_detail_package_percent">包装配比</string>
+    <string name="category_txt">分类</string>
+    <string name="goods_create_time">商品创建时间</string>
+    <string name="goods_size_inventory">规格库存</string>
+
+    <string name="btn_add_inventory">新增入库</string>
+    <string name="btn_output_inventory">出库</string>
+    <string name="btn_edit_goods">编辑商品</string>
+    <string name="btn_delete_goods">删除商品</string>
+    <string name="btn_create_qr_code">生成二维码</string>
+    <string name="back">Back</string>
+    <string name="login">登录</string>
+    <string name="login_phone">手机号码</string>
+    <string name="login_phone_old">旧手机号</string>
+    <string name="login_phone_new">新手机号</string>
+    <string name="single_input">单行输入</string>
+    <string name="login_pw">密码</string>
+    <string name="set_pw">原密码</string>
+    <string name="set_new_pw">新密码</string>
+    <string name="set_new_surepw">确认密码</string>
+    <string name="login_wx">微信快捷登陆</string>
+    <string name="login_register">注册账号</string>
+    <string name="login_forget_pw">忘记密码?</string>
+    <string name="reg_iamge">设置头像</string>
+    <string name="reg_name">请输入你的姓名</string>
+    <string name="name">姓名</string>
+    <string name="reg_contry">所在国家</string>
+    <string name="reg_xu_contry">请选择国家</string>
+    <string name="reg_xu_bri">请选择你的生日</string>
+    <string name="reg_bri">生日</string>
+    <string name="reg_phone">手机号码</string>
+    <string name="reg_xu_phone">请输入您的手机号码</string>
+    <string name="reg_tian_code">请输入验证码</string>
+    <string name="reg_code">验证码</string>
+    <string name="reg_get_code">获取验证码</string>
+    <string name="reg_tishi">绑定手机号后，手机号将作为您的登录账号</string>
+    <string name="reg_tian_pw">请输入新密码</string>
+    <string name="reg_tsure_pw">请再次确认密码</string>
+    <string name="reg_pw">新密码</string>
+    <string name="reg_sure_pw">确认密码</string>
+    <string name="reg_forget">忘记密码</string>
+    <string name="reg_register">注册账号</string>
+    <string name="sure">确认</string>
+    <string name="reg_banding">绑定</string>
+    <string name="zi">请输入关键字</string>
+    <string name="partner_id">用户ID/手机号</string>
+    <string name="partner_message">用户信息</string>
+    <string name="partner_setting">自定义设置</string>
+    <string name="partner_fuzeren">公司负责人</string>
+    <string name="partner_phone">联系方式</string>
+    <string name="partner_email">邮箱</string>
+    <string name="partner_hangye">所属行业</string>
+    <string name="partner_country">国籍</string>
+    <string name="partner_address">地址</string>
+    <string name="partner_gonggao">公司公告</string>
+    <string name="partner_supplier">添加为供应商</string>
+    <string name="partner_customer">添加为客户</string>
+    <string name="partner_beizhu">备注名</string>
+    <string name="partner_hezuo">合作方类型</string>
+    <string name="partner_dengji">合作方等级</string>
+    <string name="partner_xiaoshou">销售人员</string>
+    <string name="partner_send">发送订单</string>
+    <string name="partner_kuanxiang">查看款项记录</string>
+    <string name="partner_order">查看订单记录</string>
+    <string name="partner_detail">详情资料</string>
+    <string name="partner_add">添加合作关系</string>
+    <string name="partner_hezuoguanxi">合作关系</string>
+    <string name="partner_add_hezuoguanxi">添加合作关系</string>
+</resources>

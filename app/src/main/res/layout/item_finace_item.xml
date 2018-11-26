@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/text_color_white"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_finace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="优衣库回款"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        app:layout_constraintTop_toBottomOf="@id/tv_finace_title"
+        android:text="2018-11-12/录入人：Kevin"
+        android:layout_marginTop="@dimen/dp_4"
+        />
+
+    <TextView
+        android:id="@+id/tv_finace_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="+¥1000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_finace_price"
+        app:layout_constraintRight_toRightOf="@id/tv_finace_price"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="剩余欠款 ¥2000"
+        android:layout_marginTop="@dimen/dp_4"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.coorchice.library.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:stv_solid="@color/colorPrimary"
+        app:stv_corner="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/title_txt_size"
+        android:text="@string/login_txt"
+        android:gravity="center"/>
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.micropole.inventorysystem.entity.CategoryBean"/>
+    </data>
+
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="大衣"
+        app:custom_txt_content="11" />
+</layout>

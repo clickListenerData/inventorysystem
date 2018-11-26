@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="@string/personal_msg_name"
+        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="@string/personal_msg_sex"
+        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="@string/personal_msg_birth"
+        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:background="@color/text_color_white">
+        <TextView
+            android:id="@+id/tv_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            android:text="@string/personal_msg_head_img"
+            android:layout_marginLeft="@dimen/dp_14"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@color/colorPrimary"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_marginRight="@dimen/dp_14"/>
+    </LinearLayout>
+
+
+</LinearLayout>

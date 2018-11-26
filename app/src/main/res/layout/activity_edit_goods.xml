@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <com.micropole.inventorysystem.widght.NormalLlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:main_txt_content="@string/edit_category"
+        app:custom_txt_content="@string/edit_category_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/new_goods_id"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/new_goods_cost_price"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/new_goods_retail_price"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/new_goods_remark"
+        app:input_hint_content="@string/remark_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_content="@string/inventory_warning"
+        app:input_hint_content="@string/inventory_warning_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_14"
+        android:text="@string/correlation_goods"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/dp_72"
+        android:layout_marginRight="@dimen/dp_72"
+        android:gravity="center"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="@string/look_goods_detail"
+        android:background="@drawable/shape_white_gray_r3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/dp_72"
+        android:layout_marginRight="@dimen/dp_72"
+        android:gravity="center"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="@string/save_txt"
+        android:background="@drawable/shape_white_gray_r3"/>
+
+
+</LinearLayout>

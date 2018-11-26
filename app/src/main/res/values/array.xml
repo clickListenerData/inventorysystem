@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_bottom_title">
+        <item>@string/main_home_txt</item>
+        <item>@string/main_inventory_manager</item>
+        <item>@string/main_partner_ship</item>
+        <item>@string/main_shop_mall</item>
+        <item>@string/main_personal_center</item>
+    </string-array>
+</resources>

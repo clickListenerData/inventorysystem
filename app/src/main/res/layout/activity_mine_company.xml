@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/view_not_company"
+            layout="@layout/view_not_company"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/app_color_bg"
+                android:paddingBottom="@dimen/dp_14">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@android:color/holo_red_light"
+                    android:paddingVertical="25dp"
+                    android:paddingLeft="@dimen/dp_14"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginHorizontal="@dimen/dp_14">
+                    <ImageView
+                        android:id="@+id/iv_company_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:src="@color/colorPrimary"/>
+                    <TextView
+                        android:id="@+id/tv_company_fzr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/iv_company_img"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:layout_constraintTop_toTopOf="@id/iv_company_img"
+                        app:layout_constraintBottom_toTopOf="@id/tv_company_id"
+                        android:textSize="@dimen/txt_15"
+                        android:textColor="@color/text_color_white"
+                        android:textStyle="bold"
+                        android:text="优衣库"/>
+                    <TextView
+                        android:id="@+id/tv_company_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_company_fzr"
+                        app:layout_constraintTop_toBottomOf="@id/tv_company_fzr"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="@dimen/txt_13"
+                        android:textColor="@color/text_color_white"
+                        android:text="优衣库"/>
+
+                    <TextView
+                        android:id="@+id/tv_company_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/tv_company_id"
+                        app:layout_constraintTop_toTopOf="@id/tv_company_id"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="@dimen/txt_13"
+                        android:textColor="@color/text_color_white"
+                        android:text="优衣库"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_white_gray_r3"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginHorizontal="@dimen/dp_14">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:textSize="@dimen/txt_13"
+                        android:textColor="@color/color666666"
+                        android:text="@string/company_message"
+                        android:paddingLeft="@dimen/dp_14"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color"/>
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:paddingLeft="@dimen/dp_4"
+                        app:title_content="@string/company_for_head"
+                        app:input_content="kevin"
+                        app:input_color="@color/txt_price"/>
+
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_content="@string/company_for_phone"
+                        app:input_content="1888888888"/>
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_content="@string/company_for_email"
+                        app:input_content="123456@163.com"/>
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_content="@string/company_for_industry"
+                        app:input_content="aa"/>
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_content="@string/company_for_country"
+                        app:input_content="中国"
+                        android:visibility="gone"/>
+                    <com.micropole.inventorysystem.widght.InputMsgView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_content="@string/company_for_address"
+                        app:input_content="光会走"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_14"
+                        android:paddingRight="@dimen/dp_14">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_13"
+                            android:textColor="@color/color666666"
+                            android:text="@string/company_for_announcement"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_13"
+                            android:textColor="@color/color666666"
+                            android:text="本公司正式启用衣布购进销存系统，欢迎广大合作商发单。"
+                            android:layout_marginLeft="@dimen/dp_14"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_company_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginHorizontal="@dimen/dp_14"
+                    android:background="@drawable/shape_white_gray_r3"
+                    android:layout_marginBottom="@dimen/dp_14"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>
