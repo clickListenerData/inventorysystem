@@ -33,7 +33,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mContext = this
         beforeSetContentView()
-        setContentView(getActivityLayoutId())
+        if (getActivityLayoutId() != -1) setContentView(getActivityLayoutId())
         afterSetContentView()
     }
 

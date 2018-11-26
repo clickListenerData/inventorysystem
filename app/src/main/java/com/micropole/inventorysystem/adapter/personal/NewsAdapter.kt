@@ -1,8 +1,12 @@
 package com.micropole.inventorysystem.adapter.personal
 
 import android.support.v4.widget.SlidingPaneLayout
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.BaseViewHolder
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.NewsBean
@@ -15,42 +19,51 @@ import com.micropole.inventorysystem.entity.NewsBean
  * @Date            2018/11/23 11:31
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class NewsAdapter : DataBindAdapter<NewsBean>(1, R.layout.item_news_view) {
+class NewsAdapter(r : RecyclerView) : DataBindAdapter<NewsBean>(1, R.layout.item_news_view) {
+    lateinit var a : BaseQuickAdapter<NewsBean,BaseViewHolder>
 
-    var open = false
-    set(value) {
-        field = value
-        init = false
-        notifyDataSetChanged()
-    }
+    init {
+        r.layoutManager = LinearLayoutManager(mContext)
+        a = object : BaseQuickAdapter<NewsBean,BaseViewHolder>(R.layout.item_news_delete) {
+            override fun convert(helper: BaseViewHolder?, item: NewsBean?) {
 
-    var init = false
-
-    override fun convert(helper: DataBindViewHolder?, item: NewsBean) {
-        super.convert(helper, item)
-        val view = helper?.getView<SlidingPaneLayout>(R.id.slid_layout)
-        view?.setPanelSlideListener(listener)
-        if (helper?.adapterPosition == data.size - 1){
-            init = true
+            }
         }
-        if (open){
-            view?.openPane()
-        }else{
-            view?.closePane()
+        r.adapter = a
+
+        a.setOnItemClickListener { adapter, view, position ->
+            if (view.tag != "delete")
+            onItemChildClickListener?.onItemChildClick(this,view,position)
         }
     }
 
-    var listener = object : SlidingPaneLayout.SimplePanelSlideListener() {
-        override fun onPanelOpened(panel: View) {
-            super.onPanelOpened(panel)
-            if (!open && init)open = true
-            Log.i("news_open","1::" + open.toString())
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        super.onBindViewHolder(holder, position)
+        if (holder.itemViewType == LOADING_VIEW){
+            val view = View(mContext)
+            view.tag = "delete"
+            view.layoutParams = holder.itemView.layoutParams
+            a.addFooterView(view)
         }
+    }
 
-        override fun onPanelClosed(panel: View) {
-            super.onPanelClosed(panel)
-            if (open && init)open = false
-            Log.i("news_open","2::" + open.toString())
-        }
+    override fun loadMoreEnd() {
+        super.loadMoreEnd()
+        a.removeAllFooterView()
+    }
+
+    override fun loadMoreComplete() {
+        super.loadMoreComplete()
+        a.removeAllFooterView()
+    }
+
+    override fun setNewData(data: MutableList<NewsBean>?) {
+        super.setNewData(data)
+        a.setNewData(data)
+    }
+
+    override fun addData(newData: MutableCollection<out NewsBean>) {
+        super.addData(newData)
+        a.addData(newData)
     }
 }

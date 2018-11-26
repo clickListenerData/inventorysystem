@@ -1,14 +1,13 @@
 package com.micropole.inventorysystem.ui.personal.mine
 
 import android.support.v7.widget.LinearLayoutManager
-import com.micropole.baseapplibrary.adapter.DataBindAdapter
-import com.micropole.baseapplibrary.appconst.setListData
 import com.micropole.baseapplibrary.recyclerview.BaseRefreshActivity
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.personal.NewsAdapter
 import com.micropole.inventorysystem.entity.NewsBean
 import com.micropole.inventorysystem.ui.personal.mine.mvp.NewsContract
 import com.micropole.inventorysystem.ui.personal.mine.mvp.present.NewsPresent
+import kotlinx.android.synthetic.main.activity_news.*
 
 /**
  * @ClassName       NewsActivity
@@ -28,8 +27,7 @@ class NewsActivity : BaseRefreshActivity<NewsBean,NewsContract.Presenter>(),News
     override fun getActivityLayoutId(): Int = R.layout.activity_news
 
     override fun initRv() {
-        setRvLa(LinearLayoutManager(mContext),NewsAdapter())
-
+        setRvLa(LinearLayoutManager(mContext),NewsAdapter(rv_delete))
     }
 
     override fun getData(data: List<NewsBean>) {

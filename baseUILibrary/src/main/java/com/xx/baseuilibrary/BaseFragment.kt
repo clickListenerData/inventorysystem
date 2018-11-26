@@ -24,6 +24,9 @@ abstract class BaseFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        if (getFragmentLayoutId() == -1){
+            return getFragmentView()
+        }
         return inflater.inflate(getFragmentLayoutId(), container, false)
     }
 
@@ -33,6 +36,8 @@ abstract class BaseFragment : Fragment() {
         initData()
         initEvent(view)
     }
+
+    open fun getFragmentView() : View? = null
 
     /**
      * 获取Fragment的布局资源文件id

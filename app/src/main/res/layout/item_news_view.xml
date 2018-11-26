@@ -7,25 +7,6 @@
             type="com.micropole.inventorysystem.entity.NewsBean"/>
     </data>
 
-    <android.support.v4.widget.SlidingPaneLayout
-        android:id="@+id/slid_layout"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layoutDirection="rtl"
-        >
-
-        <FrameLayout
-            android:id="@+id/fl_menu_del"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:background="@color/app_color_bg">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_delete"/>
-        </FrameLayout>
-
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -69,5 +50,4 @@
                 android:text="time"/>
         </android.support.constraint.ConstraintLayout>
 
-    </android.support.v4.widget.SlidingPaneLayout>
 </layout>
