@@ -8,7 +8,14 @@ import com.micropole.inventorysystem.adapter.home.InTreasuryDetailAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_in_treasury_detail.*
 import kotlinx.android.synthetic.main.view_title.*
-
+/**
+ * @ClassName       InTreasuryDetailActivity
+ * @Description     入库详情
+ * @Author          xiaoguangfei
+ * @Sign            。。。
+ * @Date            2018/11/19 17:47
+ * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
+ */
 class InTreasuryDetailActivity : BaseMvpViewActivity() {
     /**
      * 获取布局资源文件id

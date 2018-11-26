@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.view_title.*
 /**
  * @ClassName       RegisterActivity
  * @Description     注册
- * @Author          xiaoguagnfei
+ * @Author          xiaoguangfei
  * @Sign            。。。
  * @Date            2018/11/19 17:49
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.

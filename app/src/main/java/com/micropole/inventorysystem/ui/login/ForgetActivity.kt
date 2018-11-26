@@ -5,7 +5,14 @@ import android.content.Intent
 import com.micropole.inventorysystem.R
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.view_title.*
-
+/**
+* @ClassName       ForgetActivity
+* @Description     忘记密码
+* @Author          xiaoguangfei
+* @Sign            。。。
+* @Date            2018/11/22 11:10
+* @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
+*/
 class ForgetActivity : BaseMvpViewActivity() {
     /**
      * 初始化数据状态
