@@ -7,13 +7,15 @@
     <include layout="@layout/view_title"/>
 
     <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_inventory_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_14">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +43,7 @@
             android:layout_marginRight="@dimen/dp_14"
             android:drawableRight="@android:drawable/ic_delete"
             android:text="全部"
-            android:gravity="right|center_vertical"
+            android:gravity="center_horizontal"
             android:drawablePadding="@dimen/dp_4"
             />
         <TextView
@@ -57,6 +59,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

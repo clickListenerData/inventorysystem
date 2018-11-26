@@ -60,6 +60,9 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
         view.tv_chuku.setOnClickListener {
             OutTreasuryActivity.startOutTreasuryActivity(mContext)
         }
+        view.tv_order_record.setOnClickListener {
+            activity?.startActivity<InventoryDetailsActivity>()
+        }
         return view
     }
 

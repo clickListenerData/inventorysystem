@@ -75,6 +75,7 @@
             android:gravity="center"/>
 
         <TextView
+            android:id="@+id/tv_order_record"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
