@@ -80,26 +80,11 @@
         android:textColor="@color/color_333"
         android:layout_marginTop="40dp"
         />
-    <TextView
-        android:id="@+id/tv_wx_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/login_wx"
-        android:gravity="center"
-        android:textSize="@dimen/dp_14"
-        android:textColor="@color/color_333"
-        android:layout_marginTop="50dp"
-        />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_14"
         android:layout_marginLeft="@dimen/dp_14">
         <TextView
@@ -109,8 +94,8 @@
             android:layout_gravity="center"
             android:text="@string/login_register"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/text_edit_hint"
             />
         <View
             android:layout_width="0dp"
@@ -124,13 +109,21 @@
             android:layout_gravity="center"
             android:text="@string/login_forget_pw"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/text_edit_hint"
             />
 
     </LinearLayout>
-
-
-
+    <TextView
+        android:id="@+id/tv_wx_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/login_wx"
+        android:gravity="center"
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/color_333"
+        android:layout_marginTop="50dp"
+        />
 
 </LinearLayout>

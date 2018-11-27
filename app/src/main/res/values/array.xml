@@ -7,4 +7,10 @@
         <item>@string/main_shop_mall</item>
         <item>@string/main_personal_center</item>
     </string-array>
+
+    <string-array name="goods_detail_array">
+        <item>@string/goods_inventory</item>
+        <item>@string/goods_sale_detail</item>
+        <item>@string/goods_customer_list</item>
+    </string-array>
 </resources>

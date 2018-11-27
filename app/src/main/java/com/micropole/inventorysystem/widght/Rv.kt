@@ -7,7 +7,7 @@ import android.view.MotionEvent
 
 /**
  * @ClassName       Rv
- * @Description     todo
+ * @Description     禁止手动滚动 RecyclerView
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/27 9:20

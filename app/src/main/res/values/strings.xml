@@ -64,6 +64,7 @@
     <string name="order_record">订单记录</string>
     <string name="inventory_goods">库存商品</string>
 
+    <string name="comprehensive_txt">综合</string>
     <string name="output_count">出库量</string>
     <string name="inventory_count_txt">库存量</string>
     <string name="inventory_txt">库存</string>
@@ -120,13 +121,13 @@
     <!--添加颜色-->
     <string name="color_name_txt">颜色名称</string>
     <string name="color_name_hint">请输入颜色名称</string>
-    <string name="create_add_color_id">以色码创建</string>
+    <string name="create_add_color_id">(以色码创建)</string>
     <string name="color_id_txt">色码</string>
     <string name="color_id_hint">请输入色码</string>
-    <string name="create_add_color_rgb">以RGB创建</string>
-    <string name="r_hint">请输入r值</string>
-    <string name="g_hint">请输入g值</string>
-    <string name="b_hint">请输入b值</string>
+    <string name="create_add_color_rgb">(以RGB创建)</string>
+    <string name="r_hint">输入R值</string>
+    <string name="g_hint">输入G值</string>
+    <string name="b_hint">输入B值</string>
     <string name="alpha_color_txt">透明度</string>
     <string name="color_template_txt">以模板创建</string>
 
@@ -229,6 +230,24 @@
     <string name="btn_edit_goods">编辑商品</string>
     <string name="btn_delete_goods">删除商品</string>
     <string name="btn_create_qr_code">生成二维码</string>
+
+    <!--地址管理-->
+    <string name="received_personal">收货人</string>
+    <string name="received_address">收货地址</string>
+
+    <!--订单详情-->
+    <string name="order_detail_txt">订单详情</string>
+    <string name="not_remark">没有备注</string>
+    <string name="freight_price">运费</string>
+    <string name="preferential_price">优惠</string>
+    <string name="pay_buy">立即支付</string>
+    <string name="price_count">合计金额</string>
+    
+    <!--购物车-->
+    <string name="settlement_txt">结算</string>
+    <string name="all_select_txt">全选</string>
+    <string name="delete_txt">删除</string>
+
     <string name="back">Back</string>
     <string name="login">登录</string>
     <string name="login_phone">手机号码</string>

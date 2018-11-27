@@ -14,7 +14,6 @@
         android:background="@drawable/shape_white_gray_r3"
         android:padding="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginHorizontal="@dimen/dp_10"
         >
 
         <ImageView
@@ -35,7 +34,9 @@
             app:layout_constraintLeft_toRightOf="@id/iv_inventory_img"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_size"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="AW0000"/>
+            android:text="AW0000"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/txt_price"/>
 
         <TextView
             android:id="@+id/tv_inventory_size"
@@ -45,6 +46,8 @@
             app:layout_constraintLeft_toLeftOf="@id/tv_inventory_id"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_color"
             android:text="XL"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
             />
 
         <TextView
@@ -55,6 +58,8 @@
             app:layout_constraintLeft_toLeftOf="@id/tv_inventory_size"
             app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
             android:text="红"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
             />
 
         <TextView
@@ -66,6 +71,8 @@
             app:layout_constraintTop_toTopOf="@id/iv_inventory_img"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_num"
             android:text="@string/inventory_txt"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_13"
             />
 
         <TextView
@@ -77,6 +84,9 @@
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_txt"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_package"
             android:text="100"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
             />
 
         <TextView
@@ -88,6 +98,8 @@
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_num"
             app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
             android:text="(2箱零2件)"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
             />
 
     </android.support.constraint.ConstraintLayout>

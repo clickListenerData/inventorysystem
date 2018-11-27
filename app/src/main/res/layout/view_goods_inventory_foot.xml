@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_goods_detail_btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
-        android:gravity="center"
-        android:background="@drawable/shape_white_gray_r3"
-        android:paddingVertical="@dimen/dp_4"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/btn_add_inventory"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
-        android:gravity="center"
-        android:background="@drawable/shape_white_gray_r3"
-        android:paddingVertical="@dimen/dp_4"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/btn_output_inventory"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
-        android:gravity="center"
-        android:background="@drawable/shape_white_gray_r3"
-        android:paddingVertical="@dimen/dp_4"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/btn_edit_goods"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
-        android:gravity="center"
-        android:background="@drawable/shape_white_gray_r3"
-        android:paddingVertical="@dimen/dp_4"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/btn_delete_goods"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
-        android:gravity="center"
-        android:background="@drawable/shape_white_gray_r3"
-        android:paddingVertical="@dimen/dp_4"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/btn_create_qr_code"/>
+        android:layout_height="match_parent"/>
 
-</LinearLayout>
+</FrameLayout>

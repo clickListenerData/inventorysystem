@@ -10,25 +10,26 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_10"
         android:layout_gravity="center_vertical"
-        android:textColor="@color/color666666"
-        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_15"
         android:text="红色"/>
 
-    <CheckBox
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/title_color"
+        android:textColorHint="@color/text_edit_hint"
+        android:hint="@string/material_input_percent"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:visibility="invisible"/>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/dp_10"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:gravity="right"
-        android:layout_gravity="center_vertical"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:textColorHint="@color/color666666"
-        android:hint="@string/material_input_percent"
-        android:layout_marginRight="@dimen/dp_14"/>
 
 </LinearLayout>

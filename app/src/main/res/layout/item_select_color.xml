@@ -5,25 +5,23 @@
     android:layout_height="wrap_content"
     android:paddingVertical="@dimen/dp_10">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:layout_gravity="center_vertical"
-        android:textColor="@color/color666666"
-        android:textSize="@dimen/main_txt_size"
-        android:text="红色"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_weight="1"/>
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:src="#ff0000"
-        android:layout_marginRight="@dimen/dp_10"/>
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_15"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="红色"/>
 
-    <CheckBox
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/dp_10"/>

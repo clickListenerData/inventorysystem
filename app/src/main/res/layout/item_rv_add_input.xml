@@ -7,17 +7,18 @@
     android:paddingVertical="@dimen/dp_14">
 
     <com.micropole.inventorysystem.widght.CustomCenterView
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         app:top_txt_content="X"
         app:bottom_txt_content="300"
+        android:layout_marginLeft="@dimen/dp_14"
         android:layout_gravity="center_vertical"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_item_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dp_14"/>
 
 </LinearLayout>

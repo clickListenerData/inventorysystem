@@ -1,50 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingVertical="@dimen/dp_4">
+    android:paddingHorizontal="@dimen/dp_14">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@color/colorPrimary"
         android:layout_marginLeft="@dimen/dp_4"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center"
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
-        android:text="蓝色"/>
-
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:textColor="@color/color666666"
-        android:textSize="@dimen/main_txt_size"
-        android:textColorHint="@color/color666666"
-        android:text=""
-        android:hint="库存200件"
-        android:paddingVertical="@dimen/dp_4"
-        android:paddingLeft="@dimen/dp_4"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:layout_marginRight="@dimen/dp_10"
-        android:text="件"
-        android:layout_gravity="center_vertical"
-        />
+        android:text="蓝100件"
+        android:layout_marginTop="@dimen/dp_10"/>
 
 </LinearLayout>

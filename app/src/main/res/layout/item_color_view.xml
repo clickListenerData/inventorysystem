@@ -23,20 +23,25 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
             android:text="默认颜色"/>
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginRight="@dimen/dp_4"
             android:layout_gravity="center_vertical"
             android:gravity="right"
-            android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size"
-            android:text="11"/>
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:text="11"
+            android:layout_marginLeft="@dimen/dp_10"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
 
         <ImageView
             android:layout_width="wrap_content"

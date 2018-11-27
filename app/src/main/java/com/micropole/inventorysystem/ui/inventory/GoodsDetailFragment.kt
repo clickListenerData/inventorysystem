@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.ui.inventory
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.micropole.inventorysystem.adapter.inventorydetail.CustomerListAdapter
 import com.micropole.inventorysystem.entity.ColorBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_goods_details.*
+import kotlinx.android.synthetic.main.view_goods_inventory_foot.view.*
 
 /**
  * @ClassName       GoodsDetailFragment
@@ -75,6 +77,11 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
 
     fun getFootView() : View{
         val vi = LayoutInflater.from(mContext).inflate(R.layout.view_goods_inventory_foot, null, false)
+        vi.rv_goods_detail_btn.layoutManager = GridLayoutManager(mContext,3,GridLayoutManager.VERTICAL,false)
+        val dataBindAdapter = DataBindAdapter<ColorBean>(1, R.layout.item_company_btn)
+        vi.rv_goods_detail_btn.adapter = dataBindAdapter
+
+        dataBindAdapter.setNewData(arrayListOf(ColorBean(), ColorBean(), ColorBean(), ColorBean(),ColorBean()))
         return vi
     }
 }
