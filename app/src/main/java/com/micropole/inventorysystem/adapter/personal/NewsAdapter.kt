@@ -1,9 +1,12 @@
 package com.micropole.inventorysystem.adapter.personal
 
+import android.content.Context
 import android.support.v4.widget.SlidingPaneLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.AttributeSet
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -19,11 +22,11 @@ import com.micropole.inventorysystem.entity.NewsBean
  * @Date            2018/11/23 11:31
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class NewsAdapter(r : RecyclerView) : DataBindAdapter<NewsBean>(1, R.layout.item_news_view) {
-    lateinit var a : BaseQuickAdapter<NewsBean,BaseViewHolder>
+class NewsAdapter(val r : RecyclerView) : DataBindAdapter<NewsBean>(1, R.layout.item_news_view) {
+    var a : BaseQuickAdapter<NewsBean,BaseViewHolder>
 
     init {
-        r.layoutManager = LinearLayoutManager(mContext)
+        r.layoutManager = Manager(r.context)
         a = object : BaseQuickAdapter<NewsBean,BaseViewHolder>(R.layout.item_news_delete) {
             override fun convert(helper: BaseViewHolder?, item: NewsBean?) {
 
@@ -47,6 +50,16 @@ class NewsAdapter(r : RecyclerView) : DataBindAdapter<NewsBean>(1, R.layout.item
         }
     }
 
+    override fun bindToRecyclerView(recyclerView: RecyclerView?) {
+        super.bindToRecyclerView(recyclerView)
+        recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                r.scrollBy(dx,dy)
+            }
+        })
+    }
+
     override fun loadMoreEnd() {
         super.loadMoreEnd()
         a.removeAllFooterView()
@@ -65,5 +78,12 @@ class NewsAdapter(r : RecyclerView) : DataBindAdapter<NewsBean>(1, R.layout.item
     override fun addData(newData: MutableCollection<out NewsBean>) {
         super.addData(newData)
         a.addData(newData)
+    }
+
+    class Manager(context: Context) : LinearLayoutManager(context){
+        var isscroll = true
+        override fun canScrollVertically(): Boolean {
+            return isscroll && super.canScrollVertically()
+        }
     }
 }
