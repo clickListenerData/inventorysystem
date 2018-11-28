@@ -16,7 +16,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:layout_marginTop="@dimen/dp_14"
         android:layout_marginLeft="@dimen/dp_14"
         android:layout_marginRight="@dimen/dp_14"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_14"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
         android:text="@string/input_storage"/>

@@ -77,7 +77,7 @@
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
         android:text="@string/look_goods_detail"
-        android:background="@drawable/shape_white_gray_r3"/>
+        android:background="@drawable/shape_white_r6"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -90,7 +90,7 @@
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
         android:text="@string/save_txt"
-        android:background="@drawable/shape_white_gray_r3"/>
+        android:background="@drawable/shape_white_r6"/>
 
 
 </LinearLayout>

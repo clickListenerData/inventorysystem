@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.graphics.Color
+import android.text.InputType
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -77,6 +78,7 @@ class InputMsgView@JvmOverloads constructor(context : Context, attrs : Attribute
 
     fun isInput(isEnable : Boolean){
         et_input_msg.isEnabled = isEnabled
+        et_input_msg.inputType = if (isEnable) InputType.TYPE_CLASS_TEXT else InputType.TYPE_NULL
     }
 
     fun setInputHint(content : String){

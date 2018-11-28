@@ -28,11 +28,11 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/image"/>
+            android:src="@drawable/ic_cover_n"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_play"
+            android:src="@drawable/ic_towardstheright_n"
             android:layout_marginRight="@dimen/dp_4"/>
     </LinearLayout>
 
@@ -61,8 +61,9 @@
         android:layout_height="wrap_content"
         app:main_txt_content="@string/company_country"
         app:custom_txt_content="@string/company_country_hint"
-        app:custom_txt_color="@color/txt_out"
-        app:custom_txt_drawable="@android:drawable/ic_media_play" />
+        app:custom_txt_color="@color/text_edit_hint"
+        app:custom_txt_bold="false"
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

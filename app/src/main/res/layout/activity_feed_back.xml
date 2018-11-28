@@ -14,7 +14,7 @@
         android:layout_marginLeft="@dimen/dp_14"
         android:layout_marginRight="@dimen/dp_14"
         android:layout_marginTop="@dimen/dp_10"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:hint="@string/feed_back_hint"
         android:gravity="top"
         android:textSize="@dimen/txt_13"

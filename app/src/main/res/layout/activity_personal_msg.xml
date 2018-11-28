@@ -12,17 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_name"
-        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
     <com.micropole.inventorysystem.widght.NormalLlView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_sex"
-        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
     <com.micropole.inventorysystem.widght.NormalLlView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_birth"
-        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,11 +45,13 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@color/colorPrimary"/>
+            android:src="@drawable/ic_headportrait_n"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_play"
+            android:src="@drawable/ic_towardstheright_n"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_14"
             android:layout_marginRight="@dimen/dp_14"/>
     </LinearLayout>
 

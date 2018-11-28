@@ -36,7 +36,7 @@
                 android:layout_toLeftOf="@id/iv_news"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_14"
-                android:src="@android:drawable/ic_menu_camera"/>
+                android:src="@drawable/ic_sharea_n"/>
             <ImageView
                 android:id="@+id/iv_news"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_14"
-                android:src="@android:drawable/ic_menu_search"/>
+                android:src="@drawable/ic_newss_n"/>
         </RelativeLayout>
 
         <ScrollView
@@ -131,7 +131,7 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:layout_marginHorizontal="@dimen/dp_14"
                     android:orientation="vertical"
-                    android:background="@drawable/shape_white_gray_r3">
+                    android:background="@drawable/shape_white_r6">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_category_manager"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_classification_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content="12"
                         android:layout_marginTop="@dimen/dp_14"/>
@@ -162,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_color_manager"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_colormanagement_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@android:drawable/ic_media_play"/>
@@ -184,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_company"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_company_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content="12"/>
 
@@ -194,7 +194,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_finance_manager"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_finance_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@android:drawable/ic_media_play"/>
@@ -206,7 +206,7 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:layout_marginHorizontal="@dimen/dp_14"
                     android:orientation="vertical"
-                    android:background="@drawable/shape_white_gray_r3">
+                    android:background="@drawable/shape_white_r6">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -225,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_all_order"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_order_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content="12"/>
 
@@ -234,7 +234,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_address_manager"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_address_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@android:drawable/ic_media_play"/>
@@ -244,7 +244,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_collect"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_collection_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@android:drawable/ic_media_play"/>
@@ -254,7 +254,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_foot"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_footprint_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content="12"/>
 
@@ -266,7 +266,7 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:layout_marginHorizontal="@dimen/dp_14"
                     android:orientation="vertical"
-                    android:background="@drawable/shape_white_gray_r3">
+                    android:background="@drawable/shape_white_r6">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -286,7 +286,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_message"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_personalinformation_n"
                         app:custom_txt_drawable="@android:drawable/ic_media_play"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
@@ -297,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_safety_setting"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_security_n"
                         app:custom_txt_drawable="@android:drawable/ic_media_play"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
@@ -308,7 +308,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_feed_back"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_opinion_n"
                         app:custom_txt_drawable="@android:drawable/ic_media_play"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
@@ -330,7 +330,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_about"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_aboutus_v"
                         app:custom_txt_drawable="@android:drawable/ic_media_play"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
@@ -340,7 +340,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_white_gray_r3"
+                    android:background="@drawable/shape_white_r6"
                     android:layout_marginTop="@dimen/dp_14"
                     android:layout_marginHorizontal="@dimen/dp_14"
                     android:paddingVertical="@dimen/dp_14"

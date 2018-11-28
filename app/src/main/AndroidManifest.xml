@@ -52,6 +52,8 @@
         <activity android:name=".ui.personal.mine.SettingPWActivity" />
         <activity android:name=".ui.personal.mine.SettingPhoneActivity"></activity>
         <activity android:name=".ui.personal.inventory.MemberListActivity"/>
+        <activity android:name=".ui.personal.inventory.MemberDetailActivity"/>
+        <activity android:name=".ui.personal.inventory.AddMemberActivity"/>
     </application>
 
 </manifest>

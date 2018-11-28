@@ -12,6 +12,7 @@ import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.AddInputAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.CustomerListAdapter
+import com.micropole.inventorysystem.entity.BtnBean
 import com.micropole.inventorysystem.entity.ColorBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_goods_details.*
@@ -77,11 +78,20 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
 
     fun getFootView() : View{
         val vi = LayoutInflater.from(mContext).inflate(R.layout.view_goods_inventory_foot, null, false)
-        vi.rv_goods_detail_btn.layoutManager = GridLayoutManager(mContext,3,GridLayoutManager.VERTICAL,false)
-        val dataBindAdapter = DataBindAdapter<ColorBean>(1, R.layout.item_company_btn)
-        vi.rv_goods_detail_btn.adapter = dataBindAdapter
-
-        dataBindAdapter.setNewData(arrayListOf(ColorBean(), ColorBean(), ColorBean(), ColorBean(),ColorBean()))
+        initBtn(vi.rv_goods_detail_btn)
         return vi
+    }
+
+    fun initBtn(rv : RecyclerView){
+        rv.layoutManager = GridLayoutManager(mContext,3,GridLayoutManager.VERTICAL,false)
+        val dataBindAdapter = DataBindAdapter<BtnBean>(1, R.layout.item_company_btn)
+        rv.adapter = dataBindAdapter
+
+        dataBindAdapter.setNewData(arrayListOf(BtnBean(R.drawable.ic_newwarehousing_n, getString(R.string.btn_add_inventory)),
+                BtnBean(R.drawable.ic_newoutbound_n, getString(R.string.btn_output_inventory)),
+                BtnBean(R.drawable.ic_edits_n, getString(R.string.btn_edit_goods)),
+                BtnBean(R.drawable.ic_erweima_n, getString(R.string.btn_create_qr_code)),
+                BtnBean(R.drawable.ic_deletemerchandise_n, getString(R.string.btn_delete_goods))
+        ))
     }
 }

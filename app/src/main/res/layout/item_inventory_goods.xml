@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:padding="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_14"
         >

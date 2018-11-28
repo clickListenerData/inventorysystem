@@ -18,21 +18,21 @@
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_goods_count"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_camera"/>
+            app:top_txt_drawable="@drawable/ic_total_n"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_counts"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_camera"/>
+            app:top_txt_drawable="@drawable/ic_totalinventory_n"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_count_cost"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_camera"/>
+            app:top_txt_drawable="@drawable/ic_totalcost_n"/>
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +49,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/ic_warehousinga_n"
+            android:drawablePadding="@dimen/dp_4"
             android:gravity="center"
             android:text="@string/input_goods"
             android:textColor="@color/color666666"
@@ -60,7 +61,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/ic_outofstockb_n"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/output_goods"
@@ -71,7 +73,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/ic_nnewlybuilda_n"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/new_create_goods"
@@ -82,7 +85,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/ic_orderrecord_n"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/order_record"
@@ -110,8 +114,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:textStyle="bold"
             android:text="@string/inventory_goods"
             android:layout_gravity="center_vertical"/>
 
@@ -129,7 +134,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:layout_marginHorizontal="@dimen/dp_14"
         android:paddingVertical="@dimen/dp_10"
         android:paddingLeft="@dimen/dp_10"
@@ -137,8 +142,10 @@
         android:textSize="@dimen/main_txt_size"
         android:text=""
         android:hint="@string/search_hint_txt"
-        android:drawableLeft="@android:drawable/ic_search_category_default"
-        android:drawableRight="@android:drawable/ic_delete"/>
+        android:drawableLeft="@drawable/global_ic_input_search"
+        android:drawablePadding="@dimen/dp_4"
+        android:drawableRight="@drawable/global_btn_input_del"
+        android:paddingRight="@dimen/dp_14"/>
 
     <net.lucode.hackware.magicindicator.MagicIndicator
         android:id="@+id/magic_inventory"
@@ -159,7 +166,8 @@
             android:text="@string/comprehensive_txt"
             android:layout_marginLeft="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/txt_out"/>
+            android:textColor="@color/txt_out"
+            android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -167,7 +175,8 @@
             android:text="@string/output_count"
             android:layout_marginLeft="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"/>
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -175,7 +184,8 @@
             android:text="@string/time_txt"
             android:layout_marginLeft="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"/>
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -183,7 +193,8 @@
             android:text="@string/sales_txt"
             android:layout_marginLeft="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"/>
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
     </LinearLayout>
 
 </LinearLayout>

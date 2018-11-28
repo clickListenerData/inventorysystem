@@ -15,6 +15,7 @@ class AboutPersonalActivity : BaseMvpViewActivity(){
     override fun getActivityLayoutId(): Int = R.layout.activity_personal_about
 
     override fun initData() {
+        setTitleText(res = R.string.personal_mine_about)
     }
 
     override fun initEvent() {

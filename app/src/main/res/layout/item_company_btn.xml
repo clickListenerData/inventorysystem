@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.ColorBean"/>
+            type="com.micropole.inventorysystem.entity.BtnBean"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,12 +16,12 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_delete"
+            android:img_res="@{data.res}"
             android:layout_gravity="center"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/company_btn_look"
+            android:text="@{data.txt}"
             android:layout_marginTop="@dimen/dp_4"
             android:layout_gravity="center"/>
 

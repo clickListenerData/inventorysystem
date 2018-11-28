@@ -10,12 +10,12 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_input_get"/>
+        android:src="@drawable/ic_createcompany_n"/>
     
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
         android:textSize="@dimen/txt_13"
         android:textColor="@color/text_edit_hint"
         android:text="@string/not_add_company"/>
@@ -23,8 +23,8 @@
     <com.coorchice.library.SuperTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
-        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_white_r6"
+        android:layout_marginTop="20dp"
         android:paddingVertical="@dimen/dp_14"
         android:paddingHorizontal="54dp"
         android:textSize="@dimen/txt_15"

@@ -11,6 +11,7 @@
         android:layout_gravity="center"
         android:textColor="@color/color666666"
         android:textSize="@dimen/txt_11"
+        android:drawablePadding="@dimen/dp_4"
         android:text=""/>
 
     <TextView

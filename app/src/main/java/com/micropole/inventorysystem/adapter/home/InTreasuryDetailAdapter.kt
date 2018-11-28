@@ -24,4 +24,11 @@ class InTreasuryDetailAdapter():BaseQuickAdapter<String,BaseViewHolder>(R.layout
 
 
     }
+
+
+    class ItmeAdapter : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_treasury_de_goods){
+        override fun convert(helper: BaseViewHolder?, item: String?) {
+
+        }
+    }
 }

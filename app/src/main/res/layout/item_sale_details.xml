@@ -37,6 +37,7 @@
             android:textColor="@color/title_color"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_sale_name"
+            android:layout_marginRight="@dimen/dp_4"
             android:text="12"/>
         <TextView
             android:id="@+id/tv_sale_price"
@@ -53,9 +54,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_sale_price"
+            app:layout_constraintTop_toBottomOf="@id/tv_sale_price"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
+            android:layout_marginRight="@dimen/dp_4"
             android:text="2018"/>
     </android.support.constraint.ConstraintLayout>
 </layout>

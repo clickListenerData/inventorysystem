@@ -15,6 +15,7 @@ class FeedBackActivity : BaseMvpViewActivity() {
     override fun getActivityLayoutId(): Int = R.layout.activity_feed_back
 
     override fun initData() {
+        setTitleText(res = R.string.personal_feed_back)
     }
 
     override fun initEvent() {
