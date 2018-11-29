@@ -106,7 +106,7 @@
             android:textSize="@dimen/txt_17"
             android:textColor="#E72639"
             android:text="￥10000"
-            android:layout_marginRight="@dimen/dp_10"/>
+            android:layout_marginRight="@dimen/dp_4"/>
         <TextView
             android:id="@+id/tv_numbers"
             android:layout_width="wrap_content"

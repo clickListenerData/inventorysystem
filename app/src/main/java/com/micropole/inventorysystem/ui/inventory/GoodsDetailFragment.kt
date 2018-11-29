@@ -1,14 +1,21 @@
 package com.micropole.inventorysystem.ui.inventory
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
+import com.blankj.utilcode.util.ConvertUtils
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
+import com.coorchice.library.SuperTextView
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
+import com.micropole.baseapplibrary.appconst.setListData
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.AddInputAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.CustomerListAdapter
@@ -42,13 +49,13 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
     }
 
     var mType = ""
-    var mAdapter : RecyclerView.Adapter<out BaseViewHolder>? = null
+    var mAdapter : BaseQuickAdapter<out Any,out BaseViewHolder>? = null
 
     override fun getFragmentLayoutId(): Int = R.layout.fragment_goods_details
 
     override fun initView(view: View?) {
         mType = arguments?.getString("goods_detail_type") ?: ""
-        rv_goods_detail.layoutManager = LinearLayoutManager(mContext)
+        val linearLayoutManager : LinearLayoutManager = LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL,false)
         when(mType){
             INVENTORY_GOODS -> {
                 mAdapter = AddInputAdapter()
@@ -62,13 +69,20 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
                 mAdapter = CustomerListAdapter()
             }
         }
+        rv_goods_detail.layoutManager = linearLayoutManager
         rv_goods_detail.adapter = mAdapter
+        rv_goods_detail.isNestedScrollingEnabled = false
     }
 
     override fun initEvent(view: View?) {
     }
 
     override fun initData() {
+        when (mType) {
+            INVENTORY_GOODS -> (mAdapter as AddInputAdapter).setNewData(arrayListOf(Any(), Any(), Any()))
+            SALE_DETAILS -> (mAdapter as DataBindAdapter<ColorBean>).setNewData(arrayListOf(ColorBean(), ColorBean(),ColorBean()))
+            CUSTOMER_LIST -> (mAdapter as CustomerListAdapter).setNewData(arrayListOf(Any(), Any(), Any()))
+        }
     }
 
     fun getHeadView() : View{
@@ -80,6 +94,22 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
         val vi = LayoutInflater.from(mContext).inflate(R.layout.view_goods_inventory_foot, null, false)
         initBtn(vi.rv_goods_detail_btn)
         return vi
+    }
+
+    fun getFootView2() : View{
+        val frameLayout = FrameLayout(mContext)
+        frameLayout.layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,ConvertUtils.dp2px(50f))
+        val superTextView = SuperTextView(mContext)
+        superTextView.solid = Color.parseColor("#0775F6")
+        superTextView.corner = 6f
+        superTextView.gravity = Gravity.CENTER
+        superTextView.setText(R.string.sure)
+        superTextView.textSize = 15f
+        superTextView.setTextColor(Color.WHITE)
+        val layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+        layoutParams.gravity = Gravity.CENTER
+        frameLayout.addView(superTextView, layoutParams)
+        return frameLayout
     }
 
     fun initBtn(rv : RecyclerView){

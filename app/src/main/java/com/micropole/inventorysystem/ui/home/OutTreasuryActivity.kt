@@ -42,7 +42,7 @@ class OutTreasuryActivity : BaseMvpViewActivity() {
         adapter.setNewData(arrayListOf("",""))
         recyclerView.addOnItemTouchListener(object : OnItemClickListener(){
             override fun onSimpleItemClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
-                OutTreasuryDetailActivity.startOutTreasuryDetailActivity(mContext)
+                InTreasuryDetailActivity.startInTreasuryDetailActivity(mContext,InTreasuryDetailActivity.TYPE_OUT)
             }
 
         })

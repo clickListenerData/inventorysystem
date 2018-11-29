@@ -115,6 +115,7 @@
                     android:background="@color/line_color"
                     android:layout_marginHorizontal="@dimen/dp_10"/>
                 <com.micropole.inventorysystem.widght.InputMsgView
+                    android:id="@+id/imv_remark_in"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title_color="#E72639"
@@ -136,6 +137,7 @@
                         android:textSize="@dimen/txt_13"
                         android:text="内涵200元增值税"/>
                     <com.coorchice.library.SuperTextView
+                        android:id="@+id/stv_btn_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/txt_13"
@@ -148,6 +150,7 @@
                         android:paddingVertical="6dp"
                         android:visibility="gone"/>
                     <com.coorchice.library.SuperTextView
+                        android:id="@+id/stv_btn_two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/txt_13"
@@ -162,6 +165,7 @@
                         />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/ll_share_print"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -173,16 +177,20 @@
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/txt_13"
                         android:textColor="@color/color666666"
-                        android:text="@string/now_order"
-                        android:layout_marginRight="@dimen/dp_14"/>
+                        android:text="@string/share_txt"
+                        android:layout_marginRight="@dimen/dp_14"
+                        android:drawableLeft="@drawable/ic_sharee_n"
+                        android:drawablePadding="@dimen/dp_4"/>
                     <TextView
                         android:id="@+id/tv_guaqi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/txt_13"
                         android:textColor="@color/color666666"
-                        android:text="@string/tuihui"
-                        android:layout_marginRight="10dp"/>
+                        android:text="@string/print_txt"
+                        android:layout_marginRight="10dp"
+                        android:drawableLeft="@drawable/ic_printinga_n"
+                        android:drawablePadding="@dimen/dp_4"/>
                 </LinearLayout>
             </LinearLayout>
 

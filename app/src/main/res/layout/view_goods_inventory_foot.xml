@@ -6,6 +6,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_goods_detail_btn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/text_color_white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"/>
 
 </FrameLayout>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingHorizontal="@dimen/dp_14">
 
-    <ImageView
+    <com.coorchice.library.SuperTextView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@color/colorPrimary"
         android:layout_marginLeft="@dimen/dp_4"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        app:stv_solid="#ff0000"
+        app:stv_corner="2dp"/>
 
     <TextView
         android:layout_width="wrap_content"

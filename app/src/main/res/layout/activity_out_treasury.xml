@@ -48,20 +48,22 @@
                     android:layout_height="match_parent">
                 </android.support.v7.widget.RecyclerView>
 
+            <com.coorchice.library.SuperTextView
+                android:id="@+id/tv_chuangjian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="105dp"
+                android:layout_marginVertical="@dimen/dp_14"
+                app:stv_solid="@color/txt_out"
+                app:stv_corner="6dp"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/txt_15"
+                android:text="新建入库"
+                android:gravity="center"
+                android:paddingVertical="@dimen/dp_10"
+                />
+
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
-    <com.coorchice.library.SuperTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="105dp"
-        android:layout_marginVertical="@dimen/dp_14"
-        app:stv_solid="@color/txt_out"
-        app:stv_corner="6dp"
-        android:textColor="@color/text_color_white"
-        android:textSize="@dimen/txt_15"
-        android:text="新建入库"
-        android:gravity="center"
-        android:paddingVertical="@dimen/dp_10"
-        />
 
 </LinearLayout>

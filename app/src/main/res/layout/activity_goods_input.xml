@@ -9,7 +9,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_r6"
+        android:background="@drawable/shape_white_gray_r5"
         android:layout_marginLeft="@dimen/dp_14"
         android:layout_marginRight="@dimen/dp_14"
         android:layout_marginTop="@dimen/dp_10"
@@ -18,40 +18,63 @@
         android:textColorHint="@color/text_edit_hint"
         android:textSize="@dimen/main_txt_size"
         android:text=""
+        android:drawableLeft="@drawable/global_ic_input_search"
+        android:drawableRight="@drawable/global_btn_input_del"
+        android:paddingRight="@dimen/dp_14"
         android:hint="@string/search_hint_txt"/>
 
-    <net.lucode.hackware.magicindicator.MagicIndicator
-        android:id="@+id/magic_inventory"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"/>
+        android:layout_height="50dp"
+        android:paddingVertical="@dimen/dp_10">
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp_10">
+        android:background="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_10">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/output_count"
-            android:layout_marginLeft="@dimen/dp_14"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/inventory_count_txt"
-            android:layout_marginLeft="@dimen/dp_14"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/time_txt"
-            android:layout_marginLeft="@dimen/dp_14"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sales_txt"
+            android:layout_weight="1"
+            android:text="@string/comprehensive_txt"
             android:layout_marginLeft="@dimen/dp_14"
-            android:visibility="gone"/>
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/output_count"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/inventory_count_txt"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/time_txt"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

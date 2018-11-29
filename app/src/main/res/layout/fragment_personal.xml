@@ -165,7 +165,7 @@
                         app:main_drawable="@drawable/ic_colormanagement_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
                         android:id="@+id/nll_material"
@@ -173,10 +173,10 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_material_bank"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
+                        app:main_drawable="@drawable/ic_materialscience_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
                         android:id="@+id/nll_company"
@@ -197,7 +197,7 @@
                         app:main_drawable="@drawable/ic_finance_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -237,7 +237,7 @@
                         app:main_drawable="@drawable/ic_address_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
                         android:layout_width="match_parent"
@@ -247,7 +247,7 @@
                         app:main_drawable="@drawable/ic_collection_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
                         android:layout_width="match_parent"
@@ -287,7 +287,7 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_message"
                         app:main_drawable="@drawable/ic_personalinformation_n"
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
@@ -298,7 +298,7 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_safety_setting"
                         app:main_drawable="@drawable/ic_security_n"
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
@@ -309,7 +309,7 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_feed_back"
                         app:main_drawable="@drawable/ic_opinion_n"
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
@@ -319,8 +319,8 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_contact_service"
-                        app:main_drawable="@android:drawable/ic_menu_manage"
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        app:main_drawable="@drawable/ic_contactcustomerservice_n"
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
@@ -331,7 +331,7 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_about"
                         app:main_drawable="@drawable/ic_aboutus_v"
-                        app:custom_txt_drawable="@android:drawable/ic_media_play"
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 

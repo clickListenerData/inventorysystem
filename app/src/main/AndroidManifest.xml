@@ -54,6 +54,8 @@
         <activity android:name=".ui.personal.inventory.MemberListActivity"/>
         <activity android:name=".ui.personal.inventory.MemberDetailActivity"/>
         <activity android:name=".ui.personal.inventory.AddMemberActivity"/>
+        <activity android:name=".ui.inventory.SelectActivity"/>
+        <activity android:name=".ui.inventory.output.SelectCustomerActivity"/>
     </application>
 
 </manifest>

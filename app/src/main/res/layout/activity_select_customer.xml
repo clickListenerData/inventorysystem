@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_gray_r5"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:textColorHint="@color/text_edit_hint"
+        android:textSize="@dimen/main_txt_size"
+        android:text=""
+        android:hint="@string/search_hint_txt"
+        android:drawableLeft="@drawable/global_ic_input_search"
+        android:drawablePadding="@dimen/dp_4"
+        android:drawableRight="@drawable/global_btn_input_del"
+        android:paddingRight="@dimen/dp_14"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dp_14">
+        <TextView
+            android:id="@+id/tv_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="最新创建"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_jiaoyi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="交易额"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_qian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="欠款金额"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="次数"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

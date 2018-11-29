@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import com.xx.baseutilslibrary.common.XxResourceUtil
+import com.xx.baseutilslibrary.status_bar.StatusBarUtils
 
 /**
  * BaseActivity
@@ -34,6 +35,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mContext = this
         beforeSetContentView()
         if (getActivityLayoutId() != -1) setContentView(getActivityLayoutId())
+        StatusBarUtils.apply(this,true)
         afterSetContentView()
     }
 

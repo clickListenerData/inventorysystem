@@ -18,12 +18,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:textSize="@dimen/txt_15"
                 android:textColor="@color/title_color"
                 android:text="@string/select_shop"
                 android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_addtoto_n"
+                android:layout_marginRight="@dimen/dp_14"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <FrameLayout
                 android:layout_width="match_parent"
@@ -45,7 +47,7 @@
                     android:gravity="center_vertical"
                     android:drawableRight="@drawable/ic_towardstheright_n"
                     android:paddingHorizontal="@dimen/dp_14"
-                    android:background="@drawable/login_codes"
+                    android:background="@drawable/shape_white_r6"
                     android:layout_marginRight="@dimen/dp_10"
                     android:layout_marginLeft="@dimen/dp_10"
                     />

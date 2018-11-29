@@ -18,7 +18,7 @@ class AddInputAdapter : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_rv_ad
 
     override fun convert(helper: BaseViewHolder?, item: Any?) {
         helper?.apply {
-            setRvAdapter(R.id.rv_item_color,LinearLayoutManager(mContext),ItemAdapter(arrayListOf(Any(), Any(),Any())))
+            setRvAdapter(R.id.rv_item_color,LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false),ItemAdapter(arrayListOf(Any(), Any(),Any())))
         }
     }
 

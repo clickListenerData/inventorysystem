@@ -23,7 +23,7 @@
                 android:visibility="gone"/>
             <include layout="@layout/view_check_net"
                 android:visibility="gone"/>
-            <ScrollView
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
@@ -233,7 +233,7 @@
                         android:paddingVertical="@dimen/dp_14"/>
 
                 </LinearLayout>
-            </ScrollView>
+            </android.support.v4.widget.NestedScrollView>
         </FrameLayout>
 
     </LinearLayout>

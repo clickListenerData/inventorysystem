@@ -24,8 +24,8 @@ class PartnerShipFragment : BaseMvpViewFragment() {
         ib_back.visibility=View.GONE
         tv_right.visibility=View.VISIBLE
 
-        recyclerView.adapter=adapter
-        recyclerView.layoutManager=LinearLayoutManager(mContext)
+        rrv_partner_ship.mLayoutManager = LinearLayoutManager(mContext)
+        rrv_partner_ship.mAdapter = adapter
         adapter.setNewData(arrayListOf("","",""))
         tv_title.text=getString(R.string.partner_hezuoguanxi)
         tv_right.text=getString(R.string.partner_add_hezuoguanxi)

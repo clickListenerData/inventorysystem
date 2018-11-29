@@ -27,6 +27,7 @@
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_10"/>
             <com.micropole.inventorysystem.widght.NormalLlView
+                android:id="@+id/nll_goods_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:main_txt_content="@string/new_goods_category"/>
@@ -78,6 +79,7 @@
                 android:layout_marginLeft="@dimen/dp_10"/>
 
             <LinearLayout
+                android:id="@+id/ll_goods_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="@dimen/dp_10"
@@ -118,6 +120,7 @@
 
 
             <com.micropole.inventorysystem.widght.NormalLlView
+                android:id="@+id/nll_goods_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:main_txt_content="@string/new_goods_size"
@@ -129,6 +132,7 @@
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_10"/>
             <com.micropole.inventorysystem.widght.NormalLlView
+                android:id="@+id/nll_goods_material"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:main_txt_content="@string/new_goods_material"

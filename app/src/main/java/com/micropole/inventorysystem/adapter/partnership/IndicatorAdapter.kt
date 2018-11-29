@@ -39,9 +39,9 @@ class IndicatorAdapter(val mDatas : List<String>,val action : (view : View,index
     override fun getIndicator(context: Context?): IPagerIndicator {
         val pagerIndicator = LinePagerIndicator(context)
         pagerIndicator.setColors(Color.parseColor("#007AFF"))
-        pagerIndicator.mode = LinePagerIndicator.MODE_EXACTLY
+        pagerIndicator.mode = LinePagerIndicator.MODE_WRAP_CONTENT
         pagerIndicator.lineHeight = UIUtil.dip2px(context!!,2.0).toFloat()
-        pagerIndicator.lineWidth = UIUtil.dip2px(context!!,30.00).toFloat()
+//        pagerIndicator.lineWidth = UIUtil.dip2px(context!!,30.00).toFloat()
         pagerIndicator.roundRadius = UIUtil.dip2px(context!!,1.0).toFloat()
         return pagerIndicator
     }
