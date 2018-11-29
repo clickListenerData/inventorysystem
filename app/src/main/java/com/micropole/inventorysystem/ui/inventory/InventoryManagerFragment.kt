@@ -10,6 +10,7 @@ import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.micropole.inventorysystem.ui.home.InTreasuryActivity
 import com.micropole.inventorysystem.ui.home.OutTreasuryActivity
+import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.fragment_inventory_manager.*
@@ -52,7 +53,9 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
 
     fun getHeaderView() : View{
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_inventory_head, null,false)
-        initMagic(view.magic_inventory)
+        view.magic_inventory.initMagic(arrayListOf("默认","大衣", "短袖", "裤子", "鞋子")){
+            view, index ->
+        }
         view.tv_new_goods.setOnClickListener { activity?.startActivity<NewGoodsActivity>() }
         view.tv_ruku.setOnClickListener {
             InTreasuryActivity.startInTreasuryActivity(mContext)
@@ -60,17 +63,9 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
         view.tv_chuku.setOnClickListener {
             OutTreasuryActivity.startOutTreasuryActivity(mContext)
         }
-        return view
-    }
-
-    fun initMagic(magic : MagicIndicator){
-        val fragmentContainerHelper = FragmentContainerHelper()
-        val commonNavigator = CommonNavigator(mContext)
-        commonNavigator.adapter = IndicatorAdapter(arrayListOf("大衣", "短袖", "裤子", "鞋子")) { view, index ->
-            fragmentContainerHelper.handlePageSelected(index, false)
-            //
+        view.tv_order_record.setOnClickListener {
+            activity?.startActivity<InventoryDetailsActivity>()
         }
-        magic.navigator = commonNavigator
-        fragmentContainerHelper.attachMagicIndicator(magic)
+        return view
     }
 }

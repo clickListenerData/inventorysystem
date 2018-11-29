@@ -1,63 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
 
     <include layout="@layout/view_title"/>
 
-    <net.lucode.hackware.magicindicator.MagicIndicator
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"
+        android:paddingVertical="@dimen/dp_10"
+        android:background="@color/text_color_white">
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_10"
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/inventory_detail_time"
             android:layout_marginLeft="@dimen/dp_14"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/inventory_detail_count"
             android:layout_marginLeft="@dimen/dp_14"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/inventory_detail_price"
             android:layout_marginLeft="@dimen/dp_14"
-            android:layout_gravity="center_vertical"/>
-        <TextView
-            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"/>
+        <com.coorchice.library.SuperTextView
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:background="@drawable/shape_white_gray_r3"
-            android:layout_weight="1"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:layout_marginRight="@dimen/dp_14"
             android:drawableRight="@android:drawable/ic_delete"
             android:text="全部"
-            android:gravity="right|center_vertical"
+            android:gravity="center"
             android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_white"
+            app:stv_solid="@color/txt_out"
+            app:stv_corner="4dp"
             />
-        <TextView
+        <com.coorchice.library.SuperTextView
             android:layout_width="0dp"
             android:layout_height="20dp"
-            android:background="@drawable/shape_white_gray_r3"
             android:layout_weight="1"
-            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_10"
             android:layout_gravity="center_vertical"
             android:text="导出"
             android:gravity="center"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_white"
+            app:stv_solid="#FF9501"
+            app:stv_corner="4dp"
             />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>

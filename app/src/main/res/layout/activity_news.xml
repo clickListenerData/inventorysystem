@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layoutDirection="rtl">
-            <android.support.v7.widget.RecyclerView
+            <com.micropole.inventorysystem.widght.Rv
                 android:id="@+id/rv_delete"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"/>
@@ -27,7 +27,7 @@
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/shape_white_gray_r3" />
+                android:background="@drawable/shape_white_r6" />
         </android.support.v4.widget.SlidingPaneLayout>
     </android.support.v4.widget.SwipeRefreshLayout>
 

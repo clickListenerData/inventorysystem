@@ -11,5 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="大衣"
-        app:custom_txt_content="11" />
+        app:custom_txt_bold="false"
+        app:custom_txt_content="11"
+        app:custom_txt_color="@color/color666666"
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 </layout>

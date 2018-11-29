@@ -32,7 +32,7 @@ class MaterialManagerActivity : BaseRefreshActivity<MaterialBean,MaterialConstra
 
     override fun createPresenter(): MaterialConstract.Present = MaterialPresent()
 
-    override fun getActivityLayoutId(): Int  = R.layout.activity_news
+    override fun getActivityLayoutId(): Int  = R.layout.activity_refresh_recy
 
     override fun getData(data: List<MaterialBean>) {
         setData(data)

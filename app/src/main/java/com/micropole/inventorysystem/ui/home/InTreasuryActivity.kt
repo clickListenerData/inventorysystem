@@ -34,7 +34,7 @@ class InTreasuryActivity : BaseMvpViewActivity() {
     /**
      * 初始化数据状态
      */
-    var adapter= InTreasuryAdapter(this)
+    var adapter= InTreasuryAdapter()
     override fun initData() {
         tv_title.text=getString(R.string.shop_in)
         recyclerView.layoutManager= LinearLayoutManager(this)
@@ -43,7 +43,7 @@ class InTreasuryActivity : BaseMvpViewActivity() {
         adapter.setNewData(arrayListOf("",""))
         recyclerView.addOnItemTouchListener(object : OnItemClickListener(){
             override fun onSimpleItemClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
-                InTreasuryDetailActivity.startInTreasuryDetailActivity(mContext)
+                InTreasuryDetailActivity.startInTreasuryDetailActivity(mContext,InTreasuryDetailActivity.TYPE_IN)
             }
 
         })

@@ -5,111 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.personal.mine.SettingPWActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/app_color_bg">
     <include layout="@layout/view_title"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/set_pw"
-            android:gravity="center_vertical|right"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="@dimen/dp_14"
+            android:background="@null"
+            android:layout_marginHorizontal="@dimen/dp_14"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"
+            android:textColor="@color/title_color"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginHorizontal="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/set_new_pw"
-            android:gravity="center_vertical|right"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_new_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="@dimen/dp_14"
+            android:background="@null"
+            android:layout_marginHorizontal="@dimen/dp_14"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"/>
+            android:textColor="@color/title_color"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginHorizontal="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:paddingBottom="@dimen/dp_10"
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/set_new_surepw"
-            android:gravity="center_vertical|right"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_sure_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="@dimen/dp_14"
+            android:background="@null"
+            android:layout_marginHorizontal="@dimen/dp_14"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"
+            android:textColor="@color/title_color"
             />
     </LinearLayout>
-    <TextView
+    <com.coorchice.library.SuperTextView
         android:id="@+id/tv_sure"
         android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="23dp"
         android:text="@string/sure"
-        android:textSize="@dimen/dp_14"
-        android:textColor="@color/color_333"
-        android:paddingRight="@dimen/dp_14"
-        android:paddingLeft="@dimen/dp_14"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp"
-        android:background="@drawable/login_code"/>
+        android:gravity="center"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_10"
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"/>
 
 
 </LinearLayout>

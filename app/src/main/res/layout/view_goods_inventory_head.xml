@@ -3,143 +3,111 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/main_txt_size"
+        android:textSize="@dimen/txt_13"
         android:textColor="@color/color666666"
+        android:drawableLeft="@drawable/ic_commodityinforma_n"
+        android:drawablePadding="@dimen/dp_4"
         android:text="@string/goods_detail_msg"
-        android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_14"/>
+        android:paddingVertical="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_14"
+        android:background="@color/text_color_white"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color" />
 
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
         app:title_content="@string/new_goods_id"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
-
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/old_goods_id"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/goods_detail_super"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/material_txt"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
-
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/purchase_price"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/new_goods_cost_price"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/new_goods_retail_price"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/goods_detail_package_percent"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/category_txt"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/goods_create_time"
         app:input_content="cv1001"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_content="@string/new_goods_remark"
         app:input_content="cv1001"
+        android:paddingBottom="@dimen/dp_10"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:paddingLeft="@dimen/dp_14"
+        android:textSize="@dimen/txt_13"
+        android:drawableLeft="@drawable/ic_specifications_n"
+        android:drawablePadding="@dimen/dp_4"
+        android:textColor="@color/color666666"
+        android:text="@string/goods_size_inventory"
+        android:background="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_10"
+        />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line_color"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_14"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
-        android:text="@string/goods_size_inventory"
-        />
 
 </LinearLayout>

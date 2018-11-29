@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.shopmall
 
+import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import com.micropole.baseapplibrary.widght.RefreshRecyclerView
@@ -14,6 +16,16 @@ import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class OrderListFragment : BaseMvpViewFragment(){
+
+    companion object {
+        fun newFragment(type : Int) : Fragment{
+            val orderListFragment = OrderListFragment()
+            val bundle = Bundle()
+            bundle.putInt("",type)
+            orderListFragment.arguments = bundle
+            return orderListFragment
+        }
+    }
 
     lateinit var refreshRecyclerView : RefreshRecyclerView
 

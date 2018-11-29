@@ -13,6 +13,8 @@
 
     <string name="search_hint_txt">请输入关键字</string>
 
+    <string name="share_txt">分享</string>
+    <string name="print_txt">打印</string>
     <!--首页-->
     <string name="input_storage">入库</string>
     <string name="output_storage">出库</string>
@@ -64,6 +66,7 @@
     <string name="order_record">订单记录</string>
     <string name="inventory_goods">库存商品</string>
 
+    <string name="comprehensive_txt">综合</string>
     <string name="output_count">出库量</string>
     <string name="inventory_count_txt">库存量</string>
     <string name="inventory_txt">库存</string>
@@ -83,12 +86,13 @@
     <string name="personal_mine_collect">我的收藏</string>
     <string name="personal_mine_foot">我的足迹</string>
     <string name="personal_normal_setting">通用设置</string>
-    <string name="personal_mine_message">个人信息设置</string>
-    <string name="personal_safety_setting">安全性设置</string>
+    <string name="personal_mine_message">个人信息</string>
+    <string name="personal_safety_setting">安全性</string>
     <string name="personal_feed_back">意见反馈</string>
     <string name="personal_contact_service">联系客服</string>
     <string name="personal_mine_about">关于我们</string>
     <string name="personal_login_out">退出</string>
+    <string name="personal_notice_txt">消息</string>
 
     <string name="new_create_category">新建分类</string>
     <string name="new_create_color">添加新颜色</string>
@@ -106,6 +110,8 @@
     <string name="company_for_address">地址</string>
     <string name="company_for_announcement">公司公告:</string>
 
+    <string name="member_list_txt">成员</string>
+    <string name="member_detail_txt">成员详情</string>
     <string name="company_btn_look">查看成员列表</string>
     <string name="company_btn_update">更新公司信息</string>
     <string name="company_btn_leave">离开该公司</string>
@@ -120,13 +126,13 @@
     <!--添加颜色-->
     <string name="color_name_txt">颜色名称</string>
     <string name="color_name_hint">请输入颜色名称</string>
-    <string name="create_add_color_id">以色码创建</string>
+    <string name="create_add_color_id">(以色码创建)</string>
     <string name="color_id_txt">色码</string>
     <string name="color_id_hint">请输入色码</string>
-    <string name="create_add_color_rgb">以RGB创建</string>
-    <string name="r_hint">请输入r值</string>
-    <string name="g_hint">请输入g值</string>
-    <string name="b_hint">请输入b值</string>
+    <string name="create_add_color_rgb">(以RGB创建)</string>
+    <string name="r_hint">输入R值</string>
+    <string name="g_hint">输入G值</string>
+    <string name="b_hint">输入B值</string>
     <string name="alpha_color_txt">透明度</string>
     <string name="color_template_txt">以模板创建</string>
 
@@ -229,6 +235,24 @@
     <string name="btn_edit_goods">编辑商品</string>
     <string name="btn_delete_goods">删除商品</string>
     <string name="btn_create_qr_code">生成二维码</string>
+
+    <!--地址管理-->
+    <string name="received_personal">收货人</string>
+    <string name="received_address">收货地址</string>
+
+    <!--订单详情-->
+    <string name="order_detail_txt">订单详情</string>
+    <string name="not_remark">没有备注</string>
+    <string name="freight_price">运费</string>
+    <string name="preferential_price">优惠</string>
+    <string name="pay_buy">立即支付</string>
+    <string name="price_count">合计金额</string>
+    
+    <!--购物车-->
+    <string name="settlement_txt">结算</string>
+    <string name="all_select_txt">全选</string>
+    <string name="delete_txt">删除</string>
+
     <string name="back">Back</string>
     <string name="login">登录</string>
     <string name="login_phone">手机号码</string>

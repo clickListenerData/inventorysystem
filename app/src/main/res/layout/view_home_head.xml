@@ -31,7 +31,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/home_ic_storage"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/title_color"
             android:text="@string/input_storage"
@@ -42,7 +43,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/home_ic_outbound"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/title_color"
             android:text="@string/output_storage"
@@ -52,7 +54,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/home_ic_financial"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/title_color"
             android:text="@string/personal_finance_manager"
@@ -62,7 +65,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/home_ic_detail"
+            android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/title_color"
             android:text="@string/inventory_detail"
@@ -74,7 +78,7 @@
         android:id="@+id/ll_home_inventory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/dp_14"
         android:layout_marginHorizontal="@dimen/dp_14"
@@ -86,35 +90,36 @@
             android:layout_weight="1"
             app:top_txt_content="@string/to_be_input_goods"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_goods"
+            />
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/current_month_input"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_storage"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/current_month_output"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_outbound"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/current_month_turnover"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_business"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_home_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@drawable/shape_white_r6"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/dp_14"
         android:layout_marginHorizontal="@dimen/dp_14"
@@ -127,28 +132,28 @@
             android:layout_weight="1"
             app:top_txt_content="@string/to_be_payment"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_payment"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/to_be_received"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_receiving"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/to_be_evaluated"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_evaluation"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/after_sale_order"
             app:bottom_txt_content="1"
-            app:top_txt_drawable="@android:drawable/ic_menu_crop"/>
+            app:top_txt_drawable="@drawable/home_ic_data_orders"/>
 
     </LinearLayout>
 

@@ -23,7 +23,7 @@
                 android:visibility="gone"/>
             <include layout="@layout/view_check_net"
                 android:visibility="gone"/>
-            <ScrollView
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
@@ -104,7 +104,7 @@
                             app:layout_constraintLeft_toRightOf="@id/view_line"
                             android:layout_marginLeft="@dimen/dp_14"
                             app:layout_constraintDimensionRatio="1:1"
-                            android:src="@color/colorPrimary"/>
+                            android:src="@drawable/ic_nothing_n"/>
                         <TextView
                             android:id="@+id/tv_personal_company"
                             android:layout_width="wrap_content"
@@ -123,14 +123,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="@drawable/shape_white_gray_r3"
+                        android:background="@drawable/shape_white_r6"
                         android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginHorizontal="@dimen/dp_14">
+                        android:layout_marginHorizontal="@dimen/dp_14"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingVertical="@dimen/dp_10"
                             android:textSize="@dimen/txt_13"
+                            android:drawableLeft="@drawable/ic_userinformation_n"
+                            android:drawablePadding="@dimen/dp_4"
                             android:textColor="@color/color666666"
                             android:text="@string/member_msg"
                             android:paddingLeft="@dimen/dp_14"
@@ -174,7 +178,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="@drawable/shape_white_gray_r3"
+                        android:background="@drawable/shape_white_r6"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_marginHorizontal="@dimen/dp_14">
                         <TextView
@@ -182,6 +186,8 @@
                             android:layout_height="wrap_content"
                             android:paddingVertical="@dimen/dp_10"
                             android:textSize="@dimen/txt_13"
+                            android:drawableLeft="@drawable/ic_setupa_n"
+                            android:drawablePadding="@dimen/dp_4"
                             android:textColor="@color/color666666"
                             android:text="@string/member_custom_setting"
                             android:paddingLeft="@dimen/dp_14"
@@ -199,7 +205,7 @@
                             app:custom_txt_color="@color/text_edit_hint"
                             app:custom_txt_content="name"
                             app:custom_txt_bold="false"
-                            app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
                         <com.micropole.inventorysystem.widght.NormalLlView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -208,7 +214,7 @@
                             app:custom_txt_color="@color/text_edit_hint"
                             app:custom_txt_content="name"
                             app:custom_txt_bold="false"
-                            app:custom_txt_drawable="@android:drawable/ic_media_play"/>
+                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     </LinearLayout>
 
@@ -227,7 +233,7 @@
                         android:paddingVertical="@dimen/dp_14"/>
 
                 </LinearLayout>
-            </ScrollView>
+            </android.support.v4.widget.NestedScrollView>
         </FrameLayout>
 
     </LinearLayout>

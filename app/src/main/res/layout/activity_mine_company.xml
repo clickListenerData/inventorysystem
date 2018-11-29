@@ -15,7 +15,7 @@
             layout="@layout/view_not_company"
             android:visibility="gone"/>
 
-        <ScrollView
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none">
@@ -83,7 +83,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@drawable/shape_white_gray_r3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/shape_white_r6"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginHorizontal="@dimen/dp_14">
                     <TextView
@@ -112,7 +114,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_phone"
-                        app:input_content="1888888888"/>
+                        app:input_content="1888888888"
+                        android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -122,22 +125,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_industry"
-                        app:input_content="aa"/>
+                        app:input_content="aa"
+                        android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_country"
                         app:input_content="中国"
-                        android:visibility="gone"/>
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_address"
-                        app:input_content="光会走"/>
+                        app:input_content="光会走"
+                        android:paddingLeft="@dimen/dp_4"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/dp_10"
+                        android:background="@color/text_color_white"
                         android:paddingLeft="@dimen/dp_14"
                         android:paddingRight="@dimen/dp_14">
                         <TextView
@@ -161,15 +168,16 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_company_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/dp_14"
                     android:layout_marginHorizontal="@dimen/dp_14"
-                    android:background="@drawable/shape_white_gray_r3"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:background="@drawable/shape_white_r6"
                     android:layout_marginBottom="@dimen/dp_14"/>
 
             </LinearLayout>
 
-        </ScrollView>
+        </android.support.v4.widget.NestedScrollView>
     </FrameLayout>
 
 </LinearLayout>

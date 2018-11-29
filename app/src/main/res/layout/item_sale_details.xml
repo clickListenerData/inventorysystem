@@ -12,49 +12,59 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/dp_10"
-        android:paddingHorizontal="@dimen/dp_10">
+        android:paddingHorizontal="@dimen/dp_10"
+        android:background="@color/text_color_white">
 
         <TextView
             android:id="@+id/tv_sale_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
             android:text="name"/>
         <TextView
             android:id="@+id/tv_sale_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_sale_name"
-            android:textSize="@dimen/main_txt_size"
+            android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
             android:text="id"/>
         <TextView
             android:id="@+id/tv_sale_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/color666666"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_sale_name"
-            app:layout_constraintBottom_toBottomOf="@id/tv_sale_id"
+            android:layout_marginRight="@dimen/dp_4"
             android:text="12"/>
+        <TextView
+            android:id="@+id/tv_sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sale_count"
+            android:layout_marginRight="@dimen/dp_4"
+            android:textSize="@dimen/txt_17"
+            android:textColor="@color/txt_price"
+            android:text="100"/>
         <TextView
             android:id="@+id/tv_sale_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_sale_name"
-            android:textSize="@dimen/main_txt_size"
+            app:layout_constraintTop_toBottomOf="@id/tv_sale_price"
+            android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
-            android:text="2018"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_sale_time"
             android:layout_marginRight="@dimen/dp_4"
-            android:text="100"/>
+            android:text="2018"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_sale_time"
+            android:layout_marginTop="@dimen/dp_4"/>
     </android.support.constraint.ConstraintLayout>
 </layout>

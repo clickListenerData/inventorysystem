@@ -15,6 +15,7 @@ class PersonalMsgActivity : BaseMvpViewActivity(){
     override fun getActivityLayoutId(): Int  = R.layout.activity_personal_msg
 
     override fun initData() {
+        setTitleText(res = R.string.personal_mine_message)
     }
 
     override fun initEvent() {

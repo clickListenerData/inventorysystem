@@ -9,4 +9,5 @@ package com.micropole.inventorysystem.entity;
  * @Copyright Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 public class CategoryBean {
+
 }

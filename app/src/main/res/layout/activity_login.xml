@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/text_color_white"
     android:orientation="vertical">
     <include layout="@layout/view_title"/>
     <ImageView
@@ -14,92 +15,74 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginTop="15dp">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/login_phone"
-            android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
         <EditText
             android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
-            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
-            android:padding="6dp"
+            android:textSize="@dimen/txt_17"
+            android:textColorHint="@color/text_edit_hint"
             android:paddingLeft="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_10"
             android:textColor="@color/color_333"
             />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/txt_out"
+            android:layout_marginHorizontal="30dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginTop="15dp">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/login_pw"
-            android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
         <EditText
             android:id="@+id/et_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
-            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
-            android:padding="6dp"
+            android:textSize="@dimen/txt_17"
+            android:textColorHint="@color/text_edit_hint"
             android:paddingLeft="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_10"
             android:textColor="@color/color_333"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/txt_out"
+            android:layout_marginHorizontal="30dp"/>
     </LinearLayout>
-    <TextView
+    <com.coorchice.library.SuperTextView
         android:id="@+id/tv_login"
-        android:layout_width="100dp"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/login"
         android:gravity="center"
-        android:textSize="@dimen/dp_14"
-        android:background="@drawable/login_input"
-        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt_17"
+        android:paddingVertical="@dimen/dp_14"
+        android:textColor="@color/text_color_white"
         android:layout_marginTop="40dp"
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"
+        android:layout_marginHorizontal="30dp"
         />
-    <TextView
-        android:id="@+id/tv_wx_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/login_wx"
-        android:gravity="center"
-        android:textSize="@dimen/dp_14"
-        android:textColor="@color/color_333"
-        android:layout_marginTop="50dp"
-        />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_14"
         android:layout_marginLeft="@dimen/dp_14">
         <TextView
@@ -109,8 +92,8 @@
             android:layout_gravity="center"
             android:text="@string/login_register"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/text_edit_hint"
             />
         <View
             android:layout_width="0dp"
@@ -124,13 +107,23 @@
             android:layout_gravity="center"
             android:text="@string/login_forget_pw"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/text_edit_hint"
             />
 
     </LinearLayout>
-
-
-
+    <TextView
+        android:id="@+id/tv_wx_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/login_wx"
+        android:gravity="center"
+        android:textSize="@dimen/dp_14"
+        android:drawableTop="@drawable/share_ic_weixin"
+        android:drawablePadding="@dimen/dp_4"
+        android:textColor="@color/color_333"
+        android:layout_marginTop="50dp"
+        />
 
 </LinearLayout>

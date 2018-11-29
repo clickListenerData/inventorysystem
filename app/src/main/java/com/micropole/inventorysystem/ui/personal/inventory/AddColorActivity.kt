@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.personal.inventory
 
+import android.graphics.Color
 import com.micropole.inventorysystem.R
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 
@@ -15,6 +16,7 @@ class AddColorActivity : BaseMvpViewActivity() {
     override fun getActivityLayoutId(): Int = R.layout.activity_add_color
 
     override fun initData() {
+
     }
 
     override fun initEvent() {

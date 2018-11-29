@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment
 import android.view.View
 import android.widget.TextView
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.R.id.*
+import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_goods_details.*
 
@@ -24,42 +26,15 @@ class GoodsDetailActivity : BaseMvpViewActivity(){
     override fun getActivityLayoutId(): Int = R.layout.activity_goods_details
 
     override fun initData() {
-        tv_goods_inventory.isSelected = true
+        magic_goods_detail.initMagic(resources.getStringArray(R.array.goods_detail_array).toList()){
+            view, index ->
+            switchFragment(index)
+        }
         switchFragment(0)
     }
 
     override fun initEvent() {
-        tv_goods_inventory.setOnClickListener { view -> switchTxt(view) }
-        tv_goods_sale.setOnClickListener { view -> switchTxt(view) }
-        tv_goods_customer.setOnClickListener { view -> switchTxt(view) }
-    }
 
-    fun switchTxt(text : View){
-        text.isSelected = true
-        (text as TextView).setTextColor(mContext.resources.getColor(R.color.text_color_white))
-        when(text){
-            tv_goods_inventory -> {
-                tv_goods_sale.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_customer.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_sale.isSelected = false
-                tv_goods_customer.isSelected = false
-                switchFragment(0)
-            }
-            tv_goods_sale -> {
-                tv_goods_inventory.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_customer.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_inventory.isSelected = false
-                tv_goods_customer.isSelected = false
-                switchFragment(1)
-            }
-            tv_goods_customer -> {
-                tv_goods_sale.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_inventory.setTextColor(mContext.resources.getColor(R.color.text_normal))
-                tv_goods_sale.isSelected = false
-                tv_goods_inventory.isSelected = false
-                switchFragment(2)
-            }
-        }
     }
 
     fun switchFragment(index : Int){

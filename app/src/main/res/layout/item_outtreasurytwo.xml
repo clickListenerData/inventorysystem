@@ -15,8 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ASL1233456"
-            android:textColor="@color/color_333"
-            android:textSize="12sp"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
             />
         <TextView
             android:id="@+id/tv_size"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="X/XL"
             android:textColor="@color/color666666"
-            android:textSize="12sp"
+            android:textSize="@dimen/txt_13"
             />
         <TextView
             android:id="@+id/tv_color"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="红"
             android:textColor="@color/color666666"
-            android:textSize="12sp"
+            android:textSize="@dimen/txt_13"
             />
     </LinearLayout>
     <LinearLayout
@@ -46,8 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="共23件"
-            android:textColor="@color/color_333"
-            android:textSize="12sp"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
             android:layout_gravity="center_horizontal"
             />
         <TextView
@@ -55,8 +55,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="（2箱2件）"
-            android:textColor="@color/color666666"
-            android:textSize="12sp"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
             android:layout_gravity="center_horizontal"
             />
     </LinearLayout>
@@ -65,7 +65,6 @@
         android:layout_height="1dp"
         android:background="@color/line_color"
         android:layout_below="@+id/ll_left"
-        android:layout_marginTop="@dimen/dp_10"/>
-
+        android:layout_marginTop="@dimen/dp_4"/>
 
 </RelativeLayout>

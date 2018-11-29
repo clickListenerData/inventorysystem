@@ -34,6 +34,10 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
     fun getAttrs(attrs: AttributeSet?,def: Int){
         val a = context.obtainStyledAttributes(attrs,R.styleable.NormalLlView,def,0)
 
+        if (a.hasValue(R.styleable.NormalLlView_custom_txt_bold)){
+            bold = a.getBoolean(R.styleable.NormalLlView_custom_txt_bold,bold)
+        }
+
         if (a.hasValue(R.styleable.NormalLlView_main_txt_content)){
             val string = a.getString(R.styleable.NormalLlView_main_txt_content)
             setMainTitle(string)
@@ -78,10 +82,6 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                 tv_custom.setCompoundDrawablesRelativeWithIntrinsicBounds(null,null,drawable,null)
             }
-        }
-
-        if (a.hasValue(R.styleable.NormalLlView_custom_txt_bold)){
-            bold = a.getBoolean(R.styleable.NormalLlView_custom_txt_bold,bold)
         }
     }
 

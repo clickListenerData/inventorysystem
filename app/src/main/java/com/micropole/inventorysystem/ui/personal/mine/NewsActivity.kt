@@ -27,6 +27,7 @@ class NewsActivity : BaseRefreshActivity<NewsBean,NewsContract.Presenter>(),News
     override fun getActivityLayoutId(): Int = R.layout.activity_news
 
     override fun initRv() {
+        setTitleText(res = R.string.personal_notice_txt)
         setRvLa(LinearLayoutManager(mContext),NewsAdapter(rv_delete))
     }
 

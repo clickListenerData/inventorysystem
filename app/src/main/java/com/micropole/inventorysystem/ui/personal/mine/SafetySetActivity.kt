@@ -30,5 +30,9 @@ class SafetySetActivity : BaseMvpViewActivity() {
             SettingPhoneActivity.startSettingPhoneActivity(this)
 
         }
+
+        iv_select_auto.setOnClickListener {
+            iv_select_auto.isSelected = !iv_select_auto.isSelected
+        }
     }
 }

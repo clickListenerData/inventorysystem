@@ -3,35 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
 
     <LinearLayout
         android:id="@+id/ll_home_inventory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
+        android:background="@color/text_color_white"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginHorizontal="@dimen/dp_10"
         android:paddingVertical="@dimen/dp_10">
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_goods_count"
-            app:bottom_txt_content="1"/>
+            app:bottom_txt_content="1"
+            app:top_txt_drawable="@drawable/ic_total_n"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_counts"
-            app:bottom_txt_content="1"/>
+            app:bottom_txt_content="1"
+            app:top_txt_drawable="@drawable/ic_totalinventory_n"/>
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:top_txt_content="@string/inventory_count_cost"
-            app:bottom_txt_content="1"/>
+            app:bottom_txt_content="1"
+            app:top_txt_drawable="@drawable/ic_totalcost_n"/>
     </LinearLayout>
 
     <LinearLayout
@@ -39,26 +41,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp_14">
+        android:paddingVertical="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@color/text_color_white">
 
         <TextView
             android:id="@+id/tv_ruku"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTop="@android:drawable/ic_menu_crop"
+            android:drawableTop="@drawable/ic_warehousinga_n"
+            android:drawablePadding="@dimen/dp_4"
             android:gravity="center"
             android:text="@string/input_goods"
             android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size" />
+            android:textSize="@dimen/txt_11" />
 
         <TextView
             android:id="@+id/tv_chuku"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
-            android:textSize="@dimen/main_txt_size"
+            android:drawableTop="@drawable/ic_outofstockb_n"
+            android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/output_goods"
             android:gravity="center"/>
@@ -68,78 +74,134 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
-            android:textSize="@dimen/main_txt_size"
+            android:drawableTop="@drawable/ic_nnewlybuilda_n"
+            android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/new_create_goods"
             android:gravity="center"/>
 
         <TextView
+            android:id="@+id/tv_order_record"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@android:drawable/ic_menu_crop"
-            android:textSize="@dimen/main_txt_size"
+            android:drawableTop="@drawable/ic_orderrecord_n"
+            android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
             android:text="@string/order_record"
             android:gravity="center"/>
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_marginTop="@dimen/dp_10"
-        android:textColor="@color/color666666"
-        android:textSize="@dimen/main_txt_size"
-        android:text="@string/inventory_goods"/>
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/title_color"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:textStyle="bold"
+            android:text="@string/inventory_goods"
+            android:layout_gravity="center_vertical"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/title_color"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"/>
+
+    </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_white_gray_r3"
-        android:layout_marginLeft="@dimen/dp_14"
-        android:layout_marginRight="@dimen/dp_14"
-        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_white_gray_r5"
+        android:layout_marginHorizontal="@dimen/dp_14"
         android:paddingVertical="@dimen/dp_10"
         android:paddingLeft="@dimen/dp_10"
         android:textColorHint="@color/text_edit_hint"
         android:textSize="@dimen/main_txt_size"
         android:text=""
-        android:hint="@string/search_hint_txt"/>
+        android:hint="@string/search_hint_txt"
+        android:drawableLeft="@drawable/global_ic_input_search"
+        android:drawablePadding="@dimen/dp_4"
+        android:drawableRight="@drawable/global_btn_input_del"
+        android:paddingRight="@dimen/dp_14"/>
 
-    <net.lucode.hackware.magicindicator.MagicIndicator
-        android:id="@+id/magic_inventory"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"/>
+        android:paddingVertical="@dimen/dp_10">
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_10">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/comprehensive_txt"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/output_count"
-            android:layout_marginLeft="@dimen/dp_14"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/inventory_count_txt"
-            android:layout_marginLeft="@dimen/dp_14"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/time_txt"
-            android:layout_marginLeft="@dimen/dp_14"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/sales_txt"
-            android:layout_marginLeft="@dimen/dp_14"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:gravity="center"/>
     </LinearLayout>
 
 </LinearLayout>

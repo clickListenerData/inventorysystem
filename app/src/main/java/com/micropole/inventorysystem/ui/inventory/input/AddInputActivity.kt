@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_add_input.*
 
 /**
  * @ClassName       AddInputActivity
- * @Description     todo
+ * @Description     新增入库
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/22 14:07

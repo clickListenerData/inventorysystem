@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.personal
 
+import android.content.Intent
 import android.view.View
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.personal.inventory.*
@@ -34,6 +35,14 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_personal_msg.setOnClickListener { activity?.startActivity<PersonalMsgActivity>() }
         nll_feed_back.setOnClickListener { activity?.startActivity<FeedBackActivity>() }
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }
+
+        iv_share.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_SUBJECT,"分享")
+            intent.putExtra(Intent.EXTRA_TEXT,"分享")
+            startActivity(Intent.createChooser(intent,"分享"))
+        }
 
         tv_title.setOnClickListener {  LoginActivity.startLoginActivity(mContext) }
     }

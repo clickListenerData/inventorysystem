@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="com.micropole.inventorysystem.entity.ColorBean"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.micropole.inventorysystem.widght.NormalLlView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:main_txt_content="王小明"
+            app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/dp_14"/>
+
+
+    </LinearLayout>
+</layout>

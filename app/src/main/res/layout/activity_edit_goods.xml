@@ -10,87 +10,102 @@
     <com.micropole.inventorysystem.widght.NormalLlView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:custom_txt_bold="false"
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+        app:custom_txt_size="@dimen/txt_13"
+        app:custom_txt_color="#999999"
         app:main_txt_content="@string/edit_category"
         app:custom_txt_content="@string/edit_category_hint"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:input_size="13"
         app:title_content="@string/new_goods_id"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:input_size="13"
         app:title_content="@string/new_goods_cost_price"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:input_size="13"
         app:title_content="@string/new_goods_retail_price"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:input_size="13"
         app:title_content="@string/new_goods_remark"
         app:input_hint_content="@string/remark_hint"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line_color"/>
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <com.micropole.inventorysystem.widght.InputMsgView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:input_size="13"
         app:title_content="@string/inventory_warning"
-        app:input_hint_content="@string/inventory_warning_hint"/>
-    <View
+        app:input_hint_content="@string/inventory_warning_hint" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"/>
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_14"
-        android:layout_marginTop="@dimen/dp_14"
-        android:text="@string/correlation_goods"/>
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="@string/correlation_goods"
+        android:drawableLeft="@drawable/ic_tips_n"
+        android:drawablePadding="@dimen/dp_4"
+        android:visibility="visible"/>
 
-    <TextView
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_look_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
+        android:layout_marginHorizontal="105dp"
         android:gravity="center"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
         android:text="@string/look_goods_detail"
-        android:background="@drawable/shape_white_gray_r3"/>
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"/>
 
-    <TextView
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_save_goods"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_72"
-        android:layout_marginRight="@dimen/dp_72"
+        android:layout_marginHorizontal="105dp"
         android:gravity="center"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
         android:text="@string/save_txt"
-        android:background="@drawable/shape_white_gray_r3"/>
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"/>
 
 
 </LinearLayout>

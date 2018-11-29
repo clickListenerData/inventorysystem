@@ -1,7 +1,10 @@
 package com.micropole.inventorysystem.ui.personal.inventory
 
+import android.app.Activity
+import android.content.Intent
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
+import com.flyco.dialog.widget.ActionSheetDialog
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.baseapplibrary.recyclerview.BaseRefreshActivity
 import com.micropole.inventorysystem.R
@@ -20,13 +23,29 @@ import kotlinx.android.synthetic.main.view_title.*
  */
 class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Present>(),CategoryConstract.View {
 
+    companion object {
+        const val TYPE_MANAGER = 0X10
+        const val TYPE_SELECT = 0X11
+        const val TYPE_SELECT_GOODS = 0X12
+        fun startCategory(activity : Activity,type : Int){
+            val intent = Intent(activity, CategoryActivity::class.java)
+            intent.putExtra("category_type",type)
+            if (type == TYPE_SELECT){
+                activity.startActivityForResult(intent,0x11)
+            }else{
+                activity.startActivity(intent)
+            }
+        }
+    }
 
+    var mtype = TYPE_MANAGER
 
     override fun loadData(page: Int) {
         getPresenter().getCategoryList()
     }
 
     override fun initRv() {
+        mtype = intent.getIntExtra("category_type",mtype)
         refresh?.isEnabled = false
         setTitleText(res = R.string.personal_category_manager)
         tv_right.text = mContext.getText(R.string.new_create_category)
@@ -34,11 +53,34 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
         setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_category_view))
     }
 
+    override fun initEvent() {
+        super.initEvent()
+        adapter?.setOnItemClickListener { adapter, view, position ->
+            when(mtype){
+                TYPE_MANAGER -> {
+                    showRenameDialog()
+                }
+                TYPE_SELECT -> {
+                    val intent = Intent()
+                    intent.putExtra("category_name",(adapter as DataBindAdapter<CategoryBean>).data[position].toString())
+                    setResult(0x12)
+                    finish()
+                }
+                TYPE_SELECT_GOODS -> {}
+            }
+        }
+    }
+
     override fun createPresenter(): CategoryConstract.Present = CategoryPresent()
 
-    override fun getActivityLayoutId(): Int = R.layout.activity_news
+    override fun getActivityLayoutId(): Int = R.layout.activity_refresh_recy
 
     override fun getData(data: List<CategoryBean>) {
         setData(data)
+    }
+
+    fun showRenameDialog(){
+        val actionSheetDialog = ActionSheetDialog(this, arrayOf("重命名", "删除分类"), null)
+        actionSheetDialog.show()
     }
 }

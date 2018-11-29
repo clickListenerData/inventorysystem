@@ -5,65 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.personal.mine.SettingPhoneActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/app_color_bg">
     <include layout="@layout/view_title"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/login_phone_old"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:textSize="@dimen/txt_15"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
+            android:background="@null"
             android:layout_marginRight="@dimen/dp_14"
             android:layout_marginBottom="2dp"
+            android:layout_marginLeft="@dimen/dp_14"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"
+            android:textColor="@color/title_color"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/reg_code"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_code"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
+            android:background="@null"
             android:layout_marginRight="@dimen/dp_14"
             android:layout_marginBottom="2dp"
+            android:layout_marginLeft="@dimen/dp_14"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"/>
+            android:textColor="@color/title_color"/>
         <TextView
             android:id="@+id/tv_wx_login"
             android:layout_width="wrap_content"
@@ -71,67 +83,83 @@
             android:layout_gravity="center"
             android:text="@string/reg_get_code"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
-            android:layout_marginRight="@dimen/dp_14"
-            android:background="@drawable/login_code"/>
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"
+            android:layout_marginRight="@dimen/dp_14" />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/login_phone_new"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:textSize="@dimen/txt_15"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_phone_new"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
+            android:background="@null"
             android:layout_marginRight="@dimen/dp_14"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333" />
+            android:textColor="@color/title_color"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:background="@color/text_color_white">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/reg_code"
+            android:layout_marginLeft="@dimen/dp_14"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"/>
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"/>
         <EditText
             android:id="@+id/et_code_new"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/login_input"
+            android:background="@null"
             android:layout_marginRight="@dimen/dp_14"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/dp_14"
             android:hint="@string/single_input"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/color_333"/>
+            android:textColor="@color/title_color"/>
         <TextView
             android:id="@+id/tv_getCode"
             android:layout_width="wrap_content"
@@ -139,35 +167,37 @@
             android:layout_gravity="center"
             android:text="@string/reg_get_code"
             android:gravity="center"
-            android:textSize="@dimen/dp_14"
-            android:textColor="@color/color_333"
-            android:layout_marginRight="@dimen/dp_14"
-            android:background="@drawable/login_code"/>
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/txt_out"
+            android:layout_marginRight="@dimen/dp_14" />
     </LinearLayout>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/reg_tishi"
-        android:textSize="@dimen/sp_12"
-        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_11"
+        android:textColor="@color/title_color"
         android:paddingRight="@dimen/dp_14"
         android:paddingLeft="@dimen/dp_14"
         android:paddingBottom="5dp"
-        android:layout_marginTop="5dp"/>
+        android:paddingTop="10dp"
+        android:background="@color/text_color_white"
+        android:drawableLeft="@drawable/ic_tips_n"
+        android:drawablePadding="@dimen/dp_4"/>
 
-    <TextView
+    <com.coorchice.library.SuperTextView
         android:id="@+id/tv_banding"
         android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="23dp"
         android:text="@string/reg_banding"
-        android:textSize="@dimen/dp_14"
-        android:textColor="@color/color_333"
-        android:paddingRight="@dimen/dp_14"
-        android:paddingLeft="@dimen/dp_14"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp"
-        android:background="@drawable/login_code"/>
+        android:gravity="center"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_10"
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"/>
 
 </LinearLayout>

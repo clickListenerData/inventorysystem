@@ -23,9 +23,9 @@ class IndicatorAdapter(val mDatas : List<String>,val action : (view : View,index
     override fun getTitleView(context: Context?, index: Int): IPagerTitleView {
         val titleView = ColorTransitionPagerTitleView(context)
         titleView.text = mDatas[index]
-        titleView.textSize = 14f
-        titleView.normalColor = Color.parseColor("#333333")
-        titleView.selectedColor = Color.parseColor("#FD212E")
+        titleView.textSize = 15f
+        titleView.normalColor = Color.parseColor("#000000")
+        titleView.selectedColor = Color.parseColor("#007AFF")
         titleView.setOnClickListener {
             action.invoke(it,index)
         }
@@ -38,10 +38,10 @@ class IndicatorAdapter(val mDatas : List<String>,val action : (view : View,index
 
     override fun getIndicator(context: Context?): IPagerIndicator {
         val pagerIndicator = LinePagerIndicator(context)
-        pagerIndicator.setColors(Color.parseColor("#FD212E"))
-        pagerIndicator.mode = LinePagerIndicator.MODE_EXACTLY
+        pagerIndicator.setColors(Color.parseColor("#007AFF"))
+        pagerIndicator.mode = LinePagerIndicator.MODE_WRAP_CONTENT
         pagerIndicator.lineHeight = UIUtil.dip2px(context!!,2.0).toFloat()
-        pagerIndicator.lineWidth = UIUtil.dip2px(context!!,30.00).toFloat()
+//        pagerIndicator.lineWidth = UIUtil.dip2px(context!!,30.00).toFloat()
         pagerIndicator.roundRadius = UIUtil.dip2px(context!!,1.0).toFloat()
         return pagerIndicator
     }

@@ -33,6 +33,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/txt_15"
         android:textColor="@color/title_color"
+        android:drawablePadding="@dimen/dp_4"
         android:layout_marginRight="@dimen/dp_4"/>
 
 </LinearLayout>

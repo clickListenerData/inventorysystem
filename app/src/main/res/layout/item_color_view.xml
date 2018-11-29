@@ -14,34 +14,35 @@
         android:padding="@dimen/dp_10">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@android:drawable/star_big_on"/>
-
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="#ff0000"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size"
-            android:text="默认颜色"/>
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="红色"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginRight="@dimen/dp_4"
-            android:layout_gravity="center_vertical"
-            android:gravity="right"
-            android:textColor="@color/color666666"
-            android:textSize="@dimen/main_txt_size"
-            android:text="11"/>
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:layout_marginLeft="@dimen/dp_10"
+            />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_delete"/>
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/select_checked_img"/>
 
     </LinearLayout>
 </layout>
