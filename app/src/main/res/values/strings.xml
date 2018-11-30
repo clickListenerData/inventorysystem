@@ -6,6 +6,8 @@
     <string name="main_partner_ship">合作关系</string>
     <string name="main_shop_mall">商城</string>
     <string name="main_personal_center">个人中心</string>
+    <string name="return_money">回款金额</string>
+    <string name="input_return_money_hint">输入回款金额:</string>
 
     <string name="login_txt">登录</string>
 
@@ -95,6 +97,8 @@
     <string name="personal_notice_txt">消息</string>
 
     <string name="new_create_category">新建分类</string>
+    <string name="new_create_category_hint">输入新分类名称</string>
+    <string name="input_category_hint">请输入分类名称</string>
     <string name="new_create_color">添加新颜色</string>
     <string name="new_create_material">添加新材质</string>
     <string name="not_add_company">没有加入任何公司</string>
@@ -122,6 +126,7 @@
     <string name="finance_return_money">总回款</string>
     <string name="finance_returned_money">已回款</string>
     <string name="finance_wait_money">待回款</string>
+    <string name="add_return_money_record">添加回款记录</string>
 
     <!--添加颜色-->
     <string name="color_name_txt">颜色名称</string>
@@ -247,7 +252,14 @@
     <string name="preferential_price">优惠</string>
     <string name="pay_buy">立即支付</string>
     <string name="price_count">合计金额</string>
-    
+
+    <!--商城-->
+    <string name="price_txt">价格</string>
+    <string name="hot_txt">热度</string>
+    <string name="new_txt">最新</string>
+    <string name="count_txt">合计</string>
+    <string name="all_category_txt">所有分类</string>
+
     <!--购物车-->
     <string name="settlement_txt">结算</string>
     <string name="all_select_txt">全选</string>

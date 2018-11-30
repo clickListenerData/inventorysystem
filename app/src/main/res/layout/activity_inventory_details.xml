@@ -25,52 +25,60 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingVertical="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_14"
         android:background="@color/text_color_white">
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/inventory_detail_time"
-            android:layout_marginLeft="@dimen/dp_14"
             android:layout_gravity="center_vertical"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/txt_out"/>
+            android:textColor="@color/select_txt_color"
+            android:drawableRight="@drawable/select_btn_down"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_14"/>
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/inventory_detail_count"
-            android:layout_marginLeft="@dimen/dp_14"
             android:layout_gravity="center_vertical"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"/>
+            android:textColor="@color/select_txt_color"
+            android:drawableRight="@drawable/select_btn_down"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_14"/>
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/inventory_detail_price"
-            android:layout_marginLeft="@dimen/dp_14"
             android:layout_gravity="center_vertical"
             android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"/>
+            android:textColor="@color/select_txt_color"
+            android:drawableRight="@drawable/select_btn_down"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_14"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
         <com.coorchice.library.SuperTextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:drawableRight="@android:drawable/ic_delete"
+            android:drawableRight="@drawable/global_btn_downc_s"
             android:text="全部"
+            android:paddingHorizontal="@dimen/dp_14"
             android:gravity="center"
             android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/text_color_white"
             app:stv_solid="@color/txt_out"
             app:stv_corner="4dp"
+            android:layout_marginRight="@dimen/dp_14"
             />
         <com.coorchice.library.SuperTextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:layout_marginRight="@dimen/dp_10"
             android:layout_gravity="center_vertical"
             android:text="导出"
             android:gravity="center"
@@ -78,6 +86,7 @@
             android:textColor="@color/text_color_white"
             app:stv_solid="#FF9501"
             app:stv_corner="4dp"
+            android:paddingHorizontal="@dimen/dp_10"
             />
     </LinearLayout>
 

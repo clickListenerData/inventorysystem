@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <com.micropole.baseapplibrary.widght.RefreshRecyclerView
+        android:id="@+id/rrv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_14">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/select_checked_img"
+            android:paddingVertical="@dimen/dp_14"
+            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/text_edit_hint"
+            android:text="@string/all_select_txt"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:drawableLeft="@drawable/ic_deletew_n"
+            android:textSize="@dimen/main_txt_size"
+            android:textColor="@color/text_edit_hint"
+            android:text="@string/delete_txt"
+            android:drawablePadding="@dimen/dp_4"
+            />
+        <com.coorchice.library.SuperTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:stv_solid="@color/txt_price"
+            android:paddingHorizontal="22dp"
+            android:textSize="@dimen/txt_15"
+            android:textColor="#FFFEFE"
+            android:text="结算:¥ 168"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.view.View
+import android.view.ViewGroup
 import com.blankj.utilcode.util.SnackbarUtils.dismiss
 import com.flyco.dialog.widget.base.BaseDialog
 import com.micropole.inventorysystem.R
@@ -19,6 +20,7 @@ class InputDialog(context: Context,val title : String,val f : String,val hint : 
     override fun setUiBeforShow() {
         dimEnabled(true)
         setCanceledOnTouchOutside(false)
+        (mOnCreateView.layoutParams as ViewGroup.MarginLayoutParams).setMargins(dp2px(14f),0,dp2px(14f),0)
         setOnclickListener()
 
         mOnCreateView.tv_input_title.text = title

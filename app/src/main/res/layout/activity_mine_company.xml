@@ -29,7 +29,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:background="@android:color/holo_red_light"
+                    android:background="@drawable/bg_beijing"
                     android:paddingVertical="25dp"
                     android:paddingLeft="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_14"
@@ -42,7 +42,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
                         android:layout_marginLeft="@dimen/dp_4"
-                        android:src="@color/colorPrimary"/>
+                        android:src="@drawable/ic_nothing_n"/>
                     <TextView
                         android:id="@+id/tv_company_fzr"
                         android:layout_width="wrap_content"
@@ -94,6 +94,8 @@
                         android:paddingVertical="@dimen/dp_10"
                         android:textSize="@dimen/txt_13"
                         android:textColor="@color/color666666"
+                        android:drawableLeft="@drawable/ic_enterpriseinformation_n"
+                        android:drawablePadding="@dimen/dp_4"
                         android:text="@string/company_message"
                         android:paddingLeft="@dimen/dp_14"
                         />

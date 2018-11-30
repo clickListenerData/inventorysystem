@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white">
+
+    <include layout="@layout/view_title"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nothing_n"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_15"
+            android:textColor="#1A1A1A"
+            android:layout_marginTop="@dimen/dp_10"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_72"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:layout_marginTop="@dimen/dp_10"
+            />
+        <com.coorchice.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="105dp"
+            app:stv_solid="@color/text_color_white"
+            app:stv_corner="6dp"
+            android:paddingVertical="@dimen/dp_14"
+            app:stv_stroke_width="1dp"
+            app:stv_stroke_color="@color/color666666"
+            android:textColor="@color/color666666"
+            android:textSize="@dimen/txt_15"/>
+        <com.coorchice.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginHorizontal="105dp"
+            app:stv_solid="@color/text_color_white"
+            app:stv_corner="6dp"
+            android:paddingVertical="@dimen/dp_10"
+            app:stv_stroke_width="1dp"
+            app:stv_stroke_color="@color/color666666"
+            android:textColor="@color/color666666"
+            android:textSize="@dimen/txt_15"/>
+    </LinearLayout>
+
+
+</LinearLayout>

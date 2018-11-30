@@ -2,9 +2,12 @@ package com.micropole.inventorysystem.ui.personal.shopmall
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.ViewGroup
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.micropole.baseapplibrary.widght.RefreshRecyclerView
+import com.micropole.inventorysystem.adapter.shopmall.OrderAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 
 /**
@@ -18,10 +21,10 @@ import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 class OrderListFragment : BaseMvpViewFragment(){
 
     companion object {
-        fun newFragment(type : Int) : Fragment{
+        fun newFragment(type : Int) : OrderListFragment{
             val orderListFragment = OrderListFragment()
             val bundle = Bundle()
-            bundle.putInt("",type)
+            bundle.putInt("order_type",type)
             orderListFragment.arguments = bundle
             return orderListFragment
         }
@@ -32,7 +35,9 @@ class OrderListFragment : BaseMvpViewFragment(){
     override fun getFragmentLayoutId(): Int = -1
 
     override fun initView(view: View?) {
-
+        refreshRecyclerView.mLayoutManager = LinearLayoutManager(mContext)
+        refreshRecyclerView.mAdapter = OrderAdapter()
+        (refreshRecyclerView.mAdapter as OrderAdapter).setNewData(arrayListOf(Any(), Any(),Any()))
     }
 
     override fun initEvent(view: View?) {

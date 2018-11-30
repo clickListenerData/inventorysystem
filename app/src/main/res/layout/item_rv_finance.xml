@@ -3,23 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_14"
     android:layout_marginBottom="@dimen/dp_4"
-    android:background="@color/app_color_bg">
+    android:background="@color/text_color_white">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/main_txt_size"
+        android:textSize="@dimen/txt_13"
         android:textColor="@color/color666666"
         android:text="9月份"
-        android:layout_marginLeft="@dimen/dp_14"/>
+        android:paddingLeft="@dimen/dp_14"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_finance_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/text_color_white"
         android:layout_marginTop="@dimen/dp_10"/>
 
 </LinearLayout>

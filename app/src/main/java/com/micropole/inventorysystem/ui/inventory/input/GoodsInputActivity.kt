@@ -8,6 +8,7 @@ import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_goods_input.*
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator
@@ -36,6 +37,10 @@ class GoodsInputActivity : BaseMvpViewActivity(){
         rv_input_inventory.adapter = dataBindAdapter
 
         dataBindAdapter.setNewData(arrayListOf(InventoryGoodsBean(), InventoryGoodsBean(),InventoryGoodsBean()))
+
+        dataBindAdapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<AddInputActivity>()
+        }
     }
 
     override fun initEvent() {

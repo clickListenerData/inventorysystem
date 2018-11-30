@@ -21,9 +21,8 @@ class PartnerShipFragment : BaseMvpViewFragment() {
     override fun getFragmentLayoutId(): Int  = R.layout.fragment_partner_ship
 
     override fun initView(view: View?) {
-        ib_back.visibility=View.GONE
-        tv_right.visibility=View.VISIBLE
 
+        tv_now.isSelected = true
         rrv_partner_ship.mLayoutManager = LinearLayoutManager(mContext)
         rrv_partner_ship.mAdapter = adapter
         adapter.setNewData(arrayListOf("","",""))

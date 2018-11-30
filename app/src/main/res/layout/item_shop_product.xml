@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp_14">
+
+    <ImageView
+        android:id="@+id/iv_product_img"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintDimensionRatio="1.2:1"
+        android:background="@color/color666666"/>
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_product_img"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintLeft_toLeftOf="@id/iv_product_img"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/title_color"
+        android:textStyle="bold"
+        android:text="name"/>
+
+    <TextView
+        android:id="@+id/tv_product_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/iv_product_img"
+        app:layout_constraintRight_toRightOf="@id/iv_product_img"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_name"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_13"
+        android:text="des"/>
+    <TextView
+        android:id="@+id/tv_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_17"
+        android:textColor="@color/txt_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_des"
+        app:layout_constraintLeft_toLeftOf="@id/iv_product_img"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="¥382"/>
+
+</android.support.constraint.ConstraintLayout>
