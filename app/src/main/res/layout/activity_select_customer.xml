@@ -27,42 +27,71 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="@dimen/dp_14">
-        <TextView
-            android:id="@+id/tv_now"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="最新创建"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/txt_out"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/tv_jiaoyi"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最新创建"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="交易额"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/tv_qian"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_jiaoyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易额"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="欠款金额"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/tv_number"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_qian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欠款金额"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="次数"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="次数"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

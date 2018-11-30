@@ -2,7 +2,9 @@ package com.micropole.inventorysystem.widght
 
 import android.content.Context
 import android.graphics.Color
+import android.text.Editable
 import android.text.InputType
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -95,6 +97,14 @@ class InputMsgView@JvmOverloads constructor(context : Context, attrs : Attribute
 
     fun setInputSize(size : Float){
         et_input_msg.textSize = size
+    }
+
+    fun setInputType(type : Int){
+        et_input_msg.inputType = type
+    }
+
+    fun addInputWatcher(watcher: TextWatcher){
+        et_input_msg.addTextChangedListener(watcher)
     }
 
 }

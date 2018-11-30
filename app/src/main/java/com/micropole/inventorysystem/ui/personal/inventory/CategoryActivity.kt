@@ -2,15 +2,18 @@ package com.micropole.inventorysystem.ui.personal.inventory
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import com.flyco.dialog.widget.ActionSheetDialog
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.baseapplibrary.recyclerview.BaseRefreshActivity
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.adapter.personal.BottomListDialog
 import com.micropole.inventorysystem.entity.CategoryBean
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.CategoryConstract
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.CategoryPresent
+import com.micropole.inventorysystem.widght.InputDialog
 import kotlinx.android.synthetic.main.view_title.*
 
 /**
@@ -41,7 +44,7 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
     var mtype = TYPE_MANAGER
 
     override fun loadData(page: Int) {
-        getPresenter().getCategoryList()
+//        getPresenter().getCategoryList()
     }
 
     override fun initRv() {
@@ -51,6 +54,7 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
         tv_right.text = mContext.getText(R.string.new_create_category)
         recyclerView?.addItemDecoration(DividerItemDecoration(mContext,LinearLayoutManager.VERTICAL))
         setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_category_view))
+        setData(arrayListOf(CategoryBean(), CategoryBean(), CategoryBean()))
     }
 
     override fun initEvent() {
@@ -66,8 +70,16 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
                     setResult(0x12)
                     finish()
                 }
-                TYPE_SELECT_GOODS -> {}
+                TYPE_SELECT_GOODS -> {
+
+                }
             }
+        }
+
+        tv_right.setOnClickListener {
+            InputDialog(this,getString(R.string.new_create_category),getString(R.string.new_create_category_hint),getString(R.string.input_category_hint)){
+
+            }.show()
         }
     }
 
@@ -80,7 +92,9 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
     }
 
     fun showRenameDialog(){
-        val actionSheetDialog = ActionSheetDialog(this, arrayOf("重命名", "删除分类"), null)
+        val actionSheetDialog = ActionSheetDialog(this, BottomListDialog(arrayListOf("重命名","删除分类")), null)
+        actionSheetDialog.isTitleShow(false)
+        actionSheetDialog.cancelText(Color.parseColor("#007AFF"))
         actionSheetDialog.show()
     }
 }

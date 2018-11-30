@@ -39,7 +39,7 @@
                         android:layout_height="100dp"
                         android:orientation="horizontal"
                         android:paddingVertical="25dp"
-                        android:background="@android:color/holo_red_light"
+                        android:background="@drawable/bg_beijing"
                         android:layout_marginTop="@dimen/dp_14"
                         android:layout_marginHorizontal="@dimen/dp_14"
                         android:paddingLeft="@dimen/dp_14">
@@ -51,7 +51,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            android:src="@color/colorPrimary"/>
+                            android:src="@drawable/ic_nothing_n"/>
                         <TextView
                             android:id="@+id/tv_personal_name"
                             android:layout_width="wrap_content"

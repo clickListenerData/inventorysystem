@@ -3,6 +3,7 @@ package com.micropole.inventorysystem.ui.login
 import android.content.Context
 import android.content.Intent
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.util.addFocusListener
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.view_title.*
@@ -22,7 +23,8 @@ class LoginActivity : BaseMvpViewActivity() {
     }
 
     override fun initEvent() {
-        ib_back.setOnClickListener { finish() }
+        et_phone.addFocusListener(view_phone_line)
+        et_pw.addFocusListener(view_pwd_line)
         tv_register.setOnClickListener {
             RegisterActivity.startRegisterActivity(this)
         }

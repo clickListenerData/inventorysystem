@@ -4,11 +4,12 @@ import android.support.v7.widget.LinearLayoutManager
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.personal.FinanceAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_finance.*
 
 /**
  * @ClassName       FinanceActivity
- * @Description     todo
+ * @Description     财务管理
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/21 17:11
@@ -25,5 +26,7 @@ class FinanceActivity : BaseMvpViewActivity() {
     }
 
     override fun initEvent() {
+
+        stv_add_return.setOnClickListener { startActivity<ReturnMoneyActivity>() }
     }
 }

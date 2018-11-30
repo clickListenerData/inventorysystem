@@ -77,7 +77,8 @@
         android:text="@string/correlation_goods"
         android:drawableLeft="@drawable/ic_tips_n"
         android:drawablePadding="@dimen/dp_4"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        android:background="@color/text_color_white"/>
 
     <com.coorchice.library.SuperTextView
         android:id="@+id/stv_look_detail"

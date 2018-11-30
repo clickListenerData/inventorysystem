@@ -56,6 +56,9 @@
         <activity android:name=".ui.personal.inventory.AddMemberActivity"/>
         <activity android:name=".ui.inventory.SelectActivity"/>
         <activity android:name=".ui.inventory.output.SelectCustomerActivity"/>
+        <activity android:name=".ui.personal.inventory.ReturnMoneyActivity"/>
+        <activity android:name=".ui.shoppingmall.CartActivity"/>
+        <activity android:name=".ui.personal.shopmall.OrderListActivity"/>
     </application>
 
 </manifest>

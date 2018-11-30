@@ -38,43 +38,77 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/text_color_white"
-        android:paddingVertical="@dimen/dp_10">
-        <TextView
+        android:paddingVertical="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_14">
+        <FrameLayout
+            android:id="@+id/fl_zh"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/comprehensive_txt"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/txt_out"
-            android:gravity="center"/>
-        <TextView
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_inventory_zh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comprehensive_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_ckl"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/output_count"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
-        <TextView
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_inventory_ckl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/output_count"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/inventory_count_txt"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
-        <TextView
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_inventory_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_xl"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/time_txt"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:textSize="@dimen/txt_13"
-            android:textColor="@color/color666666"
-            android:gravity="center"/>
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_inventory_xl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sales_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

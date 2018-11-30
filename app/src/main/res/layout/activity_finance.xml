@@ -11,101 +11,141 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:paddingVertical="@dimen/dp_10"
-        >
-        <com.micropole.inventorysystem.widght.CustomCenterView
-            android:layout_width="0dp"
+        android:orientation="vertical"
+        android:background="#FF9501">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:top_txt_content="@string/finance_return_money"
-            app:bottom_txt_content="¥1100"
-            app:bottom_txt_size="@dimen/main_txt_size"
-            />
-        <com.micropole.inventorysystem.widght.CustomCenterView
-            android:layout_width="0dp"
+            android:background="@drawable/shape_white_r6"
+            android:layout_marginHorizontal="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_14"
+            android:paddingVertical="@dimen/dp_14"
+            android:orientation="horizontal"
+            >
+            <com.micropole.inventorysystem.widght.CustomCenterView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:top_txt_size="@dimen/txt_13"
+                app:top_txt_content="@string/finance_return_money"
+                app:bottom_txt_content="1100"
+                app:bottom_txt_size="@dimen/txt_17"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color"
+                android:layout_marginVertical="@dimen/dp_4"/>
+            <com.micropole.inventorysystem.widght.CustomCenterView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:top_txt_size="@dimen/txt_13"
+                android:layout_weight="1"
+                app:top_txt_content="@string/finance_returned_money"
+                app:bottom_txt_size="@dimen/txt_17"
+                app:bottom_txt_content="1100"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color"
+                android:layout_marginVertical="@dimen/dp_4"/>
+            <com.micropole.inventorysystem.widght.CustomCenterView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:top_txt_size="@dimen/txt_13"
+                app:top_txt_content="@string/finance_wait_money"
+                app:bottom_txt_size="@dimen/txt_17"
+                app:bottom_txt_content="1100"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:top_txt_content="@string/finance_returned_money"
-            app:bottom_txt_size="@dimen/main_txt_size"
-            />
-        <com.micropole.inventorysystem.widght.CustomCenterView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:top_txt_content="@string/finance_wait_money"
-            app:bottom_txt_size="@dimen/main_txt_size"
-            />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_14">
+            <com.coorchice.library.SuperTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:stv_solid="@color/text_color_white"
+                app:stv_corner="4dp"
+                android:paddingVertical="@dimen/dp_4"
+                android:text="2018年"
+                android:drawableRight="@drawable/global_btn_down_n"
+                android:gravity="center"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/color666666"
+                android:paddingRight="@dimen/dp_10"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingVertical="@dimen/dp_10"
-        android:background="@android:color/white">
-        <com.coorchice.library.SuperTextView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:stv_solid="@color/text_color_white"
-            app:stv_stroke_color="@color/line_color"
-            app:stv_stroke_width="1dp"
-            app:stv_corner="5dp"
-            android:paddingVertical="@dimen/dp_4"
-            android:text="2018年"
-            android:drawableRight="@android:drawable/ic_delete"
-            android:gravity="center_vertical|right"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:layout_marginRight="@dimen/dp_10"/>
+            <com.coorchice.library.SuperTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:stv_solid="@color/text_color_white"
+                app:stv_corner="4dp"
+                android:paddingVertical="@dimen/dp_4"
+                android:text="2018年"
+                android:drawableRight="@drawable/global_btn_down_n"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:paddingRight="@dimen/dp_10"/>
 
-        <com.coorchice.library.SuperTextView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:stv_solid="@color/text_color_white"
-            app:stv_stroke_color="@color/line_color"
-            app:stv_stroke_width="1dp"
-            app:stv_corner="5dp"
-            android:paddingVertical="@dimen/dp_4"
-            android:text="2018年"
-            android:drawableRight="@android:drawable/ic_delete"
-            android:gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/dp_10"/>
+            <com.coorchice.library.SuperTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:stv_solid="@color/text_color_white"
+                app:stv_corner="4dp"
+                android:paddingVertical="@dimen/dp_4"
+                android:text="2018年"
+                android:drawableRight="@drawable/global_btn_down_n"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:paddingRight="@dimen/dp_10"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
 
-        <com.coorchice.library.SuperTextView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:stv_solid="@color/text_color_white"
-            app:stv_stroke_color="@color/line_color"
-            app:stv_stroke_width="1dp"
-            app:stv_corner="5dp"
-            android:paddingVertical="@dimen/dp_4"
-            android:text="2018年"
-            android:drawableRight="@android:drawable/ic_delete"
-            android:gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/dp_10"/>
+            <com.coorchice.library.SuperTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:stv_solid="@color/txt_out"
+                app:stv_corner="4dp"
+                android:paddingVertical="@dimen/dp_4"
+                android:paddingHorizontal="@dimen/dp_10"
+                android:text="导出"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/text_color_white"
+                android:gravity="center" />
 
-        <com.coorchice.library.SuperTextView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:stv_solid="@color/text_color_white"
-            app:stv_stroke_color="@color/line_color"
-            app:stv_stroke_width="1dp"
-            app:stv_corner="5dp"
-            android:paddingVertical="@dimen/dp_4"
-            android:text="2018年"
-            android:gravity="center"
-            android:layout_marginRight="@dimen/dp_10"/>
-
+        </LinearLayout>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_finance"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_add_return"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="105dp"
+        android:layout_marginVertical="@dimen/dp_14"
+        app:stv_solid="@color/txt_out"
+        app:stv_corner="6dp"
+        android:paddingVertical="@dimen/dp_14"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/txt_15"
+        android:text="@string/add_return_money_record"
+        android:gravity="center"
+        />
 
 
 </LinearLayout>

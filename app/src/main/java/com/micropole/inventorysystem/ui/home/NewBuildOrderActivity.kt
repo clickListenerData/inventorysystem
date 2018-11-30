@@ -5,7 +5,11 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.ui.inventory.output.SelectCustomerActivity
+import com.micropole.inventorysystem.ui.personal.inventory.CategoryActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.startActivity
+import kotlinx.android.synthetic.main.activity_new_build_order.*
 import kotlinx.android.synthetic.main.view_title.*
 /**
  * @ClassName       NewBuildOrderActivity
@@ -34,7 +38,13 @@ class NewBuildOrderActivity : BaseMvpViewActivity() {
      * 初始化事件
      */
     override fun initEvent() {
+
+        tv_add_goods.setOnClickListener { CategoryActivity.startCategory(this,CategoryActivity.TYPE_SELECT_GOODS) }
+        tv_add_shop.setOnClickListener { CategoryActivity.startCategory(this,CategoryActivity.TYPE_SELECT_GOODS) }
+        tv_add_kehu.setOnClickListener { startActivity<SelectCustomerActivity>() }
     }
+
+
     companion object {
         fun startNewBuildOrderActivity(context:Context){
             var intent=Intent(context,NewBuildOrderActivity::class.java)

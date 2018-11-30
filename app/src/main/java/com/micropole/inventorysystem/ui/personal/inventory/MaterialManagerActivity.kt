@@ -20,14 +20,14 @@ import kotlinx.android.synthetic.main.view_title.*
  */
 class MaterialManagerActivity : BaseRefreshActivity<MaterialBean,MaterialConstract.Present>(),MaterialConstract.View{
     override fun loadData(page: Int) {
-        getPresenter().getMaterialList()
+        //getPresenter().getMaterialList()
     }
 
     override fun initRv() {
         setTitleText(res = R.string.personal_material_bank)
         tv_right.text = mContext.getText(R.string.new_create_material)
-        recyclerView?.addItemDecoration(DividerItemDecoration(mContext,LinearLayoutManager.VERTICAL))
         setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_material_view))
+        setData(arrayListOf(MaterialBean(), MaterialBean(),MaterialBean()))
     }
 
     override fun createPresenter(): MaterialConstract.Present = MaterialPresent()

@@ -3,22 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
 
-    <EditText
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#f2f2f2"
-        android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginLeft="@dimen/dp_14"
-        android:layout_marginRight="@dimen/dp_14"
-        android:gravity="top"
-        android:textSize="@dimen/txt_13"
-        android:textColor="@color/color666666"
-        android:textColorHint="@color/text_edit_hint"
-        android:hint="@string/multiple_line_input"
-        android:paddingTop="@dimen/dp_10"
-        android:paddingLeft="@dimen/dp_10"/>
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_14"
+        android:background="@color/text_color_white">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#f2f2f2"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:gravity="top"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            android:textColorHint="@color/text_edit_hint"
+            android:hint="@string/multiple_line_input"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"/>
+    </FrameLayout>
 
     <com.coorchice.library.SuperTextView
         android:layout_width="match_parent"

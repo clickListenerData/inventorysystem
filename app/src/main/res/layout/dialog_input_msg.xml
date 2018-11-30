@@ -39,6 +39,8 @@
             android:layout_marginHorizontal="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingVertical="@dimen/dp_10"
             android:textColorHint="#C7C7CC"
             android:textColor="#C7C7CC"/>
 

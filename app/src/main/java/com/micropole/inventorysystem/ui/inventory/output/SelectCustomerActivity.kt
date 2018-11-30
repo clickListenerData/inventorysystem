@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_select_customer.*
 
 /**
  * @ClassName       SelectCustomerActivity
- * @Description     选择客户
+ * @Description     选择客户   1.新建订单   2.添加回款记录
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/29 9:50

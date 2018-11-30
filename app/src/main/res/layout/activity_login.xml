@@ -33,9 +33,10 @@
             android:textColor="@color/color_333"
             />
         <View
+            android:id="@+id/view_phone_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/txt_out"
+            android:background="#dddddd"
             android:layout_marginHorizontal="30dp"/>
     </LinearLayout>
     <LinearLayout
@@ -58,9 +59,10 @@
             android:paddingVertical="@dimen/dp_10"
             android:textColor="@color/color_333"/>
         <View
+            android:id="@+id/view_pwd_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/txt_out"
+            android:background="#dddddd"
             android:layout_marginHorizontal="30dp"/>
     </LinearLayout>
     <com.coorchice.library.SuperTextView
@@ -82,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
         android:layout_marginRight="@dimen/dp_14"
         android:layout_marginLeft="@dimen/dp_14">
         <TextView

@@ -14,6 +14,7 @@ import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.fragment_inventory_manager.*
+import kotlinx.android.synthetic.main.view_inventory_head.*
 import kotlinx.android.synthetic.main.view_inventory_head.view.*
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator
@@ -34,6 +35,7 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
     }
 
     override fun initEvent(view: View?) {
+
     }
 
     override fun initData() {
@@ -56,6 +58,7 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
         view.magic_inventory.initMagic(arrayListOf("默认","大衣", "短袖", "裤子", "鞋子")){
             view, index ->
         }
+        view.tv_inventory_zh.isSelected = true
         view.tv_new_goods.setOnClickListener { activity?.startActivity<NewGoodsActivity>() }
         view.tv_ruku.setOnClickListener {
             InTreasuryActivity.startInTreasuryActivity(mContext)
@@ -65,6 +68,19 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
         }
         view.tv_order_record.setOnClickListener {
             activity?.startActivity<InventoryDetailsActivity>()
+        }
+
+        view.fl_zh.setOnClickListener {
+            view.tv_inventory_zh.isSelected = true
+        }
+        view.fl_ckl.setOnClickListener {
+            view.tv_inventory_ckl.isSelected = true
+        }
+        view.fl_time.setOnClickListener {
+            view.tv_inventory_time.isSelected = true
+        }
+        view.fl_xl.setOnClickListener {
+            view.tv_inventory_xl.isSelected = true
         }
         return view
     }

@@ -13,12 +13,13 @@ import com.micropole.inventorysystem.adapter.inventorydetail.SelectColorAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectMaterialAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectSizeAdapter
 import com.micropole.inventorysystem.entity.ColorBean
+import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_refresh_recy.*
 
 /**
  * @ClassName       SelectActivity
- * @Description     选择属性 颜色，规格，材质，销售成员
+ * @Description     选择属性 颜色，规格，材质，销售成员,商品
  * @Author          HuaiXianZhong
  * @Sign            。。。
  * @Date            2018/11/28 16:08
@@ -33,11 +34,14 @@ class SelectActivity  : BaseMvpViewActivity(){
         const val SELECT_SIZE = 0x12
         const val SELECT_MATERIAL = 0x13
         const val SELECT_MEMBER = 0X14
+        const val SELECT_GOODS = 0X15
+        const val REQUEST_CODE = 0X20
+        const val RESULT_CODE = 0X21
 
         fun startSelect(context: Activity,type : Int){
             val intent = Intent(context, SelectActivity::class.java)
             intent.putExtra("type_select",type)
-            context.startActivityForResult(intent,0x15)
+            context.startActivityForResult(intent, REQUEST_CODE)
         }
     }
 
@@ -59,6 +63,9 @@ class SelectActivity  : BaseMvpViewActivity(){
             SELECT_MEMBER -> {
                 mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_select_member)
             }
+            SELECT_GOODS -> {
+                mAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)
+            }
         }
 
         recycler_view.adapter = mAdapter
@@ -67,5 +74,9 @@ class SelectActivity  : BaseMvpViewActivity(){
     override fun initEvent() {
 
         (mAdapter as BaseQuickAdapter<Any,BaseViewHolder>).setNewData(arrayListOf(Any(), Any(), Any()))
+
+        mAdapter.setOnItemClickListener { adapter, view, position ->
+            
+        }
     }
 }
