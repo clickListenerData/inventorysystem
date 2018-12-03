@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_customerservicea_n"/>
+        <com.coorchice.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginHorizontal="105dp"
+            app:stv_solid="@color/txt_out"
+            app:stv_corner="20dp"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/txt_17"
+            android:paddingVertical="12dp"/>
+        <com.coorchice.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginHorizontal="105dp"
+            app:stv_solid="@color/text_color_white"
+            app:stv_stroke_width="1dp"
+            app:stv_stroke_color="@color/txt_out"
+            app:stv_corner="20dp"
+            android:textColor="@color/txt_out"
+            android:textSize="@dimen/txt_17"
+            android:paddingVertical="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

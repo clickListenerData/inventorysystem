@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@color/text_color_white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:layout_gravity="center_vertical"
+            android:text="@string/gong_txt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_price"
+            android:textSize="@dimen/txt_15"
+            android:layout_gravity="center_vertical"
+            android:text="2件"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_15"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_14"
+            android:text="@string/product_txt"/>
+
+        <com.coorchice.library.SuperTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:stv_solid="@color/text_color_white"
+            app:stv_stroke_color="@color/color666666"
+            app:stv_stroke_width="1dp"
+            app:stv_corner="6dp"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/color666666"
+            android:text="@string/commit_evaluation"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="8dp"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -5,6 +5,7 @@ import android.view.View
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.shopmall.ShopMallAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.fragment_shop_mall.*
 
 /**
@@ -27,6 +28,8 @@ class ShoppingMallFragment : BaseMvpViewFragment() {
     }
 
     override fun initEvent(view: View?) {
+        iv_cart.setOnClickListener { activity?.startActivity<CartActivity>() }
+        iv_search.setOnClickListener {  }
     }
 
     override fun initData() {

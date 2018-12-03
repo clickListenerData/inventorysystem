@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="@dimen/dp_14">
+    android:layout_marginLeft="@dimen/dp_10">
 
     <com.coorchice.library.SuperTextView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="@dimen/dp_4"
         android:layout_gravity="center"
         app:stv_solid="#ff0000"
         app:stv_corner="2dp"/>
@@ -20,7 +19,26 @@
         android:layout_gravity="center"
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
-        android:text="蓝100件"
-        android:layout_marginTop="@dimen/dp_10"/>
+        android:text="蓝"
+        android:layout_marginLeft="@dimen/dp_10"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:maxLines="1"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="100"
+        android:enabled="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/main_txt_size"
+        android:textColor="@color/color666666"
+        android:text="件"
+        android:layout_marginLeft="@dimen/dp_10"/>
 
 </LinearLayout>

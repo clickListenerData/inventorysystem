@@ -21,15 +21,15 @@
             android:text="@string/main_shop_mall"
             android:textStyle="bold"/>
         <ImageView
-            android:id="@+id/iv_share"
+            android:id="@+id/iv_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/iv_news"
+            android:layout_toLeftOf="@id/iv_search"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_14"
             android:src="@drawable/ic_shoppingcar_n"/>
         <ImageView
-            android:id="@+id/iv_news"
+            android:id="@+id/iv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

@@ -13,4 +13,13 @@
         <item>@string/goods_sale_detail</item>
         <item>@string/goods_customer_list</item>
     </string-array>
+
+    <string-array name="order_title_array">
+        <item>@string/all_txt</item>
+        <item>@string/pay_order_txt</item>
+        <item>@string/send_order_txt</item>
+        <item>@string/receive_order_txt</item>
+        <item>@string/evaluation_order_txt</item>
+        <item>@string/after_order_txt</item>
+    </string-array>
 </resources>

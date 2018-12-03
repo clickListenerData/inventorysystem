@@ -1,6 +1,8 @@
 package com.micropole.baseapplibrary.widght
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.net.Uri
 import android.util.AttributeSet
 import android.view.Gravity
@@ -8,6 +10,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.util.ImageChooseHelper
 import java.io.File
@@ -100,13 +103,18 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         }
     }
 
+    @SuppressLint("NewApi")
     private fun createAddView(){
-        val imageView = ImageView(this.context)
-        imageView.setBackgroundDrawable(this.context.resources.getDrawable(R.drawable.shape_gray_r3))
-        imageView.scaleType = ImageView.ScaleType.CENTER_INSIDE
-        if (addDrawable != 0) imageView.setImageResource(addDrawable)
-        else imageView.setImageResource(android.R.drawable.ic_input_add)
+        val frameLayout = FrameLayout(context)
+        frameLayout.setBackgroundDrawable(this.context.resources.getDrawable(R.drawable.shape_gray_r3))
+        val imageView = TextView(this.context)
+        if (addDrawable != 0) imageView.setCompoundDrawablesRelativeWithIntrinsicBounds(null,context.resources.getDrawable(addDrawable),null,null)
+        else imageView.setCompoundDrawablesRelativeWithIntrinsicBounds(null,context.resources.getDrawable(android.R.drawable.ic_input_add),null,null)
         imageView.tag = true
+        imageView.textSize = 11f
+        imageView.setTextColor(Color.parseColor("#999999"))
+        imageView.setText(R.string.add_photo)
+        imageView.gravity = Gravity.CENTER
         imageView.setOnClickListener {
             if (imageChooseHelper == null){
                 addAction.invoke(it)
@@ -120,7 +128,10 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
                 }.show()
             }
         }
-        addView(imageView)
+        val layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+        layoutParams.gravity = Gravity.CENTER
+        frameLayout.addView(imageView,layoutParams)
+        addView(frameLayout)
     }
 
     fun addImgView(path : String){

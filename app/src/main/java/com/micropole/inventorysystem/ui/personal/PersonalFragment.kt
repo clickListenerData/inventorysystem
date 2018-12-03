@@ -7,6 +7,7 @@ import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.xx.baseutilslibrary.extensions.startActivity
 import com.micropole.inventorysystem.ui.login.LoginActivity
 import com.micropole.inventorysystem.ui.personal.mine.*
+import com.micropole.inventorysystem.ui.personal.shopmall.OrderListActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_personal.*
 
@@ -35,6 +36,7 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_personal_msg.setOnClickListener { activity?.startActivity<PersonalMsgActivity>() }
         nll_feed_back.setOnClickListener { activity?.startActivity<FeedBackActivity>() }
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }
+        nll_order.setOnClickListener { activity?.startActivity<OrderListActivity>() }
 
         iv_share.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)

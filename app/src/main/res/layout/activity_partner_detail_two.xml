@@ -16,9 +16,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@color/app_color_bg"
-            android:layout_marginTop="@dimen/dp_10"
-            android:divider="@drawable/shape_line_drawable"
-            android:showDividers="middle">
+            android:layout_marginTop="@dimen/dp_10">
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"

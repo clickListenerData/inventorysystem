@@ -181,7 +181,7 @@
     <string name="safety_auto_login">自动登录</string>
 
     <string name="feed_back_hint">请输入您的意见或者建议</string>
-    <string name="commit_txt">提交</string>
+    <string name="commit_txt">提  交</string>
 
     <!--新建商品-->
     <string name="new_goods_name">商品名称</string>
@@ -251,7 +251,20 @@
     <string name="freight_price">运费</string>
     <string name="preferential_price">优惠</string>
     <string name="pay_buy">立即支付</string>
-    <string name="price_count">合计金额</string>
+    <string name="price_count">合计金额:</string>
+    <string name="logistics_information">物流信息</string>
+    <string name="confirm_receive">确认收货</string>
+    <string name="lay_receive">延迟收货</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="apply_for_after">申请售后</string>
+    <string name="commit_evaluation">提交评价</string>
+    <string name="gong_txt">共</string>
+    <string name="product_txt">商品</string>
+    <string name="evaluation_score">评分</string>
+    <string name="input_your_evaluation">填写您的评论</string>
+
+    <string name="after_type">售后类型</string>
+    <string name="after_reason">申请理由</string>
 
     <!--商城-->
     <string name="price_txt">价格</string>
@@ -259,6 +272,13 @@
     <string name="new_txt">最新</string>
     <string name="count_txt">合计</string>
     <string name="all_category_txt">所有分类</string>
+
+    <string name="all_txt">全部</string>
+    <string name="pay_order_txt">待付款</string>
+    <string name="send_order_txt">待发货</string>
+    <string name="receive_order_txt">待收货</string>
+    <string name="evaluation_order_txt">待评价</string>
+    <string name="after_order_txt">售后</string>
 
     <!--购物车-->
     <string name="settlement_txt">结算</string>

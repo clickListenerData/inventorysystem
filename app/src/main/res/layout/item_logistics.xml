@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/text_color_white"
+    android:paddingBottom="@dimen/dp_14">
+
+    <TextView
+        android:id="@+id/tv_logistics_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11-15"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/title_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_14"
+        />
+    <TextView
+        android:id="@+id/tv_logistics_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_logistics_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_logistics_date"
+        android:text="09: 15"
+        android:textColor="@color/text_edit_hint"
+        android:textSize="@dimen/txt_11"
+        />
+    <ImageView
+        android:id="@+id/iv_logistics_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_logistics_date"
+        app:layout_constraintLeft_toRightOf="@id/tv_logistics_date"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:src="@drawable/ic_positio_n"
+        />
+    <TextView
+        android:id="@+id/tv_logistics_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/iv_logistics_img"
+        app:layout_constraintTop_toTopOf="@id/tv_logistics_date"
+        android:layout_marginLeft="@dimen/dp_14"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/dp_14"/>
+
+</android.support.constraint.ConstraintLayout>

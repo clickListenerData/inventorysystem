@@ -59,6 +59,10 @@
         <activity android:name=".ui.personal.inventory.ReturnMoneyActivity"/>
         <activity android:name=".ui.shoppingmall.CartActivity"/>
         <activity android:name=".ui.personal.shopmall.OrderListActivity"/>
+        <activity android:name=".ui.personal.shopmall.OrderDetailActivity"/>
+        <activity android:name=".ui.shoppingmall.ApplyAfterActivity"/>
+        <activity android:name=".ui.personal.shopmall.EvaluationOrderActivity"/>
+        <activity android:name=".ui.personal.shopmall.MineCollectActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/dp_14"
+    android:layout_marginHorizontal="@dimen/dp_14">
+
+    <include layout="@layout/view_order_product"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <com.coorchice.library.SuperTextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:stv_solid="#FF9501"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/txt_15"
+            android:text="@string/share_txt"/>
+        <com.coorchice.library.SuperTextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:stv_solid="#E6162D"
+            app:stv_corner="6dp"
+            app:stv_right_top_corner="true"
+            app:stv_right_bottom_corner="true"
+            app:stv_left_bottom_corner="false"
+            app:stv_left_top_corner="false"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/txt_15"
+            android:text="@string/delete_txt"/>
+    </LinearLayout>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

@@ -9,6 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.micropole.baseapplibrary.widght.RefreshRecyclerView
 import com.micropole.inventorysystem.adapter.shopmall.OrderAdapter
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
+import com.xx.baseutilslibrary.extensions.startActivity
 
 /**
  * @ClassName       OrderListFragment
@@ -38,6 +39,10 @@ class OrderListFragment : BaseMvpViewFragment(){
         refreshRecyclerView.mLayoutManager = LinearLayoutManager(mContext)
         refreshRecyclerView.mAdapter = OrderAdapter()
         (refreshRecyclerView.mAdapter as OrderAdapter).setNewData(arrayListOf(Any(), Any(),Any()))
+
+        refreshRecyclerView.mAdapter?.setOnItemClickListener { adapter, view, position ->
+            activity?.startActivity<OrderDetailActivity>()
+        }
     }
 
     override fun initEvent(view: View?) {
