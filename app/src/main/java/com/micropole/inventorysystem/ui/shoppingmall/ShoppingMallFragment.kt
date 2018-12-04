@@ -17,11 +17,13 @@ import kotlinx.android.synthetic.main.fragment_shop_mall.*
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class ShoppingMallFragment : BaseMvpViewFragment() {
+
+    val shopMallAdapter = ShopMallAdapter()
+
     override fun getFragmentLayoutId(): Int = R.layout.fragment_shop_mall
 
     override fun initView(view: View?) {
         rrv_shop_mall.mLayoutManager = LinearLayoutManager(mContext)
-        val shopMallAdapter = ShopMallAdapter()
         rrv_shop_mall.mAdapter = shopMallAdapter
 
         shopMallAdapter.setNewData(arrayListOf(Any(), Any(),Any()))
@@ -29,7 +31,11 @@ class ShoppingMallFragment : BaseMvpViewFragment() {
 
     override fun initEvent(view: View?) {
         iv_cart.setOnClickListener { activity?.startActivity<CartActivity>() }
-        iv_search.setOnClickListener {  }
+        iv_search.setOnClickListener { activity?.startActivity<SearchShopActivity>() }
+
+        shopMallAdapter.setOnItemClickListener { adapter, view, position ->
+            activity?.startActivity<ProductDetailActivity>()
+        }
     }
 
     override fun initData() {

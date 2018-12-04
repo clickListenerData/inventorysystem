@@ -12,6 +12,7 @@
         android:background="#F9F9F9"
         android:orientation="horizontal">
         <ImageView
+            android:id="@+id/ib_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/home_left_arrows"
@@ -146,7 +147,7 @@
                     android:textColor="@color/text_edit_hint"
                     android:textColorHint="@color/text_edit_hint"
                     android:textSize="@dimen/txt_13"
-                    android:text="@string/remark_hint"
+                    android:hint="@string/remark_hint"
                     android:gravity="top"/>
             </LinearLayout>
         </LinearLayout>
@@ -160,26 +161,16 @@
         android:background="@color/text_color_white"
         android:paddingLeft="@dimen/dp_14">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:drawableLeft="@drawable/select_checked_img"
             android:paddingVertical="@dimen/dp_14"
             android:textSize="@dimen/main_txt_size"
             android:textColor="@color/text_edit_hint"
             android:text="@string/all_select_txt"
             android:drawablePadding="@dimen/dp_4"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:drawableLeft="@drawable/ic_deletew_n"
-            android:textSize="@dimen/main_txt_size"
-            android:textColor="@color/text_edit_hint"
-            android:text="@string/delete_txt"
-            android:drawablePadding="@dimen/dp_4"
-            />
+            android:gravity="center_vertical"/>
         <com.coorchice.library.SuperTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -25,6 +25,6 @@ class OrderDetailActivity : BaseMvpViewActivity(){
     }
 
     override fun initEvent() {
-        tv_btn.setOnClickListener { startActivity<EvaluationOrderActivity>() }
+        tv_btn.setOnClickListener { startActivity<ApplyAfterActivity>() }
     }
 }

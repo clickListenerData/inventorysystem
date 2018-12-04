@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/text_color_white"
     android:orientation="vertical">
-    <include layout="@layout/view_title"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -25,7 +24,7 @@
             android:background="@null"
             android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="2dp"
-            android:hint="@string/single_input"
+            android:hint="@string/dialog_input_phone"
             android:textSize="@dimen/txt_17"
             android:textColorHint="@color/text_edit_hint"
             android:paddingLeft="@dimen/dp_10"
@@ -52,12 +51,13 @@
             android:background="@null"
             android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="2dp"
-            android:hint="@string/single_input"
+            android:hint="@string/dialog_input_pwd"
             android:textSize="@dimen/txt_17"
             android:textColorHint="@color/text_edit_hint"
             android:paddingLeft="@dimen/dp_10"
             android:paddingVertical="@dimen/dp_10"
-            android:textColor="@color/color_333"/>
+            android:textColor="@color/color_333"
+            android:inputType="textPassword"/>
         <View
             android:id="@+id/view_pwd_line"
             android:layout_width="match_parent"
@@ -122,7 +122,7 @@
         android:text="@string/login_wx"
         android:gravity="center"
         android:textSize="@dimen/dp_14"
-        android:drawableTop="@drawable/share_ic_weixin"
+        android:drawableTop="@drawable/ic_weixinaa_n"
         android:drawablePadding="@dimen/dp_4"
         android:textColor="@color/color_333"
         android:layout_marginTop="50dp"

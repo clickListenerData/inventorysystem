@@ -1,11 +1,9 @@
 package com.micropole.inventorysystem.ui.login.mvp.presenter
 
-import com.micropole.inventorysystem.ui.home.mvp.contract.InTreasuryContract
-import com.micropole.inventorysystem.ui.home.mvp.model.InTreasuryModel
-import com.micropole.inventorysystem.ui.login.mvp.contract.LoginContract
+import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.login.mvp.contract.RegisterContract
-import com.micropole.inventorysystem.ui.login.mvp.model.LoginModel
 import com.micropole.inventorysystem.ui.login.mvp.model.RegisterModel
+import com.xx.baseutilslibrary.extensions.ui
 
 /**
  * author: xiaoguagnfei
@@ -13,5 +11,45 @@ import com.micropole.inventorysystem.ui.login.mvp.model.RegisterModel
  * describe:
  */
 class RegisterPresenter:RegisterContract.Presenter() {
+    override fun sendSMS(phone: String) {
+        getModel().sendSMS(phone).ui({
+            getView()?.showToast(it.msg)
+        },{
+            getView()?.showToast(it)
+        })
+    }
+
+    override fun register(img: String, name: String, country: String, birthday: String, phone: String, code: String, pwd: String) {
+        when {
+            img.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_select_img))
+            name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_name))
+            birthday.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_xu_bri))
+            phone.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_xu_phone))
+            code.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_tian_code))
+            pwd.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
+            else -> {
+                getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+                imgUp(img){
+                    getModel().register(it,name,country, birthday, phone, code, pwd).ui({
+                        getView()?.dismissLoadingDialog()
+                        getView()?.showToast(it.msg)
+                    },{
+                        getView()?.dismissLoadingDialog()
+                        getView()?.showToast(it)
+                    })
+                }
+            }
+        }
+    }
+
+    fun imgUp(img : String,action : (s : String) -> Unit){
+        getModel().imgUp(img).ui({
+            action.invoke(it.data!!.imgUrl)
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun createModel()=RegisterModel()
 }

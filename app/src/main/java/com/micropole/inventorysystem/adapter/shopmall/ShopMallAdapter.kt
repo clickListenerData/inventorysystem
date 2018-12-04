@@ -1,6 +1,5 @@
 package com.micropole.inventorysystem.adapter.shopmall
 
-import android.content.ClipData
 import android.support.v7.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -18,6 +17,7 @@ import com.micropole.inventorysystem.R
 class ShopMallAdapter : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_shop_mall){
     override fun convert(helper: BaseViewHolder?, item: Any?) {
         helper?.setRvAdapter(R.id.rv_shop_goods,LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false),ItemAdapter(arrayListOf(Any(), Any(), Any(),Any())))
+
     }
 
     class ItemAdapter(data : List<Any>) : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_shop_product,data){

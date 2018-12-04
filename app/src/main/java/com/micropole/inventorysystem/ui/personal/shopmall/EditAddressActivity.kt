@@ -4,18 +4,17 @@ import com.micropole.inventorysystem.R
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 
 /**
- * @ClassName       AddressManagerActivity
- * @Description     管理收货地址
+ * @ClassName       EditAddressActivity
+ * @Description     编辑地址
  * @Author          HuaiXianZhong
  * @Sign            。。。
- * @Date            2018/12/3 17:46
+ * @Date            2018/12/4 8:58
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class AddressManagerActivity : BaseMvpViewActivity(){
-    override fun getActivityLayoutId(): Int = R.layout.activity_refresh_recy
+class EditAddressActivity : BaseMvpViewActivity(){
+    override fun getActivityLayoutId(): Int = R.layout.activity_edit_address
 
     override fun initData() {
-
     }
 
     override fun initEvent() {

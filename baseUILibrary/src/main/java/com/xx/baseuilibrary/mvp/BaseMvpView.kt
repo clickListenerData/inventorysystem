@@ -1,6 +1,7 @@
 package com.xx.baseuilibrary.mvp
 
 import android.app.Activity
+import android.support.annotation.StringRes
 
 /**
  * BaseMvpView
@@ -33,6 +34,8 @@ interface BaseMvpView {
      * 启动一个Activity
      */
     fun startActivity(clz: Class<out Activity>)
+
+    fun getResString(@StringRes id : Int) : String
 
     /**
      * 结束Activity

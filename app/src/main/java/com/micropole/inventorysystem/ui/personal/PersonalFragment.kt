@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.ui.personal
 
 import android.content.Intent
 import android.view.View
+import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.xx.baseutilslibrary.extensions.startActivity
@@ -23,6 +24,9 @@ class PersonalFragment : BaseMvpViewFragment() {
     override fun getFragmentLayoutId(): Int = R.layout.fragment_personal
 
     override fun initView(view: View?) {
+        if (!Constants.isLogin()){
+            
+        }
     }
 
     override fun initEvent(view: View?) {
