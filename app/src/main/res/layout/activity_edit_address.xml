@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_bg">
+
+    <include layout="@layout/view_title"/>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:input_enable="true"
+        app:title_content="@string/contract_name"
+        app:input_hint_content="@string/contract_name_hint"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
+
+    <com.micropole.inventorysystem.widght.InputMsgView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:input_enable="true"
+        app:title_content="@string/contract_phone"
+        app:input_hint_content="@string/contract_phone_hint"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_color_white"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingRight="@dimen/dp_14"
+        android:paddingBottom="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            android:text="@string/receive_address"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_gravity="top"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/text_color_white"
+        android:paddingVertical="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_14">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            android:text="@string/default_address"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_14"
+            android:src="@drawable/select_open_switch"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="105dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/shape_white_r6"
+        android:gravity="center"
+        android:textColor="@color/txt_price"
+        android:textSize="@dimen/txt_15"
+        android:text="@string/delete_address"
+        android:paddingVertical="@dimen/dp_14"/>
+
+</LinearLayout>

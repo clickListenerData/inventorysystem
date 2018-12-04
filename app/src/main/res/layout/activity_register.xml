@@ -15,6 +15,7 @@
         android:background="@color/text_color_white"
         android:orientation="vertical">
         <RelativeLayout
+            android:id="@+id/rl_select_img"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginLeft="@dimen/dp_14"
@@ -79,6 +80,7 @@
             android:background="@color/line_color"
             android:layout_marginLeft="@dimen/dp_14"/>
         <RelativeLayout
+            android:id="@+id/rl_select_country"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginLeft="@dimen/dp_14"
@@ -104,6 +106,8 @@
                 android:text="@string/reg_xu_contry"
                 android:textSize="@dimen/txt_13"
                 android:textColor="@color/text_edit_hint"
+                android:drawableRight="@drawable/ic_towardstheright_n"
+                android:drawablePadding="@dimen/dp_4"
                 android:layout_toLeftOf="@+id/iv_contry"/>
         </RelativeLayout>
         <View
@@ -112,6 +116,7 @@
             android:background="@color/line_color"
             android:layout_marginLeft="@dimen/dp_14"/>
         <RelativeLayout
+            android:id="@+id/rl_select_birth"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginLeft="@dimen/dp_14"
@@ -137,6 +142,8 @@
                 android:text="@string/reg_xu_bri"
                 android:textSize="@dimen/txt_13"
                 android:textColor="@color/text_edit_hint"
+                android:drawableRight="@drawable/ic_towardstheright_n"
+                android:drawablePadding="@dimen/dp_4"
                 android:layout_toLeftOf="@+id/iv_bri"/>
         </RelativeLayout>
         <View
@@ -212,9 +219,41 @@
                 android:layout_marginRight="@dimen/dp_14"
                 android:background="@null"/>
         </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/dp_14"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/dp_14">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_pw"
+                android:textSize="@dimen/txt_15"
+                android:textColor="@color/title_color"
+                android:layout_gravity="center_vertical"/>
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/dialog_input_pwd"
+                android:textColorHint="@color/text_edit_hint"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/text_edit_hint"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                />
+        </LinearLayout>
     </LinearLayout>
 
     <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_40"

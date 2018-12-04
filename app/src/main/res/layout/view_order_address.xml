@@ -3,15 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingVertical="@dimen/dp_10"
+    android:background="@color/text_color_white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/iv_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_lock_lock"
+        android:src="@drawable/ic_positio_n"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="@dimen/dp_14"/>
 
     <TextView
@@ -21,6 +23,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/iv_location"
         android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_13"
+        android:text="收货人：那么"
         />
 
     <TextView
@@ -29,7 +34,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@id/tv_name"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="@dimen/dp_14"/>
+        android:layout_marginLeft="@dimen/dp_14"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_13"
+        android:text="180000000"/>
 
     <TextView
         android:layout_width="0dp"
@@ -37,6 +45,9 @@
         app:layout_constraintLeft_toLeftOf="@id/tv_name"
         app:layout_constraintRight_toRightOf="@id/tv_phone"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
-        android:layout_marginTop="@dimen/dp_10"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_13"
+        android:text="地址"/>
 
 </android.support.constraint.ConstraintLayout>

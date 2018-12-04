@@ -3,6 +3,7 @@ package com.micropole.baseapplibrary.activity
 import android.content.Intent
 import android.os.Bundle
 import com.micropole.baseapplibrary.util.ImageChooseHelper
+import com.micropole.baseapplibrary.widght.ImageChooseDialog
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
@@ -41,6 +42,16 @@ abstract class BaseUpImgActivity<P : BaseMvpPresenter<*,out BaseMvpView>> : Base
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         imageChooseHelper?.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    fun showChooseDialog(){
+        ImageChooseDialog(this){
+            if (it == 0){  //拍照
+                imageChooseHelper?.takePhoto()
+            }else if (it == 1){
+                imageChooseHelper?.selectPicker()
+            }
+        }.show()
     }
 
     abstract fun imgResult(result : TResult)

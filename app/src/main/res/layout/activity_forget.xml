@@ -32,12 +32,13 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="@dimen/dp_14"
-            android:hint="@string/single_input"
+            android:hint="@string/dialog_input_phone"
             android:textSize="@dimen/txt_13"
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
+            android:gravity="right"
             />
     </LinearLayout>
     <View
@@ -70,14 +71,15 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="@dimen/dp_14"
-            android:hint="@string/single_input"
+            android:hint="@string/reg_tian_code"
             android:textSize="@dimen/txt_13"
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/title_color"/>
+            android:textColor="@color/title_color"
+            android:gravity="right"/>
         <TextView
-            android:id="@+id/tv_wx_login"
+            android:id="@+id/tv_get_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -117,12 +119,13 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="@dimen/dp_14"
-            android:hint="@string/single_input"
+            android:hint="@string/reg_tian_pw"
             android:textSize="@dimen/txt_13"
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
+            android:gravity="right"
             />
     </LinearLayout>
     <View
@@ -155,12 +158,13 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="@dimen/dp_14"
-            android:hint="@string/single_input"
+            android:hint="@string/reg_tsure_pw"
             android:textSize="@dimen/txt_13"
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
+            android:gravity="right"
             />
     </LinearLayout>
     <com.coorchice.library.SuperTextView

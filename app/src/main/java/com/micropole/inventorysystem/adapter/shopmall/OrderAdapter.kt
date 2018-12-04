@@ -23,7 +23,9 @@ class OrderAdapter : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_order_vi
     class ItemAdapter(data : List<Any>) : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_order_product,data){
 
         override fun convert(helper: BaseViewHolder?, item: Any?) {
-
+            helper?.apply {
+                if (helper.adapterPosition == data.size - 1) setGone(R.id.view_line,false)
+            }
         }
     }
 }

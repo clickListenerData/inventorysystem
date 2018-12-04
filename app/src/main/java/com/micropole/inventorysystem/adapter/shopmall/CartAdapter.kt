@@ -14,6 +14,11 @@ import com.micropole.inventorysystem.R
  */
 class CartAdapter : BaseQuickAdapter<Any,BaseViewHolder>(R.layout.item_shop_cart) {
     override fun convert(helper: BaseViewHolder?, item: Any?) {
-
+        helper?.apply {
+            addOnClickListener(R.id.iv_product_checked)
+            addOnClickListener(R.id.stv_quantity_add)
+            addOnClickListener(R.id.stv_quantity_remove)
+            addOnClickListener(R.id.stv_delete)
+        }
     }
 }

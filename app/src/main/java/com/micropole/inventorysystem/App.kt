@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem
 
+import com.facebook.stetho.Stetho
 import com.micropole.baseapplibrary.BaseApplication
 import com.xx.baseutilslibrary.network.provider.XxApiConfigProvider
 import com.xx.baseutilslibrary.network.retrofit.Retrofit2Manager
@@ -17,6 +18,7 @@ class App : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
+        Stetho.initializeWithDefaults(this)
         initApi()
     }
 

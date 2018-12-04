@@ -1,9 +1,10 @@
 package com.micropole.inventorysystem.ui.login.mvp.presenter
 
-import com.micropole.inventorysystem.ui.home.mvp.contract.InTreasuryContract
-import com.micropole.inventorysystem.ui.home.mvp.model.InTreasuryModel
+import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.login.mvp.contract.LoginContract
 import com.micropole.inventorysystem.ui.login.mvp.model.LoginModel
+import com.micropole.inventorysystem.util.md5
+import com.xx.baseutilslibrary.extensions.ui
 
 /**
  * author: xiaoguagnfei
@@ -11,5 +12,24 @@ import com.micropole.inventorysystem.ui.login.mvp.model.LoginModel
  * describe:
  */
 class LoginPresenter:LoginContract.Presenter() {
+    override fun login(phone: String, pwd: String) {
+        if (phone.isEmpty()){
+            getView()?.showToast(getView()?.getResString(R.string.dialog_input_phone))
+            return
+        }
+        if (pwd.isEmpty()){
+            getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
+            return
+        }
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading_login))
+        getModel().login(phone, pwd.md5()).ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(getView()?.getResString(R.string.login_success))
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun createModel()=LoginModel()
 }

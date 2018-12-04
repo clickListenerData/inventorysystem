@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_color_white"
+    android:paddingBottom="@dimen/dp_14"
+    android:layout_marginBottom="@dimen/dp_14">
+
+    <include layout="@layout/item_order_product"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_15"
+            android:textColor="@color/title_color"
+            android:text="@string/evaluation_score"
+            android:layout_gravity="center_vertical"/>
+        <com.micropole.inventorysystem.widght.StarView
+            android:id="@+id/sv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_14"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_put_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:background="#F2F2F1"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/dp_14"
+        android:textColorHint="@color/text_edit_hint"
+        android:textColor="@color/text_edit_hint"
+        android:text=""
+        android:hint="@string/input_your_evaluation"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/title_color"
+        android:text="@string/add_photo"/>
+    
+    <com.micropole.baseapplibrary.widght.ShowImgView
+        android:id="@+id/siv_add_photo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:layout_height="115dp" />
+
+</LinearLayout>

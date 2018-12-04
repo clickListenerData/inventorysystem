@@ -2,11 +2,13 @@ package com.micropole.inventorysystem.ui.personal
 
 import android.content.Intent
 import android.view.View
+import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.xx.baseutilslibrary.extensions.startActivity
 import com.micropole.inventorysystem.ui.login.LoginActivity
 import com.micropole.inventorysystem.ui.personal.mine.*
+import com.micropole.inventorysystem.ui.personal.shopmall.OrderListActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import kotlinx.android.synthetic.main.fragment_personal.*
 
@@ -22,6 +24,9 @@ class PersonalFragment : BaseMvpViewFragment() {
     override fun getFragmentLayoutId(): Int = R.layout.fragment_personal
 
     override fun initView(view: View?) {
+        if (!Constants.isLogin()){
+            
+        }
     }
 
     override fun initEvent(view: View?) {
@@ -35,6 +40,7 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_personal_msg.setOnClickListener { activity?.startActivity<PersonalMsgActivity>() }
         nll_feed_back.setOnClickListener { activity?.startActivity<FeedBackActivity>() }
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }
+        nll_order.setOnClickListener { activity?.startActivity<OrderListActivity>() }
 
         iv_share.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)

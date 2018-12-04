@@ -4,7 +4,7 @@
     android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/shape_white_r6"
-    android:layout_marginRight="@dimen/dp_14"
+    android:layout_marginHorizontal="@dimen/dp_14"
     android:layout_marginTop="@dimen/dp_14">
 
     <android.support.constraint.ConstraintLayout
@@ -32,7 +32,7 @@
             app:layout_constraintLeft_toRightOf="@id/iv_product_checked"
             android:layout_marginLeft="@dimen/dp_14"
             app:layout_constraintDimensionRatio="1:1"
-            />
+            android:src="@drawable/home_recommended_place_chart"/>
 
         <TextView
             android:id="@+id/tv_product_title"
@@ -80,6 +80,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_delete"
         android:layout_width="65dp"
         android:layout_height="match_parent"
         app:stv_solid="@color/txt_price"

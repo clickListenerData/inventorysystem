@@ -2,6 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.micropole.inventorysystem">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -59,6 +76,12 @@
         <activity android:name=".ui.personal.inventory.ReturnMoneyActivity"/>
         <activity android:name=".ui.shoppingmall.CartActivity"/>
         <activity android:name=".ui.personal.shopmall.OrderListActivity"/>
+        <activity android:name=".ui.personal.shopmall.OrderDetailActivity"/>
+        <activity android:name=".ui.shoppingmall.ApplyAfterActivity"/>
+        <activity android:name=".ui.personal.shopmall.EvaluationOrderActivity"/>
+        <activity android:name=".ui.personal.shopmall.MineCollectActivity"/>
+        <activity android:name=".ui.shoppingmall.SearchShopActivity"/>
+        <activity android:name=".ui.shoppingmall.ProductDetailActivity"/>
     </application>
 
 </manifest>

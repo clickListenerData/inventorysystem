@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import android.view.ViewGroup
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
+import com.micropole.inventorysystem.util.ScalePagerTitleView
 import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_order_list.*
@@ -66,13 +67,12 @@ class OrderListActivity : BaseMvpViewActivity() {
         commonNavigator.isAdjustMode = true
         commonNavigator.adapter = object : CommonNavigatorAdapter() {
             override fun getTitleView(context: Context?, index: Int): IPagerTitleView {
-                val simplePagerTitleView = SimplePagerTitleView(context)
+                val simplePagerTitleView = ScalePagerTitleView(context)
                 simplePagerTitleView.selectedColor = Color.parseColor("#007AFF")
                 simplePagerTitleView.normalColor = Color.parseColor("#666666")
                 simplePagerTitleView.textSize = 13f
                 simplePagerTitleView.text = data[index]
                 simplePagerTitleView.setOnClickListener {
-                    simplePagerTitleView.textSize = 15f
                     vp_order.currentItem = index
                 }
                 return simplePagerTitleView

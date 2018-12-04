@@ -3,6 +3,8 @@ package com.micropole.inventorysystem.util
 import android.graphics.Color
 import android.view.View
 import android.widget.EditText
+import com.blankj.utilcode.util.EncodeUtils
+import com.blankj.utilcode.util.EncryptUtils
 import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator
@@ -33,3 +35,6 @@ fun EditText.addFocusListener(view : View){
         view.setBackgroundColor(if (hasFocus) Color.parseColor("#007AFF") else Color.parseColor("#DDDDDD"))
     }
 }
+
+fun String.md5() = EncryptUtils.encryptMD5ToString(EncryptUtils.encryptMD5ToString(this + "mcjp")
+        .toLowerCase()).toLowerCase()
