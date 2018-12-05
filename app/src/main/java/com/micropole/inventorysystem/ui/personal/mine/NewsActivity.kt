@@ -33,6 +33,5 @@ class NewsActivity : BaseRefreshActivity<NewsBean,NewsContract.Presenter>(),News
 
     override fun getData(data: List<NewsBean>) {
         setData(data)
-        adapter?.setEnableLoadMore(false)
     }
 }

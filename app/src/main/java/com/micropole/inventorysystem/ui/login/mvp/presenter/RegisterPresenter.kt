@@ -3,6 +3,7 @@ package com.micropole.inventorysystem.ui.login.mvp.presenter
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.login.mvp.contract.RegisterContract
 import com.micropole.inventorysystem.ui.login.mvp.model.RegisterModel
+import com.micropole.inventorysystem.util.md5
 import com.xx.baseutilslibrary.extensions.ui
 
 /**
@@ -30,9 +31,10 @@ class RegisterPresenter:RegisterContract.Presenter() {
             else -> {
                 getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
                 imgUp(img){
-                    getModel().register(it,name,country, birthday, phone, code, pwd).ui({
+                    getModel().register(it,name,country, birthday, phone, code, pwd.md5()).ui({
                         getView()?.dismissLoadingDialog()
                         getView()?.showToast(it.msg)
+                        getView()?.finishActivity()
                     },{
                         getView()?.dismissLoadingDialog()
                         getView()?.showToast(it)

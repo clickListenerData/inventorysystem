@@ -17,10 +17,10 @@ import com.micropole.inventorysystem.R
 object ColorUtils {
 
     fun color2String(color : Int) : String{
-        val r = (color shr 16 and 0xff) / 255
-        val g = (color shr 8 and 0xff) / 255
-        val b = (color and 0xff) / 255
-        val a = (color shr 24 and 0xff) / 255
+        val r = (color shr 16 and 0xff)
+        val g = (color shr 8 and 0xff)
+        val b = (color and 0xff)
+        val a = (color shr 24 and 0xff)
         return rgb2String(r, g, b, a)
     }
 

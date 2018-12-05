@@ -35,7 +35,7 @@
                 android:layout_toLeftOf="@id/iv_home_search"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_14"
-                android:src="@android:drawable/ic_menu_camera"/>
+                android:src="@drawable/home_ic_scanning"/>
             <ImageView
                 android:id="@+id/iv_home_search"
                 android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_14"
-                android:src="@android:drawable/ic_menu_search"/>
+                android:src="@drawable/home_ic_search"/>
         </RelativeLayout>
 
         <com.micropole.baseapplibrary.widght.RefreshRecyclerView

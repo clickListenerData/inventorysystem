@@ -3,14 +3,11 @@ package com.micropole.inventorysystem.ui.login
 import android.content.Context
 import android.content.Intent
 import com.micropole.inventorysystem.R
-import com.micropole.inventorysystem.R.id.*
 import com.micropole.inventorysystem.ui.login.mvp.contract.LoginContract
 import com.micropole.inventorysystem.ui.login.mvp.presenter.LoginPresenter
 import com.micropole.inventorysystem.util.addFocusListener
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.view_title.*
 
 /**
  * @ClassName       LoginActivity

@@ -3,6 +3,7 @@ package com.xx.baseuilibrary.mvp
 import android.app.Activity
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
+import android.support.annotation.StringRes
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.text.TextUtils
@@ -94,6 +95,10 @@ abstract class BaseMvpViewFragment : BaseFragment() {
                 alertDialog?.show()
             }
         }
+    }
+
+    fun getResString(@StringRes id : Int) : String{
+        return getString(id)
     }
 
     /**

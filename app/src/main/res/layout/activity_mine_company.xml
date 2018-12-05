@@ -16,6 +16,7 @@
             android:visibility="gone"/>
 
         <android.support.v4.widget.NestedScrollView
+            android:id="@+id/view_mine_company"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none">
@@ -104,6 +105,7 @@
                         android:layout_height="1dp"
                         android:background="@color/line_color"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_fzr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_14"
@@ -113,30 +115,36 @@
                         app:input_color="@color/txt_price"/>
 
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_phone"
                         app:input_content="1888888888"
                         android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_4"
                         app:title_content="@string/company_for_email"
                         app:input_content="123456@163.com"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_industry"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_industry"
                         app:input_content="aa"
                         android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_country"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_country"
                         app:input_content="中国"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         android:paddingLeft="@dimen/dp_4"/>
                     <com.micropole.inventorysystem.widght.InputMsgView
+                        android:id="@+id/imv_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:title_content="@string/company_for_address"
@@ -156,6 +164,7 @@
                             android:textColor="@color/color666666"
                             android:text="@string/company_for_announcement"/>
                         <TextView
+                            android:id="@+id/tv_announcement"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/txt_13"

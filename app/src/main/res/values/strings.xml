@@ -97,10 +97,12 @@
     <string name="personal_notice_txt">消息</string>
 
     <string name="new_create_category">新建分类</string>
+    <string name="edit__category">编辑分类</string>
     <string name="new_create_category_hint">输入新分类名称</string>
     <string name="input_category_hint">请输入分类名称</string>
     <string name="new_create_color">添加新颜色</string>
     <string name="new_create_material">添加新材质</string>
+    <string name="new_create_material_hint">输入新材质名称</string>
     <string name="not_add_company">没有加入任何公司</string>
     <string name="new_create_company">创建公司</string>
 
@@ -113,6 +115,7 @@
     <string name="company_for_country">国籍</string>
     <string name="company_for_address">地址</string>
     <string name="company_for_announcement">公司公告:</string>
+    <string name="company_name_txt">公司名：%s</string>
 
     <string name="member_list_txt">成员</string>
     <string name="member_detail_txt">成员详情</string>
@@ -140,6 +143,7 @@
     <string name="b_hint">输入B值</string>
     <string name="alpha_color_txt">透明度</string>
     <string name="color_template_txt">以模板创建</string>
+    <string name="check_sure_color_id">请输入正确的色码值</string>
 
     <!--创建公司-->
     <string name="company_cover">公司封面</string>
@@ -293,6 +297,9 @@
     <string name="settlement_txt">结算</string>
     <string name="all_select_txt">全选</string>
     <string name="delete_txt">删除</string>
+
+    <string name="not_company">暂无公司</string>
+    <string name="sure_txt">确定</string>
 
     <string name="back">Back</string>
     <string name="login">登录</string>

@@ -244,6 +244,7 @@
                 android:hint="@string/dialog_input_pwd"
                 android:textColorHint="@color/text_edit_hint"
                 android:textSize="@dimen/txt_13"
+                android:inputType="textPassword"
                 android:textColor="@color/text_edit_hint"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"

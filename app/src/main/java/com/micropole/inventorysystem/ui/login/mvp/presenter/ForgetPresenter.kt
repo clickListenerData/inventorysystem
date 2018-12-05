@@ -7,6 +7,7 @@ import com.micropole.inventorysystem.ui.login.mvp.contract.FotgetContract
 import com.micropole.inventorysystem.ui.login.mvp.contract.LoginContract
 import com.micropole.inventorysystem.ui.login.mvp.model.ForgetModel
 import com.micropole.inventorysystem.ui.login.mvp.model.LoginModel
+import com.micropole.inventorysystem.util.md5
 import com.xx.baseutilslibrary.extensions.ui
 
 /**
@@ -30,9 +31,10 @@ class ForgetPresenter:FotgetContract.Presenter() {
             pwd.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
             else -> {
                 getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
-                getModel().forgetPwd(phone, code, pwd).ui({
+                getModel().forgetPwd(phone, code, pwd.md5()).ui({
                     getView()?.dismissLoadingDialog()
                     getView()?.showToast(it.msg)
+                    getView()?.finishActivity()
                 },{
                     getView()?.dismissLoadingDialog()
                     getView()?.showToast(it)

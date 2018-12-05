@@ -3,7 +3,10 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.ColorBean"/>
+            type="com.micropole.inventorysystem.entity.ColorBean.ColorListBean"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
     </data>
 
     <LinearLayout
@@ -20,7 +23,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                android:src="#ff0000"
+                android:img_color="@{data.c_color}"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_gravity="center_vertical"/>
             <TextView
@@ -30,7 +33,7 @@
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/txt_15"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:text="红色"/>
+                android:text="@{data.c_name}"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -39,6 +42,7 @@
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/txt_15"
                 android:layout_marginLeft="@dimen/dp_10"
+                android:text="@{data.product_count}"
                 />
 
             <ImageView
@@ -46,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/dp_10"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/select_checked_img"/>
+                android:src="@drawable/ic_deletemerchandise_n"
+                android:onClick="@{listener}"/>
 
         </LinearLayout>
         <View

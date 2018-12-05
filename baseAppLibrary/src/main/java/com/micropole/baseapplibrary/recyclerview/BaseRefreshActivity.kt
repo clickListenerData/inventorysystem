@@ -24,6 +24,7 @@ abstract class BaseRefreshActivity<T,P : BaseMvpPresenter<*,out BaseRvConstract.
     var refresh : SwipeRefreshLayout? = null
     var recyclerView : RecyclerView? = null
     var adapter : BaseQuickAdapter<T,out BaseViewHolder>? = null
+    var mLoadMore = false
 
 
 
@@ -38,7 +39,6 @@ abstract class BaseRefreshActivity<T,P : BaseMvpPresenter<*,out BaseRvConstract.
 
     fun setRvLa(layoutManager: RecyclerView.LayoutManager,adapter: BaseQuickAdapter<T,out BaseViewHolder>){
         recyclerView?.layoutManager = layoutManager
-        adapter.setEmptyView(R.layout.item_view_empty,recyclerView)
         adapter.bindToRecyclerView(recyclerView)
         this.adapter = adapter
         recyclerView?.adapter = adapter
@@ -46,9 +46,11 @@ abstract class BaseRefreshActivity<T,P : BaseMvpPresenter<*,out BaseRvConstract.
 
     override fun initEvent() {
         refresh?.setOnRefreshListener(this)
-        adapter?.setOnLoadMoreListener({
-            loadData(++mCurrentPage)
-        },recyclerView)
+        if (mLoadMore){
+            adapter?.setOnLoadMoreListener({
+                loadData(++mCurrentPage)
+            },recyclerView)
+        }
     }
 
     override fun onRefresh() {
@@ -73,6 +75,7 @@ abstract class BaseRefreshActivity<T,P : BaseMvpPresenter<*,out BaseRvConstract.
                 }
             }else{
                 refresh?.isRefreshing = false
+                adapter!!.setEmptyView(R.layout.item_view_empty,recyclerView)
                 adapter!!.setNewData(data)
                 adapter!!.disableLoadMoreIfNotFullPage()
             }

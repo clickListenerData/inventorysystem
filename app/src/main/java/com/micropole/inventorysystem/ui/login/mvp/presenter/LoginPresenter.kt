@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.login.mvp.presenter
 
+import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.login.mvp.contract.LoginContract
 import com.micropole.inventorysystem.ui.login.mvp.model.LoginModel
@@ -23,8 +24,12 @@ class LoginPresenter:LoginContract.Presenter() {
         }
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading_login))
         getModel().login(phone, pwd.md5()).ui({
+            Constants.putLongToken(it.data!!.long_token)
+            Constants.putShortToken(it.data!!.short_token)
+            Constants.login()
             getView()?.dismissLoadingDialog()
-            getView()?.showToast(getView()?.getResString(R.string.login_success))
+            getView()?.showToast(it.msg)
+            getView()?.finishActivity()
         },{
             getView()?.dismissLoadingDialog()
             getView()?.showToast(it)

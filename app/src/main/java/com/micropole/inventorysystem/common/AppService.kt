@@ -2,9 +2,7 @@ package com.micropole.inventorysystem.common
 
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.micropole.baseapplibrary.appconst.AppApi
-import com.micropole.inventorysystem.entity.ImgUpBean
-import com.micropole.inventorysystem.entity.LoginBean
-import com.micropole.inventorysystem.entity.ShortTokenBean
+import com.micropole.inventorysystem.entity.*
 import com.xx.baseutilslibrary.entity.BaseResponseEntity
 import com.xx.baseutilslibrary.network.gson.XxGsonConverterFactory
 import io.reactivex.Observable
@@ -80,7 +78,7 @@ object AppService {
         fun register(@Field("user_img") img:String, @Field("nickname") nickname:String,
                      @Field("user_nationality") country:String,@Field("user_birthday") birthday:String,
                      @Field("user_phone") phone:String,@Field("code") code:String,
-                     @Field("user_pwd") pwd:String) : Observable<BaseResponseEntity<LoginBean>>
+                     @Field("user_pwd") pwd:String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 忘记密码
@@ -89,5 +87,89 @@ object AppService {
         @FormUrlEncoded
         fun forgetPwd(@Field("user_phone") phone:String,@Field("code") code:String,
                       @Field("user_pwd") pwd:String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 用户信息
+         */
+        @Headers("token:1","language:1")
+        @POST("User/index")
+        fun userInfo() : Observable<BaseResponseEntity<UserInfoBean>>
+
+        /**
+         * 分类列表
+         */
+        @Headers("token:1","language:1")
+        @POST("area/area_list")
+        fun categoryList() : Observable<BaseResponseEntity<CategoryBean>>
+
+        /**
+         * 添加分类
+         */
+        @Headers("token:1","language:1")
+        @POST("area/add_area")
+        @FormUrlEncoded
+        fun addCategory(@Field("area_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 编辑分类
+         */
+        @Headers("token:1","language:1")
+        @POST("area/edit_area")
+        @FormUrlEncoded
+        fun editCategory(@Field("area_id") id : String,@Field("area_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除分类
+         */
+        @Headers("token:1","language:1")
+        @POST("area/delete_area")
+        @FormUrlEncoded
+        fun deleteCategory(@Field("area_id") id : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 颜色列表
+         */
+        @Headers("token:1","language:1")
+        @POST("color/color_list")
+        fun colorList() : Observable<BaseResponseEntity<ColorBean>>
+
+        /**
+         * 添加颜色
+         */
+        @Headers("token:1","language:1")
+        @POST("color/add_color")
+        @FormUrlEncoded
+        fun addColor(@Field("color_name") name : String,@Field("color") color : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除颜色
+         */
+        @Headers("token:1","language:1")
+        @POST("color/delete_color")
+        @FormUrlEncoded
+        fun deleteColor(@Field("color_id") id : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 材质列表
+         */
+        @Headers("token:1","language:1")
+        @POST("texture/texture_list")
+        fun materialList() : Observable<BaseResponseEntity<MaterialBean>>
+
+        /**
+         * 添加材质
+         */
+        @Headers("token:1","language:1")
+        @POST("texture/add_texture")
+        @FormUrlEncoded
+        fun addMaterial(@Field("texture_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除材质
+         */
+        @Headers("token:1","language:1")
+        @POST("texture/delete_texture")
+        @FormUrlEncoded
+        fun deleteMaterial(@Field("texture_id") id : String) : Observable<BaseResponseEntity<List<String>>>
     }
 }

@@ -12,7 +12,11 @@ import android.widget.TextView
 import com.blankj.utilcode.util.ConvertUtils
 import com.blankj.utilcode.util.RegexUtils
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.R.id.tv_right
+import com.micropole.inventorysystem.ui.personal.inventory.mvp.AddColorContract
+import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.AddColorPresent
 import com.micropole.inventorysystem.util.ColorUtils
+import com.xx.baseuilibrary.mvp.BaseMvpActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_add_color.*
@@ -27,7 +31,7 @@ import kotlinx.android.synthetic.main.view_title.*
  * @Date            2018/11/21 17:31
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class AddColorActivity : BaseMvpViewActivity() {
+class AddColorActivity : BaseMvpActivity<AddColorContract.Presente>(),AddColorContract.View {
 
     private val COLOR_REGEX = "^#[0-9a-fA-F]+"
 
@@ -37,6 +41,10 @@ class AddColorActivity : BaseMvpViewActivity() {
     var colorA = 255
 
     override fun getActivityLayoutId(): Int = R.layout.activity_add_color
+
+    override fun createPresenter(): AddColorContract.Presente {
+        return AddColorPresent()
+    }
 
     override fun initData() {
         setTitleText(res = R.string.new_create_color)
@@ -49,7 +57,7 @@ class AddColorActivity : BaseMvpViewActivity() {
         idWatcherListner()
 
         tv_right.setOnClickListener {
-
+            getPresenter().addcolor(tv_color_name.text.toString(),tv_color_id.text.toString())
         }
     }
 
@@ -126,7 +134,7 @@ class AddColorActivity : BaseMvpViewActivity() {
                 if (s.isNullOrEmpty()) return
                 if (!isInput) {
                     s?.delete(index,s.length)
-                    showToast("请输入正确的色码值")
+                    showToast(getString(R.string.check_sure_color_id))
                 }else{
                     if (s?.length == 4 || s?.length == 7 || s?.length == 9){
                         changeRgb(s.toString())
@@ -145,11 +153,14 @@ class AddColorActivity : BaseMvpViewActivity() {
                 index = start
                 when(start){
                     0 -> {
-                        if (s.toString() != "#"){
-                            isInput = false
-                        }else{
+                        if (s?.length == 1 && s.toString() == "#"){
                             isInput = true
                             initRGB()
+                        }else if (RegexUtils.isMatch(COLOR_REGEX,s)){
+                            isInput = true
+                            initRGB()
+                        }else{
+                            isInput = false
                         }
                     }
                     1,2,3,4,5,6,7,8 -> {

@@ -23,7 +23,7 @@ class RegisterModel:RegisterContract.Model {
         return AppService.Api!!.sendSms(phone)
     }
 
-    override fun register(img: String, name: String, country: String, birthday: String, phone: String, code: String, pwd: String): Observable<BaseResponseEntity<LoginBean>> {
+    override fun register(img: String, name: String, country: String, birthday: String, phone: String, code: String, pwd: String): Observable<BaseResponseEntity<List<String>>> {
         return AppService.Api!!.register(img,name,country, birthday, phone, code, pwd)
     }
 }

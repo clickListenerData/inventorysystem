@@ -1,6 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.inventory.mvp
 
 import com.micropole.baseapplibrary.recyclerview.mvp.BaseRvConstract
+import com.micropole.inventorysystem.common.AppService
 import com.micropole.inventorysystem.entity.CategoryBean
 import com.micropole.inventorysystem.entity.ColorBean
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
@@ -16,12 +17,17 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 class ColorConstract {
 
     interface View : BaseRvConstract.View{
-        fun getData(data : List<ColorBean>)
+        fun getData(data : ColorBean)
+        fun deleteSuccess()
     }
 
-    class Model{}
+    class Model{
+        fun colorList() = AppService.Api!!.colorList()
+        fun deleteColor(id : String) = AppService.Api!!.deleteColor(id)
+    }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
         abstract fun getColorList()
+        abstract fun deleteColor(id: String)
     }
 }

@@ -128,7 +128,7 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
     }
 
     fun setCustomTxt(txt: String){
-        if (bold) tv_custom.setTypeface(null,Typeface.BOLD)
+        if (bold) tv_custom.setTypeface(null,Typeface.BOLD) else tv_custom.setTypeface(null,Typeface.NORMAL)
         tv_custom.text = txt
     }
 

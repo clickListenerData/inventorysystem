@@ -21,7 +21,7 @@ open class DataBindAdapter<T>(val brId : Int, @LayoutRes val id:Int, var br:Int 
     override fun convert(helper: BaseViewHolder?, item: T) {
         val binding = DataBindingUtil.bind<ViewDataBinding?>(helper!!.itemView)
         binding?.setVariable(brId,item)
-        if (br >= 0) binding?.setVariable(br,{view : View -> onItemChildClickListener?.onItemChildClick(this,view,helper.adapterPosition)})
+        if (br >= 0) binding?.setVariable(br, View.OnClickListener { v -> onItemChildClickListener?.onItemChildClick(this@DataBindAdapter,v,helper.adapterPosition) })
         binding?.executePendingBindings()
     }
 }

@@ -3,7 +3,10 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.MaterialBean"/>
+            type="com.micropole.inventorysystem.entity.MaterialBean.TextureListBean"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,14 +27,15 @@
                 android:textSize="@dimen/txt_15"
                 android:textColor="@color/title_color"
                 android:layout_gravity="center_vertical"
-                android:text="1111"
+                android:text="@{data.t_name}"
                 android:layout_marginLeft="@dimen/dp_10"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_deletemerchandise_n"
-                android:layout_marginRight="@dimen/dp_10"/>
+                android:layout_marginRight="@dimen/dp_10"
+                android:onClick="@{listener}"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"

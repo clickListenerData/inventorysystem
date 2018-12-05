@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.view_title.*
  * @Date            2018/11/21 14:07
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Present>(),CategoryConstract.View {
+class CategoryActivity : BaseRefreshActivity<CategoryBean.AreaListBean,CategoryConstract.Present>(),CategoryConstract.View {
 
     companion object {
         const val TYPE_MANAGER = 0X10
@@ -43,18 +43,19 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
 
     var mtype = TYPE_MANAGER
 
+    var mPosition = 0
+    var mId = ""
+
     override fun loadData(page: Int) {
-//        getPresenter().getCategoryList()
+        getPresenter().getCategoryList()
     }
 
     override fun initRv() {
         mtype = intent.getIntExtra("category_type",mtype)
-        refresh?.isEnabled = false
         setTitleText(res = R.string.personal_category_manager)
         tv_right.text = mContext.getText(R.string.new_create_category)
         recyclerView?.addItemDecoration(DividerItemDecoration(mContext,LinearLayoutManager.VERTICAL))
         setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_category_view))
-        setData(arrayListOf(CategoryBean(), CategoryBean(), CategoryBean()))
     }
 
     override fun initEvent() {
@@ -62,6 +63,8 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
         adapter?.setOnItemClickListener { adapter, view, position ->
             when(mtype){
                 TYPE_MANAGER -> {
+                    mPosition = position
+                    mId = (adapter as DataBindAdapter<CategoryBean.AreaListBean>).data[position].area_id
                     showRenameDialog()
                 }
                 TYPE_SELECT -> {
@@ -78,7 +81,7 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
 
         tv_right.setOnClickListener {
             InputDialog(this,getString(R.string.new_create_category),getString(R.string.new_create_category_hint),getString(R.string.input_category_hint)){
-
+                getPresenter().addCategory(it)
             }.show()
         }
     }
@@ -87,14 +90,38 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean,CategoryConstract.Pres
 
     override fun getActivityLayoutId(): Int = R.layout.activity_refresh_recy
 
-    override fun getData(data: List<CategoryBean>) {
-        setData(data)
+    override fun getData(data: CategoryBean) {
+        setData(data.area_list)
+    }
+
+    override fun addSuccess(name: String) {
+        onRefresh()
+    }
+
+    override fun editSuccess(id: String, name: String) {
+        val areaListBean = (adapter as DataBindAdapter<CategoryBean.AreaListBean>).data[mPosition]
+        areaListBean.area_name = name
+        adapter?.notifyItemChanged(mPosition)
+    }
+
+    override fun deleteSuccess() {
+        adapter?.remove(mPosition)
     }
 
     fun showRenameDialog(){
         val actionSheetDialog = ActionSheetDialog(this, BottomListDialog(arrayListOf("重命名","删除分类")), null)
         actionSheetDialog.isTitleShow(false)
         actionSheetDialog.cancelText(Color.parseColor("#007AFF"))
+        actionSheetDialog.setOnOperItemClickL { parent, view, position, id ->
+            if (position == 0){
+                InputDialog(this,getString(R.string.edit__category),getString(R.string.input_category_hint),getString(R.string.input_category_hint)){
+                    getPresenter().editCategory(mId,it)
+                }.show()
+            }else if (position == 1){
+                getPresenter().deleteCategory(mId)
+            }
+            actionSheetDialog.dismiss()
+        }
         actionSheetDialog.show()
     }
 }

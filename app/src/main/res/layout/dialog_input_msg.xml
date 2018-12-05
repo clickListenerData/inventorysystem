@@ -8,7 +8,7 @@
     app:cardUseCompatPadding="true"
     app:cardPreventCornerOverlap="false"
     app:cardElevation="0dp"
-    android:background="@color/text_color_white">
+    android:background="#f7f7f7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/txt_out"
                 android:textSize="@dimen/txt_17"
-                android:text="@string/cancel_txt"
+                android:text="@string/sure_txt"
                 android:gravity="center"/>
         </LinearLayout>
     </LinearLayout>

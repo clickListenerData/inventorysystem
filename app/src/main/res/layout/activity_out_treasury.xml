@@ -30,6 +30,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:top_txt_drawable="@drawable/ic_processingorder_n"
                     app:top_txt_content="@string/wait_treasury"
                     app:bottom_txt_content="200"
                     />
@@ -37,6 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:top_txt_drawable="@drawable/ic_totala_n"
                     app:top_txt_content="@string/all_value"
                     app:bottom_txt_content="200"
                     />

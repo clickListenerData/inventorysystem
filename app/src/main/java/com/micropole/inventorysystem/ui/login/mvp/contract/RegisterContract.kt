@@ -18,7 +18,7 @@ class RegisterContract {
     }
     interface Model{
         fun register(img : String,name : String,country : String,
-                     birthday : String,phone : String,code : String,pwd : String) : Observable<BaseResponseEntity<LoginBean>>
+                     birthday : String,phone : String,code : String,pwd : String) : Observable<BaseResponseEntity<List<String>>>
         fun sendSMS(phone: String) : Observable<BaseResponseEntity<LoginBean>>
 
         fun imgUp(img: String) : Observable<BaseResponseEntity<ImgUpBean>>

@@ -2,9 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fl_login_out"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.coorchice.library.SuperTextView
+        android:id="@+id/stv_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

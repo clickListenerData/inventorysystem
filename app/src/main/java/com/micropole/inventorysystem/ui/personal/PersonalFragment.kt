@@ -4,13 +4,18 @@ import android.content.Intent
 import android.view.View
 import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.entity.UserInfoBean
 import com.micropole.inventorysystem.ui.personal.inventory.*
 import com.xx.baseutilslibrary.extensions.startActivity
 import com.micropole.inventorysystem.ui.login.LoginActivity
 import com.micropole.inventorysystem.ui.personal.mine.*
+import com.micropole.inventorysystem.ui.personal.mvp.PersonalContract
+import com.micropole.inventorysystem.ui.personal.mvp.PersonalPresenter
 import com.micropole.inventorysystem.ui.personal.shopmall.OrderListActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
+import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecFragment
+import com.xx.baseutilslibrary.extensions.loadImag
 import kotlinx.android.synthetic.main.fragment_personal.*
+import kotlinx.android.synthetic.main.view_login_out.*
 
 /**
  * @ClassName       PersonalFragment
@@ -20,13 +25,16 @@ import kotlinx.android.synthetic.main.fragment_personal.*
  * @Date            2018/11/19 17:50
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class PersonalFragment : BaseMvpViewFragment() {
+class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract.Model,PersonalContract.View,PersonalContract.Presenter>(),PersonalContract.View {
+
     override fun getFragmentLayoutId(): Int = R.layout.fragment_personal
 
-    override fun initView(view: View?) {
-        if (!Constants.isLogin()){
-            
-        }
+    override fun createPresenter(): PersonalContract.Presenter {
+        return PersonalPresenter()
+    }
+
+    override fun loadData(refresh: Boolean) {
+        presenter.userInfo()
     }
 
     override fun initEvent(view: View?) {
@@ -34,7 +42,6 @@ class PersonalFragment : BaseMvpViewFragment() {
         nll_category.setOnClickListener { activity?.startActivity<CategoryActivity>() }
         nll_color.setOnClickListener { activity?.startActivity<ColorManagerActivity>() }
         nll_material.setOnClickListener { activity?.startActivity<MaterialManagerActivity>() }
-        nll_company.setOnClickListener { activity?.startActivity<MineCompanyActivity>() }
         nll_finance.setOnClickListener { activity?.startActivity<FinanceActivity>() }
         nll_about_personal.setOnClickListener { activity?.startActivity<AboutPersonalActivity>() }
         nll_personal_msg.setOnClickListener { activity?.startActivity<PersonalMsgActivity>() }
@@ -50,9 +57,34 @@ class PersonalFragment : BaseMvpViewFragment() {
             startActivity(Intent.createChooser(intent,"分享"))
         }
 
-        tv_title.setOnClickListener {  LoginActivity.startLoginActivity(mContext) }
+        stv_login.setOnClickListener {  LoginActivity.startLoginActivity(mContext) }
+        tv_login_out.setOnClickListener {
+            Constants.loginOut()
+            LoginActivity.startLoginActivity(mContext)
+        }
     }
 
     override fun initData() {
+        if (!Constants.isLogin()){
+            showView(null)
+        }else{
+            fl_login_out.visibility = View.GONE
+            showLoading()
+            loadData(true)
+        }
+    }
+
+    override fun setData(data: UserInfoBean?) {
+        showContent()
+        iv_personal_img.loadImag(data?.user?.user_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
+        tv_personal_name.text = data?.user?.nickname
+        tv_personal_phone.text = data?.user?.user_phone
+        if (data?.company == null){
+            tv_personal_company.setText(R.string.not_company)
+        }else{
+            iv_personal_company.loadImag(data.company?.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
+            tv_personal_company.text = data.company.company_name
+        }
+        nll_company.setOnClickListener { MineCompanyActivity.startMineCompany(mContext,data!!) }
     }
 }
