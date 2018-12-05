@@ -6,6 +6,7 @@
     android:paddingVertical="@dimen/dp_10">
 
     <TextView
+        android:id="@+id/tv_material_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_10"
@@ -15,6 +16,7 @@
         android:text="红色"/>
 
     <EditText
+        android:id="@+id/et_put_material"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -25,9 +27,11 @@
         android:textColorHint="@color/text_edit_hint"
         android:hint="@string/material_input_percent"
         android:layout_marginLeft="@dimen/dp_14"
+        android:inputType="number"
         android:visibility="invisible"/>
 
     <ImageView
+        android:id="@+id/iv_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/dp_10"

@@ -109,9 +109,9 @@
                 android:layout_marginTop="@dimen/dp_14"
                 app:main_txt_content="@string/color_name_txt"
                 app:custom_txt_content="@string/select_customer"
-                app:custom_txt_color="@color/color666666"
+                app:custom_txt_color="@color/txt_out"
                 app:custom_txt_bold="false"
-                app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+                app:custom_txt_drawable="@drawable/ic_rightblue_n"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -246,15 +246,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center_vertical"
             android:textSize="10sp"
-            android:textColor="@color/text_edit_hint"/>
+            android:textColor="@color/text_edit_hint"
+            android:text="@string/service_txt"
+            android:drawableTop="@drawable/ic_customerservice_n"
+            android:drawablePadding="@dimen/dp_4"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center_vertical"
             android:textSize="10sp"
-            android:textColor="@color/text_edit_hint"/>
+            android:textColor="@color/text_edit_hint"
+            android:text="@string/service_txt"
+            android:drawableTop="@drawable/ic_collectionn_n"
+            android:drawablePadding="@dimen/dp_4"/>
         <com.coorchice.library.SuperTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -65,6 +65,11 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
     }
 
     override fun initData() {
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         if (!Constants.isLogin()){
             showView(null)
         }else{
@@ -79,11 +84,11 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
         iv_personal_img.loadImag(data?.user?.user_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
         tv_personal_name.text = data?.user?.nickname
         tv_personal_phone.text = data?.user?.user_phone
-        if (data?.company == null){
+        if (data?.company?.company_name.isNullOrEmpty()){
             tv_personal_company.setText(R.string.not_company)
         }else{
-            iv_personal_company.loadImag(data.company?.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
-            tv_personal_company.text = data.company.company_name
+            iv_personal_company.loadImag(data?.company?.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
+            tv_personal_company.text = data?.company?.company_name
         }
         nll_company.setOnClickListener { MineCompanyActivity.startMineCompany(mContext,data!!) }
     }

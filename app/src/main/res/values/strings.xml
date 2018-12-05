@@ -91,7 +91,7 @@
     <string name="personal_mine_message">个人信息</string>
     <string name="personal_safety_setting">安全性</string>
     <string name="personal_feed_back">意见反馈</string>
-    <string name="personal_contact_service">联系客服</string>
+    <string name="personal_contact_service">联系</string>
     <string name="personal_mine_about">关于我们</string>
     <string name="personal_login_out">退出</string>
     <string name="personal_notice_txt">消息</string>
@@ -199,6 +199,7 @@
     <string name="new_goods_material">选择材质</string>
     <string name="new_goods_img">选择封面</string>
     <string name="material_input_percent">请输入材质占比</string>
+    <string name="material_sure_percent">请输入正确的占比</string>
 
     <string name="optional_txt">选填</string>
 
@@ -285,6 +286,10 @@
     <string name="new_txt">最新</string>
     <string name="count_txt">合计</string>
     <string name="all_category_txt">所有分类</string>
+    <string name="look_order">查看订单</string>
+    <string name="shop_home_txt">返回商城首页</string>
+    <string name="service_txt">客服</string>
+    <string name="collection_txt">收藏</string>
 
     <string name="all_txt">全部</string>
     <string name="pay_order_txt">待付款</string>

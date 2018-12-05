@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_nothing_n"/>
+            android:src="@drawable/ic_hookk_n"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +34,7 @@
             android:textColor="@color/color666666"
             android:layout_marginTop="@dimen/dp_10"
             />
+
         <com.coorchice.library.SuperTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +46,9 @@
             app:stv_stroke_width="1dp"
             app:stv_stroke_color="@color/color666666"
             android:textColor="@color/color666666"
-            android:textSize="@dimen/txt_15"/>
+            android:textSize="@dimen/txt_15"
+            android:text="@string/look_order"
+            android:gravity="center"/>
         <com.coorchice.library.SuperTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +60,9 @@
             app:stv_stroke_width="1dp"
             app:stv_stroke_color="@color/color666666"
             android:textColor="@color/color666666"
-            android:textSize="@dimen/txt_15"/>
+            android:textSize="@dimen/txt_15"
+            android:text="@string/shop_home_txt"
+            android:gravity="center"/>
     </LinearLayout>
 
 

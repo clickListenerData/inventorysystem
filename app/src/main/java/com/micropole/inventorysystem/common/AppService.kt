@@ -171,5 +171,41 @@ object AppService {
         @POST("texture/delete_texture")
         @FormUrlEncoded
         fun deleteMaterial(@Field("texture_id") id : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 规格列表
+         */
+        @Headers("token:1","language:1")
+        @POST("spec/spec_list")
+        fun sizeList() : Observable<BaseResponseEntity<SpecBean>>
+
+        /**
+         * 添加规格
+         */
+        @Headers("token:1","language:1")
+        @POST("spec/add_spec")
+        @FormUrlEncoded
+        fun addSize(@Field("spec_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除规格
+         */
+        @Headers("token:1","language:1")
+        @POST("spec/delete_spec")
+        @FormUrlEncoded
+        fun deleteSize(@Field("spec_id") id : String,@Field("product_id") product_id :String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 新增商品
+         */
+        @Headers("token:1","language:1")
+        @POST("product/add_product")
+        @FormUrlEncoded
+        fun addGoods(@Field("area_id") category : String,@Field("product_sn") sn : String,
+                     @Field("cost_price") cost_price : String,@Field("retail_price") retail_price : String,
+                     @Field("remark") remark : String,@Field("color") color : String,
+                     @Field("spec") spec : String,@Field("cost_price") texture : String,
+                     @Field("cover_img") cover_img : String,@Field("cost_price") pack_ratio : String,
+                     @Field("product_name") name : String) : Observable<BaseResponseEntity<List<String>>>
     }
 }

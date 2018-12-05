@@ -6,6 +6,7 @@
     android:paddingVertical="@dimen/dp_10">
 
     <TextView
+        android:id="@+id/tv_spec_t"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -17,9 +18,10 @@
         android:text="XL"/>
 
     <ImageView
+        android:id="@+id/iv_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/dp_10"
-        android:src="@drawable/ic_deletemerchandise_n"/>
+        android:src="@drawable/select_checked_img"/>
 
 </LinearLayout>
