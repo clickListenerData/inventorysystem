@@ -10,7 +10,7 @@
     <include layout="@layout/view_title"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -23,7 +23,7 @@
             android:layout_marginLeft="@dimen/dp_14"
             android:textColor="@color/title_color"/>
         <EditText
-            android:id="@+id/et_phone"
+            android:id="@+id/et_old_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -38,6 +38,7 @@
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
+            android:inputType="number"
             />
     </LinearLayout>
     <View
@@ -47,7 +48,7 @@
         android:layout_marginLeft="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -60,7 +61,7 @@
             android:textSize="@dimen/txt_15"
             android:textColor="@color/title_color"/>
         <EditText
-            android:id="@+id/et_code"
+            android:id="@+id/et_old_code"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -75,9 +76,10 @@
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/title_color"/>
+            android:textColor="@color/title_color"
+            android:inputType="number"/>
         <TextView
-            android:id="@+id/tv_wx_login"
+            android:id="@+id/tv_old_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -95,7 +97,7 @@
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -122,7 +124,8 @@
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/title_color"/>
+            android:textColor="@color/title_color"
+            android:inputType="number"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -131,7 +134,7 @@
         android:layout_marginLeft="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -159,9 +162,10 @@
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/title_color"/>
+            android:textColor="@color/title_color"
+            android:inputType="number"/>
         <TextView
-            android:id="@+id/tv_getCode"
+            android:id="@+id/tv_new_Code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -171,6 +175,12 @@
             android:textColor="@color/txt_out"
             android:layout_marginRight="@dimen/dp_14" />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/dp_14"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

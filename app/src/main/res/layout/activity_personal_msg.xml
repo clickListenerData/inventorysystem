@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_sex"
-        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+        />
     <com.micropole.inventorysystem.widght.NormalLlView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

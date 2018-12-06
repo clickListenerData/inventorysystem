@@ -44,7 +44,9 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
         nll_material.setOnClickListener { activity?.startActivity<MaterialManagerActivity>() }
         nll_finance.setOnClickListener { activity?.startActivity<FinanceActivity>() }
         nll_about_personal.setOnClickListener { activity?.startActivity<AboutPersonalActivity>() }
-        nll_personal_msg.setOnClickListener { activity?.startActivity<PersonalMsgActivity>() }
+        nll_personal_msg.setOnClickListener {
+            PersonalMsgActivity.startPersonalMsgActivity(mContext,userInfo.user.nickname,userInfo.user.user_sex,"",userInfo.user.user_img)
+        }
         nll_feed_back.setOnClickListener { activity?.startActivity<FeedBackActivity>() }
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }
         nll_order.setOnClickListener { activity?.startActivity<OrderListActivity>() }
@@ -78,8 +80,9 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
             loadData(true)
         }
     }
-
+     lateinit var userInfo:UserInfoBean
     override fun setData(data: UserInfoBean?) {
+        userInfo=data!!
         showContent()
         iv_personal_img.loadImag(data?.user?.user_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
         tv_personal_name.text = data?.user?.nickname

@@ -7,7 +7,7 @@ import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.view_title.*
 /**
  * @ClassName       PartnerDetailActivity
- * @Description     合作关系详情
+ * @Description     合作关系详情二
  * @Author          xiaoguangfei
  * @Sign            。。。
  * @Date            2018/11/19 17:47
@@ -19,7 +19,7 @@ class PartnerDetailActivity : BaseMvpViewActivity() {
      *
      * @return 布局资源文件id
      */
-    override fun getActivityLayoutId(): Int =R.layout.activity_partner_detail
+    override fun getActivityLayoutId(): Int =R.layout.activity_partner_detail_two
 
     /**
      * 初始化数据状态
@@ -35,9 +35,10 @@ class PartnerDetailActivity : BaseMvpViewActivity() {
         ib_back.setOnClickListener { finish() }
     }
     companion object {
-        fun startPartnerDetailActivity(context:Context){
-            var intent= Intent(context,PartnerDetailActivity::class.java)
+        fun startPartnerDetailTwoActivity(context:Context){
+            var intent=Intent(context,PartnerDetailActivity::class.java)
             context.startActivity(intent)
         }
     }
+
 }

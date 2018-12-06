@@ -56,9 +56,19 @@ public class UserInfoBean  implements Serializable{
         private String balance;
         private String user_sex;
         private String gr_id;
+        private String user_birthday;
+
 
         public String getUser_phone() {
             return user_phone;
+        }
+
+        public String getUser_birthday() {
+            return user_birthday;
+        }
+
+        public void setUser_birthday(String user_birthday) {
+            this.user_birthday = user_birthday;
         }
 
         public void setUser_phone(String user_phone) {

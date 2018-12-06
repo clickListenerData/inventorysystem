@@ -36,7 +36,7 @@ class PartnerShipFragment : BaseMvpViewFragment() {
             AddPartnerActivity.startAddPartnerActivity(mContext)
         }
         adapter.setOnItemClickListener { adapter, view, position ->
-            PartnerDetailTwoActivity.startPartnerDetailTwoActivity(mContext)
+            PartnerDetailActivity.startPartnerDetailTwoActivity(mContext)
         }
     }
 
