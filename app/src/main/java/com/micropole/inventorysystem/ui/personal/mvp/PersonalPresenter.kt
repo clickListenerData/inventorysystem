@@ -1,6 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.mvp
 
 import com.xx.baseutilslibrary.extensions.ui
+import com.xx.baseutilslibrary.network.exception.ApiFaileException
 
 /**
  * @ClassName       PersonalPresenter
@@ -16,6 +17,7 @@ class PersonalPresenter : PersonalContract.Presenter() {
             getView()?.setData(it.data)
         },{
             getView()?.showToast(it)
+            getView()?.showError(ApiFaileException(it),false)
         })
     }
 

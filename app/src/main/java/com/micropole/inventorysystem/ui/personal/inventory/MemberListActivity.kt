@@ -27,8 +27,6 @@ class MemberListActivity : BaseMvpViewActivity(){
         rv_member_list.layoutManager = LinearLayoutManager(mContext)
         adapter = MemberListAdapter()
         rv_member_list.adapter = adapter
-
-        adapter.setNewData(arrayListOf(Any(), Any()))
     }
 
     override fun initEvent() {

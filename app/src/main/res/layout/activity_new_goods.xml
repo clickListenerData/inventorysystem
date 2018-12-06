@@ -17,10 +17,12 @@
             android:orientation="vertical"
             android:paddingBottom="@dimen/dp_14">
             <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_goods_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_name"
-                app:input_enable="true" />
+                app:input_enable="true"
+                app:input_hint_content="@string/new_goods_name_hint"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -30,48 +32,72 @@
                 android:id="@+id/nll_goods_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:main_txt_content="@string/new_goods_category"/>
+                app:main_txt_content="@string/new_goods_category"
+                app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+                app:custom_txt_bold="false"
+                app:custom_txt_color="@color/color666666"
+                app:custom_txt_content="@string/company_country_hint"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_goods_sn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_id"
-                app:input_enable="true"/>
+                app:input_enable="true"
+                app:input_hint_content="@string/new_goods_id_hint"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_cost_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_cost_price"
-                app:input_enable="true"/>
+                app:input_enable="true"
+                app:input_hint_content="@string/new_goods_cost_price"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_retail_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_retail_price"
-                app:input_enable="true"/>
+                app:input_enable="true"
+                app:input_hint_content="@string/new_goods_retail_price"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_goods_pack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_content="@string/goods_pack_msg"
+                app:input_enable="true"
+                app:input_hint_content="@string/input_pack_hint"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_marginLeft="@dimen/dp_14"/>
+            <com.micropole.inventorysystem.widght.InputMsgView
+                android:id="@+id/imv_remark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_remark"
                 app:input_hint_content="@string/optional_txt"
-                app:input_enable="true"/>
+                app:input_enable="true"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -95,22 +121,21 @@
                     android:layout_marginLeft="@dimen/dp_10"/>
 
                 <LinearLayout
+                    android:id="@+id/ll_select_colors"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:gravity="right">
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="#ff0000"/>
+                    android:gravity="right|center_vertical">
+
                 </LinearLayout>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_media_play"
-                    android:layout_marginRight="@dimen/dp_10"/>
+                    android:src="@drawable/ic_towardstheright_n"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:layout_gravity="center_vertical"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -124,8 +149,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:main_txt_content="@string/new_goods_size"
-                app:custom_txt_content="XL/XXL"
-                app:custom_txt_bold="false"/>
+                app:custom_txt_content=""
+                app:custom_txt_bold="false"
+                app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -138,6 +165,7 @@
                 app:main_txt_content="@string/new_goods_material"
                 app:custom_txt_content=""
                 app:custom_txt_bold="false"
+                app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                 />
             <View
                 android:layout_width="match_parent"
@@ -145,6 +173,7 @@
                 android:background="@color/line_color"
                 android:layout_marginLeft="@dimen/dp_14"/>
             <LinearLayout
+                android:id="@+id/ll_select_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="@dimen/dp_10"
@@ -164,18 +193,22 @@
                     android:layout_height="1dp"
                     android:layout_weight="1"/>
                 <ImageView
+                    android:id="@+id/iv_goods_img"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@color/colorPrimary"
-                    android:layout_marginRight="@dimen/dp_10"/>
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_gravity="center_vertical"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_media_play"
-                    android:layout_marginRight="@dimen/dp_10"/>
+                    android:src="@drawable/ic_towardstheright_n"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp_14"/>
             </LinearLayout>
 
             <com.coorchice.library.SuperTextView
+                android:id="@+id/stv_goods_save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_14"

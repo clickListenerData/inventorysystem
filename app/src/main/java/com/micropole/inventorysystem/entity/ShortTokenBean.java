@@ -10,13 +10,13 @@ package com.micropole.inventorysystem.entity;
  */
 public class ShortTokenBean {
 
-    private String shortToken;
+    private String short_token;
 
     public void setShortToken(String mShortToken) {
-        shortToken = mShortToken;
+        short_token = mShortToken;
     }
 
     public String getShortToken() {
-        return shortToken;
+        return short_token;
     }
 }

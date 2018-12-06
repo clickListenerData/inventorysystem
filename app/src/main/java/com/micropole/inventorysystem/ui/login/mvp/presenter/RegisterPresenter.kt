@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.login.mvp.presenter
 
+import com.blankj.utilcode.util.RegexUtils
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.login.mvp.contract.RegisterContract
 import com.micropole.inventorysystem.ui.login.mvp.model.RegisterModel
@@ -26,6 +27,7 @@ class RegisterPresenter:RegisterContract.Presenter() {
             name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_name))
             birthday.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_xu_bri))
             phone.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_xu_phone))
+            !RegexUtils.isMobileSimple(phone) -> getView()?.showToast(getView()?.getResString(R.string.reg_sure_xu_phone))
             code.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_tian_code))
             pwd.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
             else -> {

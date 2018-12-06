@@ -32,16 +32,19 @@ class MineCompanyActivity : BaseMvpViewActivity() {
         }
     }
 
+    var companyBean : UserInfoBean.CompanyBean? = null
+
     override fun getActivityLayoutId(): Int = R.layout.activity_mine_company
 
     override fun initData() {
         setTitleText(res = R.string.personal_mine_company)
         val bean = intent.getSerializableExtra("have_company") as UserInfoBean
-        if (bean.company == null){
+        if (bean.company.company_name.isNullOrEmpty()){
             view_mine_company.visibility = View.GONE
             view_not_company.visibility = View.VISIBLE
         }else{
-            setInfo(bean)
+            setInfo(bean.company)
+            tv_company_fzr.text = bean.user.nickname
             initBtn()
         }
     }
@@ -61,7 +64,7 @@ class MineCompanyActivity : BaseMvpViewActivity() {
         dataBindAdapter.setOnItemClickListener { adapter, view, position ->
             when(position){
                 0 -> {startActivity<MemberListActivity>()}   //查看成员列表
-                1 -> {}
+                1 -> {CreateCompanyActivity.startCreateCompany(this,companyBean)}  //编辑公司
                 2 -> {}
                 3 -> {}
                 4 -> {}
@@ -72,21 +75,29 @@ class MineCompanyActivity : BaseMvpViewActivity() {
     override fun initEvent() {
         stv_create_company.setOnClickListener {
             startActivity<CreateCompanyActivity>()
+            finish()
         }
     }
 
-    fun setInfo(userInfoBean: UserInfoBean){
-        val companyBean = userInfoBean.company
-        iv_company_img.loadImag(companyBean.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
-        tv_company_fzr.text = userInfoBean.user.nickname
-        tv_company_id.text = "ID:${companyBean.company_id}"
-        tv_company_name.text = getString(R.string.company_name_txt,companyBean.company_name)
-        imv_fzr.setInputContent(companyBean.company_name)
-        imv_phone.setInputContent(companyBean.company_contact)
-        imv_email.setInputContent(companyBean.company_postbox)
-        imv_industry.setInputContent(companyBean.company_industry)
-        imv_country.setInputContent(companyBean.company_nationality)
-        imv_address.setInputContent(companyBean.company_address)
-        tv_announcement.text = companyBean.company_notice
+    fun setInfo(bean: UserInfoBean.CompanyBean){
+        companyBean = bean
+        iv_company_img.loadImag(companyBean!!.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
+        tv_company_id.text = "ID:${companyBean!!.company_id}"
+        tv_company_name.text = getString(R.string.company_name_txt,companyBean!!.company_name)
+        imv_fzr.setInputContent(companyBean!!.company_name)
+        imv_phone.setInputContent(companyBean!!.company_contact)
+        imv_email.setInputContent(companyBean!!.company_postbox)
+        imv_industry.setInputContent(companyBean!!.company_industry)
+        imv_country.setInputContent(companyBean!!.company_nationality)
+        imv_address.setInputContent(companyBean!!.company_address)
+        tv_announcement.text = companyBean?.company_notice
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 0x30 && resultCode == 0x40){
+            val bean = data?.getSerializableExtra("company_bean")
+            if (bean != null) setInfo(bean as UserInfoBean.CompanyBean)
+        }
     }
 }

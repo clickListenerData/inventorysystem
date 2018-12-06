@@ -69,8 +69,9 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean.AreaListBean,CategoryC
                 }
                 TYPE_SELECT -> {
                     val intent = Intent()
-                    intent.putExtra("category_name",(adapter as DataBindAdapter<CategoryBean>).data[position].toString())
-                    setResult(0x12)
+                    intent.putExtra("category_name",(adapter as DataBindAdapter<CategoryBean.AreaListBean>).data[position].area_name)
+                    intent.putExtra("category_id",(adapter).data[position].area_id)
+                    setResult(0x12,intent)
                     finish()
                 }
                 TYPE_SELECT_GOODS -> {

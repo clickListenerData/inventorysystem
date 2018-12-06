@@ -81,19 +81,19 @@ public class TokenInterceptor implements Interceptor {
                 //根据和服务端的约定判断token过期
                 if (Constants.LONG_TOKEN_INVALID.equals(baseResponseEntity.getCode())) {
                     //长token过期,重新登录
+                    Constants.INSTANCE.loginOut();
                     ActivityUtils.startActivity(LoginActivity.class);
                 } else if (Constants.SHORT_TOKEN_INVALID.equals(baseResponseEntity.getCode())) {
                     //不是请求刷新token时才进行token刷新
-                    if (!request.url().url().toString().contains("apitoken_refresh")) {
+                    if (!request.url().url().toString().contains("get_short_token")) {
                         //短token过期,同步刷新token
 
                         //remove 短token
 
                         Request apisign = AppService.INSTANCE.getApi()
-                                .refreshToken()
+                                .refreshToken(Constants.INSTANCE.getLongToken())
                                 .request()
                                 .newBuilder()
-                                .addHeader("loginsign",  Constants.INSTANCE.getLongToken())
                                 .build();
                         String string = chain.proceed(apisign).body().string();
                         BaseResponseEntity<ShortTokenBean> body = new Gson().fromJson(string, new TypeToken<BaseResponseEntity<ShortTokenBean>>() {
@@ -107,7 +107,7 @@ public class TokenInterceptor implements Interceptor {
                             }
 
                             Request newRequest = request.newBuilder()
-                                    .header("apisign", newToken)//设置新的token
+                                    .header("token", newToken)//设置新的token
                                     .build();
                             originalResponse.body().close();
 

@@ -42,9 +42,9 @@ object AppService {
         /**
          * 刷新token
          */
-        @Headers("long_token:1")
         @POST("login/get_short_token")
-        fun refreshToken() : Call<BaseResponseEntity<ShortTokenBean>>
+        @FormUrlEncoded
+        fun refreshToken(@Field("long_token") token:String) : Call<BaseResponseEntity<ShortTokenBean>>
 
         /**
          * 图片上传
@@ -204,8 +204,30 @@ object AppService {
         fun addGoods(@Field("area_id") category : String,@Field("product_sn") sn : String,
                      @Field("cost_price") cost_price : String,@Field("retail_price") retail_price : String,
                      @Field("remark") remark : String,@Field("color") color : String,
-                     @Field("spec") spec : String,@Field("cost_price") texture : String,
-                     @Field("cover_img") cover_img : String,@Field("cost_price") pack_ratio : String,
+                     @Field("spec") spec : String,@Field("texture") texture : String,
+                     @Field("cover_img") cover_img : String,@Field("pack_ratio") pack_ratio : String,
                      @Field("product_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 添加公司
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/company_add")
+        @FormUrlEncoded
+        fun addCompany(@Field("company_postbox") email : String,@Field("company_address") address : String,
+                     @Field("company_img") cover_img : String,@Field("company_contact") contact : String,
+                     @Field("company_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 更新公司信息
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/company_update")
+        @FormUrlEncoded
+        fun editCompany(@Field("company_postbox") email : String,@Field("company_address") address : String,
+                        @Field("company_img") cover_img : String,@Field("company_contact") contact : String,
+                        @Field("company_name") name : String,@Field("company_industry") industry : String,
+                        @Field("company_nationality") country : String,@Field("company_notice") notice : String)
+                : Observable<BaseResponseEntity<List<String>>>
     }
 }

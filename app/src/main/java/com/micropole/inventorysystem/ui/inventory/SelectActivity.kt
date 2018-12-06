@@ -20,8 +20,11 @@ import com.micropole.inventorysystem.entity.MaterialBean
 import com.micropole.inventorysystem.entity.SpecBean
 import com.micropole.inventorysystem.ui.inventory.mvp.SelectContract
 import com.micropole.inventorysystem.ui.inventory.mvp.present.SelectPresent
+import com.micropole.inventorysystem.ui.personal.inventory.AddColorActivity
+import com.micropole.inventorysystem.widght.InputDialog
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_refresh_recy.*
 import kotlinx.android.synthetic.main.view_title.*
 import java.text.FieldPosition
@@ -36,7 +39,7 @@ import java.text.FieldPosition
  */
 class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract.View{
 
-    lateinit var mAdapter : BaseQuickAdapter<out Any,out BaseViewHolder>
+    lateinit var mAdapter : BaseQuickAdapter<*,out BaseViewHolder>
 
     var mType = SELECT_COLOR
     val mChecks = arrayListOf<Boolean>()
@@ -68,13 +71,22 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
         recycler_view.layoutManager = LinearLayoutManager(mContext)
         when(mType){
             SELECT_COLOR -> {
+                setTitleText(res = R.string.select_color)
+                tv_right.setText(R.string.new_create_color)
                 mAdapter = SelectColorAdapter()
+                getPresenter().colorList()
             }
             SELECT_SIZE -> {
+                setTitleText(res = R.string.select_spec)
+                tv_right.setText(R.string.new_create_spec)
                 mAdapter = SelectSizeAdapter()
+                getPresenter().specList()
             }
             SELECT_MATERIAL -> {
+                setTitleText(res = R.string.select_material)
+                tv_right.setText(R.string.new_create_material)
                 mAdapter = SelectMaterialAdapter()
+                getPresenter().materialList()
             }
             SELECT_MEMBER -> {
                 mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_select_member)
@@ -83,22 +95,49 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 mAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)
             }
         }
+        mAdapter.bindToRecyclerView(recycler_view)
 
         recycler_view.adapter = mAdapter
     }
 
     override fun initEvent() {
 
-        ib_back.setOnClickListener {
-            setResult()
-        }
-
-        (mAdapter as BaseQuickAdapter<Any,BaseViewHolder>).setNewData(arrayListOf(Any(), Any(), Any()))
-
         mAdapter.setOnItemChildClickListener { adapter, view, position ->
             view.isSelected = !view.isSelected
             checkItem(position)
         }
+
+        tv_right.setOnClickListener {
+            if (mType == SELECT_COLOR){
+                startActivityForResult(Intent(this,AddColorActivity::class.java),0x10)
+            }else{
+                InputDialog(this,getHintS(0),getHintS(1),getHintS(2)){
+                    addNewS(it)
+                }.show()
+            }
+        }
+    }
+
+    override fun afterSetContentView() {
+        super.afterSetContentView()
+        ib_back.setOnClickListener {
+            setResult()
+        }
+    }
+
+    fun addNewS(s : String){
+        if(mType == SELECT_SIZE) getPresenter().addSpec(s) else if (mType == SELECT_MATERIAL) getPresenter().addMaterial(s)
+    }
+
+    fun getHintS(type:Int) : String{
+        var s = ""
+        when(mType){
+            SELECT_SIZE -> {
+                s = if (type == 0) getString(R.string.new_create_spec) else getString(R.string.new_create_spec_hint)
+            }
+            SELECT_MATERIAL -> s = if (type == 0) getString(R.string.new_create_material) else getString(R.string.new_create_material_hint)
+        }
+        return s
     }
 
     fun checkItem(position: Int){
@@ -106,8 +145,8 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
         if (mType == SELECT_MATERIAL) {
             val selectMaterialAdapter = mAdapter as SelectMaterialAdapter
             selectMaterialAdapter.checkData[position] = !selectMaterialAdapter.checkData[position]
+            mAdapter.notifyItemChanged(position)
         }
-        mAdapter.notifyItemChanged(position)
     }
 
     override fun colorList(bean: ColorBean) {
@@ -158,7 +197,7 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 data.append(getContent(isId,i)+s)
             }
         }
-        data.delete(data.length - 1,data.length)
+        if (data.length > 1) data.delete(data.length - 1,data.length)
         return data.toString()
     }
 
@@ -173,13 +212,19 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
             }
             SELECT_MATERIAL -> {
                 val a = mAdapter as SelectMaterialAdapter
-                if (isId){
-                    s = a.data[position].t_id
+                s = if (isId){
+                    a.data[position].t_id
                 }else{
-                    s = a.materails[position] + "%" + a.data[position].t_name
+                    val m = if (a.materails[position].isEmpty()) "0" else a.materails[position]
+                    m + "%" + a.data[position].t_name
                 }
             }
         }
         return s
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        getPresenter().colorList()
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.micropole.baseapplibrary.activity.BaseNavigationActivity
+import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.ui.home.HomeFragment
 import com.micropole.inventorysystem.ui.inventory.InventoryManagerFragment
 import com.micropole.inventorysystem.ui.partnership.PartnerShipFragment

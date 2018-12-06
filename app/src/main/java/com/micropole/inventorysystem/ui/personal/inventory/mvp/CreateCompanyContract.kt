@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.personal.inventory.mvp
 
+import com.micropole.inventorysystem.common.AppService
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
@@ -13,11 +14,21 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
  */
 class CreateCompanyContract {
 
-    interface View : BaseMvpView
+    interface View : BaseMvpView{
+        fun editSuccess(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
+        fun getImg() : String
+    }
 
-    class Model{}
+    class Model{
+        fun addCompany(name:String,email:String,contact:String,img:String,address:String) =
+                AppService.Api!!.addCompany(email,address,img,contact,name)
+        fun imgUp(img: String) = AppService.Api!!.imgUp(img)
+        fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String) =
+                AppService.Api!!.editCompany(email,address,img,contact,name,industry,country,notice)
+    }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
-
+        abstract fun addCompany(name:String,email:String,contact:String,img:String,address:String)
+        abstract fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
     }
 }

@@ -1,8 +1,10 @@
 package com.micropole.inventorysystem.adapter.inventorydetail
 
+import android.media.Image
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
+import android.widget.ImageView
 import com.blankj.utilcode.util.ToastUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -26,7 +28,11 @@ class SelectMaterialAdapter : BaseQuickAdapter<MaterialBean.TextureListBean,Base
         helper?.apply {
             setText(R.id.tv_material_t,item?.t_name)
             addOnClickListener(R.id.iv_check)
-            if (checkData[adapterPosition]) setVisible(R.id.et_put_material,true)
+            if (checkData[adapterPosition])
+            {
+                setVisible(R.id.et_put_material,true)
+                getView<ImageView>(R.id.iv_check).isSelected = true
+            }
             getView<EditText>(R.id.et_put_material).addTextChangedListener(watcher(adapterPosition))
         }
     }

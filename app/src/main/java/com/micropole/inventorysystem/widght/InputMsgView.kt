@@ -107,4 +107,6 @@ class InputMsgView@JvmOverloads constructor(context : Context, attrs : Attribute
         et_input_msg.addTextChangedListener(watcher)
     }
 
+    fun getInputContent() = et_input_msg.text.toString()
+
 }

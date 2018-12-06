@@ -102,9 +102,12 @@
     <string name="input_category_hint">请输入分类名称</string>
     <string name="new_create_color">添加新颜色</string>
     <string name="new_create_material">添加新材质</string>
+    <string name="new_create_spec">添加新规格</string>
     <string name="new_create_material_hint">输入新材质名称</string>
+    <string name="new_create_spec_hint">输入新规格名称</string>
     <string name="not_add_company">没有加入任何公司</string>
     <string name="new_create_company">创建公司</string>
+    <string name="edit_company_msg">编辑公司</string>
 
     <!--我的公司-->
     <string name="company_message">企业信息</string>
@@ -153,8 +156,14 @@
     <string name="company_country_hint">请选择国家</string>
     <string name="company_email">公司邮箱</string>
     <string name="company_email_hint">请输入公司邮箱</string>
+    <string name="company_sure_email_hint">请输入正确的邮箱</string>
     <string name="company_industry">行业</string>
     <string name="company_industry_hint">请输入公司经营范围</string>
+    <string name="company_contact_hint">请输入联系方式</string>
+    <string name="company_sure_contact_hint">请输入正确的联系方式</string>
+    <string name="company_address_hint">请输入公司地址</string>
+    <string name="company_notice">公司公告</string>
+    <string name="company_notice_hint">请输入公司公告</string>
     <string name="create_txt">创建</string>
     <string name="save_txt">保存</string>
 
@@ -189,8 +198,11 @@
 
     <!--新建商品-->
     <string name="new_goods_name">商品名称</string>
+    <string name="new_goods_name_hint">请输入商品名称</string>
     <string name="new_goods_category">所属分类</string>
+    <string name="new_goods_category_hint">请选择所属分类</string>
     <string name="new_goods_id">货号</string>
+    <string name="new_goods_id_hint">请输入货号</string>
     <string name="new_goods_cost_price">成本价</string>
     <string name="new_goods_retail_price">零售价</string>
     <string name="new_goods_remark">备注</string>
@@ -200,6 +212,7 @@
     <string name="new_goods_img">选择封面</string>
     <string name="material_input_percent">请输入材质占比</string>
     <string name="material_sure_percent">请输入正确的占比</string>
+    <string name="goods_pack_msg">包装配比</string>
 
     <string name="optional_txt">选填</string>
 
@@ -229,6 +242,9 @@
     <string name="correlation_goods">该商品已经关联s%</string>
     <string name="look_goods_detail">查看商品详情</string>
     <string name="input_txt">请输入s%</string>
+    <string name="select_color">选择颜色</string>
+    <string name="select_spec">选择规格</string>
+    <string name="select_material">选择材质</string>
 
     <string name="goods_inventory">商品/库存</string>
     <string name="goods_sale_detail">销售明细</string>
@@ -328,6 +344,7 @@
     <string name="reg_bri">生日</string>
     <string name="reg_phone">手机号码</string>
     <string name="reg_xu_phone">请输入您的手机号码</string>
+    <string name="reg_sure_xu_phone">请输入正确的手机号码</string>
     <string name="reg_tian_code">请输入验证码</string>
     <string name="reg_code">验证码</string>
     <string name="reg_get_code">获取验证码</string>
@@ -374,4 +391,5 @@
     <string name="dialog_input_phone">请输入手机号</string>
     <string name="dialog_input_pwd">请输入密码</string>
     <string name="dialog_select_img">请选择图片</string>
+    <string name="input_pack_hint">请输入包装配比</string>
 </resources>

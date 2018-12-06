@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.login.mvp.presenter
 
+import com.blankj.utilcode.util.RegexUtils
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.home.mvp.contract.InTreasuryContract
 import com.micropole.inventorysystem.ui.home.mvp.model.InTreasuryModel
@@ -27,6 +28,7 @@ class ForgetPresenter:FotgetContract.Presenter() {
     override fun forgetPwd(phone: String, code: String, pwd: String) {
         when{
             phone.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_phone))
+            !RegexUtils.isMobileSimple(phone) -> getView()?.showToast(getView()?.getResString(R.string.reg_sure_xu_phone))
             code.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_tian_code))
             pwd.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
             else -> {
