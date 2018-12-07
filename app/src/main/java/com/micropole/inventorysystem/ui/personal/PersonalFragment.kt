@@ -73,15 +73,28 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
     override fun onResume() {
         super.onResume()
         if (!isHidden){
-            if (!Constants.isLogin()){
-                showView(null)
-            }else{
-                fl_login_out.visibility = View.GONE
-                showLoading()
-                loadData(true)
-            }
+            refresh()
         }
     }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden){
+            refresh()
+        }
+    }
+
+    fun refresh(){
+        if (!Constants.isLogin()){
+            showView(null)
+        }else{
+            fl_login_out.visibility = View.GONE
+            showLoading()
+            loadData(true)
+        }
+    }
+
+
      lateinit var userInfo:UserInfoBean
     override fun setData(data: UserInfoBean?) {
         userInfo=data!!

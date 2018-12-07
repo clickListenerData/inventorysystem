@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.personal.inventory.mvp
 
+import com.micropole.inventorysystem.common.AppService
 import com.micropole.inventorysystem.entity.UserInfoBean
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
@@ -14,9 +15,15 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
  */
 class MineCompanyContract {
 
-    interface View : BaseMvpLcecView<UserInfoBean.CompanyBean?>
+    interface View : BaseMvpLcecView<UserInfoBean?>
 
-    class Model{}
+    class Model{
+        fun companyMsg() = AppService.Api!!.companyMsg()
+        fun isAgreeCompany(id:String,stat:String) = AppService.Api!!.isagreeCompany(id,stat)
+    }
 
-    abstract class Present : BaseMvpPresenter<Model,View>(){}
+    abstract class Present : BaseMvpPresenter<Model,View>(){
+        abstract fun companyMsg()
+        abstract fun isAgreeCompany(id:String,stat:String)
+    }
 }

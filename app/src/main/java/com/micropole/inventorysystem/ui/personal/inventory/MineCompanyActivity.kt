@@ -16,6 +16,7 @@ import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecActivity
 import com.xx.baseutilslibrary.extensions.loadImag
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_mine_company.*
+import kotlinx.android.synthetic.main.view_add_invitation_company.*
 import kotlinx.android.synthetic.main.view_not_company.*
 
 /**
@@ -26,7 +27,7 @@ import kotlinx.android.synthetic.main.view_not_company.*
  * @Date            2018/11/21 16:29
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean.CompanyBean?,MineCompanyContract.Model,MineCompanyContract.View,MineCompanyContract.Present>(),MineCompanyContract.View {
+class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean?,MineCompanyContract.Model,MineCompanyContract.View,MineCompanyContract.Present>(),MineCompanyContract.View {
 
     companion object {
         fun startMineCompany(context: Context,bean : UserInfoBean){
@@ -50,14 +51,17 @@ class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean.CompanyBean?,M
         super.initData()
         setTitleText(res = R.string.personal_mine_company)
         val bean = intent.getSerializableExtra("have_company") as UserInfoBean
-        if (bean.company.company_name.isNullOrEmpty()){
+        tv_company_fzr.text = bean.user.nickname
+        tv_addcompany_fzr.text = bean.user.nickname
+        /*if (bean.company.company_name.isNullOrEmpty()){
             view_content.visibility = View.GONE
             view_not_company.visibility = View.VISIBLE
         }else{
             setInfo(bean.company)
             tv_company_fzr.text = bean.user.nickname
             initBtn()
-        }
+        }*/
+        presenter.companyMsg()
     }
 
     private fun initBtn() {
@@ -90,12 +94,20 @@ class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean.CompanyBean?,M
         }
     }
 
-    override fun setData(data: UserInfoBean.CompanyBean?) {
+    override fun setData(data: UserInfoBean?) {
         showContent()
-        if (data != null) setInfo(data)
-        else {
-            view_content.visibility = View.GONE
-            view_not_company.visibility = View.VISIBLE
+        if (data?.company != null){
+            if (data.company?.company_id.isNullOrEmpty()){
+                view_content.visibility = View.GONE
+                view_not_company.visibility = View.VISIBLE
+                return
+            }
+            if (data.company.is_add == "1"){
+                setInfo(data.company)
+                initBtn()
+            }else{
+                setAddCompany(data.company)
+            }
         }
     }
 
@@ -111,6 +123,19 @@ class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean.CompanyBean?,M
         imv_country.setInputContent(companyBean!!.company_nationality)
         imv_address.setInputContent(companyBean!!.company_address)
         tv_announcement.text = companyBean?.company_notice
+    }
+
+    fun setAddCompany(bean : UserInfoBean.CompanyBean){
+        view_content.visibility = View.GONE
+        view_not_company.visibility = View.GONE
+        view_add_company.visibility = View.VISIBLE
+        companyBean = bean
+        iv_addcompany_img.loadImag(companyBean!!.company_img,plach = R.drawable.ic_nothing_n,error = R.drawable.ic_nothing_n,radio = 12)
+        tv_addcompany_id.text = "ID:${companyBean!!.company_id}"
+        tv_addcompany_name.text = getString(R.string.company_name_txt,companyBean!!.company_name)
+
+        stv_refuls.setOnClickListener { presenter.isAgreeCompany(bean.company_id,"3") }
+        stv_agree.setOnClickListener { presenter.isAgreeCompany(bean.company_id,"2") }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -130,6 +130,7 @@ public class UserInfoBean  implements Serializable{
          * company_notice :
          * company_user_id : 4010
          * add_time : 1543368565
+         * is_add
          */
 
         private String company_id;
@@ -144,6 +145,15 @@ public class UserInfoBean  implements Serializable{
         private String company_notice;
         private String company_user_id;
         private String add_time;
+        private String is_add;
+
+        public void setIs_add(String mIs_add) {
+            is_add = mIs_add;
+        }
+
+        public String getIs_add() {
+            return is_add;
+        }
 
         public String getCompany_id() {
             return company_id;

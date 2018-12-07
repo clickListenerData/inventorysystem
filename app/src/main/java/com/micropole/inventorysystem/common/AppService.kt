@@ -142,8 +142,8 @@ object AppService {
          * 公司信息
          */
         @Headers("token:1","language:1")
-        @POST("User/index")
-        fun companyMsg() : Observable<BaseResponseEntity<UserInfoBean.CompanyBean>>
+        @POST("User/user_company")
+        fun companyMsg() : Observable<BaseResponseEntity<UserInfoBean>>
 
         /**
          * 分类列表
@@ -329,6 +329,14 @@ object AppService {
         @POST("Company/transfer_user")
         @FormUrlEncoded
         fun transferCompany(@Field("user_id") id : String) : Observable<BaseResponseEntity<SearchMemberBean>>
+
+        /**
+         * 同意拒绝加入公司
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/update_company_user")
+        @FormUrlEncoded
+        fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
 
     }
 }
