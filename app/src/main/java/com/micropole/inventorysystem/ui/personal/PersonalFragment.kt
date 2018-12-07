@@ -45,7 +45,7 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
         nll_finance.setOnClickListener { activity?.startActivity<FinanceActivity>() }
         nll_about_personal.setOnClickListener { activity?.startActivity<AboutPersonalActivity>() }
         nll_personal_msg.setOnClickListener {
-            PersonalMsgActivity.startPersonalMsgActivity(mContext,userInfo.user.nickname,userInfo.user.user_sex,"",userInfo.user.user_img)
+            PersonalMsgActivity.startPersonalMsgActivity(mContext,userInfo.user.nickname,userInfo.user.user_sex,userInfo.user.user_birthday,userInfo.user.user_img)
         }
         nll_feed_back.setOnClickListener { activity?.startActivity<FeedBackActivity>() }
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }

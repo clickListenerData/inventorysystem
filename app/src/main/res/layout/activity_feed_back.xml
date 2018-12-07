@@ -9,6 +9,7 @@
     <include layout="@layout/view_title"/>
 
     <EditText
+        android:id="@+id/et_content"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginLeft="@dimen/dp_14"
@@ -24,6 +25,7 @@
         />
 
     <com.coorchice.library.SuperTextView
+        android:id="@+id/st_sure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"

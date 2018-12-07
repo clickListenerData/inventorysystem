@@ -115,8 +115,21 @@ object AppService {
          */
         @Headers("token:1")
         @POST("User/update_user")
+        @FormUrlEncoded
         fun settingInfo(@Field("nickname")nickname:String,@Field("user_sex")user_sex:String,@Field("user_img")user_img:String,@Field("user_birthday")user_birthday:String) : Observable<BaseResponseEntity<List<String>>>
-
+        /**
+         * 意见反馈
+         */
+        @Headers("token:1")
+        @POST("user/user_feetback")
+        @FormUrlEncoded
+        fun feedback(@Field("content") content:String) : Observable<BaseResponseEntity<List<String>>>
+        /**
+         * 关于我们
+         */
+        @Headers("token:1")
+        @POST("user/about_us")
+        fun aboutAs() : Observable<BaseResponseEntity<AboutAsBean>>
         /**
          * 分类列表
          */
