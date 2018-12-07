@@ -26,6 +26,7 @@ class CreateCompanyPresent : CreateCompanyContract.Present(){
             country.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_country_hint))
             notice.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_notice_hint))
             else -> {
+                getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
                 if (!img.isEmpty())
                 imgUp(img){s ->
                     edit(name, email, contact, s, address, industry, country, notice)
@@ -46,7 +47,7 @@ class CreateCompanyPresent : CreateCompanyContract.Present(){
         })
     }
 
-    override fun addCompany(name: String, email: String, contact: String, img: String, address: String) {
+    override fun addCompany(name: String, email: String, contact: String, img: String, address: String,industry:String,country:String,notice:String) {
         when{
             name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_name_hint))
             email.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_email_hint))
@@ -57,7 +58,7 @@ class CreateCompanyPresent : CreateCompanyContract.Present(){
             address.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_address_hint))
             else -> {
                 imgUp(img){
-                    getModel().addCompany(name, email, contact, it, address).ui({
+                    getModel().addCompany(name, email, contact, it, address,industry, country, notice).ui({
                         getView()?.dismissLoadingDialog()
                         getView()?.showToast(it.msg)
                         getView()?.finishActivity()
@@ -75,7 +76,6 @@ class CreateCompanyPresent : CreateCompanyContract.Present(){
     }
 
     fun imgUp(img: String,action: (s :String) -> Unit){
-        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().imgUp(img).ui({
             action.invoke(it.data!!.imgUrl)
         },{

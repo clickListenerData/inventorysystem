@@ -10,13 +10,16 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <include layout="@layout/view_check_net"/>
+        <include layout="@layout/view_loading"/>
+        <include layout="@layout/view_error" />
         <include
             android:id="@+id/view_not_company"
             layout="@layout/view_not_company"
             android:visibility="gone"/>
 
         <android.support.v4.widget.NestedScrollView
-            android:id="@+id/view_mine_company"
+            android:id="@+id/view_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none">

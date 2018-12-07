@@ -42,7 +42,7 @@
             android:paddingLeft="@dimen/dp_14"
             android:paddingVertical="@dimen/dp_10"
             android:textColorHint="#C7C7CC"
-            android:textColor="#C7C7CC"/>
+            android:textColor="@color/title_color"/>
 
         <View
             android:layout_width="match_parent"

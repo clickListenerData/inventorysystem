@@ -3,7 +3,10 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.ColorBean"/>
+            type="com.micropole.inventorysystem.entity.SearchMemberBean"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,13 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/app_color_bg">
-            <include layout="@layout/view_loading"
-                android:visibility="gone"/>
-            <include layout="@layout/view_error"
-                android:visibility="gone"/>
-            <include layout="@layout/view_check_net"
-                android:visibility="gone"/>
+            <include layout="@layout/view_loading"/>
+            <include layout="@layout/view_check_net"/>
+            <include layout="@layout/view_error"/>
             <android.support.v4.widget.NestedScrollView
+                android:id="@+id/view_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
@@ -31,9 +32,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="@color/app_color_bg"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:divider="@drawable/shape_line_drawable"
-                    android:showDividers="middle">
+                    android:layout_marginTop="@dimen/dp_10">
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
@@ -51,7 +50,8 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            android:src="@drawable/ic_nothing_n"/>
+                            android:src="@drawable/ic_nothing_n"
+                            android:image_url_radio="@{data.user_img}" />
                         <TextView
                             android:id="@+id/tv_personal_name"
                             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                             android:textSize="@dimen/txt_15"
                             android:textColor="@color/text_color_white"
                             android:textStyle="bold"
-                            android:text=""/>
+                            android:text="@{data.user_remark}"/>
                         <TextView
                             android:id="@+id/tv_personal_phone"
                             android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                             app:layout_constraintBottom_toTopOf="@id/tv_personal_real_name"
                             android:textSize="@dimen/txt_11"
                             android:textColor="@color/text_color_white"
-                            android:text=""/>
+                            android:text="@{data.user_phone}"/>
                         <TextView
                             android:id="@+id/tv_personal_real_name"
                             android:layout_width="wrap_content"
@@ -83,7 +83,8 @@
                             app:layout_constraintBottom_toBottomOf="@id/iv_personal_img"
                             android:textColor="@color/text_color_white"
                             android:textSize="@dimen/txt_11"
-                            android:text=""/>
+                            android:text="@{data.nickname}"
+                            android:visibility="visible"/>
 
                         <View
                             android:id="@+id/view_line"
@@ -104,7 +105,8 @@
                             app:layout_constraintLeft_toRightOf="@id/view_line"
                             android:layout_marginLeft="@dimen/dp_14"
                             app:layout_constraintDimensionRatio="1:1"
-                            android:src="@drawable/ic_nothing_n"/>
+                            android:src="@drawable/ic_nothing_n"
+                            android:image_url_radio="@{data.company_img}" />
                         <TextView
                             android:id="@+id/tv_personal_company"
                             android:layout_width="wrap_content"
@@ -115,7 +117,7 @@
                             android:layout_marginLeft="@dimen/dp_10"
                             android:textSize="@dimen/txt_15"
                             android:textColor="@color/text_color_white"
-                            android:text=""/>
+                            android:text="@{data.company_name}"/>
 
                     </android.support.constraint.ConstraintLayout>
 
@@ -149,27 +151,33 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
                             app:title_content="@string/member_phone"
-                            app:input_content="1700000000"/>
+                            android:input_content="@{data.user_phone}"/>
                         <com.micropole.inventorysystem.widght.InputMsgView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:title_content="@string/member_email"
-                            app:input_content="1700000000"/>
+                            android:visibility="visible"
+                            android:input_content="@{data.user_email}"/>
                         <com.micropole.inventorysystem.widght.InputMsgView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:title_content="@string/company_for_country"
-                            app:input_content="1700000000"/>
+                            android:input_content="@{data.user_nationality}"/>
                         <com.micropole.inventorysystem.widght.InputMsgView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:title_content="@string/member_company"
-                            app:input_content="1700000000"/>
+                            android:input_content="@{data.company_name}"/>
                         <com.micropole.inventorysystem.widght.InputMsgView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:title_content="@string/member_add_time"
-                            app:input_content="1700000000"
+                            android:input_content="@{data.add_time}" />
+                        <com.micropole.inventorysystem.widght.InputMsgView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_content="@string/member_birthday"
+                            android:input_content="@{data.user_birthday}"
                             android:paddingBottom="@dimen/dp_14"/>
 
                     </LinearLayout>
@@ -197,28 +205,33 @@
                             android:layout_height="1dp"
                             android:background="@color/line_color"/>
                         <com.micropole.inventorysystem.widght.NormalLlView
+                            android:id="@+id/nll_remark_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
                             app:main_txt_content="@string/member_nick_name"
                             app:custom_txt_size="@dimen/txt_15"
                             app:custom_txt_color="@color/text_edit_hint"
-                            app:custom_txt_content="name"
+                            android:custom_content="@{data.user_remark}"
                             app:custom_txt_bold="false"
-                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+                            android:onClick="@{listener}"/>
                         <com.micropole.inventorysystem.widght.NormalLlView
+                            android:id="@+id/nll_company_position"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:main_txt_content="@string/member_position"
                             app:custom_txt_size="@dimen/txt_15"
                             app:custom_txt_color="@color/text_edit_hint"
-                            app:custom_txt_content="name"
+                            app:custom_txt_content=""
                             app:custom_txt_bold="false"
-                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+                            app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+                            android:onClick="@{listener}"/>
 
                     </LinearLayout>
 
                     <com.coorchice.library.SuperTextView
+                        android:id="@+id/stv_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="23dp"
@@ -230,6 +243,7 @@
                         android:textColor="@color/text_color_white"
                         android:text="@string/remove_member"
                         android:gravity="center"
+                        android:onClick="@{listener}"
                         android:paddingVertical="@dimen/dp_14"/>
 
                 </LinearLayout>

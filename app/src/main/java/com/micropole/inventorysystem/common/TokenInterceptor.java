@@ -96,8 +96,16 @@ public class TokenInterceptor implements Interceptor {
                                 .newBuilder()
                                 .build();
                         String string = chain.proceed(apisign).body().string();
-                        BaseResponseEntity<ShortTokenBean> body = new Gson().fromJson(string, new TypeToken<BaseResponseEntity<ShortTokenBean>>() {
-                        }.getType());
+                        BaseResponseStatusEntity entity = new Gson().fromJson(string,BaseResponseStatusEntity.class);
+                        BaseResponseEntity<ShortTokenBean> body;
+                        if (entity.getStatus().equals(BaseResponseStatusEntity.Companion.getSUCCESS())){
+                            body = new Gson().fromJson(string, new TypeToken<BaseResponseEntity<ShortTokenBean>>() {
+                            }.getType());
+                        }else {
+                            Constants.INSTANCE.loginOut();
+                            ActivityUtils.startActivity(LoginActivity.class);
+                            return originalResponse;
+                        }
 
                         //要用retrofit的同步方式
                         synchronized (Utils.getApp()) {

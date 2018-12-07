@@ -44,7 +44,7 @@ fun BaseViewHolder.setRvAdapter(@IdRes id : Int,manager : RecyclerView.LayoutMan
     view.adapter = adapter
 }
 
-fun setUrl(view:ImageView?,url:String?){
+fun setUrl(view:ImageView?, url:String?){
     view?.loadImag(url)
 }
 

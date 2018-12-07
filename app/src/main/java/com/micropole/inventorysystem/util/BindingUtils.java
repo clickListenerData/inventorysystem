@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.micropole.inventorysystem.widght.InputMsgView;
 import com.micropole.inventorysystem.widght.NormalLlView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -27,7 +28,13 @@ public class BindingUtils {
 
     @BindingAdapter(value = "android:custom_content", requireAll = false)
     public static void setCustomContent(NormalLlView view, String content) {
-        view.setCustomTxt(content);
+        if (content == null) view.setCustomTxt("");
+        else  view.setCustomTxt(content);
+    }
+
+    @BindingAdapter(value = "android:input_content",requireAll = false)
+    public static void setInputContent(InputMsgView view,String content){
+        view.setInputContent(content);
     }
 
     @BindingAdapter(value = "android:img_color", requireAll = false)
