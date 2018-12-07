@@ -87,7 +87,7 @@ class InputMsgView@JvmOverloads constructor(context : Context, attrs : Attribute
         et_input_msg.hint = content
     }
 
-    fun setInputContent(content: String){
+    fun setInputContent(content: String?){
         et_input_msg.setText(content)
     }
 

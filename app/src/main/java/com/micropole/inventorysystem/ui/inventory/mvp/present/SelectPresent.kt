@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.ui.inventory.mvp.present
 
+import com.blankj.utilcode.util.DeviceUtils.getModel
+import com.blankj.utilcode.util.SnackbarUtils.getView
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.inventory.mvp.SelectContract
 import com.xx.baseutilslibrary.extensions.ui
@@ -13,6 +15,17 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class SelectPresent : SelectContract.Present(){
+    override fun positionList() {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().positionList().ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.positionList(it.data!!)
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun colorList() {
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().colorList().ui({

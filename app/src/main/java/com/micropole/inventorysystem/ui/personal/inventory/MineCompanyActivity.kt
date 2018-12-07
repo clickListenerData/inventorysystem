@@ -6,9 +6,13 @@ import android.support.v7.widget.GridLayoutManager
 import android.view.View
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.R.id.*
 import com.micropole.inventorysystem.entity.BtnBean
 import com.micropole.inventorysystem.entity.UserInfoBean
+import com.micropole.inventorysystem.ui.personal.inventory.mvp.MineCompanyContract
+import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.MineCompanyPresent
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecActivity
 import com.xx.baseutilslibrary.extensions.loadImag
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_mine_company.*
@@ -22,7 +26,7 @@ import kotlinx.android.synthetic.main.view_not_company.*
  * @Date            2018/11/21 16:29
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class MineCompanyActivity : BaseMvpViewActivity() {
+class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean.CompanyBean?,MineCompanyContract.Model,MineCompanyContract.View,MineCompanyContract.Present>(),MineCompanyContract.View {
 
     companion object {
         fun startMineCompany(context: Context,bean : UserInfoBean){
@@ -36,11 +40,18 @@ class MineCompanyActivity : BaseMvpViewActivity() {
 
     override fun getActivityLayoutId(): Int = R.layout.activity_mine_company
 
+    override fun loadData(refresh: Boolean) {
+
+    }
+
+    override fun createPresenter(): MineCompanyContract.Present = MineCompanyPresent()
+
     override fun initData() {
+        super.initData()
         setTitleText(res = R.string.personal_mine_company)
         val bean = intent.getSerializableExtra("have_company") as UserInfoBean
         if (bean.company.company_name.isNullOrEmpty()){
-            view_mine_company.visibility = View.GONE
+            view_content.visibility = View.GONE
             view_not_company.visibility = View.VISIBLE
         }else{
             setInfo(bean.company)
@@ -76,6 +87,15 @@ class MineCompanyActivity : BaseMvpViewActivity() {
         stv_create_company.setOnClickListener {
             startActivity<CreateCompanyActivity>()
             finish()
+        }
+    }
+
+    override fun setData(data: UserInfoBean.CompanyBean?) {
+        showContent()
+        if (data != null) setInfo(data)
+        else {
+            view_content.visibility = View.GONE
+            view_not_company.visibility = View.VISIBLE
         }
     }
 

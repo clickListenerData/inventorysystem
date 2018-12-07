@@ -13,11 +13,9 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.R.id.recycler_view
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectColorAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectMaterialAdapter
+import com.micropole.inventorysystem.adapter.inventorydetail.SelectPositionAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectSizeAdapter
-import com.micropole.inventorysystem.entity.ColorBean
-import com.micropole.inventorysystem.entity.InventoryGoodsBean
-import com.micropole.inventorysystem.entity.MaterialBean
-import com.micropole.inventorysystem.entity.SpecBean
+import com.micropole.inventorysystem.entity.*
 import com.micropole.inventorysystem.ui.inventory.mvp.SelectContract
 import com.micropole.inventorysystem.ui.inventory.mvp.present.SelectPresent
 import com.micropole.inventorysystem.ui.personal.inventory.AddColorActivity
@@ -50,6 +48,7 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
         const val SELECT_MATERIAL = 0x13
         const val SELECT_MEMBER = 0X14
         const val SELECT_GOODS = 0X15
+        const val SELECT_POSITION = 0X16    //选择职位
         const val REQUEST_CODE = 0X20
         const val RESULT_CODE = 0X21
 
@@ -88,6 +87,11 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 mAdapter = SelectMaterialAdapter()
                 getPresenter().materialList()
             }
+            SELECT_POSITION -> {
+                setTitleText(res = R.string.select_position)
+                mAdapter = SelectPositionAdapter()
+                getPresenter().positionList()
+            }
             SELECT_MEMBER -> {
                 mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_select_member)
             }
@@ -114,6 +118,16 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 InputDialog(this,getHintS(0),getHintS(1),getHintS(2)){
                     addNewS(it)
                 }.show()
+            }
+        }
+
+        mAdapter.setOnItemClickListener { adapter, view, position ->
+            if (mType == SELECT_POSITION){
+                val intent = Intent()
+                intent.putExtra("role_name",(adapter as SelectPositionAdapter).data[position].r_role)
+                intent.putExtra("role_id",(adapter as SelectPositionAdapter).data[position].r_id)
+                setResult(RESULT_CODE,intent)
+                finish()
             }
         }
     }
@@ -171,6 +185,10 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
             mChecks.add(false)
         }
         (mAdapter as SelectSizeAdapter).setListData(bean.spec_list)
+    }
+
+    override fun positionList(data: List<PositionBean>) {
+        (mAdapter as SelectPositionAdapter).setNewData(data)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

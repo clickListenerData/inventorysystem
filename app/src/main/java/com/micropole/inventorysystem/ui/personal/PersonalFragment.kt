@@ -70,12 +70,14 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
 
     override fun onResume() {
         super.onResume()
-        if (!Constants.isLogin()){
-            showView(null)
-        }else{
-            fl_login_out.visibility = View.GONE
-            showLoading()
-            loadData(true)
+        if (!isHidden){
+            if (!Constants.isLogin()){
+                showView(null)
+            }else{
+                fl_login_out.visibility = View.GONE
+                showLoading()
+                loadData(true)
+            }
         }
     }
 

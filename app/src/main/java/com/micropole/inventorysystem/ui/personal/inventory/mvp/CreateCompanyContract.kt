@@ -20,15 +20,15 @@ class CreateCompanyContract {
     }
 
     class Model{
-        fun addCompany(name:String,email:String,contact:String,img:String,address:String) =
-                AppService.Api!!.addCompany(email,address,img,contact,name)
+        fun addCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String) =
+                AppService.Api!!.addCompany(email,address,img,contact,name,industry,country,notice)
         fun imgUp(img: String) = AppService.Api!!.imgUp(img)
         fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String) =
                 AppService.Api!!.editCompany(email,address,img,contact,name,industry,country,notice)
     }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
-        abstract fun addCompany(name:String,email:String,contact:String,img:String,address:String)
+        abstract fun addCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
         abstract fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
     }
 }

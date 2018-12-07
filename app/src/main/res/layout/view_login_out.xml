@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="@dimen/dp_40"
         android:layout_marginRight="@dimen/dp_40"
-        app:stv_solid="@color/colorPrimary"
+        app:stv_solid="@color/txt_out"
         app:stv_corner="@dimen/dp_10"
         android:padding="@dimen/dp_10"
         android:textColor="@color/text_color_white"

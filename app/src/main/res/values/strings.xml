@@ -242,9 +242,14 @@
     <string name="correlation_goods">该商品已经关联s%</string>
     <string name="look_goods_detail">查看商品详情</string>
     <string name="input_txt">请输入s%</string>
+    <string name="input_remark_hint">请输入备注名</string>
     <string name="select_color">选择颜色</string>
     <string name="select_spec">选择规格</string>
     <string name="select_material">选择材质</string>
+    <string name="select_position">选择职位</string>
+    <string name="invitation_company">邀请您加入该公司</string>
+    <string name="invitation_agree">同意</string>
+    <string name="invitation_refuse">拒绝</string>
 
     <string name="goods_inventory">商品/库存</string>
     <string name="goods_sale_detail">销售明细</string>
@@ -358,7 +363,7 @@
     <string name="sure">确认</string>
     <string name="reg_banding">绑定</string>
     <string name="zi">请输入关键字</string>
-    <string name="partner_id">用户ID/手机号</string>
+    <string name="partner_id">用户手机号</string>
     <string name="partner_message">用户信息</string>
     <string name="partner_setting">自定义设置</string>
     <string name="partner_fuzeren">公司负责人</string>
@@ -392,4 +397,5 @@
     <string name="dialog_input_pwd">请输入密码</string>
     <string name="dialog_select_img">请选择图片</string>
     <string name="input_pack_hint">请输入包装配比</string>
+    <string name="no_search_result">未搜索到结果</string>
 </resources>

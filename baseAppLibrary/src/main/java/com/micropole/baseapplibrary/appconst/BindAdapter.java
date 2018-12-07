@@ -21,9 +21,14 @@ import java.util.List;
  */
 public class BindAdapter {
 
-    @BindingAdapter(value = "android:image_url", requireAll = false)
+    @BindingAdapter(value = "android:image_url")
     public static void setImageUrl(ImageView view,  String url) {
         com.micropole.baseapplibrary.appconst.AdapterKt.setUrl(view,url);
+    }
+
+    @BindingAdapter(value = "android:image_url_radio")
+    public static void setImageUrlRadio(ImageView view,  String url) {
+        com.xx.baseutilslibrary.extensions.ViewExKt.loadImag(view,url,null,0,0,false,12);
     }
 
     @BindingAdapter(value = "android:text_html",requireAll = false)

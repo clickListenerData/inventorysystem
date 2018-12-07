@@ -57,7 +57,8 @@ class CreateCompanyActivity : BaseUpImgActivity<CreateCompanyContract.Present>()
         ll_company_img.setOnClickListener { showChooseDialog() }
         stv_create.setOnClickListener {
             if (mCreate) getPresenter().addCompany(imv_company_name.getInputContent(),imv_company_email.getInputContent(),imv_company_contact.getInputContent(),
-                    mImgs,imv_company_address.getInputContent())
+                    mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),/*nll_select_country.getCustomTxt()*/"11",
+                    imv_company_notice.getInputContent())
             else getPresenter().editCompany(imv_company_name.getInputContent(),imv_company_email.getInputContent(),imv_company_contact.getInputContent(),
                     mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),/*nll_select_country.getCustomTxt()*/"11",
                     imv_company_notice.getInputContent())

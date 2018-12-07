@@ -81,6 +81,14 @@ object AppService {
                      @Field("user_pwd") pwd:String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
+         * 公司角色,合作方类型，合作方等级
+         */
+        @Headers("token:1","language:1")
+        @POST("index/get_config_message")
+        @FormUrlEncoded
+        fun getConfigMsg(@Field("type") type : Int) : Observable<BaseResponseEntity<List<PositionBean>>>
+
+        /**
          * 忘记密码
          */
         @POST("login/forget_passwd")
@@ -94,6 +102,13 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("User/index")
         fun userInfo() : Observable<BaseResponseEntity<UserInfoBean>>
+
+        /**
+         * 公司信息
+         */
+        @Headers("token:1","language:1")
+        @POST("User/index")
+        fun companyMsg() : Observable<BaseResponseEntity<UserInfoBean.CompanyBean>>
 
         /**
          * 分类列表
@@ -216,7 +231,8 @@ object AppService {
         @FormUrlEncoded
         fun addCompany(@Field("company_postbox") email : String,@Field("company_address") address : String,
                      @Field("company_img") cover_img : String,@Field("company_contact") contact : String,
-                     @Field("company_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+                     @Field("company_name") name : String,@Field("company_industry") industry : String,
+                       @Field("company_nationality") country : String,@Field("company_notice") notice : String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 更新公司信息
@@ -229,5 +245,55 @@ object AppService {
                         @Field("company_name") name : String,@Field("company_industry") industry : String,
                         @Field("company_nationality") country : String,@Field("company_notice") notice : String)
                 : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 公司成员列表
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/get_user_list")
+        fun memberList() : Observable<BaseResponseEntity<List<MemberListBean>>>
+
+        /**
+         * 已邀请成员列表
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/invitation_user_list")
+        fun invitationMember() : Observable<BaseResponseEntity<InvitationBean>>
+
+        /**
+         * 搜索用户信息
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/get_user")
+        @FormUrlEncoded
+        fun searchMember(@Field("user_id") id : String = "",@Field("user_phone") phone : String = "") : Observable<BaseResponseEntity<SearchMemberBean>>
+
+        /**
+         * 公司添加成员
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/add_company_user")
+        @FormUrlEncoded
+        fun addMember(@Field("user_phone") phone : String?,@Field("user_nationality") country : String?,
+                      @Field("user_birthday") birthday: String?,@Field("user_remark") remark: String?,
+                      @Field("r_role") role : String?,@Field("user_id") userId : String?,@Field("user_email") email : String?)
+                : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 公司移除成员
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/delete_company_user")
+        @FormUrlEncoded
+        fun removeMember(@Field("user_id") userId : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 转让公司
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/transfer_user")
+        @FormUrlEncoded
+        fun transferCompany(@Field("user_id") id : String) : Observable<BaseResponseEntity<SearchMemberBean>>
+
     }
 }
