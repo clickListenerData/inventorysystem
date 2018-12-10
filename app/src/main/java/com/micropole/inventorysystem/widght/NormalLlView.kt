@@ -6,6 +6,7 @@ import android.graphics.Typeface
 import android.os.Build
 import android.support.annotation.*
 import android.util.AttributeSet
+import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -75,6 +76,8 @@ class NormalLlView@JvmOverloads constructor(context : Context, attrs : Attribute
             }else{
                 iv_main_title.setImageDrawable(drawable)
             }
+        }else{
+            iv_main_title.visibility = View.GONE
         }
 
         if (a.hasValue(R.styleable.NormalLlView_custom_txt_drawable)){

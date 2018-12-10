@@ -95,6 +95,7 @@
     <string name="personal_mine_about">关于我们</string>
     <string name="personal_login_out">退出</string>
     <string name="personal_notice_txt">消息</string>
+    <string name="personal_customer_level">客户级别管理</string>
 
     <string name="new_create_category">新建分类</string>
     <string name="edit__category">编辑分类</string>

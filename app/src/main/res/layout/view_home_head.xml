@@ -81,8 +81,8 @@
         android:background="@drawable/shape_white_r6"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/dp_14"
-        android:layout_marginHorizontal="@dimen/dp_14"
         android:paddingVertical="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_14"
         app:layout_constraintTop_toBottomOf="@id/ll_home_key">
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"
@@ -124,7 +124,8 @@
         android:layout_marginTop="@dimen/dp_14"
         android:layout_marginHorizontal="@dimen/dp_14"
         android:paddingVertical="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/ll_home_inventory">
+        app:layout_constraintTop_toBottomOf="@id/ll_home_inventory"
+        android:visibility="gone">
 
         <com.micropole.inventorysystem.widght.CustomCenterView
             android:layout_width="0dp"

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_white_r6"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="#00ff00"/>
+
+    <ImageView
+        android:id="@+id/iv_inttreasury_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginVertical="@dimen/dp_14"
+        android:src="#00ff00"/>
+
+    <TextView
+        android:id="@+id/tv_intreasury_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/iv_inttreasury_img"
+        android:layout_marginLeft="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="@id/iv_inttreasury_img"
+        app:layout_constraintBottom_toTopOf="@id/tv_intreasury_count"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_15"
+        android:text="秀秀类"/>
+    <TextView
+        android:id="@+id/tv_intreasury_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_intreasury_title"
+        app:layout_constraintLeft_toLeftOf="@id/tv_intreasury_title"
+        app:layout_constraintBottom_toBottomOf="@id/iv_inttreasury_img"
+        android:textSize="@dimen/txt_15"
+        android:textColor="@color/txt_price"
+        android:text="635件"
+        />
+    <TextView
+        android:id="@+id/tv_intreasury_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_intreasury_count"
+        app:layout_constraintBottom_toBottomOf="@id/tv_intreasury_count"
+        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_11"
+        android:text="（2箱余10件）"/>
+
+    <TextView
+        android:id="@+id/tv_intreasury_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/dp_14"
+        app:layout_constraintBottom_toBottomOf="@id/tv_intreasury_title"
+        android:textSize="@dimen/txt_hint"
+        android:textColor="@color/color666666"
+        android:text="8 : 22"
+        />
+    <TextView
+        android:id="@+id/tv_intreasury_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/tv_intreasury_time"
+        app:layout_constraintBottom_toBottomOf="@id/tv_intreasury_pack"
+        android:text="金额：883"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/txt_13"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_inttreasury_img"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:background="@color/line_color"/>
+
+</android.support.constraint.ConstraintLayout>

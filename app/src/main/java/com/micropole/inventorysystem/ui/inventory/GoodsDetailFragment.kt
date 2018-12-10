@@ -60,7 +60,7 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
             INVENTORY_GOODS -> {
                 mAdapter = AddInputAdapter()
                 (mAdapter as AddInputAdapter).addHeaderView(getHeadView())
-                (mAdapter as AddInputAdapter).addFooterView(getFootView())
+//                (mAdapter as AddInputAdapter).addFooterView(getFootView())
             }
             SALE_DETAILS -> {
                 mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_sale_details)

@@ -17,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/title_color"
         android:text="蓝"
         android:layout_marginLeft="@dimen/dp_10"/>
 
@@ -31,14 +31,22 @@
         android:textSize="@dimen/main_txt_size"
         android:textColor="@color/color666666"
         android:text="100"
-        android:enabled="true"/>
+        android:enabled="true"
+        android:visibility="gone"/>
+    <include
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        layout="@layout/view_quantity"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="@dimen/main_txt_size"
-        android:textColor="@color/color666666"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/title_color"
         android:text="件"
+        android:layout_marginRight="@dimen/dp_14"
         android:layout_marginLeft="@dimen/dp_10"/>
 
 </LinearLayout>

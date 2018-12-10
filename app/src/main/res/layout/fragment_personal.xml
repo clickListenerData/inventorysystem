@@ -157,6 +157,16 @@
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:layout_marginTop="@dimen/dp_14"/>
+                    <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_customer_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        app:main_txt_content="@string/personal_customer_level"
+                        app:main_drawable="@drawable/ic_classification_n"
+                        app:custom_txt_content=""
+                        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+                        />
 
                     <com.micropole.inventorysystem.widght.NormalLlView
                         android:id="@+id/nll_color"

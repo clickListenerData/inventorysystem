@@ -1,12 +1,16 @@
 package com.micropole.inventorysystem.adapter.shopmall
 
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.micropole.baseapplibrary.appconst.setRvAdapter
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.ShopMall
+import com.micropole.inventorysystem.ui.shoppingmall.ProductDetailActivity
 import com.xx.baseutilslibrary.extensions.loadImag
 
 /**
@@ -19,8 +23,13 @@ import com.xx.baseutilslibrary.extensions.loadImag
  */
 class ShopMallAdapter : BaseQuickAdapter<ShopMall,BaseViewHolder>(R.layout.item_shop_mall){
     override fun convert(helper: BaseViewHolder?, item: ShopMall) {
-        helper?.setRvAdapter(R.id.rv_shop_goods,LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false),ItemAdapter(item.product_data))
+        val itemAdapter = ItemAdapter(item.product_data)
+        helper?.setRvAdapter(R.id.rv_shop_goods,LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false),itemAdapter)
         helper?.setText(R.id.tv_name_tit,item.area_name)
+
+        itemAdapter.setOnItemClickListener { adapter, view, position ->
+            ProductDetailActivity.startProductDetail(mContext,(adapter as ItemAdapter).data[position].pro_id)
+        }
     }
 
     class ItemAdapter(data : List<ShopMall.ProductDataBean>) : BaseQuickAdapter<ShopMall.ProductDataBean,BaseViewHolder>(R.layout.item_shop_product,data){
@@ -29,7 +38,6 @@ class ShopMallAdapter : BaseQuickAdapter<ShopMall,BaseViewHolder>(R.layout.item_
                     ?.setText(R.id.tv_product_des,item?.pro_label)
                     ?.setText(R.id.tv_product_price,"￥"+item?.pro_shop_price)
             helper?.getView<ImageView>(R.id.iv_product_img)?.loadImag(item?.pro_img)
-
         }
     }
 }

@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.ui.shoppingmall
 
 import android.provider.SyncStateContract
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.View
 import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
@@ -26,15 +27,13 @@ import kotlinx.android.synthetic.main.view_login_out.*
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingMallContract.Model, ShoppingMallContract.View, ShoppingMallContract.Presenter>(), ShoppingMallContract.View {
-   var current=1
     /**
      * 加载数据
      *
      * @param refresh 是否是刷新数据
      */
     override fun loadData(refresh: Boolean) {
-
-       presenter.shopMall(""+current,"1")
+       presenter.shopMall("1","1")
     }
 
 
@@ -75,22 +74,16 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
     override fun initData() {
         rrv_shop_mall.mLayoutManager = LinearLayoutManager(mContext)
         rrv_shop_mall.mAdapter = shopMallAdapter
-//        shopMallAdapter.setNewData(arrayListOf(Any(), Any(),Any()))
         rrv_shop_mall.setRefreshLoadMoreListener {
             presenter.shopMall(""+it,"1")
-
         }
-        loading()
+        //loading()
     }
     override fun initEvent(view: View?) {
         iv_cart.setOnClickListener { activity?.startActivity<CartActivity>() }
         iv_search.setOnClickListener { activity?.startActivity<SearchShopActivity>() }
 
-        shopMallAdapter.setOnItemClickListener { adapter, view, position ->
-            activity?.startActivity<ProductDetailActivity>()
-        }
         rg_des.setOnCheckedChangeListener { group, checkedId ->
-            current=1
             showLoadingDialog(getResString(R.string.loading))
             if (checkedId==rb_shop_price.id){
 

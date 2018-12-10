@@ -351,10 +351,10 @@ object AppService {
 
         /*商城*/
         /**
-         *
+         * 商品详情
          */
         @Headers("token:1","language:1")
-        @POST("Company/update_company_user")
+        @POST("Sproduct/product_detail")
         @FormUrlEncoded
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
     }

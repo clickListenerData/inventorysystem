@@ -51,6 +51,7 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?,Produc
         mProId = intent.getStringExtra("pro_id")
         super.initData()
         initWeb()
+        loadData(true)
     }
 
     override fun initEvent() {
