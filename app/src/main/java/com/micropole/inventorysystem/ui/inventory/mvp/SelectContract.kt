@@ -2,10 +2,7 @@ package com.micropole.inventorysystem.ui.inventory.mvp
 
 import com.micropole.baseapplibrary.appconst.AppApi
 import com.micropole.inventorysystem.common.AppService
-import com.micropole.inventorysystem.entity.ColorBean
-import com.micropole.inventorysystem.entity.MaterialBean
-import com.micropole.inventorysystem.entity.PositionBean
-import com.micropole.inventorysystem.entity.SpecBean
+import com.micropole.inventorysystem.entity.*
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
@@ -24,6 +21,7 @@ class SelectContract {
         fun materialList(bean : MaterialBean)
         fun specList(bean : SpecBean)
         fun positionList(data : List<PositionBean>)
+        fun memberList(data : List<MemberListBean>)
     }
 
     class Model{
@@ -33,7 +31,8 @@ class SelectContract {
         fun specList() = AppService.Api!!.sizeList()
         fun addSpec(name: String) = AppService.Api!!.addSize(name)
         fun positionList() = AppService.Api!!.getConfigMsg(1)
-
+        fun memberList() = AppService.Api!!.memberList()
+        fun transferCompany(userId : String) = AppService.Api!!.transferCompany(userId)
     }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
@@ -43,5 +42,7 @@ class SelectContract {
         abstract fun specList()
         abstract fun addSpec(name: String)
         abstract fun positionList()
+        abstract fun memberList()
+        abstract fun transferCompany(userId: String)
     }
 }

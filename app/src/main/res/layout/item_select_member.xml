@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.ColorBean"/>
+            type="com.micropole.inventorysystem.entity.MemberListBean"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,8 @@
             android:id="@+id/nll_select_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:main_txt_content="王小明"
+            android:main_content="@{data.nickname}"
+            android:custom_content="@{data.r_role}"
             app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
         <View
             android:layout_width="match_parent"
