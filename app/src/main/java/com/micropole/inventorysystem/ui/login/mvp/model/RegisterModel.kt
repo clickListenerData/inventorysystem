@@ -15,6 +15,10 @@ import io.reactivex.Observable
  * describe:
  */
 class RegisterModel:RegisterContract.Model {
+    override fun getCountry(): Observable<BaseResponseEntity<List<String>>> {
+        return AppService.Api!!.getCountry()
+    }
+
     override fun imgUp(img: String): Observable<BaseResponseEntity<ImgUpBean>> {
         return AppService.Api!!.imgUp(img)
     }

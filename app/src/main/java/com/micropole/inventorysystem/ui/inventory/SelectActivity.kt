@@ -96,6 +96,7 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
             SELECT_MEMBER -> {
                 setTitleText(res = R.string.select_member)
                 mAdapter = DataBindAdapter<MemberListBean>(1,R.layout.item_select_member)
+                getPresenter().memberList()
             }
             SELECT_GOODS -> {
                 mAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)

@@ -61,6 +61,9 @@ object AppService {
         @FormUrlEncoded
         fun sendSms(@Field("phone") phone: String) : Observable<BaseResponseEntity<LoginBean>>
 
+        @POST("Index/get_country")
+        fun getCountry() : Observable<BaseResponseEntity<List<String>>>
+
         /**
          * 登录
          */
@@ -337,6 +340,8 @@ object AppService {
         @POST("Company/update_company_user")
         @FormUrlEncoded
         fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
+
+
 
     }
 }

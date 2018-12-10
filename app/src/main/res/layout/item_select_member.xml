@@ -16,7 +16,7 @@
             android:id="@+id/nll_select_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:main_content="@{data.nickname}"
+            android:main_content="@{data.user_remark}"
             android:custom_content="@{data.r_role}"
             app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
         <View

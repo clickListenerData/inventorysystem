@@ -9,6 +9,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.R.id.*
 import com.micropole.inventorysystem.entity.BtnBean
 import com.micropole.inventorysystem.entity.UserInfoBean
+import com.micropole.inventorysystem.ui.inventory.SelectActivity
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.MineCompanyContract
 import com.micropole.inventorysystem.ui.personal.inventory.mvp.present.MineCompanyPresent
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
@@ -82,7 +83,7 @@ class MineCompanyActivity : BaseMvpLcecActivity<View,UserInfoBean?,MineCompanyCo
                 1 -> {CreateCompanyActivity.startCreateCompany(this,companyBean)}  //编辑公司
                 2 -> {}
                 3 -> {}
-                4 -> {}
+                4 -> {SelectActivity.startSelect(this,SelectActivity.SELECT_MEMBER)}
             }
         }
     }
