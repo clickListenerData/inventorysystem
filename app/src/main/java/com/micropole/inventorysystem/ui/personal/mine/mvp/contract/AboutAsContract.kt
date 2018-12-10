@@ -1,9 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.mine.mvp.contract
 
-import com.micropole.baseapplibrary.recyclerview.mvp.BaseRvConstract
 import com.micropole.inventorysystem.common.AppService
 import com.micropole.inventorysystem.entity.AboutAsBean
-import com.micropole.inventorysystem.entity.NewsBean
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 

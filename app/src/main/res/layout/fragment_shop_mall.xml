@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/text_color_white"
-    android:orientation="vertical">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/view_login_out"/>
+    <include layout="@layout/view_loading"/>
+    <include layout="@layout/view_check_net"/>
+    <include layout="@layout/view_error"/>
+    <LinearLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/text_color_white">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
@@ -44,9 +51,50 @@
         android:orientation="horizontal"
         android:paddingVertical="@dimen/dp_10"
         android:paddingHorizontal="@dimen/dp_14">
+        <RadioGroup
+            android:id="@+id/rg_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_shop_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/selector_tab_mall"
+                android:text="@string/price_txt"
+                android:textColor="@drawable/select_txt_mall"
+                android:textSize="@dimen/txt_13"
+                android:button="@null"
+                android:drawablePadding="@dimen/dp_4"/>
+            <RadioButton
+                android:id="@+id/rb_shop_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@drawable/select_txt_mall"
+                android:drawableRight="@drawable/selector_tab_mall"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/rb_shop_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@drawable/select_txt_mall"
+                android:drawableRight="@drawable/selector_tab_mall"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:button="@null"/>
+        </RadioGroup>
 
-        <TextView
-            android:id="@+id/tv_shop_price"
+       <!--  <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/price_txt"
@@ -82,7 +130,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dp_14"
-            />
+            />-->
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -104,5 +152,5 @@
         android:id="@+id/rrv_shop_mall"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>

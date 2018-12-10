@@ -40,61 +40,95 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:layout_marginLeft="@dimen/dp_14"
         android:layout_marginRight="@dimen/dp_14"
-        android:layout_marginTop="@dimen/dp_10"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
         <TextView
             android:id="@+id/tv_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="最新创建"
-            android:textSize="@dimen/txt_11"
+            android:textSize="@dimen/txt_13"
             android:textColor="@color/select_txt_color"
             android:drawableRight="@drawable/select_btn_down"
             android:gravity="center"
             android:drawablePadding="@dimen/dp_4"
             android:layout_marginRight="6dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
         <TextView
             android:id="@+id/tv_jiaoyi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="交易额"
-            android:textSize="@dimen/txt_11"
+            android:textSize="@dimen/txt_13"
             android:textColor="@color/select_txt_color"
             android:drawableRight="@drawable/select_btn_down"
             android:gravity="center"
             android:drawablePadding="@dimen/dp_4"
             android:layout_marginRight="6dp"
             />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
         <TextView
             android:id="@+id/tv_qian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="欠款金额"
-            android:textSize="@dimen/txt_11"
+            android:textSize="@dimen/txt_13"
             android:textColor="@color/select_txt_color"
             android:gravity="center"
             android:drawableRight="@drawable/select_btn_down"
             android:drawablePadding="@dimen/dp_4"
             android:layout_marginRight="6dp"
             />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
         <TextView
             android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="次数"
-            android:textSize="@dimen/txt_11"
+            android:textSize="@dimen/txt_13"
             android:textColor="@color/select_txt_color"
             android:drawableRight="@drawable/select_btn_down"
             android:drawablePadding="@dimen/dp_4"
             android:layout_marginRight="6dp"
             android:gravity="center"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/tv_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="供应商"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_white"
+            android:padding="4dp"
+            app:stv_solid="@color/txt_out"
+            app:stv_corner="4dp"
+            android:gravity="center"
+            android:drawableRight="@drawable/global_btn_downc_s"
+            android:drawablePadding="@dimen/dp_4"
+           />
         <com.coorchice.library.SuperTextView
             android:id="@+id/tv_tyle"
             android:layout_width="wrap_content"
@@ -107,18 +141,15 @@
             app:stv_corner="4dp"
             android:gravity="center"
             android:drawableRight="@drawable/global_btn_downc_s"
-            android:drawablePadding="@dimen/dp_4"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginLeft="19dp"/>
         <com.coorchice.library.SuperTextView
             android:id="@+id/tv_daochu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="导出"
             android:textSize="@dimen/txt_13"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="18dp"
             android:textColor="@color/text_color_white"
             android:paddingVertical="@dimen/dp_4"
             android:paddingHorizontal="@dimen/dp_10"

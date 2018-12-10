@@ -337,6 +337,12 @@ object AppService {
         @POST("Company/update_company_user")
         @FormUrlEncoded
         fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
-
+        /**
+         * 商城首页
+         */
+        @Headers("token:1","language:1")
+        @POST("Sproduct/store_index")
+        @FormUrlEncoded
+        fun shopMall(@Field("page") page:String,@Field("post_desc")post_desc:String) : Observable<BaseResponseEntity<List<ShopMall>>>
     }
 }

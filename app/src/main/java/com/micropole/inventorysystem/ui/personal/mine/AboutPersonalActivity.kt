@@ -6,7 +6,6 @@ import com.micropole.inventorysystem.entity.AboutAsBean
 import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.AboutAsContract
 import com.micropole.inventorysystem.ui.personal.mine.mvp.present.AboutAsPresent
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_personal_about.*
 
 /**

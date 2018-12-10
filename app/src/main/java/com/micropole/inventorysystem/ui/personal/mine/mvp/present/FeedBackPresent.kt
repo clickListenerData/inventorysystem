@@ -1,9 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.mine.mvp.present
 
 import com.micropole.inventorysystem.R
-import com.micropole.inventorysystem.entity.NewsBean
 import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.FeedBackContract
-import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.NewsContract
 import com.xx.baseutilslibrary.extensions.ui
 
 /**

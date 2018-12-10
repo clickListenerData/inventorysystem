@@ -4,7 +4,6 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.FeedBackContract
 import com.micropole.inventorysystem.ui.personal.mine.mvp.present.FeedBackPresent
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_feed_back.*
 
 /**
