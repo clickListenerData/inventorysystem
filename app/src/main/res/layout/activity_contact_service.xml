@@ -25,7 +25,9 @@
             app:stv_corner="20dp"
             android:textColor="@color/text_color_white"
             android:textSize="@dimen/txt_17"
-            android:paddingVertical="12dp"/>
+            android:paddingVertical="12dp"
+            android:text="@string/on_line_service"
+            android:gravity="center"/>
         <com.coorchice.library.SuperTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +39,9 @@
             app:stv_corner="20dp"
             android:textColor="@color/txt_out"
             android:textSize="@dimen/txt_17"
-            android:paddingVertical="12dp"/>
+            android:paddingVertical="12dp"
+            android:text="@string/phone_service"
+            android:gravity="center"/>
     </LinearLayout>
 
 </LinearLayout>

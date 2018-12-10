@@ -342,6 +342,13 @@ object AppService {
         fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
 
 
-
+        /*商城*/
+        /**
+         *
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/update_company_user")
+        @FormUrlEncoded
+        fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
     }
 }

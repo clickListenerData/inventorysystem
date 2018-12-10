@@ -154,7 +154,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_category_manager"
                         app:main_drawable="@drawable/ic_classification_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                         android:layout_marginTop="@dimen/dp_14"/>
@@ -166,7 +165,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_color_manager"
                         app:main_drawable="@drawable/ic_colormanagement_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -177,7 +175,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_material_bank"
                         app:main_drawable="@drawable/ic_materialscience_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -188,7 +185,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_company"
                         app:main_drawable="@drawable/ic_company_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -199,7 +195,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_finance_manager"
                         app:main_drawable="@drawable/ic_finance_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
                 </LinearLayout>
@@ -231,7 +226,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_all_order"
                         app:main_drawable="@drawable/ic_order_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -241,7 +235,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_address_manager"
                         app:main_drawable="@drawable/ic_address_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -251,7 +244,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_collect"
                         app:main_drawable="@drawable/ic_collection_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -261,7 +253,6 @@
                         android:background="@android:color/white"
                         app:main_txt_content="@string/personal_mine_foot"
                         app:main_drawable="@drawable/ic_footprint_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
@@ -295,7 +286,6 @@
                         app:main_txt_content="@string/personal_mine_message"
                         app:main_drawable="@drawable/ic_personalinformation_n"
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
@@ -306,7 +296,6 @@
                         app:main_txt_content="@string/personal_safety_setting"
                         app:main_drawable="@drawable/ic_security_n"
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
@@ -317,7 +306,6 @@
                         app:main_txt_content="@string/personal_feed_back"
                         app:main_drawable="@drawable/ic_opinion_n"
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
@@ -328,7 +316,6 @@
                         app:main_txt_content="@string/personal_contact_service"
                         app:main_drawable="@drawable/ic_contactcustomerservice_n"
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
@@ -339,7 +326,6 @@
                         app:main_txt_content="@string/personal_mine_about"
                         app:main_drawable="@drawable/ic_aboutus_v"
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"
-                        android:paddingLeft="@dimen/dp_4"
                         app:custom_txt_content=""/>
 
                 </LinearLayout>
