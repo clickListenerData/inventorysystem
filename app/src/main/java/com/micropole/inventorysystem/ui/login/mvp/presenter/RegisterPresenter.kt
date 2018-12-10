@@ -42,6 +42,7 @@ class RegisterPresenter:RegisterContract.Presenter() {
             !RegexUtils.isMobileSimple(phone) -> getView()?.showToast(getView()?.getResString(R.string.reg_sure_xu_phone))
             code.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.reg_tian_code))
             pwd.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.dialog_input_pwd))
+            pwd.length < 6 || pwd.length > 15 -> getView()?.showToast(getView()?.getResString(R.string.pwd_regix))
             else -> {
                 getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
                 imgUp(img){

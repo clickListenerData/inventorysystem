@@ -168,6 +168,9 @@
     <string name="save_txt">保存</string>
 
     <string name="invitation_member">已邀请成员</string>
+    
+    <string name="on_line_service">在线客服</string>
+    <string name="phone_service">电话客服</string>
 
     <!--成员详情-->
     <string name="member_msg">用户信息</string>
@@ -396,6 +399,7 @@
     <string name="login_success">登录成功</string>
     <string name="dialog_input_phone">请输入手机号</string>
     <string name="dialog_input_pwd">请输入密码</string>
+    <string name="pwd_regix">请设置6-15位密码</string>
     <string name="dialog_select_img">请选择图片</string>
     <string name="input_pack_hint">请输入包装配比</string>
     <string name="no_search_result">未搜索到结果</string>

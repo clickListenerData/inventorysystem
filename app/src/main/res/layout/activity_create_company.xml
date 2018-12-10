@@ -63,7 +63,7 @@
                 app:input_size="13"
                 app:input_enable="true"
                 app:input_hint_content="@string/company_name_hint"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -78,7 +78,6 @@
                 app:custom_txt_content="@string/company_country_hint"
                 app:custom_txt_color="@color/text_edit_hint"
                 app:custom_txt_bold="false"
-                android:paddingLeft="@dimen/dp_4"
                 app:custom_txt_drawable="@drawable/ic_towardstheright_n" />
             <View
                 android:layout_width="match_parent"
@@ -95,7 +94,7 @@
                 app:input_hint_color="@color/text_edit_hint"
                 app:input_size="13"
                 app:input_enable="true"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -111,7 +110,7 @@
                 app:input_hint_color="@color/text_edit_hint"
                 app:input_enable="true"
                 app:input_size="13"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -128,7 +127,7 @@
                 app:input_hint_color="@color/text_edit_hint"
                 app:input_enable="true"
                 app:input_size="13"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -145,7 +144,7 @@
                 app:input_hint_color="@color/text_edit_hint"
                 app:input_enable="true"
                 app:input_size="13"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -162,7 +161,7 @@
                 app:input_hint_color="@color/text_edit_hint"
                 app:input_enable="true"
                 app:input_size="13"
-                android:paddingLeft="@dimen/dp_4"/>
+                />
 
             <com.coorchice.library.SuperTextView
                 android:id="@+id/stv_create"

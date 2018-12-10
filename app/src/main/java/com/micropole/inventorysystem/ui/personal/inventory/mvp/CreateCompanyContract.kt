@@ -17,6 +17,7 @@ class CreateCompanyContract {
     interface View : BaseMvpView{
         fun editSuccess(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
         fun getImg() : String
+        fun getCountry(data : List<String>)
     }
 
     class Model{
@@ -25,10 +26,12 @@ class CreateCompanyContract {
         fun imgUp(img: String) = AppService.Api!!.imgUp(img)
         fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String) =
                 AppService.Api!!.editCompany(email,address,img,contact,name,industry,country,notice)
+        fun getCountry() = AppService.Api!!.getCountry()
     }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
         abstract fun addCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
         abstract fun editCompany(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String)
+        abstract fun getCountry()
     }
 }

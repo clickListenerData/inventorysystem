@@ -347,5 +347,15 @@ object AppService {
         @POST("Sproduct/store_index")
         @FormUrlEncoded
         fun shopMall(@Field("page") page:String,@Field("post_desc")post_desc:String) : Observable<BaseResponseEntity<List<ShopMall>>>
+
+
+        /*商城*/
+        /**
+         *
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/update_company_user")
+        @FormUrlEncoded
+        fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
     }
 }

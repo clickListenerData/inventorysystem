@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import cn.qqtheme.framework.picker.SinglePicker
 import com.blankj.utilcode.util.EncodeUtils
 import com.micropole.baseapplibrary.activity.BaseUpImgActivity
 import com.micropole.inventorysystem.R
@@ -54,13 +55,14 @@ class CreateCompanyActivity : BaseUpImgActivity<CreateCompanyContract.Present>()
     }
 
     override fun initEvent() {
+        nll_select_country.setOnClickListener {  }
         ll_company_img.setOnClickListener { showChooseDialog() }
         stv_create.setOnClickListener {
             if (mCreate) getPresenter().addCompany(imv_company_name.getInputContent(),imv_company_email.getInputContent(),imv_company_contact.getInputContent(),
-                    mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),/*nll_select_country.getCustomTxt()*/"11",
+                    mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),nll_select_country.getCustomTxt(),
                     imv_company_notice.getInputContent())
             else getPresenter().editCompany(imv_company_name.getInputContent(),imv_company_email.getInputContent(),imv_company_contact.getInputContent(),
-                    mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),/*nll_select_country.getCustomTxt()*/"11",
+                    mImgs,imv_company_address.getInputContent(),imv_company_industry.getInputContent(),nll_select_country.getCustomTxt(),
                     imv_company_notice.getInputContent())
         }
     }
@@ -84,6 +86,14 @@ class CreateCompanyActivity : BaseUpImgActivity<CreateCompanyContract.Present>()
 
     override fun getImg(): String {
         return bean?.company_img ?: ""
+    }
+
+    override fun getCountry(data: List<String>) {
+        val singlePicker = SinglePicker<String>(this, data)
+        singlePicker.setOnItemPickListener { index, item ->
+            nll_select_country.setCustomTxt(item)
+        }
+        singlePicker.show()
     }
 
     override fun editSuccess(name:String,email:String,contact:String,img:String,address:String,industry:String,country:String,notice:String) {

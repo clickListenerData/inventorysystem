@@ -14,6 +14,17 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class CreateCompanyPresent : CreateCompanyContract.Present(){
+    override fun getCountry() {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().getCountry().ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.getCountry(it.data!!)
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun editCompany(name: String, email: String, contact: String, img: String, address: String, industry: String, country: String, notice: String) {
         when{
             name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_name_hint))
@@ -24,6 +35,7 @@ class CreateCompanyPresent : CreateCompanyContract.Present(){
             address.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_address_hint))
             industry.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_industry_hint))
             country.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_country_hint))
+            country == getView()?.getResString(R.string.company_country_hint) -> getView()?.showToast(getView()?.getResString(R.string.company_country_hint))
             notice.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.company_notice_hint))
             else -> {
                 getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
