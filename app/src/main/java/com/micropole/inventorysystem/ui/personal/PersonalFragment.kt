@@ -87,6 +87,7 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
     fun refresh(){
         if (!Constants.isLogin()){
             showView(null)
+            fl_login_out.visibility = View.VISIBLE
         }else{
             fl_login_out.visibility = View.GONE
             showLoading()

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import cn.qqtheme.framework.picker.DatePicker
 import cn.qqtheme.framework.picker.DateTimePicker
+import cn.qqtheme.framework.picker.SinglePicker
 import com.blankj.utilcode.util.EncodeUtils
 import com.micropole.baseapplibrary.activity.BaseUpImgActivity
 import com.micropole.inventorysystem.R
@@ -52,6 +53,7 @@ class RegisterActivity : BaseUpImgActivity<RegisterContract.Presenter>(),Registe
     override fun initEvent() {
         rl_select_birth.setOnClickListener { showDatePicker() }
         rl_select_img.setOnClickListener { showChooseDialog() }
+        rl_select_country.setOnClickListener { getPresenter().getCountry() }
         tv_getCode.setOnClickListener { getPresenter().sendSMS(et_phone.text.toString()) }
         stv_register.setOnClickListener { getPresenter().register(imgs,et_name.text.toString(),
                 tv_country.text.toString(),tv_bri.text.toString(),et_phone.text.toString(),et_code.text.toString(),et_pwd.text.toString() ) }
@@ -76,6 +78,14 @@ class RegisterActivity : BaseUpImgActivity<RegisterContract.Presenter>(),Registe
     override fun imgResult(result: TResult) {
         iv_hand.setImageURI(Uri.fromFile(File(result.images[0].compressPath)))
         imgs = EncodeUtils.base64Encode2String(File(result.images[0].compressPath).readBytes())
+    }
+
+    override fun getCountry(data: List<String>) {
+        val singlePicker = SinglePicker<String>(this, data)
+        singlePicker.setOnItemPickListener { index, item ->
+            tv_country.text = item
+        }
+        singlePicker.show()
     }
 
     companion object {

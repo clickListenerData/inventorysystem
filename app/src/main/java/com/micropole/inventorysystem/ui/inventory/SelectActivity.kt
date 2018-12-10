@@ -15,6 +15,7 @@ import com.micropole.inventorysystem.adapter.inventorydetail.SelectColorAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectMaterialAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectPositionAdapter
 import com.micropole.inventorysystem.adapter.inventorydetail.SelectSizeAdapter
+import com.micropole.inventorysystem.adapter.personal.MemberListAdapter
 import com.micropole.inventorysystem.entity.*
 import com.micropole.inventorysystem.ui.inventory.mvp.SelectContract
 import com.micropole.inventorysystem.ui.inventory.mvp.present.SelectPresent
@@ -93,7 +94,9 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 getPresenter().positionList()
             }
             SELECT_MEMBER -> {
-                mAdapter = DataBindAdapter<ColorBean>(1,R.layout.item_select_member)
+                setTitleText(res = R.string.select_member)
+                mAdapter = DataBindAdapter<MemberListBean>(1,R.layout.item_select_member)
+                getPresenter().memberList()
             }
             SELECT_GOODS -> {
                 mAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)
@@ -128,6 +131,8 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
                 intent.putExtra("role_id",(adapter as SelectPositionAdapter).data[position].r_id)
                 setResult(RESULT_CODE,intent)
                 finish()
+            }else if (mType == SELECT_MEMBER){
+                getPresenter().transferCompany((adapter as DataBindAdapter<MemberListBean>).data[position].user_id)
             }
         }
     }
@@ -189,6 +194,10 @@ class SelectActivity  : BaseMvpActivity<SelectContract.Present>(),SelectContract
 
     override fun positionList(data: List<PositionBean>) {
         (mAdapter as SelectPositionAdapter).setNewData(data)
+    }
+
+    override fun memberList(data: List<MemberListBean>) {
+        (mAdapter as DataBindAdapter<MemberListBean>).setNewData(data)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

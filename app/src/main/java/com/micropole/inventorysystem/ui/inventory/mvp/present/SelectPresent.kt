@@ -15,6 +15,29 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class SelectPresent : SelectContract.Present(){
+    override fun transferCompany(userId: String) {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().transferCompany(userId).ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it.msg)
+            getView()?.finishActivity()
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
+    override fun memberList() {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().memberList().ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.memberList(it.data!!)
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun positionList() {
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().positionList().ui({

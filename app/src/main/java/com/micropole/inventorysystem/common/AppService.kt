@@ -61,6 +61,9 @@ object AppService {
         @FormUrlEncoded
         fun sendSms(@Field("phone") phone: String) : Observable<BaseResponseEntity<LoginBean>>
 
+        @POST("Index/get_country")
+        fun getCountry() : Observable<BaseResponseEntity<List<String>>>
+
         /**
          * 登录
          */
