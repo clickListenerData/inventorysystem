@@ -1,8 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.mine.mvp.present
 
-import com.micropole.baseapplibrary.recyclerview.mvp.BaseRvConstract
 import com.micropole.inventorysystem.entity.NewsBean
-import com.micropole.inventorysystem.ui.personal.mine.mvp.NewsContract
+import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.NewsContract
 
 /**
  * @ClassName       NewsPresent

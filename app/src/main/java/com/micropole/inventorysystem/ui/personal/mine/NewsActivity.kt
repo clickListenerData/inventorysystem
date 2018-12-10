@@ -5,7 +5,7 @@ import com.micropole.baseapplibrary.recyclerview.BaseRefreshActivity
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.personal.NewsAdapter
 import com.micropole.inventorysystem.entity.NewsBean
-import com.micropole.inventorysystem.ui.personal.mine.mvp.NewsContract
+import com.micropole.inventorysystem.ui.personal.mine.mvp.contract.NewsContract
 import com.micropole.inventorysystem.ui.personal.mine.mvp.present.NewsPresent
 import kotlinx.android.synthetic.main.activity_news.*
 
@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_news.*
  * @Date            2018/11/21 11:39
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class NewsActivity : BaseRefreshActivity<NewsBean,NewsContract.Presenter>(),NewsContract.View{
+class NewsActivity : BaseRefreshActivity<NewsBean, NewsContract.Presenter>(), NewsContract.View{
     override fun loadData(page: Int) {
         getPresenter().getNewsList()
     }

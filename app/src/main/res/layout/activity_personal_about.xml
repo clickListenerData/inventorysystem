@@ -6,10 +6,13 @@
 
     <include layout="@layout/view_title"/>
 
-    <WebView
+    <TextView
+        android:id="@+id/tv_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp">
 
-    </WebView>
+    </TextView>
 
 </LinearLayout>

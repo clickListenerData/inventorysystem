@@ -95,6 +95,22 @@ object AppService {
         @FormUrlEncoded
         fun forgetPwd(@Field("user_phone") phone:String,@Field("code") code:String,
                       @Field("user_pwd") pwd:String) : Observable<BaseResponseEntity<List<String>>>
+        /**
+         * 修改手机
+         */
+        @Headers("token:1")
+        @POST("User/update_user_phone")
+        @FormUrlEncoded
+        fun settingPhone(@Field("old_user_phone") old_user_phone:String,@Field("new_user_phone") new_user_phone:String,
+                      @Field("new_code") new_code:String,@Field("old_code")old_code:String) : Observable<BaseResponseEntity<List<String>>>
+        /**
+         * 修改密码
+         */
+        @Headers("token:1")
+        @POST("user/update_user_pwd")
+        @FormUrlEncoded
+        fun settingPW(@Field("old_user_pwd") old_user_pwd	:String,@Field("new_user_pwd") new_user_pwd:String,
+                         @Field("confirm_user_pwd") comfirm_user_pwd:String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 用户信息
@@ -102,13 +118,32 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("User/index")
         fun userInfo() : Observable<BaseResponseEntity<UserInfoBean>>
-
+        /**
+         * 修改用户昵称或者修改性别或修改用户头像
+         */
+        @Headers("token:1")
+        @POST("User/update_user")
+        @FormUrlEncoded
+        fun settingInfo(@Field("nickname")nickname:String,@Field("user_sex")user_sex:String,@Field("user_img")user_img:String,@Field("user_birthday")user_birthday:String) : Observable<BaseResponseEntity<List<String>>>
+        /**
+         * 意见反馈
+         */
+        @Headers("token:1")
+        @POST("user/user_feetback")
+        @FormUrlEncoded
+        fun feedback(@Field("content") content:String) : Observable<BaseResponseEntity<List<String>>>
+        /**
+         * 关于我们
+         */
+        @Headers("token:1")
+        @POST("user/about_us")
+        fun aboutAs() : Observable<BaseResponseEntity<AboutAsBean>>
         /**
          * 公司信息
          */
         @Headers("token:1","language:1")
-        @POST("User/index")
-        fun companyMsg() : Observable<BaseResponseEntity<UserInfoBean.CompanyBean>>
+        @POST("User/user_company")
+        fun companyMsg() : Observable<BaseResponseEntity<UserInfoBean>>
 
         /**
          * 分类列表
@@ -294,6 +329,14 @@ object AppService {
         @POST("Company/transfer_user")
         @FormUrlEncoded
         fun transferCompany(@Field("user_id") id : String) : Observable<BaseResponseEntity<SearchMemberBean>>
+
+        /**
+         * 同意拒绝加入公司
+         */
+        @Headers("token:1","language:1")
+        @POST("Company/update_company_user")
+        @FormUrlEncoded
+        fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
 
     }
 }

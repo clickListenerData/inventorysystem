@@ -9,21 +9,29 @@
     <include layout="@layout/view_title"/>
 
     <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/ul_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_name"
-        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+        app:custom_txt_bold="false"/>
     <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/ul_sex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_sex"
-        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+        app:custom_txt_bold="false"
+        />
     <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/ul_bir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:main_txt_content="@string/personal_msg_birth"
-        app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
+        app:custom_txt_drawable="@drawable/ic_towardstheright_n"
+        app:custom_txt_bold="false"/>
     <LinearLayout
+        android:id="@+id/ll_hand"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/dp_10"
@@ -42,7 +50,8 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"/>
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_hand"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_headportrait_n"/>

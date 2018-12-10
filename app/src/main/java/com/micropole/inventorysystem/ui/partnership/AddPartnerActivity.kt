@@ -2,8 +2,6 @@ package com.micropole.inventorysystem.ui.partnership
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import com.micropole.inventorysystem.R
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_add_partner.*
@@ -37,7 +35,7 @@ class AddPartnerActivity : BaseMvpViewActivity() {
     override fun initEvent() {
         ib_back.setOnClickListener { finish() }
         tv_sure.setOnClickListener {
-            PartnerDetailActivity.startPartnerDetailActivity(this)
+            AddPartnerDetailActivity.startPartnerDetailActivity(this)
         }
 
     }

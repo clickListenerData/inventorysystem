@@ -10,7 +10,7 @@
     <include layout="@layout/view_title"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -36,6 +36,7 @@
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
+            android:inputType="textPassword"
             />
     </LinearLayout>
     <View
@@ -45,7 +46,7 @@
         android:layout_marginHorizontal="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:background="@color/text_color_white">
         <TextView
@@ -70,7 +71,8 @@
             android:textColorHint="@color/text_edit_hint"
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
-            android:textColor="@color/title_color"/>
+            android:textColor="@color/title_color"
+            android:inputType="textPassword"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -79,9 +81,8 @@
         android:layout_marginHorizontal="@dimen/dp_14"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
-        android:paddingBottom="@dimen/dp_10"
         android:background="@color/text_color_white">
         <TextView
             android:layout_width="wrap_content"
@@ -106,7 +107,7 @@
             android:padding="6dp"
             android:paddingLeft="@dimen/dp_10"
             android:textColor="@color/title_color"
-            />
+            android:inputType="textPassword"/>
     </LinearLayout>
     <com.coorchice.library.SuperTextView
         android:id="@+id/tv_sure"
