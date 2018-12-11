@@ -312,11 +312,21 @@ public class GoodsDetailBean {
                  * pro_stock : 0
                  * pro_color : 1
                  * color_name : 红色
+                 * c_color
                  */
 
                 private String pro_stock;
                 private String pro_color;
                 private String color_name;
+                private String c_color;
+
+                public void setC_color(String mC_color) {
+                    c_color = mC_color;
+                }
+
+                public String getC_color() {
+                    return c_color;
+                }
 
                 public String getPro_stock() {
                     return pro_stock;

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.R.id.*
 import com.micropole.inventorysystem.adapter.AddInputAdapter
@@ -13,7 +14,9 @@ import com.micropole.inventorysystem.ui.inventory.mvp.AddInputContract
 import com.micropole.inventorysystem.ui.inventory.mvp.present.AddInputPresent
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
+import com.xx.baseutilslibrary.extensions.loadImag
 import kotlinx.android.synthetic.main.activity_add_input.*
+import kotlinx.android.synthetic.main.view_add_input_head.view.*
 import kotlinx.android.synthetic.main.view_title.*
 
 /**
@@ -36,6 +39,7 @@ class AddInputActivity : BaseMvpActivity<AddInputContract.Present>(),AddInputCon
     }
 
     lateinit var addInputAdapter: AddInputAdapter
+    lateinit var imageView: ImageView
 
     override fun getActivityLayoutId(): Int = R.layout.activity_add_input
 
@@ -65,6 +69,7 @@ class AddInputActivity : BaseMvpActivity<AddInputContract.Present>(),AddInputCon
 
     fun getHeadView() : View{
         val view = LayoutInflater.from(mContext).inflate(R.layout.view_add_input_head, null, false)
+        imageView = view.iv_detail_img
         return view
     }
 
@@ -75,5 +80,6 @@ class AddInputActivity : BaseMvpActivity<AddInputContract.Present>(),AddInputCon
 
     override fun goodsDetail(bean: GoodsDetailBean?) {
         addInputAdapter.setNewData(bean?.product?.prodinfo)
+        imageView.loadImag(bean?.product?.pro_img)
     }
 }

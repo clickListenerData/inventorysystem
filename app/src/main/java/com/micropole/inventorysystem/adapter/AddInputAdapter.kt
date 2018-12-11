@@ -34,7 +34,7 @@ class AddInputAdapter : BaseQuickAdapter<GoodsDetailBean.ProductBean.ProdinfoBea
     <GoodsDetailBean.ProductBean.ProdinfoBean.ColorBean,BaseViewHolder>(R.layout.item_add_input_color,data){
         override fun convert(helper: BaseViewHolder?, item: GoodsDetailBean.ProductBean.ProdinfoBean.ColorBean?) {
             helper?.apply {
-                getView<SuperTextView>(R.id.stv_color).solid = ColorUtils.string2Color(item?.pro_color ?: "")
+                getView<SuperTextView>(R.id.stv_color).solid = ColorUtils.string2Color(item?.c_color ?: "")
                 setText(R.id.tv_color_name,item?.color_name)
             }
         }

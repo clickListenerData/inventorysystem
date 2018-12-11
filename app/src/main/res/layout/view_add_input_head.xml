@@ -6,10 +6,12 @@
     android:background="@color/app_color_bg">
 
     <ImageView
+        android:id="@+id/iv_detail_img"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
-        android:src="@color/colorPrimary"/>
+        android:src="@color/colorPrimary"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:layout_width="match_parent"

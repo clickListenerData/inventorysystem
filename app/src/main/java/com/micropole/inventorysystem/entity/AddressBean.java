@@ -1,5 +1,8 @@
 package com.micropole.inventorysystem.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * @ClassName AddressBean
  * @Description todo
@@ -8,7 +11,7 @@ package com.micropole.inventorysystem.entity;
  * @Date 2018/12/11 9:14
  * @Copyright Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-public class AddressBean {
+public class AddressBean implements Parcelable{
 
     /**
      * ua_id : 1
@@ -25,6 +28,42 @@ public class AddressBean {
     private String consignee;
     private String phone;
     private String is_default;
+
+    protected AddressBean(Parcel in) {
+        ua_id = in.readString();
+        user_id = in.readString();
+        address = in.readString();
+        consignee = in.readString();
+        phone = in.readString();
+        is_default = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(ua_id);
+        dest.writeString(user_id);
+        dest.writeString(address);
+        dest.writeString(consignee);
+        dest.writeString(phone);
+        dest.writeString(is_default);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<AddressBean> CREATOR = new Creator<AddressBean>() {
+        @Override
+        public AddressBean createFromParcel(Parcel in) {
+            return new AddressBean(in);
+        }
+
+        @Override
+        public AddressBean[] newArray(int size) {
+            return new AddressBean[size];
+        }
+    };
 
     public String getUa_id() {
         return ua_id;

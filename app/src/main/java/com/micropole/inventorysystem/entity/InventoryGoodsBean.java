@@ -32,7 +32,7 @@ public class InventoryGoodsBean {
          * pack_ratio : 100:1
          * colors : 红色/橙色/绿色
          * specs : X/XL/XXL
-         * pro_pack : 0箱
+         * pro_stock : 0箱
          * store_count : 0
          * pro_img
          */
@@ -44,7 +44,7 @@ public class InventoryGoodsBean {
         private String pack_ratio;
         private String colors;
         private String specs;
-        private String pro_pack;
+        private String pro_stock;
         private String store_count;
         private String pro_img;
 
@@ -113,11 +113,11 @@ public class InventoryGoodsBean {
         }
 
         public String getPro_pack() {
-            return pro_pack;
+            return pro_stock;
         }
 
-        public void setPro_pack(String pro_pack) {
-            this.pro_pack = pro_pack;
+        public void setPro_pack(String pro_stock) {
+            this.pro_stock = pro_stock;
         }
 
         public String getStore_count() {

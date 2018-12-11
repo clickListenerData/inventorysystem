@@ -308,6 +308,8 @@
     <string name="receive_address">收货地址:</string>
     <string name="default_address">设为默认地址</string>
     <string name="delete_address">删除该地址</string>
+    <string name="add_address">添加地址</string>
+    <string name="edit_address">编辑地址</string>
 
     <!--商城-->
     <string name="price_txt">价格</string>

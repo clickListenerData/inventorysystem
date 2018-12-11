@@ -96,7 +96,7 @@
             app:layout_constraintRight_toRightOf="@id/tv_inventory_num"
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_num"
             app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
-            android:text="@{data.pro_stock}"
+            android:text="@{data.store_count}"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
             />

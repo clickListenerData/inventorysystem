@@ -19,8 +19,17 @@
             android:layout_marginTop="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
-            android:text="@{data.consignee + data.phone}"
+            android:text="@{data.consignee}"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_address_np"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/color666666"
+            app:layout_constraintTop_toTopOf="@id/tv_address_np"
+            android:text="@{data.phone}"/>
         <TextView
             android:id="@+id/tv_address_detail"
             android:layout_width="0dp"

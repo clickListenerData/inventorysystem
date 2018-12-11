@@ -392,5 +392,33 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("saddress/user_address")
         fun addressList() : Observable<BaseResponseEntity<List<AddressBean>>>
+
+        /**
+         * 添加收货地址
+         */
+        @Headers("token:1","language:1")
+        @POST("saddress/add_address")
+        @FormUrlEncoded
+        fun addAddress(@Field("rece_name") name: String,@Field("rece_phone") phone: String,
+                       @Field("address") address: String,@Field("is_default") default:Int) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 编辑收货地址
+         */
+        @Headers("token:1","language:1")
+        @POST("saddress/edit_address")
+        @FormUrlEncoded
+        fun editAddress(@Field("rece_name") name: String,@Field("rece_phone") phone: String,
+                       @Field("address") address: String,@Field("is_default") default:Int,
+                        @Field("address_id") id: String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除收货地址
+         */
+        @Headers("token:1","language:1")
+        @POST("saddress/delete_address")
+        @FormUrlEncoded
+        fun deleteAddress(@Field("address_id") id: String) : Observable<BaseResponseEntity<List<String>>>
+
     }
 }

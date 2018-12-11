@@ -9,6 +9,7 @@
     <include layout="@layout/view_title"/>
 
     <com.micropole.inventorysystem.widght.InputMsgView
+        android:id="@+id/imv_input_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:input_enable="true"
@@ -22,6 +23,7 @@
         android:layout_marginLeft="@dimen/dp_14"/>
 
     <com.micropole.inventorysystem.widght.InputMsgView
+        android:id="@+id/imv_input_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:input_enable="true"
@@ -50,6 +52,7 @@
             android:layout_gravity="top"
             />
         <EditText
+            android:id="@+id/et_input_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -77,6 +80,7 @@
             />
 
         <ImageView
+            android:id="@+id/iv_check_default"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/dp_14"
@@ -85,6 +89,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_delete_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="105dp"
