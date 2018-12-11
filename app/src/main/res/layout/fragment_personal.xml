@@ -250,6 +250,7 @@
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_collect"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
@@ -259,6 +260,7 @@
                         app:custom_txt_drawable="@drawable/ic_towardstheright_n"/>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_foot"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"

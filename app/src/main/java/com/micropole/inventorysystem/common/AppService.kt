@@ -387,6 +387,20 @@ object AppService {
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
 
         /**
+         * 收藏列表
+         */
+        @Headers("token:1","language:1")
+        @POST("scollect/collect_list")
+        fun collectList() : Observable<BaseResponseEntity<List<CollectBean>>>
+
+        /**
+         * 足迹列表
+         */
+        @Headers("token:1","language:1")
+        @POST("Sfootprint/footprint_list")
+        fun footList() : Observable<BaseResponseEntity<List<CollectBean>>>
+
+        /**
          * 地址列表
          */
         @Headers("token:1","language:1")

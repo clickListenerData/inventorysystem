@@ -7,6 +7,7 @@ import android.view.KeyEvent
 import com.blankj.utilcode.util.ActivityUtils
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.appconst.Constants
+import com.micropole.baseapplibrary.util.CustomNavigator
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator
@@ -49,6 +50,7 @@ abstract class BaseNavigationActivity : BaseMvpViewActivity() {
 
     fun initNavigation(){
         val commonNavigator = CommonNavigator(this)
+//        val commonNavigator = CustomNavigator(this)
         commonNavigator.isAdjustMode = true
         commonNavigator.adapter = object : CommonNavigatorAdapter() {
             override fun getTitleView(p0: Context?, p1: Int): IPagerTitleView? {

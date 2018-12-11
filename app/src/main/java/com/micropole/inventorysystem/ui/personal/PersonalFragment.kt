@@ -12,6 +12,7 @@ import com.micropole.inventorysystem.ui.personal.mine.*
 import com.micropole.inventorysystem.ui.personal.mvp.PersonalContract
 import com.micropole.inventorysystem.ui.personal.mvp.PersonalPresenter
 import com.micropole.inventorysystem.ui.personal.shopmall.AddressManagerActivity
+import com.micropole.inventorysystem.ui.personal.shopmall.MineCollectActivity
 import com.micropole.inventorysystem.ui.personal.shopmall.OrderListActivity
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecFragment
 import com.xx.baseutilslibrary.extensions.loadImag
@@ -52,6 +53,8 @@ class PersonalFragment : BaseMvpLcecFragment<View, UserInfoBean,PersonalContract
         nll_safety.setOnClickListener { activity?.startActivity<SafetySetActivity>() }
         nll_order.setOnClickListener { activity?.startActivity<OrderListActivity>() }
         nll_address_manager.setOnClickListener { activity?.startActivity<AddressManagerActivity>() }
+        nll_collect.setOnClickListener { MineCollectActivity.startMineCollect(mContext,0) }
+        nll_foot.setOnClickListener { MineCollectActivity.startMineCollect(mContext,1) }
 
         iv_share.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
