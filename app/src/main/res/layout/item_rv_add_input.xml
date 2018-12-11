@@ -8,6 +8,7 @@
     android:paddingVertical="@dimen/dp_14">
 
     <com.micropole.inventorysystem.widght.CustomCenterView
+        android:id="@+id/ccv_detail_specs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:top_txt_content="X"

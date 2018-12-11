@@ -21,6 +21,7 @@
         android:drawableLeft="@drawable/global_ic_input_search"
         android:drawableRight="@drawable/global_btn_input_del"
         android:paddingRight="@dimen/dp_14"
+        android:drawablePadding="@dimen/dp_4"
         android:hint="@string/search_hint_txt"/>
 
     <FrameLayout
@@ -76,6 +77,23 @@
                 android:layout_gravity="center"/>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/fl_xl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_inventory_xl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inventory_count_txt"
+                android:textSize="@dimen/txt_13"
+                android:textColor="@color/select_txt_color"
+                android:drawableRight="@drawable/select_btn_down"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
             android:id="@+id/fl_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -92,28 +110,23 @@
                 android:gravity="center"
                 android:layout_gravity="center"/>
         </FrameLayout>
-        <FrameLayout
-            android:id="@+id/fl_xl"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <TextView
-                android:id="@+id/tv_inventory_xl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sales_txt"
-                android:textSize="@dimen/txt_13"
-                android:textColor="@color/select_txt_color"
-                android:drawableRight="@drawable/select_btn_down"
-                android:drawablePadding="@dimen/dp_4"
-                android:gravity="center"
-                android:layout_gravity="center"/>
-        </FrameLayout>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_input_inventory"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_create_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/txt_15"
+        android:paddingVertical="@dimen/dp_14"
+        android:background="@color/txt_out"
+        android:text="@string/new_create_goods"
+        android:gravity="center"/>
 
 </LinearLayout>

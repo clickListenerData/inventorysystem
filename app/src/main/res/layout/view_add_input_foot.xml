@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color_bg">
+    android:background="@color/text_color_white">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="@dimen/txt_15"
         android:textColor="@color/text_color_white"
-        android:text="@string/input_storage"
+        android:text="@string/jx_select_goods"
         app:stv_solid="@color/txt_out"
         app:stv_corner="6dp"
         android:gravity="center"/>

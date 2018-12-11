@@ -79,7 +79,7 @@ class GoodsDetailFragment : BaseMvpViewFragment() {
 
     override fun initData() {
         when (mType) {
-            INVENTORY_GOODS -> (mAdapter as AddInputAdapter).setNewData(arrayListOf(Any(), Any(), Any()))
+            INVENTORY_GOODS -> (mAdapter as AddInputAdapter).setNewData(arrayListOf())
             SALE_DETAILS -> (mAdapter as DataBindAdapter<ColorBean>).setNewData(arrayListOf(ColorBean(), ColorBean(),ColorBean()))
             CUSTOMER_LIST -> (mAdapter as CustomerListAdapter).setNewData(arrayListOf(Any(), Any(), Any()))
         }

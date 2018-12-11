@@ -66,7 +66,7 @@
             android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
-            android:text="@string/output_goods"
+            android:text="@string/hand_input_goodos"
             android:gravity="center"/>
 
         <TextView
@@ -74,11 +74,11 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_nnewlybuilda_n"
+            android:drawableTop="@drawable/ic_outofstockb_n"
             android:drawablePadding="@dimen/dp_4"
             android:textSize="@dimen/txt_11"
             android:textColor="@color/color666666"
-            android:text="@string/new_create_goods"
+            android:text="@string/output_goods"
             android:gravity="center"/>
 
         <TextView

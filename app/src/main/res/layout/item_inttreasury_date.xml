@@ -8,6 +8,7 @@
     android:layout_marginTop="@dimen/dp_14">
 
     <TextView
+        android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/txt_hint"
@@ -15,6 +16,7 @@
         android:text="2018/4/25"/>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"/>

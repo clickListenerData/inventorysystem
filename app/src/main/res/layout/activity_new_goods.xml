@@ -22,7 +22,8 @@
                 android:layout_height="wrap_content"
                 app:title_content="@string/new_goods_name"
                 app:input_enable="true"
-                app:input_hint_content="@string/new_goods_name_hint"/>
+                app:input_hint_content="@string/new_goods_name_hint"
+                android:visibility="gone"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -36,7 +37,7 @@
                 app:custom_txt_drawable="@drawable/ic_towardstheright_n"
                 app:custom_txt_bold="false"
                 app:custom_txt_color="@color/color666666"
-                app:custom_txt_content="@string/company_country_hint"/>
+                app:custom_txt_content="@string/new_goods_category_hint"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

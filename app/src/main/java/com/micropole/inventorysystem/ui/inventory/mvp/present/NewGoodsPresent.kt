@@ -17,7 +17,7 @@ class NewGoodsPresent : NewGoodsContract.Present(){
     override fun newGoods(name: String, categoryId: String, huohao: String, cost_price: String, retial_price: String, remark: String,
                           colorId: String, specId: String, material: String, img: String, pack: String) {
         when{
-            name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.new_goods_name_hint))
+//            name.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.new_goods_name_hint))
             categoryId.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.new_goods_category_hint))
             huohao.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.new_goods_id_hint))
             cost_price.isEmpty() ->

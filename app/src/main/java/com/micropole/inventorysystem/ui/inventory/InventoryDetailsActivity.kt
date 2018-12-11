@@ -28,8 +28,6 @@ class InventoryDetailsActivity : BaseMvpViewActivity() {
         val inTreasuryAdapter = InTreasuryAdapter(2)
         recycler_view.adapter = inTreasuryAdapter
 
-        inTreasuryAdapter.setNewData(arrayListOf("","",""))
-
         inTreasuryAdapter.setOnItemClickListener { adapter, view, position ->
             InTreasuryDetailActivity.startInTreasuryDetailActivity(mContext,InTreasuryDetailActivity.TYPE_DETAIL)
         }

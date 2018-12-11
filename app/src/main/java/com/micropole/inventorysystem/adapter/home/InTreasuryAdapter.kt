@@ -8,21 +8,23 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.coorchice.library.SuperTextView
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.entity.TreasuryBean
 
 /**
  * author: xiaoguagnfei
  * date: 2018/11/22
  * describe: 1 : 进销存明细
  */
-class InTreasuryAdapter(val type : Int = 1):BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_inttreasury) {
+class InTreasuryAdapter(val type : Int = 1):BaseQuickAdapter<TreasuryBean.OrderDataBean,BaseViewHolder>(R.layout.item_inttreasury_date) {
+
     /**
      * Implement this method and use the helper to adapt the view to the given item.
      *
      * @param helper A fully initialized helper.
      * @param item   The item that needs to be displayed.
      */
-    override fun convert(helper: BaseViewHolder?, item: String?) {
-        val view = helper?.getView<SuperTextView>(R.id.tv_guaqi)
+    override fun convert(helper: BaseViewHolder?, item: TreasuryBean.OrderDataBean?) {
+        /*val view = helper?.getView<SuperTextView>(R.id.tv_guaqi)
 
         if (type == 2){
             view?.solid = Color.TRANSPARENT
@@ -36,7 +38,7 @@ class InTreasuryAdapter(val type : Int = 1):BaseQuickAdapter<String,BaseViewHold
         recyclerView!!.layoutManager=LinearLayoutManager(mContext)
         recyclerView!!.adapter=adapter
         recyclerView.isNestedScrollingEnabled=false
-        adapter.setNewData(arrayListOf("",""))
+        adapter.setNewData(arrayListOf("",""))*/
 
     }
 }

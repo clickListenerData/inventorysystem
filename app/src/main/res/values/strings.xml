@@ -57,12 +57,14 @@
     <string name="now_order">立即下单</string>
     <string name="guaqinow">挂起</string>
     <string name="ruku_shops">点击选择要入库的商品</string>
+    <string name="jx_select_goods">继续选择商品</string>
 
     <!--库存管理-->
     <string name="inventory_goods_count">商品总数</string>
     <string name="inventory_counts">库存总量</string>
     <string name="inventory_count_cost">库存总成本</string>
     <string name="input_goods">商品入库</string>
+    <string name="hand_input_goodos">自行入库</string>
     <string name="output_goods">商品出库</string>
     <string name="new_create_goods">新建商品</string>
     <string name="order_record">订单记录</string>
@@ -224,6 +226,7 @@
     <string name="new_add_inventory">新增的库存</string>
     <string name="multiple_line_input">多行输入</string>
     <string name="inventory_by_hand">手动入库商品</string>
+    <string name="new_add_treasury">新增库存</string>
 
     <!--进销存明细-->
     <string name="inventory_detail_time">时间</string>

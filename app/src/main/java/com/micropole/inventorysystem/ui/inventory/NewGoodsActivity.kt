@@ -58,7 +58,7 @@ class NewGoodsActivity : BaseUpImgActivity<NewGoodsContract.Present>(),NewGoodsC
         ll_goods_color.setOnClickListener { SelectActivity.startSelect(this,SelectActivity.SELECT_COLOR) }
         ll_select_img.setOnClickListener { showChooseDialog() }
         stv_goods_save.setOnClickListener {
-            getPresenter().newGoods(imv_goods_name.getInputContent(),mCategoryId,imv_goods_sn.getInputContent(),
+            getPresenter().newGoods("",mCategoryId,imv_goods_sn.getInputContent(),
                     imv_cost_price.getInputContent(),imv_retail_price.getInputContent(),imv_remark.getInputContent(),
                     mColors,mSpecs,mMaterials,mImgs,imv_goods_pack.getInputContent())
         }

@@ -258,8 +258,25 @@ object AppService {
                      @Field("cost_price") cost_price : String,@Field("retail_price") retail_price : String,
                      @Field("remark") remark : String,@Field("color") color : String,
                      @Field("spec") spec : String,@Field("texture") texture : String,
-                     @Field("cover_img") cover_img : String,@Field("pack_ratio") pack_ratio : String,
-                     @Field("product_name") name : String) : Observable<BaseResponseEntity<List<String>>>
+                     @Field("cover_img") cover_img : String,@Field("pack_ratio") pack_ratio : String)
+                : Observable<BaseResponseEntity<List<String>>>
+
+
+        /**
+         * 商品详情
+         */
+        @Headers("token:1","language:1")
+        @POST("product/product_detail")
+        @FormUrlEncoded
+        fun goodsDetail(@Field("product_id") id: String) : Observable<BaseResponseEntity<GoodsDetailBean>>
+
+        /**
+         * 商品列表
+         */
+        @Headers("token:1","language:1")
+        @POST("product/product_list")
+        @FormUrlEncoded
+        fun goodsList(@Field("area_id") category:String,@Field("sort") sort : Int) : Observable<BaseResponseEntity<InventoryGoodsBean>>
 
         /**
          * 添加公司
@@ -340,6 +357,17 @@ object AppService {
         @POST("Company/update_company_user")
         @FormUrlEncoded
         fun isagreeCompany(@Field("company_id") id: String,@Field("stat") stat : String): Observable<BaseResponseEntity<List<String>>>
+
+
+        /*入库*/
+        @Headers("token:1","language:1")
+        @POST("order/order_list")
+        @FormUrlEncoded
+        fun treasurylist(@Field("type") type : Int,@Field("page") page : Int,
+                         @Field("order_deac") deac : Int,@Field("company_id") companyID : String)
+                        : Observable<BaseResponseEntity<TreasuryBean>>
+
+
         /**
          * 商城首页
          */

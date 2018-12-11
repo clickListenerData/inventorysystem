@@ -10,6 +10,7 @@ import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import com.micropole.inventorysystem.entity.InventoryGoodsBean
 import com.micropole.inventorysystem.ui.home.InTreasuryActivity
 import com.micropole.inventorysystem.ui.home.OutTreasuryActivity
+import com.micropole.inventorysystem.ui.inventory.input.GoodsInputActivity
 import com.micropole.inventorysystem.util.initMagic
 import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseutilslibrary.extensions.startActivity
@@ -40,13 +41,11 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
 
     override fun initData() {
         rrv_inventory.mLayoutManager = LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false)
-        val dataBindAdapter = DataBindAdapter<InventoryGoodsBean>(1, R.layout.item_inventory_goods)
+        val dataBindAdapter = DataBindAdapter<InventoryGoodsBean.ProductListBean>(1, R.layout.item_inventory_goods)
         rrv_inventory.mAdapter = dataBindAdapter
         rrv_inventory.mAdapter?.isUseEmpty(false)
 
         rrv_inventory.mAdapter?.setHeaderView(getHeaderView())
-
-        dataBindAdapter.setListData(arrayListOf(InventoryGoodsBean(), InventoryGoodsBean(),InventoryGoodsBean()))
 
         dataBindAdapter.setOnItemClickListener { adapter, view, position ->
             activity?.startActivity<GoodsDetailActivity>()
@@ -59,12 +58,15 @@ class InventoryManagerFragment : BaseMvpViewFragment() {
             view, index ->
         }
         view.tv_inventory_zh.isSelected = true
-        view.tv_new_goods.setOnClickListener { activity?.startActivity<NewGoodsActivity>() }
+        view.tv_new_goods.setOnClickListener {   //出库
+            activity?.startActivity<OutTreasuryActivity>()
+        }
         view.tv_ruku.setOnClickListener {
             InTreasuryActivity.startInTreasuryActivity(mContext)
         }
-        view.tv_chuku.setOnClickListener {
-            OutTreasuryActivity.startOutTreasuryActivity(mContext)
+        view.tv_chuku.setOnClickListener { //自行入库
+            activity?.startActivity<GoodsInputActivity>()
+            //OutTreasuryActivity.startOutTreasuryActivity(mContext)
         }
         view.tv_order_record.setOnClickListener {
             activity?.startActivity<InventoryDetailsActivity>()

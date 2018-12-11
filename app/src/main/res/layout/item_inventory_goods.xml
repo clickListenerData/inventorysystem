@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.InventoryGoodsBean"/>
+            type="com.micropole.inventorysystem.entity.InventoryGoodsBean.ProductListBean"/>
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
-            android:src="@color/colorPrimary"
+            android:image_url="@{data.pro_img}"
             />
 
         <TextView
@@ -33,7 +33,7 @@
             app:layout_constraintLeft_toRightOf="@id/iv_inventory_img"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_size"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="AW0000"
+            android:text="@{data.item_no}"
             android:textSize="@dimen/txt_15"
             android:textColor="@color/txt_price"/>
 
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_id"
             app:layout_constraintLeft_toLeftOf="@id/tv_inventory_id"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_color"
-            android:text="XL"
+            android:text="@{data.specs}"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
             />
@@ -56,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_size"
             app:layout_constraintLeft_toLeftOf="@id/tv_inventory_size"
             app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
-            android:text="红"
+            android:text="@{data.colors}"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
             />
@@ -65,8 +65,8 @@
             android:id="@+id/tv_inventory_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="@id/tv_inventory_package"
-            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_package"
+            app:layout_constraintRight_toRightOf="@id/tv_inventory_num"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_num"
             app:layout_constraintTop_toTopOf="@id/iv_inventory_img"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_num"
             android:text="@string/inventory_txt"
@@ -78,11 +78,11 @@
             android:id="@+id/tv_inventory_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_package"
-            app:layout_constraintRight_toRightOf="@id/tv_inventory_package"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/dp_40"
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_txt"
             app:layout_constraintBottom_toTopOf="@id/tv_inventory_package"
-            android:text="100"
+            android:text="@{data.store_count}"
             android:textColor="@color/title_color"
             android:textSize="@dimen/big_txt_size"
             android:textStyle="bold"
@@ -92,11 +92,11 @@
             android:id="@+id/tv_inventory_package"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="@id/tv_inventory_num"
+            app:layout_constraintRight_toRightOf="@id/tv_inventory_num"
             app:layout_constraintTop_toBottomOf="@id/tv_inventory_num"
             app:layout_constraintBottom_toBottomOf="@id/iv_inventory_img"
-            android:text="(2箱零2件)"
+            android:text="@{data.pro_stock}"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
             />

@@ -9,49 +9,56 @@
     android:background="@color/app_color_bg">
     <include  layout="@layout/view_title"
         android:id="@+id/ic_title"/>
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scrollView"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="10dp">
-        <LinearLayout
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp">
             <LinearLayout
-                android:id="@+id/ll_tou"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingVertical="@dimen/dp_10"
-                android:background="@color/text_color_white">
-                <com.micropole.inventorysystem.widght.CustomCenterView
-                    android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_tou"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:top_txt_content="@string/wait_treasury"
-                    app:bottom_txt_content="200"
-                    app:top_txt_drawable="@drawable/ic_pendingstorage_n"
-                    />
-                <com.micropole.inventorysystem.widght.CustomCenterView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:top_txt_content="@string/all_value"
-                    app:bottom_txt_content="200"
-                    app:top_txt_drawable="@drawable/ic_totalvalue_n"
-                    />
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/dp_10"
+                    android:background="@color/text_color_white">
+                    <com.micropole.inventorysystem.widght.CustomCenterView
+                        android:id="@+id/ccv_treasury"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:top_txt_content="@string/wait_treasury"
+                        app:bottom_txt_content=""
+                        app:top_txt_drawable="@drawable/ic_pendingstorage_n"
+                        />
+                    <com.micropole.inventorysystem.widght.CustomCenterView
+                        android:id="@+id/ccv_treasury_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:top_txt_content="@string/all_value"
+                        app:bottom_txt_content=""
+                        app:top_txt_drawable="@drawable/ic_totalvalue_n"
+                        />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
             </LinearLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </android.support.v7.widget.RecyclerView>
-
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <com.coorchice.library.SuperTextView
         android:id="@+id/tv_chuangjian"
@@ -66,6 +73,7 @@
         android:text="新建入库"
         android:gravity="center"
         android:paddingVertical="@dimen/dp_10"
+        android:visibility="gone"
         />
 
 </LinearLayout>

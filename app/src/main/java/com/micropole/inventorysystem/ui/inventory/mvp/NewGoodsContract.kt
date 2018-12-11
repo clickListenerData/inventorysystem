@@ -19,7 +19,7 @@ class NewGoodsContract {
     class Model{
         fun newGoods(name:String,categoryId:String,huohao:String,cost_price:String,retial_price:String,remark:String,
                      colorId:String,specId:String,material:String,img:String,pack:String) =
-                AppService.Api!!.addGoods(categoryId,huohao,cost_price,retial_price,remark,colorId,specId,material,img,pack,name)
+                AppService.Api!!.addGoods(categoryId,huohao,cost_price,retial_price,remark,colorId,specId,material,img,pack)
         fun imgUp(img: String) = AppService.Api!!.imgUp(img)
     }
 
