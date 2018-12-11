@@ -82,6 +82,7 @@
         <activity android:name=".ui.personal.shopmall.MineCollectActivity"/>
         <activity android:name=".ui.shoppingmall.SearchShopActivity"/>
         <activity android:name=".ui.shoppingmall.ProductDetailActivity"/>
+        <activity android:name=".ui.personal.shopmall.AddressManagerActivity"/>
     </application>
 
 </manifest>

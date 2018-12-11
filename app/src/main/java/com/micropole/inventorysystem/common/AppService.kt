@@ -357,5 +357,12 @@ object AppService {
         @POST("Sproduct/product_detail")
         @FormUrlEncoded
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
+
+        /**
+         * 地址列表
+         */
+        @Headers("token:1","language:1")
+        @POST("saddress/user_address")
+        fun addressList() : Observable<BaseResponseEntity<List<AddressBean>>>
     }
 }

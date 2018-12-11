@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.micropole.inventorysystem.entity.ColorBean"/>
+            type="com.micropole.inventorysystem.entity.AddressBean"/>
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,7 +19,7 @@
             android:layout_marginTop="@dimen/dp_14"
             android:textSize="@dimen/txt_13"
             android:textColor="@color/color666666"
-            android:text="name phone"
+            android:text="@{data.consignee + data.phone}"
             />
         <TextView
             android:id="@+id/tv_address_detail"
@@ -33,7 +33,7 @@
             android:layout_marginRight="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_10"
             android:paddingBottom="@dimen/dp_10"
-            android:text="address"/>
+            android:text="@{data.address}"/>
         <TextView
             android:id="@+id/tv_edit_address"
             android:layout_width="wrap_content"

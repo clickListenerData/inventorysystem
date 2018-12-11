@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.view.ViewPager
 import android.view.ViewGroup
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
@@ -30,11 +31,12 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Simple
  */
 class OrderListActivity : BaseMvpViewActivity() {
 
-    val data = arrayListOf("全部","代发货","待收货","售后","评价")
     val fragmens = arrayListOf<OrderListFragment>()
+    lateinit var data : Array<String>
     override fun getActivityLayoutId(): Int = R.layout.activity_order_list
 
     override fun initData() {
+        data = resources.getStringArray(R.array.order_title_array)
         for (i in data.indices){
             fragmens.add(OrderListFragment.newFragment(i))
         }
@@ -60,6 +62,19 @@ class OrderListActivity : BaseMvpViewActivity() {
             }
 
         }
+
+        vp_order.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
+
+            override fun onPageSelected(position: Int) {
+
+            }
+        })
     }
 
     fun initMagic(){

@@ -32,24 +32,29 @@ class OrderListFragment : BaseMvpViewFragment(){
     }
 
     lateinit var refreshRecyclerView : RefreshRecyclerView
+    var mType = 0
 
     override fun getFragmentLayoutId(): Int = -1
 
     override fun initView(view: View?) {
+        mType = arguments?.getInt("order_type") ?: mType
         refreshRecyclerView.mLayoutManager = LinearLayoutManager(mContext)
         refreshRecyclerView.mAdapter = OrderAdapter()
-        (refreshRecyclerView.mAdapter as OrderAdapter).setNewData(arrayListOf(Any(), Any(),Any()))
-
-        refreshRecyclerView.mAdapter?.setOnItemClickListener { adapter, view, position ->
-            activity?.startActivity<OrderDetailActivity>()
-        }
     }
 
     override fun initEvent(view: View?) {
+        refreshRecyclerView.mAdapter?.setOnItemClickListener { adapter, view, position ->
+        }
     }
 
     override fun initData() {
     }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+
 
     override fun getFragmentView(): View? {
         refreshRecyclerView = RefreshRecyclerView(mContext)
