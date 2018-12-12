@@ -412,6 +412,22 @@ object AppService {
         fun footList() : Observable<BaseResponseEntity<List<CollectBean>>>
 
         /**
+         * 订单列表
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/order_list")
+        @FormUrlEncoded
+        fun orderList(@Field("or_stat") stat: Int) : Observable<BaseResponseEntity<List<OrderListBean>>>
+
+        /**
+         * 订单详情
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/order_detail")
+        @FormUrlEncoded
+        fun orderDetail(@Field("or_id") id: Int) : Observable<BaseResponseEntity<OrderDetailBean>>
+
+        /**
          * 地址列表
          */
         @Headers("token:1","language:1")
