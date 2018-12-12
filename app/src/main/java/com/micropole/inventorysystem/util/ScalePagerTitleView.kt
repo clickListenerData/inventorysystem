@@ -17,4 +17,9 @@ class ScalePagerTitleView(context: Context?) : SimplePagerTitleView(context) {
         super.onSelected(index, totalCount)
         this.textSize = 15f
     }
+
+    override fun onDeselected(index: Int, totalCount: Int) {
+        super.onDeselected(index, totalCount)
+        this.textSize = 13f
+    }
 }

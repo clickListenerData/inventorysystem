@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.shopmall.mvp
 
+import com.micropole.inventorysystem.common.AppService
+import com.micropole.inventorysystem.entity.OrderListBean
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
@@ -13,15 +15,18 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
  */
 class OrderListContract {
 
-    interface View : BaseMvpView
+    interface View : BaseMvpView{
+        fun orderList(data : List<OrderListBean>?)
+    }
 
     class Model{
-
+        fun orderList(stat : Int) = AppService.Api!!.orderList(stat)
     }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
         override fun createModel(): Model {
             return Model()
         }
+        abstract fun orderList(stat: Int)
     }
 }

@@ -280,6 +280,7 @@
     <string name="received_address">收货地址</string>
 
     <!--订单详情-->
+    <string name="order_list_txt">订单列表</string>
     <string name="order_detail_txt">订单详情</string>
     <string name="not_remark">没有备注</string>
     <string name="freight_price">运费</string>
@@ -296,6 +297,7 @@
     <string name="product_txt">商品</string>
     <string name="evaluation_score">评分</string>
     <string name="input_your_evaluation">填写您的评论</string>
+    <string name="count_goods">共s%件商品</string>
 
     <string name="after_type">售后类型</string>
     <string name="after_reason">申请理由</string>

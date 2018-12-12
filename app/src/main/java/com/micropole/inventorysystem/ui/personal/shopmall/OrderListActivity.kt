@@ -36,6 +36,7 @@ class OrderListActivity : BaseMvpViewActivity() {
     override fun getActivityLayoutId(): Int = R.layout.activity_order_list
 
     override fun initData() {
+        setTitleText(res = R.string.order_list_txt)
         data = resources.getStringArray(R.array.order_title_array)
         for (i in data.indices){
             fragmens.add(OrderListFragment.newFragment(i))
@@ -72,14 +73,13 @@ class OrderListActivity : BaseMvpViewActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-
+                (fragmens[position]).loadData()
             }
         })
     }
 
     fun initMagic(){
         val commonNavigator = CommonNavigator(this)
-        commonNavigator.isAdjustMode = true
         commonNavigator.adapter = object : CommonNavigatorAdapter() {
             override fun getTitleView(context: Context?, index: Int): IPagerTitleView {
                 val simplePagerTitleView = ScalePagerTitleView(context)

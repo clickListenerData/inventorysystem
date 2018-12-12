@@ -21,7 +21,7 @@ class OrderDetailActivity : BaseMvpViewActivity(){
 
     override fun initData() {
         rv_order_detail.layoutManager = LinearLayoutManager(mContext)
-        rv_order_detail.adapter = OrderAdapter.ItemAdapter(arrayListOf(Any(), Any()))
+        rv_order_detail.adapter = OrderAdapter.ItemAdapter(arrayListOf())
     }
 
     override fun initEvent() {
