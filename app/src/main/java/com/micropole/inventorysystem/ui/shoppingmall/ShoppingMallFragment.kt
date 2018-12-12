@@ -75,8 +75,9 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
         rrv_shop_mall.setRefreshLoadMoreListener {
             presenter.shopMall(""+it,"1")
         }
-        //loading()
+        loading()
     }
+
     override fun initEvent(view: View?) {
         iv_cart.setOnClickListener { activity?.startActivity<CartActivity>() }
         iv_search.setOnClickListener { activity?.startActivity<SearchShopActivity>() }
@@ -94,19 +95,6 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
         }
     }
 
-    override fun onHiddenChanged(hidden: Boolean) {
-        super.onHiddenChanged(hidden)
-        if (!isHidden){
-            loading()
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (!isHidden){
-            loading()
-        }
-    }
     fun loading(){
         if (!Constants.isLogin()){
             showView(null)

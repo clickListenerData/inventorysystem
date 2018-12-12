@@ -383,6 +383,23 @@ object AppService {
         @POST("Sproduct/product_detail")
         @FormUrlEncoded
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
+
+        /**
+         * 选择规格
+         */
+        @Headers("token:1","language:1")
+        @POST("Sproduct/select_spec")
+        @FormUrlEncoded
+        fun selectProSpec(@Field("pro_id") id : String,@Field("sp_name") sp : String,
+                          @Field("mo_name") mo : String) : Observable<BaseResponseEntity<SelectSpecBean>>
+
+        /**
+         * 收藏商品
+         */
+        @Headers("token:1","language:1")
+        @POST("scollect/collect_add")
+        @FormUrlEncoded
+        fun collectProduct(@Field("pro_id") id : String) : Observable<BaseResponseEntity<List<String>>>
         /**
          * 购物车信息
          */
@@ -395,7 +412,8 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("shopp/add_shopp")
         @FormUrlEncoded
-        fun addCar(@Field("pro_id") pro_id : String,@Field("pro_num") pro_num:String,@Field("sp_name")sp_name:String,@Field("mo_name") mo_name:String) : Observable<BaseResponseEntity<List<String>>>
+        fun addCar(@Field("pro_id") pro_id : String,@Field("pro_num") pro_num:String,@Field("sp_name")sp_name:String,@Field("mo_name") mo_name:String)
+                : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 收藏列表
@@ -425,7 +443,7 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("sorder/order_detail")
         @FormUrlEncoded
-        fun orderDetail(@Field("or_id") id: Int) : Observable<BaseResponseEntity<OrderDetailBean>>
+        fun orderDetail(@Field("or_id") id: String) : Observable<BaseResponseEntity<OrderDetailBean>>
 
         /**
          * 地址列表

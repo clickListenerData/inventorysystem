@@ -250,9 +250,9 @@
     <string name="inventory_warning">库存预警</string>
     <string name="inventory_warning_hint">请填写预警值（选填）</string>
     <string name="remark_hint">请填写备注（选填）</string>
-    <string name="correlation_goods">该商品已经关联s%</string>
+    <string name="correlation_goods">该商品已经关联%s</string>
     <string name="look_goods_detail">查看商品详情</string>
-    <string name="input_txt">请输入s%</string>
+    <string name="input_txt">请输入%s</string>
     <string name="input_remark_hint">请输入备注名</string>
     <string name="select_color">选择颜色</string>
     <string name="select_spec">选择规格</string>
@@ -283,6 +283,8 @@
     <string name="received_personal">收货人</string>
     <string name="received_address">收货地址</string>
 
+    <string name="kucun_count">库存%s件</string>
+
     <!--订单详情-->
     <string name="order_list_txt">订单列表</string>
     <string name="order_detail_txt">订单详情</string>
@@ -301,7 +303,7 @@
     <string name="product_txt">商品</string>
     <string name="evaluation_score">评分</string>
     <string name="input_your_evaluation">填写您的评论</string>
-    <string name="count_goods">共s%件商品</string>
+    <string name="count_goods">共%s件商品</string>
 
     <string name="after_type">售后类型</string>
     <string name="after_reason">申请理由</string>

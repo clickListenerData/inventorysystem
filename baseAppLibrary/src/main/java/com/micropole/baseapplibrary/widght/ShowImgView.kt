@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.util.ImageChooseHelper
+import com.xx.baseutilslibrary.extensions.loadImag
 import java.io.File
 
 /**
@@ -25,8 +26,8 @@ import java.io.File
  */
 class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(context,attributeSet) {
 
-    var maxCount = 3  //最大图片数
-        private set(value) {
+    var maxCount = 4  //最大图片数
+        set(value) {
             if (value != field) {
                 removeAllViews()
                 createAddView()
@@ -34,7 +35,7 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
             field = value
         }
     var maxLine = 1   //最大行数
-        private set(value) {
+        set(value) {
             if (value != field) {
                 removeAllViews()
                 createAddView()
@@ -66,8 +67,16 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         field = value
     }
 
-    init {
-        post { createAddView() }
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        for (i in 0 until childCount){
+            getChildAt(i).measure(widthMeasureSpec,heightMeasureSpec)
+        }
+    }
+
+    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
+        super.onLayout(changed, l, t, r, b)
+        createAddView()
     }
 
     override fun addView(child: View?) {
@@ -83,7 +92,8 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         val i2 = height / maxLine //图片 height
         val params = LinearLayout.LayoutParams(i1,i2)
         params.rightMargin = 10
-        addView(child,params)
+        child?.layoutParams = params
+        super.addView(child)
     }
 
     override fun removeViewAt(index: Int) {
@@ -132,6 +142,16 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         layoutParams.gravity = Gravity.CENTER
         frameLayout.addView(imageView,layoutParams)
         addView(frameLayout)
+    }
+
+    fun addShowImgView(url:String,id:Int = 0){
+        val imageView = ImageView(context)
+        imageView.scaleType = ImageView.ScaleType.FIT_XY
+        if (id != 0) imageView.setImageResource(id)
+        else imageView.loadImag(url)
+
+        this.addView(imageView)
+        isAdd = false
     }
 
     fun addImgView(path : String){

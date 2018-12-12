@@ -12,14 +12,13 @@ import java.util.List;
  */
 public class ProductDetailBean {
 
-
     /**
      * pro_id : 116
      * pro_name : qwe
      * pro_label : qwe
-     * pro_text : <p><img src="/ueditor/php/upload/image/20181204/1543918038306601.png" title="1543918038306601.png" alt="5bb81efc8f84d.png"/></p>
-     * pro_img : /uploads/20181204/8fbe844b0de68316e00d85e73861462e.jpg
-     * pro_imgs : ["/uploads/20181204/3a717a51d5df4e331b1ae29fd81c3c5a.jpg"]
+     * pro_text : <p><img src="/ueditor/php/upload/image/20181204/1543918038306601.png" title="1543918038306601.png" alt="5bb81efc8f84d.png"/></p><p><br/></p>
+     * pro_img : /uploads/20181211/e1139da3be71ae4b752b57464ecbf29f.jpg
+     * pro_imgs : ["/uploads/20181211/3d7efd37b04d0096d6a3922d6f7d190c.jpg","/uploads/20181211/a5a64b1d399878e3c5b85fba9be360f1.jpg","/uploads/20181211/d7da2a4e53952e0498bf3a1e0e571328.jpg","/uploads/20181211/ad7cb3c68e6902722f73e8445d553dc1.jpg"]
      * pro_stock : 0
      * pro_recos : 0
      * pro_sort : 0
@@ -29,7 +28,7 @@ public class ProductDetailBean {
      * pro_commission : 0
      * pro_shop_price : 23
      * pro_market_price : 123
-     * pro_addtime : 1543918041
+     * pro_addtime : 1544515603
      * pro_browse : 0
      * pro_weight : 0.00
      * pro_type : 0

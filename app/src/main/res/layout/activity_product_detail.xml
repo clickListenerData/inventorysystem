@@ -118,11 +118,12 @@
                     </android.support.constraint.ConstraintLayout>
 
                     <com.micropole.inventorysystem.widght.NormalLlView
+                        android:id="@+id/nll_select_size"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_14"
-                        app:main_txt_content="@string/color_name_txt"
-                        app:custom_txt_content="@string/select_customer"
+                        app:main_txt_content="@string/select_spec"
+                        app:custom_txt_content="@string/select_spec"
                         app:custom_txt_color="@color/txt_out"
                         app:custom_txt_bold="false"
                         app:custom_txt_drawable="@drawable/ic_rightblue_n"/>
@@ -152,14 +153,9 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/txt_out"
                                 android:textSize="@dimen/txt_15"
-                                android:text="查看全部"/>
-                            <com.coorchice.library.SuperTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="@dimen/dp_4"
-                                android:layout_marginLeft="@dimen/dp_4"
-                                app:stv_state_drawable="@drawable/ic_towardstheright_n"
-                                app:stv_state_drawable_tint="@color/txt_out"/>
+                                android:text="查看全部"
+                                android:drawableRight="@drawable/ic_rightblue_n"
+                                android:drawablePadding="@dimen/dp_4"/>
                         </LinearLayout>
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
@@ -256,6 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:background="@color/text_color_white"
                 android:paddingVertical="@dimen/dp_10">
                 <TextView
                     android:id="@+id/tv_contract_service"
@@ -293,7 +290,7 @@
                     app:stv_right_top_corner="false"
                     app:stv_left_bottom_corner="true"
                     app:stv_right_bottom_corner="false"
-                    android:paddingVertical="@dimen/dp_14"
+                    android:paddingVertical="@dimen/dp_10"
                     android:paddingHorizontal="18dp"
                     android:textColor="@color/txt_out"
                     android:textSize="@dimen/txt_15"
@@ -309,7 +306,7 @@
                     app:stv_right_top_corner="true"
                     app:stv_left_bottom_corner="false"
                     app:stv_right_bottom_corner="true"
-                    android:paddingVertical="@dimen/dp_14"
+                    android:paddingVertical="@dimen/dp_10"
                     android:paddingHorizontal="18dp"
                     android:textSize="@dimen/txt_15"
                     android:textColor="@color/text_color_white"

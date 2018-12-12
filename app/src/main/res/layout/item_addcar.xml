@@ -96,7 +96,7 @@
             android:layout_marginLeft="@dimen/dp_14"
             android:layout_gravity="center_vertical"/>
         <include
-            layout="@layout/view_addcar"
+            layout="@layout/view_quantity"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_10"/>

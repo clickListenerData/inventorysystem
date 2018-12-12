@@ -1,4 +1,4 @@
-package com.micropole.inventorysystem.ui.shoppingmall.mvp.present
+package com.micropole.inventorysystem.ui.shoppingmall.mvp.presenter
 
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.NewsBean

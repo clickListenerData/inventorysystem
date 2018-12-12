@@ -6,9 +6,8 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.shopmall.CartAdapter
 import com.micropole.inventorysystem.entity.CarBean
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.contract.CarContract
-import com.micropole.inventorysystem.ui.shoppingmall.mvp.present.CarPresent
+import com.micropole.inventorysystem.ui.shoppingmall.mvp.presenter.CarPresent
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
-import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import kotlinx.android.synthetic.main.activity_cart.*
 
 /**

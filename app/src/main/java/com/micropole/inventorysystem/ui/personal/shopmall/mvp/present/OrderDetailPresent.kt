@@ -1,6 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.shopmall.mvp.present
 
 import com.micropole.inventorysystem.ui.personal.shopmall.mvp.OrderDetailContract
+import com.xx.baseutilslibrary.extensions.ui
 
 /**
  * @ClassName       OrderDetailPresent
@@ -11,5 +12,12 @@ import com.micropole.inventorysystem.ui.personal.shopmall.mvp.OrderDetailContrac
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class OrderDetailPresent : OrderDetailContract.Present(){
+    override fun orderDetail(id: String) {
+        getModel().orderDetail(id).ui({
+            getView()?.setData(it.data)
+        },{
+            getView()?.showToast(it)
+        })
+    }
 
 }
