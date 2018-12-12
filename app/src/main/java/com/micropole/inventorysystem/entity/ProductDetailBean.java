@@ -101,7 +101,6 @@ public class ProductDetailBean {
     private String bar_code;
     private String is_copy;
     private String is_all_return;
-    private BulkteamBean bulkteam;
     private String bulkteam_number;
     private String shopp_number;
     private String pro_collect;
@@ -416,13 +415,7 @@ public class ProductDetailBean {
         this.is_all_return = is_all_return;
     }
 
-    public BulkteamBean getBulkteam() {
-        return bulkteam;
-    }
 
-    public void setBulkteam(BulkteamBean bulkteam) {
-        this.bulkteam = bulkteam;
-    }
 
     public String getBulkteam_number() {
         return bulkteam_number;

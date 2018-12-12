@@ -34,9 +34,9 @@
             android:gravity="center"
             android:layout_marginLeft="@dimen/dp_4"/>
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="@dimen/dp_14"
             android:drawableLeft="@drawable/ic_deletew_n"
             android:textSize="@dimen/main_txt_size"
@@ -44,7 +44,12 @@
             android:text="@string/delete_txt"
             android:drawablePadding="@dimen/dp_4"
             />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
         <com.coorchice.library.SuperTextView
+            android:id="@+id/sv_sure"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:stv_solid="@color/txt_price"

@@ -414,7 +414,21 @@ object AppService {
         @FormUrlEncoded
         fun addCar(@Field("pro_id") pro_id : String,@Field("pro_num") pro_num:String,@Field("sp_name")sp_name:String,@Field("mo_name") mo_name:String)
                 : Observable<BaseResponseEntity<List<String>>>
-
+        /**
+         * 购物车更新
+         */
+        @Headers("token:1","language:1")
+        @POST("shopp/update_shopp")
+        @FormUrlEncoded
+        fun updateCar(@Field("sh_id") sh_id : String,@Field("pro_num") pro_num:String,@Field("check_status")check_status:String)
+                : Observable<BaseResponseEntity<UpdateCar>>
+        /**
+         * 删除购物车
+         */
+        @Headers("token:1","language:1")
+        @POST("shopp/del_shopp")
+        @FormUrlEncoded
+        fun deleteCar(@Field("sh_id") sh_id : String): Observable<BaseResponseEntity<List<String>>>
         /**
          * 收藏列表
          */

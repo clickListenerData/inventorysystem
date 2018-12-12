@@ -73,6 +73,15 @@ public class CarBean {
         private String pro_img;
         private String pro_label;
         private String pro_shop_price;
+        private Boolean isChacked=false;
+
+        public Boolean getIsChacked() {
+            return isChacked;
+        }
+
+        public void setIsChacked(Boolean chacked) {
+            isChacked = chacked;
+        }
 
         public String getSh_id() {
             return sh_id;
