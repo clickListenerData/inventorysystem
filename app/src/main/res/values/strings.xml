@@ -239,6 +239,10 @@
     <string name="material_txt">材质</string>
     <string name="purchase_price">进货价</string>
     <string name="size_count">规格数量</string>
+    <string name="count">选择产品规格</string>
+    <string name="colur">颜色</string>
+    <string name="chicun">尺寸</string>
+    <string name="buy_number">购买数量</string>
 
     <!--编辑商品-->
     <string name="edit_category">所属分类</string>

@@ -35,9 +35,9 @@ class SettingPhonePresent : SettingPhoneContract.Presenter() {
 
     override fun settingPhone(old_user_phone: String, new_user_phone: String, new_code: String, old_code: String) {
         when{
-            old_user_phone.isNullOrEmpty()->getView()?.showToast("请输入旧手机号")
+//            old_user_phone.isNullOrEmpty()->getView()?.showToast("请输入旧手机号")
             new_user_phone.isNullOrEmpty()->getView()?.showToast("请输入新手机号")
-            old_code.isNullOrEmpty()->getView()?.showToast("请输入旧手机验证码")
+//            old_code.isNullOrEmpty()->getView()?.showToast("请输入旧手机验证码")
             new_code.isNullOrEmpty()->getView()?.showToast("请输入新手机验证码")
             else->{
                 getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))

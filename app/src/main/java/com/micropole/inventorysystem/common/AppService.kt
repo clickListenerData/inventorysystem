@@ -376,8 +376,6 @@ object AppService {
         @FormUrlEncoded
         fun shopMall(@Field("page") page:String,@Field("post_desc")post_desc:String) : Observable<BaseResponseEntity<List<ShopMall>>>
 
-
-        /*商城*/
         /**
          * 商品详情
          */
@@ -385,6 +383,19 @@ object AppService {
         @POST("Sproduct/product_detail")
         @FormUrlEncoded
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
+        /**
+         * 购物车信息
+         */
+        @Headers("token:1","language:1")
+        @POST("shopp/shopp_list")
+        fun car() : Observable<BaseResponseEntity<CarBean>>
+        /**
+         * 加入购物车
+         */
+        @Headers("token:1","language:1")
+        @POST("shopp/add_shopp")
+        @FormUrlEncoded
+        fun addCar(@Field("pro_id") pro_id : String,@Field("pro_num") pro_num:String,@Field("sp_name")sp_name:String,@Field("mo_name") mo_name:String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 收藏列表

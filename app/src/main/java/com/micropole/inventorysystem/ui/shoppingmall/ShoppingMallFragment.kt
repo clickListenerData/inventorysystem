@@ -1,6 +1,5 @@
 package com.micropole.inventorysystem.ui.shoppingmall
 
-import android.provider.SyncStateContract
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
@@ -8,15 +7,14 @@ import com.micropole.baseapplibrary.appconst.Constants
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.shopmall.ShopMallAdapter
 import com.micropole.inventorysystem.entity.ShopMall
-import com.micropole.inventorysystem.entity.UserInfoBean
-import com.micropole.inventorysystem.ui.personal.mvp.PersonalContract
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.contract.ShoppingMallContract
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.presenter.ShoppingMallPresenter
-import com.xx.baseuilibrary.mvp.BaseMvpViewFragment
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecFragment
 import com.xx.baseutilslibrary.extensions.startActivity
+import kotlinx.android.synthetic.main.activity_mine_company.*
 import kotlinx.android.synthetic.main.fragment_shop_mall.*
 import kotlinx.android.synthetic.main.view_login_out.*
+import okhttp3.OkHttpClient
 
 /**
  * @ClassName       ShoppingMallFragment
