@@ -81,7 +81,9 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
     override fun initEvent(view: View?) {
         iv_cart.setOnClickListener { activity?.startActivity<CartActivity>() }
         iv_search.setOnClickListener { activity?.startActivity<SearchShopActivity>() }
-
+        sv_classity.setOnClickListener {
+            activity?.startActivity<ClassityActivity>()
+        }
         rg_des.setOnCheckedChangeListener { group, checkedId ->
             showLoadingDialog(getResString(R.string.loading))
             if (checkedId==rb_shop_price.id){

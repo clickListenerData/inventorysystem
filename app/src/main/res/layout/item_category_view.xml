@@ -8,6 +8,7 @@
     </data>
 
     <com.micropole.inventorysystem.widght.NormalLlView
+        android:id="@+id/nl_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:main_content="@{data.area_name}"

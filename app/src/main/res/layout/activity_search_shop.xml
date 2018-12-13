@@ -9,6 +9,7 @@
     <include layout="@layout/view_title"/>
 
     <EditText
+        android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_14"
@@ -22,7 +23,19 @@
         android:hint="@string/input_category_hint"
         android:drawableLeft="@drawable/global_ic_input_search"
         android:drawablePadding="@dimen/dp_4"
-        android:drawableRight="@drawable/global_btn_input_del"/>
+        android:drawableRight="@drawable/global_btn_input_del"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -84,13 +97,13 @@
     <net.lucode.hackware.magicindicator.MagicIndicator
         android:id="@+id/magic_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_14"/>
+        android:layout_height="@dimen/dp_40" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/dp_14"/>
-
+        android:layout_marginTop="@dimen/dp_10"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

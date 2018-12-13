@@ -337,11 +337,13 @@
     <string name="receive_order_txt">待收货</string>
     <string name="evaluation_order_txt">待评价</string>
     <string name="after_order_txt">售后</string>
+    <string name="cassity">所有分类</string>
 
     <!--购物车-->
     <string name="settlement_txt">结算</string>
     <string name="all_select_txt">全选</string>
     <string name="delete_txt">删除</string>
+    <string name="product_tishi">请选中商品</string>
     <string name="confirm_buy">立即支付</string>
 
     <string name="rename_txt">重命名</string>
@@ -414,7 +416,8 @@
     <string name="partner_hezuoguanxi">合作关系</string>
     <string name="partner_add_hezuoguanxi">添加合作关系</string>
 
-
+    <!--搜索-->
+    <string name="search">搜索</string>
 
     <!--弹框-->
     <string name="loading">正在加载</string>

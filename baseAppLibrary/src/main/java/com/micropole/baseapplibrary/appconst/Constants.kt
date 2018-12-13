@@ -25,6 +25,7 @@ object Constants {
 
     const val LONG_TOKEN_INVALID = "444"
     const val SHORT_TOKEN_INVALID = "333"
+    const val SEARCH_HIS="search_history"
 
     fun isFirst() = SPUtils.getInstance().getBoolean(KEY_IS_FIRST,true)
 
@@ -47,6 +48,12 @@ object Constants {
     fun getUserInfo() : String {
         var user=SPUtils.getInstance().getString(KEY_USER_INFO)
         return user
+    }
+    fun putSearch_his(content: String){SPUtils.getInstance().put(SEARCH_HIS,content)}
+
+    fun getSearch_his() : String {
+        var history=SPUtils.getInstance().getString(SEARCH_HIS)
+        return history
     }
 
     /**

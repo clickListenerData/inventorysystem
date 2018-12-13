@@ -7,7 +7,9 @@
             <solid android:color="@color/txt_out"/>
             <corners
                 android:topRightRadius="2dp"
-                android:topLeftRadius="2dp"/>
+                android:topLeftRadius="2dp"
+                android:bottomLeftRadius="2dp"
+                android:bottomRightRadius="2dp"/>
         </shape>
     </item>
 </selector>

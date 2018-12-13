@@ -24,17 +24,17 @@ import java.lang.StringBuilder
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
-    var allPrice = 0.00
+    var allPrice = 0.00//计算合计金额
     override fun updateCar(updateCar: UpdateCar, position: Int, isAdd: Boolean) {
         cartAdapter.data[position].pro_num = updateCar.shopp_count
         var any = cartAdapter.data[position]
         if (cartAdapter.data[position].isChacked) {
             if (isAdd) {
                 allPrice = any.pro_num.toInt() * any.pro_price.toDouble()
-                sv_sure.text = "结算:¥ ${allPrice}"
+                sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
             } else {
                 allPrice = allPrice - any.pro_num.toInt() * any.pro_price.toDouble()
-                sv_sure.text = "结算:¥ ${allPrice}"
+                sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
             }
         }
 
@@ -45,7 +45,7 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
         if (position == -1) {//多选删除
             if (isAll == 1) {//是否全选
                 cartAdapter.setNewData(arrayListOf())
-                sv_sure.text = "结算:¥ 0.00"
+                sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ 0.00"
             } else {
 
                     for (i in 0..position_list.size - 1) {
@@ -53,12 +53,12 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
                         cartAdapter.remove(position_list[i])
                     }
                     position_list= arrayListOf()
-                    sv_sure.text = "结算:¥${allPrice}"
+                    sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥${allPrice}"
             }
         } else {//单选
             if (cartAdapter.data[position].isChacked) {
                 allPrice = allPrice - cartAdapter.data[position].pro_num.toInt() * cartAdapter.data[position].pro_price.toDouble()
-                sv_sure.text = "结算:¥ ${allPrice}"
+                sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
             }
             cartAdapter.remove(position)
         }
@@ -69,7 +69,7 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
             rrv_cart.isRefreshing = false
         }
         cartAdapter.setNewData(cars.shopp)
-        sv_sure.text = "结算:¥ ${allPrice}"
+        sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
     }
 
     /**
@@ -116,7 +116,7 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
                     }
                 }
                 cartAdapter.notifyDataSetChanged()
-                sv_sure.text = "结算:¥ ${allPrice}"
+                sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
             }
 
         }
@@ -144,7 +144,7 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
 
             }
             if (str.isNullOrEmpty()) {
-                showToast("请选中商品")
+                showToast(resources.getString(R.string.product_tishi))
             } else {
                 getPresenter().deleteCar(str, -1)
             }
@@ -209,7 +209,7 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
         } else {
             allPrice = allPrice - any.pro_num.toInt() * any.pro_price.toDouble()
         }
-        sv_sure.text = "结算:¥ ${allPrice}"
+        sv_sure.text = "${resources.getString(R.string.settlement_txt)}:¥ ${allPrice}"
     }
 
     /**

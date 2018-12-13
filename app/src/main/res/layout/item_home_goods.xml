@@ -26,6 +26,7 @@
             android:src="@drawable/home_recommended_place_chart"
             />
         <ImageView
+            android:id="@+id/iv_hot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/home_ic_recommended_label_hot"

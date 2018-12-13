@@ -448,6 +448,25 @@ object AppService {
         @FormUrlEncoded
         fun deleteCar(@Field("sh_id") sh_id : String): Observable<BaseResponseEntity<List<String>>>
         /**
+         * 商城搜索
+         */
+        @Headers("token:1","language:1")
+        @POST("sproduct/search_index")
+        fun hotSearch( ): Observable<BaseResponseEntity<SearchBean>>
+        /**
+         * 搜索商品
+         */
+        @Headers("token:1","language:1")
+        @POST("sproduct/search")
+        @FormUrlEncoded
+        fun searchProduct(@Field("keyword")keyword:String,@Field("order_desc") order_desc:String): Observable<BaseResponseEntity<SearchPotuct>>
+        /**
+         * 分类列表
+         */
+        @Headers("token:1","language:1")
+        @POST("Sarea/area_list")
+        fun classity(): Observable<BaseResponseEntity<List<ClassityBean>>>
+        /**
          * 收藏列表
          */
         @Headers("token:1","language:1")

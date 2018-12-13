@@ -34,7 +34,8 @@
             android:layout_toLeftOf="@id/iv_search"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_14"
-            android:src="@drawable/ic_shoppingcar_n"/>
+            android:src="@drawable/ic_shoppingcar_n"
+            android:padding="@dimen/dp_4"/>
         <ImageView
             android:id="@+id/iv_search"
             android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_14"
-            android:src="@drawable/global_ic_input_search"/>
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/home_ic_search"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -136,6 +138,7 @@
             android:layout_height="1dp"
             android:layout_weight="1"/>
         <com.coorchice.library.SuperTextView
+            android:id="@+id/sv_classity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:stv_solid="@color/txt_out"
