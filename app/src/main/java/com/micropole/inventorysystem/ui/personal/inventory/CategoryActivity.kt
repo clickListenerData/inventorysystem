@@ -110,7 +110,7 @@ class CategoryActivity : BaseRefreshActivity<CategoryBean.AreaListBean,CategoryC
     }
 
     fun showRenameDialog(){
-        val actionSheetDialog = ActionSheetDialog(this, BottomListDialog(arrayListOf("重命名","删除分类")), null)
+        val actionSheetDialog = ActionSheetDialog(this, BottomListDialog(resources.getStringArray(R.array.category_btn_list)), null)
         actionSheetDialog.isTitleShow(false)
         actionSheetDialog.cancelText(Color.parseColor("#007AFF"))
         actionSheetDialog.setOnOperItemClickL { parent, view, position, id ->

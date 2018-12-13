@@ -1,5 +1,8 @@
 package com.micropole.inventorysystem.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.List;
 
 /**
@@ -76,7 +79,7 @@ public class OrderListBean {
         this.or_prod = or_prod;
     }
 
-    public static class OrProdBean {
+    public static class OrProdBean implements Parcelable{
         /**
          * op_id : 154
          * pro_id : 115
@@ -100,6 +103,50 @@ public class OrderListBean {
         private String sp_name;
         private String mo_name;
         private String or_id;
+
+        protected OrProdBean(Parcel in) {
+            op_id = in.readString();
+            pro_id = in.readString();
+            pro_name = in.readString();
+            pro_img = in.readString();
+            pro_num = in.readString();
+            pro_money = in.readString();
+            area_name = in.readString();
+            sp_name = in.readString();
+            mo_name = in.readString();
+            or_id = in.readString();
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(op_id);
+            dest.writeString(pro_id);
+            dest.writeString(pro_name);
+            dest.writeString(pro_img);
+            dest.writeString(pro_num);
+            dest.writeString(pro_money);
+            dest.writeString(area_name);
+            dest.writeString(sp_name);
+            dest.writeString(mo_name);
+            dest.writeString(or_id);
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        public static final Creator<OrProdBean> CREATOR = new Creator<OrProdBean>() {
+            @Override
+            public OrProdBean createFromParcel(Parcel in) {
+                return new OrProdBean(in);
+            }
+
+            @Override
+            public OrProdBean[] newArray(int size) {
+                return new OrProdBean[size];
+            }
+        };
 
         public String getOp_id() {
             return op_id;

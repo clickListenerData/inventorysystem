@@ -35,8 +35,8 @@ class OrderAdapter : BaseQuickAdapter<OrderListBean,BaseViewHolder>(R.layout.ite
                 if (helper.adapterPosition == data.size - 1) setGone(R.id.view_line,false)
                 getView<ImageView>(R.id.iv_order_img).loadImag(item?.pro_img)
                 setText(R.id.tv_product_title,item?.pro_name)
-                setText(R.id.tv_product_size,item?.sp_name)
-//                setText(R.id.tv_product_price,item?.)
+                setText(R.id.tv_product_size,item?.sp_name+"/${item?.mo_name}")
+                setText(R.id.tv_product_price,"¥${item?.pro_money}")
                 setText(R.id.tv_product_count,"X${item?.pro_num}")
             }
         }

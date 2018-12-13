@@ -2,6 +2,7 @@ package com.micropole.inventorysystem.ui.shoppingmall.mvp.contract
 
 import com.micropole.inventorysystem.App
 import com.micropole.inventorysystem.common.AppService
+import com.micropole.inventorysystem.entity.ConfirmOrderBean
 import com.micropole.inventorysystem.entity.ProductDetailBean
 import com.micropole.inventorysystem.entity.SelectSpecBean
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecView
@@ -19,6 +20,7 @@ class ProductDetailContract {
 
     interface View : BaseMvpLcecView<ProductDetailBean?>{
         fun specResult(bean : SelectSpecBean?)
+        fun confirmBuy(bean : ConfirmOrderBean?)
     }
 
     class Model{
@@ -26,6 +28,8 @@ class ProductDetailContract {
         fun collectProduct(id: String) = AppService.Api!!.collectProduct(id)
         fun selectSpec(id: String,sp:String,mo:String) = AppService.Api!!.selectProSpec(id, sp, mo)
         fun addCart(id: String,sp: String,mo: String,num:String) = AppService.Api!!.addCar(id,num,sp,mo)
+        fun confirmBuy(id: String,reid: String,mo: String,num: String)
+                = AppService.Api!!.confirmBuy(id,num,reid, mo)
     }
 
     abstract class Prenset() : BaseMvpPresenter<Model, View>(){
@@ -33,5 +37,6 @@ class ProductDetailContract {
         abstract fun collectProduct(id: String)
         abstract fun selectSpec(id: String,sp:String,mo:String)
         abstract fun addCart(id: String,sp: String,mo: String,num:String)
+        abstract fun confirmBuy(id: String,sp: String,mo: String,num: String)
     }
 }

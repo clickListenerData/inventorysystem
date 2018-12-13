@@ -15,6 +15,7 @@ import android.widget.TextView
 import com.blankj.utilcode.util.ConvertUtils
 import com.micropole.baseapplibrary.appconst.setTurnImage
 import com.micropole.inventorysystem.R
+import com.micropole.inventorysystem.entity.ConfirmOrderBean
 import com.micropole.inventorysystem.entity.ProductDetailBean
 import com.micropole.inventorysystem.entity.SelectSpecBean
 import com.micropole.inventorysystem.ui.personal.shopmall.ContactServiceActivity
@@ -54,8 +55,8 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
     var mMoName = ""
     var mSpName = ""
     var mNum = 1
-    var mSpView : View? = null
-    var mMoView : View? = null
+    var mSpView : TextView? = null
+    var mMoView : TextView? = null
 
     override fun getActivityLayoutId(): Int = R.layout.activity_product_detail
 
@@ -70,10 +71,6 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
     override fun initData() {
         mProId = intent.getStringExtra("pro_id")
         super.initData()
-
-        val imageView = ImageView(this)
-        imageView.setImageResource(R.drawable.home_recommended_place_chart)
-        siv_imgs.addView(imageView)
         initWeb()
         loadData(true)
     }
@@ -81,12 +78,17 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
     override fun initEvent() {
         tv_contract_service.setOnClickListener { startActivity<ContactServiceActivity>() }
         tv_collection.setOnClickListener { presenter.collectProduct(mProId) }
-        stv_add_cart.setOnClickListener {
+        nll_select_size.setOnClickListener {
+            mType = 0
             mBottomDialog.show()
+        }
+        stv_add_cart.setOnClickListener {
             mType = 1
+            mBottomDialog.show()
         }
         stv_confirm_buy.setOnClickListener {
             mType = 2
+            mBottomDialog.show()
         }
     }
 
@@ -126,13 +128,17 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
             stv_mian_you.visibility = if (data.is_pinkage == "1") View.VISIBLE else View.GONE
             web_product_detail.loadDataWithBaseURL("",data.pro_text,"text/html","utf-8","")
 
-            //siv_imgs.removeAllViews()
+            siv_imgs.removeAllViews()
             for (i in 0..3){
-                //siv_imgs.addShowImgView("",R.drawable.home_recommended_place_chart)
+                siv_imgs.addShowImgView("",R.drawable.home_recommended_place_chart)
             }
         }else{
             showError(ApiFaileException(""),true)
         }
+    }
+
+    override fun confirmBuy(bean: ConfirmOrderBean?) {
+        if (bean != null) ConfirmOrderActivity.startConfirmOrder(this,bean)
     }
 
     var mDialogView:View?=null
@@ -182,14 +188,16 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
             textView.setTextColor(Color.parseColor("#ffffff"))
             if (position == 0){
                 mSpView?.isSelected = false
+                mSpView?.setTextColor(Color.parseColor("#666666"))
                 it.isSelected = true
                 mSpName = text
-                mSpView = it
+                mSpView = textView
             }else{
                 mMoView?.isSelected = false
+                mMoView?.setTextColor(Color.parseColor("#333333"))
                 it.isSelected = true
                 mMoName = text
-                mMoView = it
+                mMoView = textView
             }
             if (!mSpName.isEmpty() && !mMoName.isEmpty()){
                 presenter.selectSpec(mProId,mSpName,mMoName)
@@ -212,11 +220,13 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
         }
 
         view.sv_sure.setOnClickListener {
-
+            if (mSpName.isEmpty() || mMoName.isEmpty()){
+                showToast(getString(R.string.select_spec))
+                return@setOnClickListener
+            }
             when(mType){
-                0 -> {}
                 1 -> { presenter.addCart(mProId,mSpName,mMoName,mNum.toString()) }
-                2 -> {}
+                2 -> { presenter.confirmBuy("","","$mProId,$mSpName,$mMoName",mNum.toString()) }
             }
             mBottomDialog.dismiss()
         }

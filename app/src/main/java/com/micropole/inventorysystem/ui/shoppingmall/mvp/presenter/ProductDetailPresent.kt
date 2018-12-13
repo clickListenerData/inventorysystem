@@ -15,6 +15,17 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class ProductDetailPresent : ProductDetailContract.Prenset() {
+    override fun confirmBuy(id: String, sp: String, mo: String, num: String) {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().confirmBuy(id, sp, mo, num).ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.confirmBuy(it.data)
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun addCart(id: String, sp: String, mo: String, num: String) {
         when{
             sp.isEmpty() -> getView()?.showToast(getView()?.getResString(R.string.select_color))

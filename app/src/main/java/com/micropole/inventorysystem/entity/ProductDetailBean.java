@@ -489,9 +489,6 @@ public class ProductDetailBean {
         this.mo_name_arr = mo_name_arr;
     }
 
-    public static class BulkteamBean {
-    }
-
     public static class StoreBean {
         /**
          * store_id : 1

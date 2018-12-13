@@ -84,7 +84,7 @@
         <activity android:name=".ui.shoppingmall.ProductDetailActivity"/>
         <activity android:name=".ui.personal.shopmall.AddressManagerActivity"/>
         <activity android:name=".ui.personal.shopmall.EditAddressActivity"/>
-        <activity android:name=".ui.shoppingmall.TestActivity"/>
+        <activity android:name=".ui.shoppingmall.ConfirmOrderActivity"/>
     </application>
 
 </manifest>

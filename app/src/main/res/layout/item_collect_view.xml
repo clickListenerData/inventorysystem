@@ -5,6 +5,9 @@
         <variable
             name="data"
             type="com.micropole.inventorysystem.entity.CollectBean"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
     </data>
     <com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -21,14 +24,17 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <com.coorchice.library.SuperTextView
+                android:id="@+id/stv_share"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 app:stv_solid="#FF9501"
                 android:gravity="center"
                 android:textColor="@color/text_color_white"
                 android:textSize="@dimen/txt_15"
-                android:text="@string/share_txt"/>
+                android:text="@string/share_txt"
+                android:onClick="@{listener}"/>
             <com.coorchice.library.SuperTextView
+                android:id="@+id/stv_delete"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 app:stv_solid="#E6162D"
@@ -40,7 +46,8 @@
                 android:gravity="center"
                 android:textColor="@color/text_color_white"
                 android:textSize="@dimen/txt_15"
-                android:text="@string/delete_txt"/>
+                android:text="@string/delete_txt"
+                android:onClick="@{listener}"/>
         </LinearLayout>
 
     </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
