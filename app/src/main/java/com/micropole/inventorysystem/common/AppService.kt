@@ -454,6 +454,11 @@ object AppService {
         @POST("scollect/collect_list")
         fun collectList() : Observable<BaseResponseEntity<List<CollectBean>>>
 
+        @Headers("token:1","language:1")
+        @POST("Sfootprint/footprint_add")
+        @FormUrlEncoded
+        fun addFoot(@Field("pro_id") id: String) : Observable<BaseResponseEntity<List<String>>>
+
         /**
          * 足迹列表
          */

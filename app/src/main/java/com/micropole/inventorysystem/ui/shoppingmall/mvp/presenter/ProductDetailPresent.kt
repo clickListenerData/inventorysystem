@@ -15,6 +15,10 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class ProductDetailPresent : ProductDetailContract.Prenset() {
+    override fun addFoot(id: String) {
+        getModel().addFoot(id)
+    }
+
     override fun confirmBuy(id: String, sp: String, mo: String, num: String) {
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().confirmBuy(id, sp, mo, num).ui({
@@ -67,6 +71,7 @@ class ProductDetailPresent : ProductDetailContract.Prenset() {
 
     override fun productDetail(id: String) {
         getModel().productDetail(id).ui({
+            addFoot(id)
             getView()?.setData(it.data)
         },{
             getView()?.showToast(it)
