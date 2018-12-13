@@ -7,6 +7,8 @@ import com.micropole.inventorysystem.entity.ProductDetailBean
 import com.micropole.inventorysystem.entity.SelectSpecBean
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
+import com.xx.baseutilslibrary.entity.BaseResponseEntity
+import io.reactivex.Observable
 
 /**
  * @ClassName       ProductDetailContract
@@ -30,6 +32,7 @@ class ProductDetailContract {
         fun addCart(id: String,sp: String,mo: String,num:String) = AppService.Api!!.addCar(id,num,sp,mo)
         fun confirmBuy(id: String,reid: String,mo: String,num: String)
                 = AppService.Api!!.confirmBuy(id,num,reid, mo)
+        fun addFoot(id: String) = AppService.Api!!.addFoot(id)
     }
 
     abstract class Prenset() : BaseMvpPresenter<Model, View>(){
@@ -38,5 +41,6 @@ class ProductDetailContract {
         abstract fun selectSpec(id: String,sp:String,mo:String)
         abstract fun addCart(id: String,sp: String,mo: String,num:String)
         abstract fun confirmBuy(id: String,sp: String,mo: String,num: String)
+        abstract fun addFoot(id: String)
     }
 }
