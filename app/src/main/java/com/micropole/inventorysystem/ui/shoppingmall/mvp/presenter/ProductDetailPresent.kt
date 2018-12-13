@@ -16,7 +16,7 @@ import com.xx.baseutilslibrary.extensions.ui
  */
 class ProductDetailPresent : ProductDetailContract.Prenset() {
     override fun addFoot(id: String) {
-        getModel().addFoot(id)
+        getModel().addFoot(id).ui({},{})
     }
 
     override fun confirmBuy(id: String, sp: String, mo: String, num: String) {
