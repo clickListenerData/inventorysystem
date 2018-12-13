@@ -45,15 +45,13 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
                 cartAdapter.setNewData(arrayListOf())
                 sv_sure.text = "结算:¥ 0.00"
             } else {
-                if (cartAdapter.data.size == 0) {
-                    sv_sure.text = "结算:¥ 0.00"
-                } else {
+
                     for (i in 0..position_list.size - 1) {
-                        allPrice = allPrice - cartAdapter.data[i].pro_num.toInt() * cartAdapter.data[i].pro_price.toDouble()
+                        allPrice = allPrice - cartAdapter.data[position_list[i]].pro_num.toInt() * cartAdapter.data[position_list[i]].pro_price.toDouble()
                         cartAdapter.remove(position_list[i])
                     }
+                    position_list= arrayListOf()
                     sv_sure.text = "结算:¥${allPrice}"
-                }
             }
         } else {//单选
             if (cartAdapter.data[position].isChacked) {

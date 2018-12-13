@@ -22,11 +22,13 @@ class CarPresent : CarContract.Presenter() {
     }
 
     override fun deleteCar(sh_id: String,position:Int) {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().deleteCar(sh_id).ui({
+            getView()?.dismissLoadingDialog()
             getView()?.deleteSucceeful(it.msg!!,position)
         },{
+            getView()?.dismissLoadingDialog()
             getView()?.showToast(it)
-
         })
     }
 
