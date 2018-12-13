@@ -20,7 +20,7 @@ import com.flyco.dialog.utils.CornerUtils
  * @Date            2018/11/29 15:08
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class BottomListDialog(val mData : List<String>) : BaseAdapter() {
+class BottomListDialog(val mData : Array<String>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val mContext = parent?.context
         val llItem = LinearLayout(mContext)
@@ -35,7 +35,7 @@ class BottomListDialog(val mData : List<String>) : BaseAdapter() {
         tvItem.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         tvItem.setSingleLine(true)
         tvItem.gravity = Gravity.CENTER
-        if (position == 0)
+        if (position != mData.size - 1)
             tvItem.setTextColor(Color.parseColor("#007AFF"))
         else
             tvItem.setTextColor(Color.parseColor("#FE3824"))

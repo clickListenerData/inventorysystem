@@ -17,6 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="fitXY"
             android:image_url="@{data.pro_img}"
             />
 

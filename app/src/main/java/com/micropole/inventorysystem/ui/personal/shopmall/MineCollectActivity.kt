@@ -9,6 +9,7 @@ import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.entity.CollectBean
 import com.micropole.inventorysystem.ui.personal.shopmall.mvp.MineCollectContract
 import com.micropole.inventorysystem.ui.personal.shopmall.mvp.present.MineCollectPresent
+import com.micropole.inventorysystem.ui.shoppingmall.ProductDetailActivity
 import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 
 /**
@@ -30,6 +31,7 @@ class MineCollectActivity : BaseRefreshActivity<CollectBean,MineCollectContract.
     }
 
     var mType = 0
+    var mPosition = 0
 
     override fun getActivityLayoutId(): Int = R.layout.activity_refresh_recy
 
@@ -47,6 +49,24 @@ class MineCollectActivity : BaseRefreshActivity<CollectBean,MineCollectContract.
     override fun initRv() {
         mType = intent.getIntExtra("collect_type",mType)
         if (mType == 0) setTitleText(res = R.string.personal_mine_collect) else setTitleText(res = R.string.personal_mine_foot)
-        setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_collect_view))
+        setRvLa(LinearLayoutManager(mContext),DataBindAdapter(1,R.layout.item_collect_view,2))
+
+        adapter?.setOnItemChildClickListener { adapter, view, position ->
+            when(view.id){
+                R.id.stv_delete -> {
+                    mPosition = position
+                    getPresenter().deletePro(mType,(adapter as DataBindAdapter<CollectBean>).data[position].pro_id)
+                }
+                R.id.stv_share -> {showToast("分享")}
+            }
+        }
+
+        adapter?.setOnItemClickListener { adapter, view, position ->
+            ProductDetailActivity.startProductDetail(this,(adapter as DataBindAdapter<CollectBean>).data[position].pro_id)
+        }
+    }
+
+    override fun deleteSuccess() {
+        adapter?.remove(mPosition)
     }
 }

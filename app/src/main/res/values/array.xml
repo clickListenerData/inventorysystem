@@ -22,4 +22,14 @@
         <item>@string/evaluation_order_txt</item>
         <item>@string/after_order_txt</item>
     </string-array>
+
+    <string-array name="category_btn_list">
+        <item>@string/rename_txt</item>
+        <item>@string/delete_category</item>
+    </string-array>
+
+    <string-array name="buy_pay_list">
+        <item>@string/alipay_txt</item>
+        <item>@string/wx_txt</item>
+    </string-array>
 </resources>

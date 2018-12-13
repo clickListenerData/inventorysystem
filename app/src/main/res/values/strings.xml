@@ -282,6 +282,7 @@
     <!--地址管理-->
     <string name="received_personal">收货人</string>
     <string name="received_address">收货地址</string>
+    <string name="edit_txt">编辑</string>
 
     <string name="kucun_count">库存%s件</string>
 
@@ -341,6 +342,14 @@
     <string name="settlement_txt">结算</string>
     <string name="all_select_txt">全选</string>
     <string name="delete_txt">删除</string>
+    <string name="confirm_buy">立即支付</string>
+
+    <string name="rename_txt">重命名</string>
+    <string name="delete_category">删除分类</string>
+
+    <string name="alipay_txt">支付宝</string>
+    <string name="wx_txt">微信</string>
+    <string name="please_select_address">请选择地址</string>
 
     <string name="not_company">暂无公司</string>
     <string name="sure_txt">确定</string>

@@ -11,6 +11,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.blankj.utilcode.util.ToastUtils
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.util.ImageChooseHelper
 import com.xx.baseutilslibrary.extensions.loadImag
@@ -67,37 +68,32 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         field = value
     }
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        for (i in 0 until childCount){
-            getChildAt(i).measure(widthMeasureSpec,heightMeasureSpec)
-        }
-    }
-
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         super.onLayout(changed, l, t, r, b)
         createAddView()
     }
 
     override fun addView(child: View?) {
-        if (childCount > maxCount){
-            return
+        post {
+            if (childCount > maxCount){
+                return@post
+            }
+            if (childCount > 0 && child?.tag != true){
+                mImgList.add("")
+                removeViewAt(childCount - 1)
+            }
+            val i = maxCount / maxLine  //每行显示的图片数
+            val i1 = measuredWidth / i  //图片 width
+            val i2 = measuredHeight / maxLine //图片 height
+            val params = LinearLayout.LayoutParams(i1,i2)
+            params.rightMargin = 10
+            child?.layoutParams = params
+            super.addView(child)
         }
-        if (childCount > 0 && child?.tag != true){
-            mImgList.add("")
-            removeViewAt(childCount - 1)
-        }
-        val i = maxCount / maxLine  //每行显示的图片数
-        val i1 = width / i  //图片 width
-        val i2 = height / maxLine //图片 height
-        val params = LinearLayout.LayoutParams(i1,i2)
-        params.rightMargin = 10
-        child?.layoutParams = params
-        super.addView(child)
     }
 
     override fun removeViewAt(index: Int) {
-        mImgList.removeAt(index)
+        if (mImgList.size > index) mImgList.removeAt(index)
         super.removeViewAt(index)
         if (!isAdd){
             createAddView()
@@ -120,7 +116,7 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         val imageView = TextView(this.context)
         if (addDrawable != 0) imageView.setCompoundDrawablesRelativeWithIntrinsicBounds(null,context.resources.getDrawable(addDrawable),null,null)
         else imageView.setCompoundDrawablesRelativeWithIntrinsicBounds(null,context.resources.getDrawable(android.R.drawable.ic_input_add),null,null)
-        imageView.tag = true
+        frameLayout.tag = true
         imageView.textSize = 11f
         imageView.setTextColor(Color.parseColor("#999999"))
         imageView.setText(R.string.add_photo)
@@ -149,9 +145,8 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         imageView.scaleType = ImageView.ScaleType.FIT_XY
         if (id != 0) imageView.setImageResource(id)
         else imageView.loadImag(url)
-
+        imageView.tag = true
         this.addView(imageView)
-        isAdd = false
     }
 
     fun addImgView(path : String){

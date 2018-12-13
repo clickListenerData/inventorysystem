@@ -4,6 +4,9 @@
         <variable
             name="data"
             type="com.micropole.inventorysystem.entity.AddressBean"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -52,8 +55,10 @@
             app:layout_constraintRight_toRightOf="parent"
             android:textSize="@dimen/txt_15"
             android:textColor="@color/txt_out"
-            android:text="编辑"
-            android:layout_marginRight="@dimen/dp_14"/>
+            android:text="@string/edit_txt"
+            android:layout_marginRight="@dimen/dp_14"
+            android:onClick="@{listener}"
+            />
         <View
             android:id="@+id/view_line"
             android:layout_width="match_parent"

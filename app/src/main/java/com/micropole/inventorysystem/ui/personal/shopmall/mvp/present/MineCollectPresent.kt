@@ -13,6 +13,18 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class MineCollectPresent : MineCollectContract.Present() {
+    override fun deletePro(type: Int, id: String) {
+        getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
+        getModel().deletePro(type, id).ui({
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it.msg)
+            getView()?.deleteSuccess()
+        },{
+            getView()?.dismissLoadingDialog()
+            getView()?.showToast(it)
+        })
+    }
+
     override fun collectList() {
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().collectList().ui({

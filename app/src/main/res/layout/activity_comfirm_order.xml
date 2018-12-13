@@ -16,6 +16,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <LinearLayout
+                android:id="@+id/ll_select_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -45,13 +46,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_14"
                 app:title_content="@string/freight_price"
-                app:input_content="20"
+                app:input_content=""
                 />
             <com.micropole.inventorysystem.widght.InputMsgView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_content="@string/preferential_price"
-                app:input_content="20"
+                app:input_content=""
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -85,6 +86,7 @@
             android:layout_gravity="center"/>
 
         <TextView
+            android:id="@+id/tv_or_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/txt_price"
@@ -100,7 +102,7 @@
             android:background="@color/txt_out"
             android:textSize="@dimen/txt_15"
             android:textColor="#FFFEFE"
-            android:text="立即支付"
+            android:text="@string/confirm_buy"
             android:gravity="center"
             android:paddingHorizontal="30dp"
             android:visibility="visible"/>

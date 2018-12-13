@@ -385,6 +385,24 @@ object AppService {
         fun productDetail(@Field("pro_id") id : String) : Observable<BaseResponseEntity<ProductDetailBean>>
 
         /**
+         * 立即购买
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/purchase_order")
+        @FormUrlEncoded
+        fun confirmBuy(@Field("sh_id") id : String,@Field("pro_num") num : String,@Field("re_id") re_id : String,
+                       @Field("prodinfo") mo :String) : Observable<BaseResponseEntity<ConfirmOrderBean>>
+
+        /**
+         * 生成订单
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/add_order")
+        @FormUrlEncoded
+        fun buyOrder(@Field("sh_id") id : String,@Field("pro_num") num : String,@Field("re_id") re_id : String,
+                     @Field("prodinfo") mo :String,@Field("or_leave_json") json : String) : Observable<BaseResponseEntity<ConfirmOrderBean>>
+
+        /**
          * 选择规格
          */
         @Headers("token:1","language:1")
@@ -428,6 +446,22 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("Sfootprint/footprint_list")
         fun footList() : Observable<BaseResponseEntity<List<CollectBean>>>
+
+        /**
+         * 删除收藏
+         */
+        @Headers("token:1","language:1")
+        @POST("scollect/collect_del")
+        @FormUrlEncoded
+        fun deleteCollect(@Field("pro_id") id : String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 删除足迹
+         */
+        @Headers("token:1","language:1")
+        @POST("Sfootprint/footprint_del")
+        @FormUrlEncoded
+        fun deletefoot(@Field("pro_id") id : String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 订单列表
