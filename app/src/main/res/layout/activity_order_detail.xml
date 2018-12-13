@@ -73,6 +73,7 @@
                         android:gravity="center"
                         android:background="@color/text_color_white">
                         <TextView
+                            android:id="@+id/tv_stat_desc"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -89,6 +90,7 @@
                             android:layout_marginVertical="@dimen/dp_14"
                             android:background="@color/line_color"/>
                         <TextView
+                            android:id="@+id/tv_desc"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
@@ -138,6 +140,7 @@
                         android:background="@color/line_color"
                         android:layout_marginLeft="@dimen/dp_14"/>
                     <TextView
+                        android:id="@+id/tv_detail_remark"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:background="@color/text_color_white"
@@ -154,7 +157,8 @@
                         android:paddingLeft="@dimen/dp_14"
                         android:textColor="@color/title_color"
                         android:textSize="@dimen/txt_15"
-                        android:text="@string/logistics_information"/>
+                        android:text="@string/logistics_information"
+                        android:visibility="gone"/>
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/rv_logistics"
                         android:layout_width="match_parent"
@@ -182,6 +186,7 @@
                     android:layout_gravity="center"/>
 
                 <TextView
+                    android:id="@+id/tv_detail_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/txt_price"
@@ -191,6 +196,7 @@
                     android:layout_gravity="center"/>
 
                 <com.coorchice.library.SuperTextView
+                    android:id="@+id/stv_btn_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -205,6 +211,7 @@
                     />
 
                 <com.coorchice.library.SuperTextView
+                    android:id="@+id/stv_btn_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

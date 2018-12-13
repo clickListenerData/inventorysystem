@@ -400,7 +400,7 @@ object AppService {
         @POST("sorder/add_order")
         @FormUrlEncoded
         fun buyOrder(@Field("sh_id") id : String,@Field("pro_num") num : String,@Field("re_id") re_id : String,
-                     @Field("prodinfo") mo :String,@Field("or_leave_json") json : String) : Observable<BaseResponseEntity<ConfirmOrderBean>>
+                     @Field("prodinfo") mo :String,@Field("or_leave_json") json : String) : Observable<BaseResponseEntity<BuyOrderBean>>
 
         /**
          * 选择规格
@@ -483,7 +483,7 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("sorder/order_list")
         @FormUrlEncoded
-        fun orderList(@Field("or_stat") stat: Int) : Observable<BaseResponseEntity<List<OrderListBean>>>
+        fun orderList(@Field("or_stat") stat: String) : Observable<BaseResponseEntity<List<OrderListBean>>>
 
         /**
          * 订单详情

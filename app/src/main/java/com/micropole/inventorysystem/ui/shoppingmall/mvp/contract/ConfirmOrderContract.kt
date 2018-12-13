@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.ui.shoppingmall.mvp.contract
 
+import com.micropole.inventorysystem.common.AppService
+import com.micropole.inventorysystem.entity.ConfirmOrderBean
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
@@ -13,13 +15,23 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
  */
 class ConfirmOrderContract {
 
-    interface View : BaseMvpView
+    interface View : BaseMvpView{
+//        fun addCartSuccess(num: String)
+        fun setUIData(bean : ConfirmOrderBean?)
+        fun addError()
+        fun buyOrder()
+    }
 
     class Model{
-
+        fun confirmBuy(cartId:String,num: String,re_id:String,proInfo:String)
+                = AppService.Api!!.confirmBuy(cartId,num,re_id,proInfo)
+        fun buyOrder(cartId:String,num: String,re_id:String,proInfo:String,remark:String)
+                = AppService.Api!!.buyOrder(cartId,num,re_id,proInfo,remark)
     }
 
     abstract class Presenter : BaseMvpPresenter<Model,View>(){
         override fun createModel(): Model = Model()
+        abstract fun confirmBuy(cartId:String,num: String,re_id:String,proInfo:String)
+        abstract fun buyOrder(cartId:String,num: String,re_id:String,proInfo:String,remark:String)
     }
 }

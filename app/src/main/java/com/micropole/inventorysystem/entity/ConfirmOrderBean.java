@@ -198,6 +198,7 @@ public class ConfirmOrderBean implements Parcelable{
         private String reality_order_price;
         private String st_name;
         private String user_id;
+        private String discounts_price;
         private List<OrderListBean.OrProdBean> prodinfo;
 
         protected OrprodDataBean(Parcel in) {
@@ -209,6 +210,7 @@ public class ConfirmOrderBean implements Parcelable{
             reality_order_price = in.readString();
             st_name = in.readString();
             user_id = in.readString();
+            discounts_price = in.readString();
             prodinfo = in.createTypedArrayList(OrderListBean.OrProdBean.CREATOR);
         }
 
@@ -222,6 +224,7 @@ public class ConfirmOrderBean implements Parcelable{
             dest.writeString(reality_order_price);
             dest.writeString(st_name);
             dest.writeString(user_id);
+            dest.writeString(discounts_price);
             dest.writeTypedList(prodinfo);
         }
 
@@ -241,6 +244,14 @@ public class ConfirmOrderBean implements Parcelable{
                 return new OrprodDataBean[size];
             }
         };
+
+        public void setDiscounts_price(String mDiscounts_price) {
+            discounts_price = mDiscounts_price;
+        }
+
+        public String getDiscounts_price() {
+            return discounts_price;
+        }
 
         public void setProdinfo(List<OrderListBean.OrProdBean> mProdinfo) {
             prodinfo = mProdinfo;

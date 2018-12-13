@@ -38,9 +38,9 @@ public class OrderDetailBean {
     private String re_id;
     private String de_name;
     private String de_number;
-    private UserAddressBean user_address;
+    private AddressBean user_address;
     private String or_stat_desc;
-    private List<OrprodBean> orprod;
+    private List<OrderListBean.OrProdBean> orprod;
     private List<String> logistics;
 
     public String getOr_id() {
@@ -115,11 +115,11 @@ public class OrderDetailBean {
         this.de_number = de_number;
     }
 
-    public UserAddressBean getUser_address() {
+    public AddressBean getUser_address() {
         return user_address;
     }
 
-    public void setUser_address(UserAddressBean user_address) {
+    public void setUser_address(AddressBean user_address) {
         this.user_address = user_address;
     }
 
@@ -131,11 +131,11 @@ public class OrderDetailBean {
         this.or_stat_desc = or_stat_desc;
     }
 
-    public List<OrprodBean> getOrprod() {
+    public List<OrderListBean.OrProdBean> getOrprod() {
         return orprod;
     }
 
-    public void setOrprod(List<OrprodBean> orprod) {
+    public void setOrprod(List<OrderListBean.OrProdBean> orprod) {
         this.orprod = orprod;
     }
 
@@ -145,114 +145,5 @@ public class OrderDetailBean {
 
     public void setLogistics(List<String> logistics) {
         this.logistics = logistics;
-    }
-
-    public static class UserAddressBean {
-    }
-
-    public static class OrprodBean {
-        /**
-         * op_id : 154
-         * pro_id : 115
-         * pro_name : qwe
-         * pro_img : http://jinxiaocun.com/uploads/20181204/5ae557efc591932a11e83fb74c699cd2.png
-         * pro_num : 1
-         * pro_money : 23
-         * area_name : “”
-         * sp_name : 红色
-         * mo_name : 件
-         * or_id : 155
-         */
-
-        private String op_id;
-        private String pro_id;
-        private String pro_name;
-        private String pro_img;
-        private String pro_num;
-        private String pro_money;
-        private String area_name;
-        private String sp_name;
-        private String mo_name;
-        private String or_id;
-
-        public String getOp_id() {
-            return op_id;
-        }
-
-        public void setOp_id(String op_id) {
-            this.op_id = op_id;
-        }
-
-        public String getPro_id() {
-            return pro_id;
-        }
-
-        public void setPro_id(String pro_id) {
-            this.pro_id = pro_id;
-        }
-
-        public String getPro_name() {
-            return pro_name;
-        }
-
-        public void setPro_name(String pro_name) {
-            this.pro_name = pro_name;
-        }
-
-        public String getPro_img() {
-            return pro_img;
-        }
-
-        public void setPro_img(String pro_img) {
-            this.pro_img = pro_img;
-        }
-
-        public String getPro_num() {
-            return pro_num;
-        }
-
-        public void setPro_num(String pro_num) {
-            this.pro_num = pro_num;
-        }
-
-        public String getPro_money() {
-            return pro_money;
-        }
-
-        public void setPro_money(String pro_money) {
-            this.pro_money = pro_money;
-        }
-
-        public String getArea_name() {
-            return area_name;
-        }
-
-        public void setArea_name(String area_name) {
-            this.area_name = area_name;
-        }
-
-        public String getSp_name() {
-            return sp_name;
-        }
-
-        public void setSp_name(String sp_name) {
-            this.sp_name = sp_name;
-        }
-
-        public String getMo_name() {
-            return mo_name;
-        }
-
-        public void setMo_name(String mo_name) {
-            this.mo_name = mo_name;
-        }
-
-        public String getOr_id() {
-            return or_id;
-        }
-
-        public void setOr_id(String or_id) {
-            this.or_id = or_id;
-        }
     }
 }

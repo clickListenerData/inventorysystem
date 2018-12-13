@@ -5,6 +5,7 @@ import android.view.View
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.shopmall.CartAdapter
 import com.micropole.inventorysystem.entity.CarBean
+import com.micropole.inventorysystem.entity.ConfirmOrderBean
 import com.micropole.inventorysystem.entity.PositionBean
 import com.micropole.inventorysystem.entity.UpdateCar
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.contract.CarContract
@@ -12,6 +13,7 @@ import com.micropole.inventorysystem.ui.shoppingmall.mvp.presenter.CarPresent
 import com.xx.baseuilibrary.mvp.BaseMvpActivity
 import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.view_title.*
+import java.lang.StringBuilder
 
 /**
  * @ClassName       CartActivity
@@ -154,6 +156,30 @@ class CartActivity : BaseMvpActivity<CarPresent>(), CarContract.View {
                 R.id.stv_quantity_remove -> addRemoveProduct(false, position)
                 R.id.cb_product_checked -> checkProduct(view, position)
             }
+        }
+        sv_sure.setOnClickListener {
+            val cartId = StringBuilder()
+            val nums = StringBuilder()
+            for (i in cartAdapter.data.indices){
+                if (cartAdapter.data[i].isChacked){
+                    cartId.append("${cartAdapter.data[i].sh_id},")
+                    nums.append("${cartAdapter.data[i].pro_num},")
+                }
+            }
+            if (cartId.isNotEmpty()){
+                cartId.delete(cartId.length-1,cartId.length)
+                nums.delete(nums.length-1,nums.length)
+                getPresenter().confirmOrder(cartId.toString(),nums.toString())
+            }
+        }
+    }
+
+    /**
+     * 购物车下单
+     */
+    override fun confirmOrder(bean: ConfirmOrderBean?,cartid:String) {
+        if (bean != null){
+            ConfirmOrderActivity.startConfirmOrder(this,bean,cartid)
         }
     }
 

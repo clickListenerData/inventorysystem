@@ -1,6 +1,8 @@
 package com.micropole.inventorysystem.adapter.shopmall
 
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.view.MotionEvent
 import android.widget.ImageView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -24,7 +26,14 @@ class OrderAdapter : BaseQuickAdapter<OrderListBean,BaseViewHolder>(R.layout.ite
         helper?.apply {
             setText(R.id.tv_order_sub,item?.or_text)
             setText(R.id.tv_order_count,mContext.getString(R.string.count_goods).format(item?.or_num))
+            setText(R.id.tv_order_price,"¥${item?.or_id}")
             setRvAdapter(R.id.rv_order,LinearLayoutManager(mContext),ItemAdapter(item?.or_prod))
+            getView<RecyclerView>(R.id.rv_order).setOnTouchListener { v, event ->
+                if (event.action == MotionEvent.ACTION_UP){
+                    onItemClickListener.onItemClick(this@OrderAdapter,null,adapterPosition)
+                }
+                return@setOnTouchListener false
+            }
         }
     }
 

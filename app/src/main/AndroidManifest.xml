@@ -85,6 +85,7 @@
         <activity android:name=".ui.personal.shopmall.AddressManagerActivity"/>
         <activity android:name=".ui.personal.shopmall.EditAddressActivity"/>
         <activity android:name=".ui.shoppingmall.ConfirmOrderActivity"/>
+        <activity android:name=".ui.personal.shopmall.ContactServiceActivity"/>
     </application>
 
 </manifest>

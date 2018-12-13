@@ -13,7 +13,7 @@ import com.xx.baseutilslibrary.extensions.ui
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
 class OrderListPresent : OrderListContract.Present() {
-    override fun orderList(stat: Int) {
+    override fun orderList(stat: String) {
         getView()?.showLoadingDialog(getView()?.getResString(R.string.loading))
         getModel().orderList(stat).ui({
             getView()?.dismissLoadingDialog()

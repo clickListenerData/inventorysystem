@@ -15,6 +15,7 @@ class SearchShopActivity : BaseMvpViewActivity() {
     override fun getActivityLayoutId(): Int = R.layout.activity_search_shop
 
     override fun initData() {
+
     }
 
     override fun initEvent() {

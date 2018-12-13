@@ -8,6 +8,7 @@ import com.flyco.dialog.widget.ActionSheetDialog
 import com.micropole.baseapplibrary.adapter.DataBindAdapter
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.R.id.*
+import com.micropole.inventorysystem.adapter.shopmall.ConfirmOrderAdapter
 import com.micropole.inventorysystem.adapter.shopmall.OrderAdapter
 import com.micropole.inventorysystem.entity.AddressBean
 import com.micropole.inventorysystem.entity.ConfirmOrderBean
@@ -30,15 +31,20 @@ import kotlinx.android.synthetic.main.view_order_address.*
 class ConfirmOrderActivity : BaseMvpActivity<ConfirmOrderContract.Presenter>(),ConfirmOrderContract.View{
 
     companion object {
-        fun startConfirmOrder(context: Context,bean : ConfirmOrderBean){
+        fun startConfirmOrder(context: Context,bean : ConfirmOrderBean,data : String = ""){
             val intent = Intent(context, ConfirmOrderActivity::class.java)
             intent.putExtra("confirm_bean",bean)
+            intent.putExtra("confirm_cart",data)
             context.startActivity(intent)
         }
     }
 
     var mAddressId = ""
-    val mAdapter = OrderAdapter.ItemAdapter(arrayListOf())
+    val mAdapter = ConfirmOrderAdapter()
+    var mCartId :List<String>? = null
+    var mNums = arrayListOf<String>()
+    var mProInfo = ""
+    var mBean : ConfirmOrderBean? = null
 
     override fun getActivityLayoutId(): Int = R.layout.activity_comfirm_order
 
@@ -48,17 +54,36 @@ class ConfirmOrderActivity : BaseMvpActivity<ConfirmOrderContract.Presenter>(),C
         rv_comfirm_order.layoutManager = LinearLayoutManager(mContext)
         rv_comfirm_order.adapter = mAdapter
         val bean = intent.getParcelableExtra<ConfirmOrderBean>("confirm_bean")
+        val cartId = intent.getStringExtra("confirm_cart")
+        if (!cartId.isNullOrEmpty()){
+            mCartId = cartId.split(",")
+        }
         setUIData(bean)
     }
 
     override fun initEvent() {
         ll_select_address.setOnClickListener { AddressManagerActivity.startAddressManager(this,1) }
         tv_btn.setOnClickListener {
-            showBuyDialog()
+            confirmBuy(1)
+        }
+        mAdapter.setOnItemChildClickListener { adapter, view, position ->
+            var s = mNums[position].toInt()
+            when(view.id){
+                R.id.stv_quantity_add -> {
+                    ++s
+                    mNums[position] = s.toString()
+                }
+                R.id.stv_quantity_remove -> {
+                    --s
+                    mNums[position] = s.toString()
+                }
+            }
+            confirmBuy()
         }
     }
 
-    fun setUIData(bean : ConfirmOrderBean?){
+    override fun setUIData(bean : ConfirmOrderBean?){
+        mBean = bean
         if (bean != null){
             if (!bean.rece_name.isNullOrEmpty()){
                 mAddressId = bean.re_id
@@ -66,9 +91,51 @@ class ConfirmOrderActivity : BaseMvpActivity<ConfirmOrderContract.Presenter>(),C
                 tv_phone.text = bean.rece_phone
                 tv_address.text = getString(R.string.received_address)+":${bean.or_address}"
             }
-            if (bean.orprod_data != null && bean.orprod_data.isNotEmpty()) mAdapter.setNewData(bean.orprod_data[0].prodinfo)
-            tv_or_price.text = "¥${bean.or_moneys}"
+            if (bean.orprod_data != null && bean.orprod_data.isNotEmpty()){
+                mAdapter.setNewData(bean.orprod_data[0].prodinfo)
+                tv_or_price.text = "¥${bean.orprod_data[0].reality_order_price}"
+                imv_weight.setInputContent(bean.orprod_data[0].or_weight)
+                imv_discount.setInputContent(bean.orprod_data[0].discounts_price)
+                mProInfo = "${bean.orprod_data[0].prodinfo[0].pro_id},${bean.orprod_data[0].prodinfo[0].sp_name},${bean.orprod_data[0].prodinfo[0].mo_name}"
+                for (i in bean.orprod_data[0].prodinfo.indices){
+                    mNums.add(bean.orprod_data[0].prodinfo[i].pro_num)
+                }
+            }
         }
+    }
+
+    fun confirmBuy(type : Int = 0){
+        val r = et_remark.text.toString()
+        val remark = "{\"store_id0\":\"$r\"}"
+        if (mCartId != null){
+            val cart = StringBuilder()
+            val num = StringBuilder()
+            for (i in mCartId!!.indices){
+                cart.append("${mCartId!![i]},")
+                num.append("${mNums[i]},")
+            }
+            if (cart.isNotEmpty()){
+                cart.delete(cart.length-1,cart.length)
+                num.delete(num.length-1,num.length)
+                if (type == 0)
+                    getPresenter().confirmBuy(cart.toString(),num.toString(),mAddressId,"")
+                else
+                    getPresenter().buyOrder(cart.toString(),num.toString(),mAddressId,"",remark)
+            }
+        }else{
+            if (type == 0)
+                getPresenter().confirmBuy("",mNums[0],mAddressId,mProInfo)
+            else
+                getPresenter().buyOrder("",mNums[0],mAddressId,mProInfo,remark)
+        }
+    }
+
+    override fun buyOrder() {
+        showBuyDialog()
+    }
+
+    override fun addError() {
+        setUIData(mBean)
     }
 
     /**

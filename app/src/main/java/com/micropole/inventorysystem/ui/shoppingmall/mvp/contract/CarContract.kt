@@ -3,6 +3,7 @@ package com.micropole.inventorysystem.ui.shoppingmall.mvp.contract
 import com.micropole.baseapplibrary.recyclerview.mvp.BaseRvConstract
 import com.micropole.inventorysystem.common.AppService
 import com.micropole.inventorysystem.entity.CarBean
+import com.micropole.inventorysystem.entity.ConfirmOrderBean
 import com.micropole.inventorysystem.entity.NewsBean
 import com.micropole.inventorysystem.entity.UpdateCar
 import com.xx.baseuilibrary.mvp.BaseMvpView
@@ -23,13 +24,15 @@ class CarContract {
         fun carSucceeful(cars:CarBean)
         fun deleteSucceeful(msg:String,position:Int)
         fun  updateCar(updateCar: UpdateCar,position:Int,isAdd:Boolean)
-
+        fun confirmOrder(bean : ConfirmOrderBean?,cartid: String)
     }
 
     class Model {
         fun car()=AppService.Api!!.car()
         fun deleteCar(sh_id:String)=AppService.Api!!.deleteCar(sh_id)
         fun updateCar(sh_id:String,pro_num:String)=AppService.Api!!.updateCar(sh_id,pro_num,"")
+        fun confirmOrder(cartid:String,num:String)
+                = AppService.Api!!.confirmBuy(cartid,num,"","")
     }
 
     abstract class Presenter : BaseMvpPresenter<Model, View>(){
@@ -37,6 +40,7 @@ class CarContract {
        abstract fun car()
         abstract fun deleteCar(sh_id:String,position:Int)
         abstract fun updateCar(sh_id:String,pro_num:String,position:Int,isAdd:Boolean)
+        abstract fun confirmOrder(cartid:String,num:String)
 
     }
 }

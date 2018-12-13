@@ -1,5 +1,6 @@
 package com.micropole.inventorysystem.ui.personal.shopmall
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
@@ -16,6 +17,7 @@ import com.xx.baseuilibrary.mvp.BaseMvpViewActivity
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecActivity
 import com.xx.baseutilslibrary.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_order_detail.*
+import kotlinx.android.synthetic.main.view_order_address.*
 
 /**
  * @ClassName       OrderDetailActivity
@@ -36,6 +38,7 @@ class OrderDetailActivity : BaseMvpLcecActivity<View,OrderDetailBean?,OrderDetai
     }
 
     var mOId = "0"
+    var mAdapter = OrderAdapter.ItemAdapter(arrayListOf())
 
     override fun getActivityLayoutId(): Int = R.layout.activity_order_detail
 
@@ -51,7 +54,8 @@ class OrderDetailActivity : BaseMvpLcecActivity<View,OrderDetailBean?,OrderDetai
         super.initData()
         mOId = intent.getStringExtra("order_id")
         rv_order_detail.layoutManager = LinearLayoutManager(mContext)
-        rv_order_detail.adapter = OrderAdapter.ItemAdapter(arrayListOf())
+        rv_order_detail.adapter = mAdapter
+        loadData(true)
     }
 
     override fun initEvent() {
@@ -59,6 +63,25 @@ class OrderDetailActivity : BaseMvpLcecActivity<View,OrderDetailBean?,OrderDetai
     }
 
     override fun setData(data: OrderDetailBean?) {
-        showContent()
+        if (data != null){
+            showContent()
+            tv_stat_desc.text = data.or_stat_desc
+
+            tv_name.text = getString(R.string.received_personal) + ": ${data.user_address.consignee}"
+            tv_phone.text = data.user_address.phone
+            tv_address.text = getString(R.string.received_address) + ": ${data.user_address.address}"
+
+            mAdapter.setNewData(data.orprod)
+
+            imv_yunfei.setInputContent(data.or_weight)
+            imv_youhui.setInputContent("")
+            tv_detail_remark.text = ""
+
+            tv_detail_price.text = "¥ ${data.or_money}"
+        }
+    }
+
+    fun setBtnVG(stat : String){
+
     }
 }

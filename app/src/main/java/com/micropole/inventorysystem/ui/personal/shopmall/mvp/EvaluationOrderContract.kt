@@ -1,32 +1,25 @@
 package com.micropole.inventorysystem.ui.personal.shopmall.mvp
 
-import com.micropole.inventorysystem.common.AppService
-import com.micropole.inventorysystem.entity.OrderListBean
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
 /**
- * @ClassName       OrderListContract
+ * @ClassName       EvaluationOrderContract
  * @Description     todo
  * @Author          HuaiXianZhong
  * @Sign            。。。
- * @Date            2018/12/11 9:08
+ * @Date            2018/12/13 17:22
  * @Copyright       Guangzhou micro pole mobile Internet Technology Co., Ltd.
  */
-class OrderListContract {
+class EvaluationOrderContract {
 
-    interface View : BaseMvpView{
-        fun orderList(data : List<OrderListBean>?)
-    }
+    interface View : BaseMvpView
 
-    class Model{
-        fun orderList(stat : String) = AppService.Api!!.orderList(stat)
-    }
+    class Model
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
         override fun createModel(): Model {
             return Model()
         }
-        abstract fun orderList(stat: String)
     }
 }
