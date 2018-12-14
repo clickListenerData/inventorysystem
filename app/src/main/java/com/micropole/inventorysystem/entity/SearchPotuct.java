@@ -25,6 +25,14 @@ public class SearchPotuct {
         return product;
     }
 
+    @Override
+    public String toString() {
+        return "SearchPotuct{" +
+                "hot_keys=" + hot_keys +
+                ", product=" + product +
+                '}';
+    }
+
     public void setProduct(List<ProductBean> product) {
         this.product = product;
     }
@@ -109,5 +117,17 @@ public class SearchPotuct {
         public void setPro_shop_price(String pro_shop_price) {
             this.pro_shop_price = pro_shop_price;
         }
+
+        @Override
+        public String toString() {
+            return "ProductBean{" +
+                    "pro_id='" + pro_id + '\'' +
+                    ", pro_name='" + pro_name + '\'' +
+                    ", pro_label='" + pro_label + '\'' +
+                    ", pro_img='" + pro_img + '\'' +
+                    ", pro_shop_price='" + pro_shop_price + '\'' +
+                    '}';
+        }
     }
+
 }

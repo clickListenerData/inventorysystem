@@ -459,7 +459,7 @@ object AppService {
         @Headers("token:1","language:1")
         @POST("sproduct/search")
         @FormUrlEncoded
-        fun searchProduct(@Field("keyword")keyword:String,@Field("order_desc") order_desc:String): Observable<BaseResponseEntity<SearchPotuct>>
+        fun searchProduct(@Field("keyword")keyword:String,@Field("order_desc") order_desc:String,@Field("area_id")area_id:String): Observable<BaseResponseEntity<SearchPotuct>>
         /**
          * 分类列表
          */

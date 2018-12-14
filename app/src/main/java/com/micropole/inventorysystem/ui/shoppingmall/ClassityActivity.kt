@@ -40,6 +40,9 @@ class ClassityActivity : BaseMvpActivity<ClassityPresenter>(),ClassityContract.V
      * 初始化事件
      */
     override fun initEvent() {
+        adapter.setOnItemClickListener { adapter, view, position ->
+            ClassitySearchActivity.startClassitySearchActivity(this,(adapter as ClassityAdapter).data[position].area_id)
+        }
     }
 
     override fun classity(classityBean: List<ClassityBean>) {
