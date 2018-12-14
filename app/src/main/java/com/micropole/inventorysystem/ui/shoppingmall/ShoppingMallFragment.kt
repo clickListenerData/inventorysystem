@@ -75,7 +75,6 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
         rrv_shop_mall.setRefreshLoadMoreListener {
             presenter.shopMall(""+it,"1")
         }
-        loading()
     }
 
     override fun initEvent(view: View?) {
@@ -97,14 +96,24 @@ class ShoppingMallFragment : BaseMvpLcecFragment<View, List<ShopMall>, ShoppingM
         }
     }
 
-    fun loading(){
-        if (!Constants.isLogin()){
-            showView(null)
-        }else{
-            fl_login_out.visibility = View.GONE
-            showLoading()
-            loadData(true)
+    override fun onResume() {
+        super.onResume()
+        if (!isHidden){
+            loading()
         }
+    }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden){
+            loading()
+        }
+    }
+
+    fun loading(){
+            showLoading()
+            fl_login_out.visibility=View.GONE
+            loadData(true)
 
     }
 

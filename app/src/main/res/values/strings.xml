@@ -171,7 +171,7 @@
     <string name="save_txt">保存</string>
 
     <string name="invitation_member">已邀请成员</string>
-    
+
     <string name="on_line_service">在线客服</string>
     <string name="phone_service">电话客服</string>
 
@@ -339,6 +339,7 @@
     <string name="evaluation_order_txt">待评价</string>
     <string name="after_order_txt">售后</string>
     <string name="cassity">所有分类</string>
+    <string name="cassity_sel">选择分类</string>
 
     <!--购物车-->
     <string name="settlement_txt">结算</string>
