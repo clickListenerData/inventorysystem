@@ -3,11 +3,13 @@ package com.micropole.inventorysystem.ui.personal.shopmall
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.micropole.baseapplibrary.activity.BaseUpImgActivity
 import com.micropole.baseapplibrary.widght.ShowImgView
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.R.id.rv_evaluation
 import com.micropole.inventorysystem.adapter.shopmall.EvaluationAdapter
+import com.micropole.inventorysystem.entity.CommentsBean
 import com.micropole.inventorysystem.entity.OrderListBean
 import com.micropole.inventorysystem.ui.personal.shopmall.mvp.EvaluationOrderContract
 import com.micropole.inventorysystem.ui.personal.shopmall.mvp.present.EvaluationOrderPresent
@@ -50,6 +52,7 @@ class EvaluationOrderActivity : BaseUpImgActivity<EvaluationOrderContract.Presen
 
         val data = intent.getParcelableArrayListExtra<OrderListBean.OrProdBean>("evaluation_data")
         evaluationAdapter?.setNewData(data)
+        tv_product_count.text = "${data.size}件"
 
         mOid = intent.getStringExtra("evaluation_id")
     }
@@ -61,7 +64,48 @@ class EvaluationOrderActivity : BaseUpImgActivity<EvaluationOrderContract.Presen
             }
         }
 
+        stv_commit_evalua.setOnClickListener {
+            evalutionOrder()
+        }
+    }
 
+    val list = arrayListOf<CommentsBean>()
+    val buffer =  StringBuffer()
+    var mP = 0
+    var mI = 0
+    fun evalutionOrder(){
+        for (i in evaluationAdapter?.contents!!.indices){
+            val bean = CommentsBean()
+            bean.com_content = evaluationAdapter?.contents!![i]
+            bean.pro_id = evaluationAdapter?.data!![i].pro_id
+            bean.pro_score = evaluationAdapter?.scores!![i]
+            bean.custom_orginalpics = evaluationAdapter?.views!![i].mImgList
+            list.add(bean)
+            Log.i("evaluation_img",list[mP].custom_orginalpics[mI])
+            if (i == 0) getPresenter().imgSup(bean.custom_orginalpics[mI])
+        }
+    }
+
+    override fun imgUP(s: String) {
+        buffer.append("$s,")
+        if (mI == list[mP].custom_orginalpics.size - 1){
+            if (mP == list.size - 1){
+                list[mP].custom_orginalpics = null
+                buffer.delete(buffer.length -1,buffer.length)
+                list[mP].com_pic = buffer.toString()
+                getPresenter().evaluationOrder(mOid,list)
+            }else{
+                buffer.delete(buffer.length -1,buffer.length)
+                list[mP].com_pic = buffer.toString()
+                buffer.delete(0,buffer.length)
+                list[mP].custom_orginalpics = null
+                ++mP
+                mI = 0
+                getPresenter().imgSup(list[mP].custom_orginalpics[mI])
+            }
+        }else{
+            getPresenter().imgSup(list[mP].custom_orginalpics[++mI])
+        }
     }
 
     override fun imgResult(result: TResult) {

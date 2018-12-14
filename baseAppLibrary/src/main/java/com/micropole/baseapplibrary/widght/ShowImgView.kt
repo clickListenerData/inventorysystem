@@ -51,8 +51,10 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
     var addDrawable : Int = 0
     set(value) {
         field = value
-        removeAllViews()
-        createAddView()
+        post {
+            removeAllViews()
+            createAddView()
+        }
     }
     var deleteDrawable : Int = 0
     var mImgList = arrayListOf<String>()
@@ -83,7 +85,6 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
                 return@post
             }
             if (childCount > 0 && child?.tag != true){
-                mImgList.add("")
                 removeViewAt(childCount - 1)
             }
             if (!isAdd && child is FrameLayout && child.tag == true){
@@ -100,7 +101,6 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
     }
 
     override fun removeViewAt(index: Int) {
-        if (mImgList.size > index) mImgList.removeAt(index)
         super.removeViewAt(index)
         if (!isAdd){
             createAddView()
@@ -177,8 +177,6 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
 
         val params = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT)
         params.gravity = Gravity.RIGHT or Gravity.TOP
-        params.topMargin = -5
-        params.rightMargin = -5
         frameLayout.addView(createDeleteView(context,frameLayout),params)
 
         this.addView(frameLayout)

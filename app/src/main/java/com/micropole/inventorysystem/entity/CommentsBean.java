@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.entity;
 
+import java.util.ArrayList;
+
 /**
  * @ClassName CommentsBean
  * @Description todo
@@ -27,6 +29,15 @@ public class CommentsBean {
     private String com_pic;
     private String nickname;
     private String user_img;
+    private ArrayList<String> custom_orginalpics;
+
+    public void setCustom_orginalpics(ArrayList<String> mCustom_orginalpics) {
+        custom_orginalpics = mCustom_orginalpics;
+    }
+
+    public ArrayList<String> getCustom_orginalpics() {
+        return custom_orginalpics;
+    }
 
     public String getCom_id() {
         return com_id;

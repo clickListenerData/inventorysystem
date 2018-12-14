@@ -29,6 +29,7 @@
             android:layout_gravity="center_vertical"
             android:text="@string/gong_txt"/>
         <TextView
+            android:id="@+id/tv_product_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/txt_price"
@@ -45,6 +46,7 @@
             android:text="@string/product_txt"/>
 
         <com.coorchice.library.SuperTextView
+            android:id="@+id/stv_commit_evalua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:stv_solid="@color/text_color_white"
