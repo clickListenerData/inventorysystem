@@ -19,6 +19,7 @@ class OrderDetailContract {
 
     class Model{
         fun orderDetail(id:String) = AppService.Api!!.orderDetail(id)
+        fun confirmOrder(id: String) = AppService.Api!!.confirmOrder(id)
     }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
@@ -26,5 +27,6 @@ class OrderDetailContract {
             return Model()
         }
         abstract fun orderDetail(id: String)
+        abstract fun confirmOrder(id: String)
     }
 }

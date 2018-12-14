@@ -27,6 +27,10 @@ public class OrderDetailBean {
      * orprod : [{"op_id":154,"pro_id":115,"pro_name":"qwe","pro_img":"http://jinxiaocun.com/uploads/20181204/5ae557efc591932a11e83fb74c699cd2.png","pro_num":1,"pro_money":23,"area_name":"\u201c\u201d","sp_name":"红色","mo_name":"件","or_id":155}]
      * or_stat_desc : 待付款
      * logistics : []
+     * discounts_price
+     * or_leave
+     * unpaid_overdue_time
+     * is_comment
      */
 
     private String or_id;
@@ -41,7 +45,43 @@ public class OrderDetailBean {
     private AddressBean user_address;
     private String or_stat_desc;
     private List<OrderListBean.OrProdBean> orprod;
-    private List<String> logistics;
+    private List<LogisticsBean> logistics;
+    private String discounts_price;
+    private String or_leave;
+    private String unpaid_overdue_time;
+    private String is_comment;
+
+    public void setIs_comment(String mIs_comment) {
+        is_comment = mIs_comment;
+    }
+
+    public String getIs_comment() {
+        return is_comment;
+    }
+
+    public void setUnpaid_overdue_time(String mUnpaid_overdue_time) {
+        unpaid_overdue_time = mUnpaid_overdue_time;
+    }
+
+    public String getUnpaid_overdue_time() {
+        return unpaid_overdue_time;
+    }
+
+    public void setOr_leave(String mOr_leave) {
+        or_leave = mOr_leave;
+    }
+
+    public String getOr_leave() {
+        return or_leave;
+    }
+
+    public void setDiscounts_price(String mDiscounts_price) {
+        discounts_price = mDiscounts_price;
+    }
+
+    public String getDiscounts_price() {
+        return discounts_price;
+    }
 
     public String getOr_id() {
         return or_id;
@@ -139,11 +179,11 @@ public class OrderDetailBean {
         this.orprod = orprod;
     }
 
-    public List<String> getLogistics() {
+    public List<LogisticsBean> getLogistics() {
         return logistics;
     }
 
-    public void setLogistics(List<String> logistics) {
+    public void setLogistics(List<LogisticsBean> logistics) {
         this.logistics = logistics;
     }
 }

@@ -37,7 +37,6 @@ class OrderListFragment : BaseMvpFragment<OrderListContract.Model,OrderListContr
 
     lateinit var refreshRecyclerView : RefreshRecyclerView
     var mType = 0
-    var mStat = ""
     val mAdapter = OrderAdapter()
 
     override fun getFragmentLayoutId(): Int = -1
@@ -48,15 +47,6 @@ class OrderListFragment : BaseMvpFragment<OrderListContract.Model,OrderListContr
 
     override fun initView(view: View?) {
         mType = arguments?.getInt("order_type") ?: mType
-        mStat = when(mType){
-            0 -> ""
-            1 -> "0"
-            2 -> "2"
-            3 -> "3"
-            4 -> "4"
-            5 -> "5"
-            else -> ""
-        }
         refreshRecyclerView.mLayoutManager = LinearLayoutManager(mContext)
         refreshRecyclerView.mAdapter = mAdapter
     }
@@ -78,7 +68,7 @@ class OrderListFragment : BaseMvpFragment<OrderListContract.Model,OrderListContr
     }
 
     fun loadData(){
-        getPresenter().orderList(mStat)
+        getPresenter().orderList(mType.toString())
     }
 
     override fun getFragmentView(): View? {

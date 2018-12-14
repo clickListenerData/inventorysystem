@@ -39,7 +39,7 @@ class OrderListActivity : BaseMvpViewActivity() {
         setTitleText(res = R.string.order_list_txt)
         data = resources.getStringArray(R.array.order_title_array)
         for (i in data.indices){
-            fragmens.add(OrderListFragment.newFragment(i))
+            fragmens.add(OrderListFragment.newFragment(i + 1))
         }
         initVp()
         initMagic()

@@ -24,6 +24,7 @@ import com.micropole.inventorysystem.ui.shoppingmall.mvp.contract.ProductDetailC
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.presenter.ProductDetailPresent
 import com.micropole.inventorysystem.widght.FlowLayout
 import com.xx.baseuilibrary.mvp.lcec.BaseMvpLcecActivity
+import com.xx.baseutilslibrary.extensions.loadImag
 import com.xx.baseutilslibrary.extensions.startActivity
 import com.xx.baseutilslibrary.network.exception.ApiFaileException
 import kotlinx.android.synthetic.main.activity_product_detail.*
@@ -90,6 +91,7 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
             mType = 2
             mBottomDialog.show()
         }
+        ll_evaluation_list.setOnClickListener { EvaluationListActivity.startEvalutionList(this,mProId) }
     }
 
     fun initWeb(){
@@ -128,9 +130,23 @@ class ProductDetailActivity : BaseMvpLcecActivity<View,ProductDetailBean?, Produ
             stv_mian_you.visibility = if (data.is_pinkage == "1") View.VISIBLE else View.GONE
             web_product_detail.loadDataWithBaseURL("",data.pro_text,"text/html","utf-8","")
 
-            siv_imgs.removeAllViews()
-            for (i in 0..3){
-                siv_imgs.addShowImgView("",R.drawable.home_recommended_place_chart)
+            tv_evaluation_txt.text = getString(R.string.evaluation_count_score).format(data.comments_number,"0")
+            if (data.comments.nickname.isNullOrEmpty()){
+                cl_comment.visibility = View.GONE
+            }else{
+                civ_head_img.loadImag(data.comments.user_img)
+                tv_e_name.text = data.comments.nickname
+                tv_e_num.text = data.comments.pro_score
+                tv_e_des.text = data.comments.com_content
+                siv_imgs.removeAllViews()
+                if (data.comments.com_pic != null){
+                    val s = data.comments.com_pic.split(",")
+                    for (i in s.indices){
+                        siv_imgs.addShowImgView(s[i])
+                    }
+                }else{
+                    siv_imgs.visibility = View.GONE
+                }
             }
         }else{
             showError(ApiFaileException(""),true)

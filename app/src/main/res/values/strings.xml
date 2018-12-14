@@ -305,6 +305,7 @@
     <string name="evaluation_score">评分</string>
     <string name="input_your_evaluation">填写您的评论</string>
     <string name="count_goods">共%s件商品</string>
+    <string name="auto_close_order">%s小时%s分钟后自动关闭订单</string>
 
     <string name="after_type">售后类型</string>
     <string name="after_reason">申请理由</string>
@@ -345,6 +346,7 @@
     <string name="delete_txt">删除</string>
     <string name="product_tishi">请选中商品</string>
     <string name="confirm_buy">立即支付</string>
+    <string name="evaluation_count_score">评论%s条，平均%s分</string>
 
     <string name="rename_txt">重命名</string>
     <string name="delete_category">删除分类</string>

@@ -21,6 +21,7 @@ public class OrderListBean {
      * or_stat : 0
      * or_text : 待付款
      * or_num : 1
+     * or_money
      * or_prod : [{"op_id":"154","pro_id":"115","pro_name":"qwe","pro_img":"http://jinxiaocun.com/uploads/20181204/5ae557efc591932a11e83fb74c699cd2.png","pro_num":"1","pro_money":23,"area_name":null,"sp_name":"红色","mo_name":"件","or_id":"155"}]
      */
 
@@ -30,6 +31,15 @@ public class OrderListBean {
     private String or_text;
     private String or_num;
     private List<OrProdBean> or_prod;
+    private String or_money;
+
+    public void setOr_money(String mOr_money) {
+        or_money = mOr_money;
+    }
+
+    public String getOr_money() {
+        return or_money;
+    }
 
     public String getOr_id() {
         return or_id;

@@ -5,6 +5,7 @@ import com.blankj.utilcode.util.SnackbarUtils.getView
 import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.ui.shoppingmall.mvp.contract.ProductDetailContract
 import com.xx.baseutilslibrary.extensions.ui
+import com.xx.baseutilslibrary.network.exception.ApiFaileException
 
 /**
  * @ClassName       ProductDetailPresent
@@ -75,6 +76,7 @@ class ProductDetailPresent : ProductDetailContract.Prenset() {
             getView()?.setData(it.data)
         },{
             getView()?.showToast(it)
+            getView()?.showError(ApiFaileException(""),true)
         })
     }
 

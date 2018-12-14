@@ -21,6 +21,7 @@ import java.util.List;
 public class StarView extends LinearLayout implements View.OnClickListener {
     private static final int SCORE_NORMAL = 20;
     private LinearLayout layout;
+    private NumChangeListener mListener;
 
     public StarView(Context context) {
         this(context, null);
@@ -73,13 +74,17 @@ public class StarView extends LinearLayout implements View.OnClickListener {
             }
             views.get(i).setSelected(stars.get(i));
         }
+        if (mListener != null){
+            mListener.changeNum(getStarNum() + "");
+        }
     }
 
     public void setStarNum(int star) {
         setShowView(star / SCORE_NORMAL);
     }
 
-    public void setEvent(boolean event) {
+    public void setEvent(boolean event,NumChangeListener mNumChangeListener) {
+        mListener = mNumChangeListener;
         if (event) {
             for (int i = 0; i < layout.getChildCount(); i++) {
                 views.get(i).setTag(i);
@@ -102,5 +107,9 @@ public class StarView extends LinearLayout implements View.OnClickListener {
     public void onClick(View v) {
         int i = (int) v.getTag();
         setShowView(++i);
+    }
+
+    public interface NumChangeListener{
+        void changeNum(String num);
     }
 }

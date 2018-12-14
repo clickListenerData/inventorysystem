@@ -1,10 +1,14 @@
 package com.micropole.inventorysystem.util
 
 import android.graphics.Color
+import android.os.Handler
+import android.os.Message
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import com.blankj.utilcode.util.EncodeUtils
 import com.blankj.utilcode.util.EncryptUtils
+import com.micropole.inventorysystem.R
 import com.micropole.inventorysystem.adapter.partnership.IndicatorAdapter
 import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.MagicIndicator

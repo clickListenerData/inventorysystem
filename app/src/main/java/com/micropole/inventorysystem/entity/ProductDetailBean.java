@@ -61,6 +61,7 @@ public class ProductDetailBean {
      * sp_name_arr : ["红色"]
      * mo_name_arr : ["件"]
      * monthly_sale : 0
+     * comments_number
      */
 
     private String pro_id;
@@ -110,6 +111,24 @@ public class ProductDetailBean {
     private List<String> pro_imgs;
     private List<String> sp_name_arr;
     private List<String> mo_name_arr;
+    private String comments_number;
+    private CommentsBean comments;
+
+    public void setComments(CommentsBean mComments) {
+        comments = mComments;
+    }
+
+    public CommentsBean getComments() {
+        return comments;
+    }
+
+    public void setComments_number(String mComments_number) {
+        comments_number = mComments_number;
+    }
+
+    public String getComments_number() {
+        return comments_number;
+    }
 
     public String getPro_id() {
         return pro_id;

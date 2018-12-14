@@ -473,10 +473,21 @@ object AppService {
         @POST("scollect/collect_list")
         fun collectList() : Observable<BaseResponseEntity<List<CollectBean>>>
 
+        /**
+         *添加足迹
+         */
         @Headers("token:1","language:1")
         @POST("Sfootprint/footprint_add")
         @FormUrlEncoded
         fun addFoot(@Field("pro_id") id: String) : Observable<BaseResponseEntity<List<String>>>
+
+        /**
+         * 评价列表
+         */
+        @Headers("token:1","language:1")
+        @POST("scomment/comment_list")
+        @FormUrlEncoded
+        fun evaluationList(@Field("pro_id") id: String,@Field("page") page : Int) : Observable<BaseResponseEntity<List<CommentsBean>>>
 
         /**
          * 足迹列表
@@ -516,6 +527,25 @@ object AppService {
         @POST("sorder/order_detail")
         @FormUrlEncoded
         fun orderDetail(@Field("or_id") id: String) : Observable<BaseResponseEntity<OrderDetailBean>>
+
+        /**
+         * 订单确认收货
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/confirm_goods")
+        @FormUrlEncoded
+        fun confirmOrder(@Field("or_id") id: String) : Observable<BaseResponseEntity<List<String>>>
+
+
+        /**
+         * 申请售后
+         * 商品ID用逗号隔开
+         */
+        @Headers("token:1","language:1")
+        @POST("sreturns/apply_return")
+        @FormUrlEncoded
+        fun applyAfter(@Field("or_id") id: String,@Field("type") type: String,@Field("pro_id") pro_id: String,
+                       @Field("reason") reason: String,@Field("remark") remark: String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
          * 地址列表

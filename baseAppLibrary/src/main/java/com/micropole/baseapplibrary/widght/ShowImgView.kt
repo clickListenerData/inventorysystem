@@ -2,6 +2,8 @@ package com.micropole.baseapplibrary.widght
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.net.Uri
 import android.util.AttributeSet
@@ -11,6 +13,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.blankj.utilcode.util.EncodeUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.micropole.baseapplibrary.R
 import com.micropole.baseapplibrary.util.ImageChooseHelper
@@ -68,9 +71,10 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
         field = value
     }
 
-    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        super.onLayout(changed, l, t, r, b)
-        createAddView()
+    var mListener : CLICKListener? = null
+
+    init {
+        if (childCount == 0) createAddView()
     }
 
     override fun addView(child: View?) {
@@ -81,6 +85,9 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
             if (childCount > 0 && child?.tag != true){
                 mImgList.add("")
                 removeViewAt(childCount - 1)
+            }
+            if (!isAdd && child is FrameLayout && child.tag == true){
+                return@post
             }
             val i = maxCount / maxLine  //每行显示的图片数
             val i1 = measuredWidth / i  //图片 width
@@ -111,6 +118,7 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
 
     @SuppressLint("NewApi")
     private fun createAddView(){
+        isAdd = true
         val frameLayout = FrameLayout(context)
         frameLayout.setBackgroundDrawable(this.context.resources.getDrawable(R.drawable.shape_gray_r3))
         val imageView = TextView(this.context)
@@ -133,6 +141,9 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
                     }
                 }.show()
             }
+            if (mListener != null){
+                mListener?.clickListener()
+            }
         }
         val layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
         layoutParams.gravity = Gravity.CENTER
@@ -141,6 +152,7 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
     }
 
     fun addShowImgView(url:String,id:Int = 0){
+        isAdd = false
         val imageView = ImageView(context)
         imageView.scaleType = ImageView.ScaleType.FIT_XY
         if (id != 0) imageView.setImageResource(id)
@@ -150,8 +162,8 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
     }
 
     fun addImgView(path : String){
-//        EncodeUtils.base64Encode2String(File(path).readBytes())
-        mImgList.add(path)
+        val s = EncodeUtils.base64Encode2String(File(path).readBytes())
+        mImgList.add(s)
         createImgView(this.context,path)
     }
 
@@ -187,6 +199,10 @@ class ShowImgView(context: Context,attributeSet: AttributeSet) : LinearLayout(co
             this@ShowImgView.removeView(it.tag as View)
         }
         return imageView
+    }
+
+    interface CLICKListener{
+        fun clickListener()
     }
 
 }

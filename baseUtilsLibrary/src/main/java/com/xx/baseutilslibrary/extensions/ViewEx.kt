@@ -32,6 +32,7 @@ fun ImageView.loadImag( url: String?, tran: BitmapTransformation? = null, plach:
             Retrofit2Manager.instance.apiConfigProvider?.releaseHost+url
         }
     }
+    if (this.tag != urltemp) this.tag = null
     val options = RequestOptions().also {
         if (tran != null) it.transform(tran)
         if (plach != 0) it.placeholder(plach) else it.placeholder(R.drawable.image)
