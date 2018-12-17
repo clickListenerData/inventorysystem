@@ -482,6 +482,14 @@ object AppService {
         fun addFoot(@Field("pro_id") id: String) : Observable<BaseResponseEntity<List<String>>>
 
         /**
+         *评价订单
+         */
+        @Headers("token:1","language:1")
+        @POST("sorder/comments")
+        @FormUrlEncoded
+        fun evaluationOrder(@Field("or_id") id: String,@Field("data") data : String) : Observable<BaseResponseEntity<Any>>
+
+        /**
          * 评价列表
          */
         @Headers("token:1","language:1")

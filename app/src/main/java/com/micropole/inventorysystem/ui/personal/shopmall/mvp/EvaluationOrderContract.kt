@@ -1,5 +1,7 @@
 package com.micropole.inventorysystem.ui.personal.shopmall.mvp
 
+import com.micropole.inventorysystem.common.AppService
+import com.micropole.inventorysystem.entity.CommentsBean
 import com.xx.baseuilibrary.mvp.BaseMvpView
 import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
 
@@ -13,13 +15,20 @@ import com.xx.baseuilibrary.mvp.presenter.BaseMvpPresenter
  */
 class EvaluationOrderContract {
 
-    interface View : BaseMvpView
+    interface View : BaseMvpView{
+        fun imgUP(s : String)
+    }
 
-    class Model
+    class Model{
+        fun evaluationOrder(id:String,data:String) = AppService.Api!!.evaluationOrder(id, data)
+        fun imgUp(img:String) = AppService.Api!!.imgUp(img)
+    }
 
     abstract class Present : BaseMvpPresenter<Model,View>(){
         override fun createModel(): Model {
             return Model()
         }
+        abstract fun evaluationOrder(id:String,list:ArrayList<CommentsBean>)
+        abstract fun imgSup(img:String)
     }
 }

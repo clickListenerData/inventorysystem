@@ -32,18 +32,15 @@ class EvaluationAdapter(val imageChooseHelper: ImageChooseHelper) : BaseQuickAda
     var position = 0
     set(value) {
         field = value
-        isRefresh = true
-        notifyItemChanged(value)
+        views[value].addImgView(s)
     }
-    var isRefresh = false
 
 
     override fun convert(helper: BaseViewHolder?, item: OrderListBean.OrProdBean?) {
         helper?.apply {
-            if (isRefresh){
-                views[adapterPosition].addImgView(s)
-            }
             val view = getView<ShowImgView>(R.id.siv_add_photo)
+            view.addDrawable = R.drawable.ic_photoo_n
+            view.deleteDrawable = R.drawable.globl_btn_input_del
             getView<ImageView>(R.id.iv_order_img).loadImag(item?.pro_img)
             setText(R.id.tv_product_title,item?.pro_name)
             setText(R.id.tv_product_size,item?.sp_name+"/${item?.mo_name}")
